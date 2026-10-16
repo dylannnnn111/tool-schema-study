@@ -1,0 +1,18 @@
+{
+  "name": "tool-schema-study",
+  "version": "0.1.0",
+  "description": "Same MCP tools, different schemas: which design choices make models call tools correctly? Five schema variants of Aussie Data MCP's ten tools, 40 hard questions, three Claude models.",
+  "engines": { "node": ">=22.6" },
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --no-warnings --test test/*.test.ts",
+    "references": "node --experimental-strip-types --no-warnings scripts/references.ts",
+    "eval": "node --experimental-strip-types --no-warnings scripts/eval.ts",
+    "eval:keychain": "ANTHROPIC_API_KEY=$(security find-generic-password -s aussie-data-mcp-anthropic -w) npm run eval --",
+    "smoke": "NAME=smoke VARIANTS=baseline,nested RUNS=1 npm run eval -- v02 o07 m02 m15",
+    "smoke:keychain": "ANTHROPIC_API_KEY=$(security find-generic-password -s aussie-data-mcp-anthropic -w) npm run smoke",
+    "analyse": "node --experimental-strip-types --no-warnings scripts/analyse.ts"
+  },
+  "license": "MIT",
+  "author": "Dylan Lewis"
+}
