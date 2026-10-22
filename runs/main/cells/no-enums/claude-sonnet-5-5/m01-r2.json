@@ -1,0 +1,128 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "m01",
+ "kind": "multi",
+ "q": "Are real wages going up? Compare wage growth from the ABS Wage Price Index with inflation.",
+ "date": "2026-10-19",
+ "cost": 0.02265,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 5,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**No. Real wages are falling.** Wage growth has been below inflation for the last four quarters, and the gap widened in the latest monthly CPI.\n\n**Annual growth in the Wage Price Index (total hourly pay excluding bonuses, seasonally adjusted) against annual CPI inflation**\n\n| Quarter | WPI | CPI (quarter-end month) | Real wage growth (WPI minus CPI) |\n|---|---|---|---|\n| Sep 2024 | 3.6% | 2.8% | +0.8 pt |\n| Dec 2024 | 3.2% | 2.4% | +0.8 pt |\n| Mar 2025 | 3.5% | 2.4% | +1.1 pt |\n| Jun 2025 | 3.4% | 1.9% | +1.5 pt |\n| Sep 2025 | 3.3% | 3.6% | −0.3 pt |\n| Dec 2025 | 3.4% | 3.8% | −0.4 pt |\n| Mar 2026 | 3.2% | 4.6% | −1.4 pt |\n| Jun 2026 | 3.2% | 3.8% | −0.6 pt |\n\n- **Latest wages:** The June quarter 2026 WPI is up 3.2% on a year earlier. That is the latest WPI available, and wage growth has been slowly easing from 3.6% in September 2024.\n- **Latest inflation:** Headline CPI was 4.0% in the year to August 2026. Over the same period, trimmed mean inflation (the RBA's preferred underlying measure) was 3.6%.\n- **Real wages now:** Comparing the June 2026 WPI with the August CPI, real wages are down about 0.8 percentage points. Against trimmed mean inflation, they are down about 0.4 points.\n- **Turning point:** Real wage growth was clearly positive through to mid-2025, when CPI inflation dipped to 1.9% in June 2025. It turned negative when inflation jumped from July 2025, reaching 3.0% that month and 4.6% in March 2026. Wage growth barely moved over that time.\n\nThe CPI figures are monthly readings for the quarter-end month, so they differ slightly from the ABS quarterly CPI. The WPI also excludes bonuses and doesn't capture changes in hours worked or in the mix of jobs. Average earnings measures can differ.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[{\"code\":\"1\",\"label\":\"Quarterly Index\"},{\"code\":\"2\",\"label\":\"Percentage change from previous quarter\"},{\"code\":\"3\",\"label\":\"Percentage change from corresponding quarter of previous year\"},{\"code\":\"4\",\"label\":\"Financial Year Index\"},{\"code\":\"5\",\"label\":\"Financial Year Index - Percentage change from previous period\"}],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"OHRPEB\",\"label\":\"Ordinary time hourly rates of pay excluding bonuses\"},{\"code\":\"OHRPIB\",\"label\":\"Ordinary time hourly rates of pay including bonuses\"},{\"code\":\"THRPEB\",\"label\":\"Total hourly rates of pay excluding bonuses\"},{\"code\":\"THRPIB\",\"label\":\"Total hourly rates of pay including bonuses\"}],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[{\"code\":\"7\",\"label\":\"Private and Public\"},{\"code\":\"1\",\"label\":\"Private\"},{\"code\":\"2\",\"label\":\"Public\"},{\"code\":\"3\",\"label\":\"Commonwealth\"},{\"code\":\"6\",\"label\":\"State and Local Government\"},{\"code\":\"4\",\"label\":\"State Government\"},{\"code\":\"5\",\"label\":\"Local Government\"}],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[{\"code\":\"TOT\",\"label\":\"All Industries\"},{\"code\":\"A\",\"label\":\"Agriculture, Forestry and Fishing\"},{\"code\":\"B\",\"label\":\"Mining\"},{\"code\":\"C\",\"label\":\"Manufacturing\"},{\"code\":\"D\",\"label\":\"Electricity, Gas, Water and Waste Services\"},{\"code\":\"E\",\"label\":\"Construction\"},{\"code\":\"F\",\"label\":\"Wholesale Trade\"},{\"code\":\"G\",\"label\":\"Retail Trade\"},{\"code\":\"H\",\"labe"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2024-06 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2024-Q2\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q2\",3.8],[\"2024-Q3\",2.8],[\"2024-Q4\",2.4],[\"2025-Q1\",2.4],[\"2025-Q2\",2.1],[\"2025-Q3\",3.2]],\"start\":{\"period\":\"2024-Q2\",\"value\":3.8},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.2},\"change\":-0.6}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.20.AUS.Q",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.20.AUS.Q",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS WPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB.7.TOT.20.AUS.Q?startPeriod=2024-06\",\"series\":[{\"name\":\"Total hourly rates of pay excluding bonuses - Private and Public - All Industries - Australia\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q3\",3.6],[\"2024-Q4\",3.2],[\"2025-Q1\",3.5],[\"2025-Q2\",3.4],[\"2025-Q3\",3.3],[\"2025-Q4\",3.4],[\"2026-Q1\",3.2],[\"2026-Q2\",3.2]],\"start\":{\"period\":\"2024-Q3\",\"value\":3.6},\"latest\":{\"period\":\"2026-Q2\",\"value\":3.2},\"change\":-0.4}],\"notes\":[\"All series: Percentage change from corresponding quarter of previous year, Total hourly rates of pay excluding bonuses, Private and Public, All Industries, Seasonally Adjusted, Australia\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.10.AUS.Q",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.10.AUS.Q",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS WPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB.7.TOT.10.AUS.Q?startPeriod=2024-06\",\"series\":[{\"name\":\"Total hourly rates of pay excluding bonuses - Private and Public - All Industries - Australia\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q3\",3.5],[\"2024-Q4\",3.2],[\"2025-Q1\",3.4],[\"2025-Q2\",3.4],[\"2025-Q3\",3.4],[\"2025-Q4\",3.4],[\"2026-Q1\",3.2],[\"2026-Q2\",3.2]],\"start\":{\"period\":\"2024-Q3\",\"value\":3.5},\"latest\":{\"period\":\"2026-Q2\",\"value\":3.2},\"change\":-0.3}],\"notes\":[\"All series: Percentage change from corresponding quarter of previous year, Total hourly rates of pay excluding bonuses, Private and Public, All Industries, Original, Australia\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-06\",\"value\":2.8},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.8},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-06\",\"value\":1.9},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":2.1}],\"notes\":[\"All series: Percentage change from previous year, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1629,
+   "cacheWrite": 1750,
+   "cacheRead": 19696
+  },
+  "ms": 12891
+ }
+}

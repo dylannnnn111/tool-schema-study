@@ -1,0 +1,171 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "rents"
+  ],
+  "cities": [
+   "sydney",
+   "australia"
+  ],
+  "measure": "monthly_change",
+  "adjustment": "original",
+  "start": "2025-07"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/2.30014..1+50.M?startPeriod=2025-07",
+  "series": [
+   {
+    "name": "Rents - Sydney (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-07",
+      0.3
+     ],
+     [
+      "2025-08",
+      0.3
+     ],
+     [
+      "2025-09",
+      0.2
+     ],
+     [
+      "2025-10",
+      0.2
+     ],
+     [
+      "2025-11",
+      0.4
+     ],
+     [
+      "2025-12",
+      0.2
+     ],
+     [
+      "2026-01",
+      0.3
+     ],
+     [
+      "2026-02",
+      0.3
+     ],
+     [
+      "2026-03",
+      0.2
+     ],
+     [
+      "2026-04",
+      0.2
+     ],
+     [
+      "2026-05",
+      0.4
+     ],
+     [
+      "2026-06",
+      0.3
+     ],
+     [
+      "2026-07",
+      0.3
+     ],
+     [
+      "2026-08",
+      0.3
+     ]
+    ],
+    "start": {
+     "period": "2025-07",
+     "value": 0.3
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0.3
+    },
+    "change": 0
+   },
+   {
+    "name": "Rents - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-07",
+      0.3
+     ],
+     [
+      "2025-08",
+      0.3
+     ],
+     [
+      "2025-09",
+      0.2
+     ],
+     [
+      "2025-10",
+      0.2
+     ],
+     [
+      "2025-11",
+      0.4
+     ],
+     [
+      "2025-12",
+      0.2
+     ],
+     [
+      "2026-01",
+      0.3
+     ],
+     [
+      "2026-02",
+      0.4
+     ],
+     [
+      "2026-03",
+      0.2
+     ],
+     [
+      "2026-04",
+      0.2
+     ],
+     [
+      "2026-05",
+      0.4
+     ],
+     [
+      "2026-06",
+      0.3
+     ],
+     [
+      "2026-07",
+      0.4
+     ],
+     [
+      "2026-08",
+      0.3
+     ]
+    ],
+    "start": {
+     "period": "2025-07",
+     "value": 0.3
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0.3
+    },
+    "change": 0
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous period, Rents, Original",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:05:43.017Z"
+}

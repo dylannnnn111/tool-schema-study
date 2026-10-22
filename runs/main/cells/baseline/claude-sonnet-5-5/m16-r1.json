@@ -1,0 +1,86 @@
+{
+ "variant": "baseline",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m16",
+ "kind": "multi",
+ "q": "How do credit card and personal loan rates compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.01838,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": false,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Credit card rates are far above the cash rate and have barely moved with it. I couldn't get a current figure for personal loans.\n\n**Latest data (September 2026)**\n- The cash rate (monthly average) was 4.36%.\n- The standard credit card rate was 21.24%, about 16.9 percentage points higher.\n- The low-rate credit card rate was 13.49%, about 9.1 points higher.\n\n**Cash rate cuts and hikes**\n\n| Period | Cash rate | Standard card | Low-rate card |\n|---|---|---|---|\n| Jan 2025 | 4.35% | 20.99% | 13.49% |\n| Late 2025 to Jan 2026 (trough) | 3.60% | 20.99% | 13.49% |\n| Sep 2026 | 4.36% | 21.24% | 13.49% |\n\n- **Cuts:** The cash rate fell 0.75 points between January and October 2025, from 4.35% to 3.60%. Card rates didn't fall at all. The standard card stayed at 20.99% and the low-rate card at 13.49%.\n- **Hikes:** The cash rate rose about 0.75 points between February and June 2026, back to 4.35%. The low-rate card didn't change. The standard card rose 0.25 points, to 21.24%, in September 2026.\n- **Longer run:** Since January 2024 the cash rate is up 0.01 points (4.35% to 4.36%). The standard card is up 1.17 points (20.07% to 21.24%), and the low-rate card is up 0.41 points (13.08% to 13.49%).\n\n**Personal loans**\nThe RBA's indicator series for unsecured fixed and variable personal loans has no data in this feed, so I can't give a current comparison. Credit cards are the only personal-lending rate I could compare.\n\nThese are advertised indicator rates. Rates people actually pay can differ, and the RBA's F6 table covers those.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "credit_card_standard",
+      "personal_loan_fixed"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "credit_card_standard",
+      "personal_loan_fixed"
+     ],
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Personal loans; Revolving credit; Credit cards; Standard\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",20.07],[\"2024-02-29\",20.16],[\"2024-03-31\",20.16],[\"2024-04-30\",20.16],[\"2024-05-31\",20.16],[\"2024-06-30\",20.57],[\"2024-07-31\",20.57],[\"2024-08-31\",20.57],[\"2024-09-30\",20.78],[\"2024-10-31\",20.78],[\"2024-11-30\",20.78],[\"2024-12-31\",20.78],[\"2025-01-31\",20.99],[\"2025-02-28\",20.99],[\"2025-03-31\",20.99],[\"2025-04-30\",20.99],[\"2025-05-31\",20.99],[\"2025-06-30\",20.99],[\"2025-07-31\",20.99],[\"2025-08-31\",20.99],[\"2025-09-30\",20.99],[\"2025-10-31\",20.99],[\"2025-11-30\",20.99],[\"2025-12-31\",20.99],[\"2026-01-31\",20.99],[\"2026-02-28\",20.99],[\"2026-03-31\",20.99],[\"2026-04-30\",20.99],[\"2026-05-31\",20.99],[\"2026-06-30\",20.99],[\"2026-07-31\",20.99],[\"2026-08-31\",20.99],[\"2026-09-30\",21.24]],\"start\":{\"period\":\"2024-01-31\",\"value\":20.07},\"latest\":{\"period\":\"2026-09-30\",\"value\":21.24},\"change\":1.17},{\"name\":\"Personal loans; Term loans (unsecured); Fixed\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",4.35],[\"2024-02-29\",4.35],[\"2024-03-31\",4.35],[\"2024-04-30\",4.35],[\"2024-05-31\",4.35],[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f5",
+     "search": "personal loans",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f5",
+     "search": "personal loans",
+     "monthly": false,
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F5 F5  INDICATOR LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Lending rates; Personal loans; Revolving credit; Credit cards; Standard\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",20.07],[\"2024-02-29\",20.16],[\"2024-03-31\",20.16],[\"2024-04-30\",20.16],[\"2024-05-31\",20.16],[\"2024-06-30\",20.57],[\"2024-07-31\",20.57],[\"2024-08-31\",20.57],[\"2024-09-30\",20.78],[\"2024-10-31\",20.78],[\"2024-11-30\",20.78],[\"2024-12-31\",20.78],[\"2025-01-31\",20.99],[\"2025-02-28\",20.99],[\"2025-03-31\",20.99],[\"2025-04-30\",20.99],[\"2025-05-31\",20.99],[\"2025-06-30\",20.99],[\"2025-07-31\",20.99],[\"2025-08-31\",20.99],[\"2025-09-30\",20.99],[\"2025-10-31\",20.99],[\"2025-11-30\",20.99],[\"2025-12-31\",20.99],[\"2026-01-31\",20.99],[\"2026-02-28\",20.99],[\"2026-03-31\",20.99],[\"2026-04-30\",20.99],[\"2026-05-31\",20.99],[\"2026-06-30\",20.99],[\"2026-07-31\",20.99],[\"2026-08-31\",20.99],[\"2026-09-30\",21.24]],\"start\":{\"period\":\"2024-01-31\",\"value\":20.07},\"latest\":{\"period\":\"2026-09-30\",\"value\":21.24},\"change\":1.17},{\"name\":\"Lending rates; Personal loans; Revolving credit; Credit cards; Low rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",13.08],[\"2024-02-29\",13.33],[\"2024-03-31\",13.33],[\"2024-04-30\",13.33],[\"2024-05-31\",13.69],[\"2024-06-30\",13.69],[\"2024-07-31\",13.69],[\"2024-08-31\",13.69],[\"2024-09-30\",13.69],[\"2024-10-31\",13.69],[\"2024-11-30\",13.79],[\"2024-12-31\",13.49],[\"2025-01-31\",13.49],[\"2025-02-28\""
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 919,
+   "cacheWrite": 3038,
+   "cacheRead": 15791
+  },
+  "ms": 8186
+ }
+}

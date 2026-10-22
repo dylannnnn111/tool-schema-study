@@ -1,0 +1,55 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "o01",
+ "kind": "out-of-scope",
+ "q": "What's the Friday office gap in Melbourne's CBD?",
+ "date": "2026-10-19",
+ "cost": 0.01869,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you Melbourne's Friday gap, because my commuting data only covers Sydney. It comes from Transport for NSW's Opal card records, and I don't have an equivalent source for Melbourne's Myki card.\n\n**For comparison, the Sydney CBD figures are:**\n- **September 2026 (latest month):** 0.783. Friday afternoon travel out of the CBD was about **78% of the Tuesday–Thursday average**, so roughly 22% lower.\n- **August 2026:** 0.799, or about 80%.\n- That's a slight drop of 0.016 between the two months. July 2026 isn't included, because months with too few usable weekdays are left out.\n\n**How it's measured:** the gap is based on people tapping their Opal cards between 3pm and 7pm as they leave work. Friday's count is divided by the Tuesday–Thursday average for the same month. Public holidays, outages and periods with known data problems are excluded.\n\n**Where to look for Melbourne:** the Department of Transport and Planning has published some Myki and office-attendance data. The Property Council's office occupancy surveys are another source, and they cover the Melbourne CBD.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "view": "friday_gap",
+     "start": "2026-07-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-07-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-08\",\"value\":0.799},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":-0.016}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 701,
+   "cacheWrite": 697,
+   "cacheRead": 5816
+  },
+  "ms": 8219
+ }
+}

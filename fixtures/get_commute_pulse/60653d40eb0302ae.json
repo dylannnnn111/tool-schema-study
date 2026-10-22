@@ -1,0 +1,219 @@
+{
+ "tool": "get_commute_pulse",
+ "args": {
+  "view": "friday_gap",
+  "centres": [
+   "Sydney CBD",
+   "Chatswood",
+   "Macquarie Park",
+   "North Sydney"
+  ],
+  "start": "2026-01-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "Commute Pulse (TfNSW Opal Tap Data)",
+  "notes": [
+   "Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.",
+   "Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.",
+   "Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.",
+   "Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse",
+   "Months with fewer than 8 usable weekdays are left out."
+  ],
+  "series": [
+   {
+    "name": "Sydney CBD",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-02",
+      0.763
+     ],
+     [
+      "2026-03",
+      0.769
+     ],
+     [
+      "2026-04",
+      0.797
+     ],
+     [
+      "2026-05",
+      0.788
+     ],
+     [
+      "2026-06",
+      0.776
+     ],
+     [
+      "2026-07",
+      0.778
+     ],
+     [
+      "2026-08",
+      0.799
+     ],
+     [
+      "2026-09",
+      0.783
+     ]
+    ],
+    "start": {
+     "period": "2026-02",
+     "value": 0.763
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.783
+    },
+    "change": 0.02
+   },
+   {
+    "name": "Chatswood",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-02",
+      0.999
+     ],
+     [
+      "2026-03",
+      0.98
+     ],
+     [
+      "2026-04",
+      0.937
+     ],
+     [
+      "2026-05",
+      1.008
+     ],
+     [
+      "2026-06",
+      0.993
+     ],
+     [
+      "2026-07",
+      0.963
+     ],
+     [
+      "2026-08",
+      1.051
+     ],
+     [
+      "2026-09",
+      1.03
+     ]
+    ],
+    "start": {
+     "period": "2026-02",
+     "value": 0.999
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 1.03
+    },
+    "change": 0.031
+   },
+   {
+    "name": "Macquarie Park",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-02",
+      0.733
+     ],
+     [
+      "2026-03",
+      0.737
+     ],
+     [
+      "2026-04",
+      0.737
+     ],
+     [
+      "2026-05",
+      0.775
+     ],
+     [
+      "2026-06",
+      0.832
+     ],
+     [
+      "2026-07",
+      0.797
+     ],
+     [
+      "2026-08",
+      0.729
+     ],
+     [
+      "2026-09",
+      0.77
+     ]
+    ],
+    "start": {
+     "period": "2026-02",
+     "value": 0.733
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.77
+    },
+    "change": 0.037
+   },
+   {
+    "name": "North Sydney",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-02",
+      0.76
+     ],
+     [
+      "2026-03",
+      0.716
+     ],
+     [
+      "2026-04",
+      0.705
+     ],
+     [
+      "2026-05",
+      0.752
+     ],
+     [
+      "2026-06",
+      0.743
+     ],
+     [
+      "2026-07",
+      0.712
+     ],
+     [
+      "2026-08",
+      0.751
+     ],
+     [
+      "2026-09",
+      0.741
+     ]
+    ],
+    "start": {
+     "period": "2026-02",
+     "value": 0.76
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.741
+    },
+    "change": -0.019
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:22:15.503Z"
+}

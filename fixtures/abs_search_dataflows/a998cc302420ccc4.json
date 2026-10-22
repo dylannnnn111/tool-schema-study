@@ -1,0 +1,62 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "consumer price index"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "CPI",
+    "version": "2.0.0",
+    "name": "Consumer Price Index (CPI)"
+   },
+   {
+    "id": "CPI_WEIGHTS",
+    "version": "1.0.0",
+    "name": "Consumer Price Index (CPI) Weights"
+   },
+   {
+    "id": "CPI_Q",
+    "version": "1.0.0",
+    "name": "Consumer Price Index (CPI) Quarterly"
+   },
+   {
+    "id": "CPI_M",
+    "version": "1.2.0",
+    "name": "Monthly Consumer Price Index (CPI) indicator"
+   },
+   {
+    "id": "WPI",
+    "version": "1.2.0",
+    "name": "Wage Price Index"
+   },
+   {
+    "id": "ITPI_EXP",
+    "version": "1.0.0",
+    "name": "Export Price Index"
+   },
+   {
+    "id": "ITPI_IMP",
+    "version": "1.0.0",
+    "name": "Import Price Index"
+   },
+   {
+    "id": "RPPI",
+    "version": "1.0.0",
+    "name": "Residential Property Price Index"
+   },
+   {
+    "id": "PPI",
+    "version": "1.1.3",
+    "name": "Producer Price Indexes by Industry"
+   },
+   {
+    "id": "PPI_FD",
+    "version": "1.1.0",
+    "name": "Producer Price Indexes, Final Demand"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:17:03.077Z"
+}

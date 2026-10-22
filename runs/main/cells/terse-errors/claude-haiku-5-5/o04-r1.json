@@ -1,0 +1,33 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.00039,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't get that figure. My data tools don't include station-level or daily Opal tap-on counts, so I don't have Central station's numbers for last Friday.\n\nWhat I can provide from the Commute Pulse data (TfNSW Opal taps) is monthly, for commercial centres including Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta. These include:\n- **Friday gap:** Friday evening tap-ons as a share of Tuesday–Thursday evening tap-ons (1.0 means no gap).\n- **Evening volume:** average Tuesday–Thursday evening tap-ons per day in each centre.\n\nFor station-level daily numbers, TfNSW publishes Opal tap-on data on its Open Data portal, which is the place to look.\n\nIf you'd like, I can pull the latest Sydney CBD Friday gap or evening volume to show how Friday attendance compares with midweek.",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 673,
+   "cacheWrite": 88,
+   "cacheRead": 4708
+  },
+  "ms": 3664
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "o09",
+ "kind": "out-of-scope",
+ "q": "Where is the ASX 200 sitting today?",
+ "date": "2026-10-19",
+ "cost": 0.00931,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you today's ASX 200 level because none of my data sources cover share prices or stock indices. My tools pull official statistics from the ABS and the RBA, such as CPI, jobs, the cash rate, lending rates and exchange rates. If I gave you a figure, I'd be guessing.\n\nFor the live level, try:\n- **asx.com.au**: the official source (index data may be delayed about 20 minutes)\n- **Market Index (marketindex.com.au)**, Google Finance or Yahoo Finance (ticker **^AXJO**)\n- The finance section of most news sites (ABC, AFR, SMH)\n\nI can look up market-related numbers that might help explain what the index is doing, for example:\n- The **Australian dollar** against the USD or the trade-weighted index, daily up to the latest available day\n- **Government bond yields** from RBA table F2\n- The **RBA cash rate**, the latest **CPI inflation** reading, or **unemployment**, which tend to move the market around their release dates\n\nLet me know if any of those would help.",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 396,
+   "cacheWrite": 87,
+   "cacheRead": 4708
+  },
+  "ms": 5287
+ }
+}

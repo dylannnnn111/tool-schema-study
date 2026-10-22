@@ -1,0 +1,49 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o10",
+ "kind": "out-of-scope",
+ "q": "How many people rode the Sydney Metro last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.00833,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you how many people rode the Sydney Metro last Friday (Friday 16 October 2026). None of my data sources has daily Metro ridership.\n\nThe closest thing I have is Opal tap-on data for the Sydney CBD. It has three limits:\n- **Monthly only:** It gives monthly averages, not figures for a single day. The latest month is September 2026.\n- **Evening only:** It counts tap-ons from 3pm to 7pm, not the whole day.\n- **Not Metro-specific:** It covers all Opal modes in the CBD. The source also says it's unclear whether Metro taps are included.\n\nFor context, CBD evening tap-ons on Tuesday to Thursday averaged about 255,900 per day in September 2026. In August 2026 they averaged about 262,200 per day.\n\nFor an actual Metro figure, Transport for NSW publishes Opal and Metro patronage statistics. You could also ask Sydney Metro directly.\n\nI can also pull the CBD \"Friday gap\" for recent months if you'd like. It shows how busy Fridays are compared with midweek.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "evening_volume",
+     "start": "2026-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "evening_volume",
+     "start": "2026-08"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"average Tue-Thu evening tap-ons per day\",\"frequency\":\"Monthly\",\"points\":[[\"2026-08\",262233.3333],[\"2026-09\",255926.6667]],\"start\":{\"period\":\"2026-08\",\"value\":262233.3333},\"latest\":{\"period\":\"2026-09\",\"value\":255926.6667},\"change\":-6306.6666}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 567,
+   "cacheWrite": 724,
+   "cacheRead": 8410
+  },
+  "ms": 6984
+ }
+}

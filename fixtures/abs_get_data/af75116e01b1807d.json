@@ -1,0 +1,595 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9.TOT.100...M",
+  "last_n": 2
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT.100...M?lastNObservations=2",
+  "series": [
+   {
+    "name": "Greater Hobart",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      148
+     ],
+     [
+      "2026-08",
+      104
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 148
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 104
+    },
+    "change": -44
+   },
+   {
+    "name": "Queensland",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      4272
+     ],
+     [
+      "2026-08",
+      3381
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 4272
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3381
+    },
+    "change": -891
+   },
+   {
+    "name": "Australia",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      19273
+     ],
+     [
+      "2026-08",
+      16967
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 19273
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "change": -2306
+   },
+   {
+    "name": "Rest of Tas.",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      144
+     ],
+     [
+      "2026-08",
+      158
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 144
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 158
+    },
+    "change": 14
+   },
+   {
+    "name": "Rest of Vic.",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      1327
+     ],
+     [
+      "2026-08",
+      1061
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 1327
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1061
+    },
+    "change": -266
+   },
+   {
+    "name": "Tasmania",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      292
+     ],
+     [
+      "2026-08",
+      262
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 292
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 262
+    },
+    "change": -30
+   },
+   {
+    "name": "Australian Capital Territory",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      257
+     ],
+     [
+      "2026-08",
+      157
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 257
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 157
+    },
+    "change": -100
+   },
+   {
+    "name": "South Australia",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      1359
+     ],
+     [
+      "2026-08",
+      1776
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 1359
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1776
+    },
+    "change": 417
+   },
+   {
+    "name": "Rest of Qld",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      1770
+     ],
+     [
+      "2026-08",
+      1303
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 1770
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1303
+    },
+    "change": -467
+   },
+   {
+    "name": "Greater Perth",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      2057
+     ],
+     [
+      "2026-08",
+      2119
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 2057
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 2119
+    },
+    "change": 62
+   },
+   {
+    "name": "Victoria",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      5149
+     ],
+     [
+      "2026-08",
+      5094
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 5149
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 5094
+    },
+    "change": -55
+   },
+   {
+    "name": "New South Wales",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      5385
+     ],
+     [
+      "2026-08",
+      3859
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 5385
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3859
+    },
+    "change": -1526
+   },
+   {
+    "name": "Rest of SA",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      220
+     ],
+     [
+      "2026-08",
+      265
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 220
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 265
+    },
+    "change": 45
+   },
+   {
+    "name": "Greater Darwin",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      53
+     ],
+     [
+      "2026-08",
+      27
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 53
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 27
+    },
+    "change": -26
+   },
+   {
+    "name": "Rest of NSW",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      1829
+     ],
+     [
+      "2026-08",
+      1322
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 1829
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1322
+    },
+    "change": -507
+   },
+   {
+    "name": "Australian Capital Territory",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      257
+     ],
+     [
+      "2026-08",
+      157
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 257
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 157
+    },
+    "change": -100
+   },
+   {
+    "name": "Northern Territory",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      97
+     ],
+     [
+      "2026-08",
+      46
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 97
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 46
+    },
+    "change": -51
+   },
+   {
+    "name": "Greater Melbourne",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      3822
+     ],
+     [
+      "2026-08",
+      4033
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 3822
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4033
+    },
+    "change": 211
+   },
+   {
+    "name": "Greater Sydney",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      3556
+     ],
+     [
+      "2026-08",
+      2535
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 3556
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 2535
+    },
+    "change": -1021
+   },
+   {
+    "name": "Rest of WA",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      405
+     ],
+     [
+      "2026-08",
+      272
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 405
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 272
+    },
+    "change": -133
+   },
+   {
+    "name": "Rest of NT",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      44
+     ],
+     [
+      "2026-08",
+      19
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 44
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 19
+    },
+    "change": -25
+   },
+   {
+    "name": "Greater Brisbane",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      2502
+     ],
+     [
+      "2026-08",
+      2078
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 2502
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 2078
+    },
+    "change": -424
+   },
+   {
+    "name": "Greater Adelaide",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      1139
+     ],
+     [
+      "2026-08",
+      1511
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 1139
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1511
+    },
+    "change": 372
+   },
+   {
+    "name": "Western Australia",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      2462
+     ],
+     [
+      "2026-08",
+      2392
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 2462
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 2392
+    },
+    "change": -70
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Sectors, Total Work, Total Residential, Original"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:26:47.638Z"
+}

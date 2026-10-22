@@ -1,0 +1,52 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "A2",
+  "monthly": false,
+  "start": "2026-01"
+ },
+ "ok": true,
+ "result": {
+  "table": "A2",
+  "title": "A2 RESERVE BANK OF AUSTRALIA – CHANGES IN MONETARY POLICY AND ADMINISTERED RATES",
+  "columns": [
+   {
+    "id": "ARBAMPCCCR",
+    "title": "Change in Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "As announced"
+   },
+   {
+    "id": "ARBAMPCNCRT",
+    "title": "New Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "As announced"
+   },
+   {
+    "id": "ARBAMPCRPESB",
+    "title": "Change in ES Rate",
+    "unit": "Per cent",
+    "frequency": "As announced"
+   },
+   {
+    "id": "ARBAMPNRPESB",
+    "title": "New ES Rate",
+    "unit": "Per cent",
+    "frequency": "As announced"
+   },
+   {
+    "id": "ARBAMPCORR",
+    "title": "Change in Overnight Repo Rate",
+    "unit": "Per cent",
+    "frequency": "As announced"
+   },
+   {
+    "id": "ARBAMPNORR",
+    "title": "New Overnight Repo Rate",
+    "unit": "Per cent",
+    "frequency": "As announced"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:22:53.537Z"
+}

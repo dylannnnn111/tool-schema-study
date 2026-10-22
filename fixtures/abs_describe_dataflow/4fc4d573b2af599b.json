@@ -1,0 +1,86 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "code_search": "Australia"
+ },
+ "ok": true,
+ "result": {
+  "id": "BA_GCCSA",
+  "name": "Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above",
+  "dimensions": [
+   {
+    "id": "MEASURE",
+    "position": 1,
+    "codes": [],
+    "totalCodes": 3
+   },
+   {
+    "id": "VALUE",
+    "position": 2,
+    "codes": [],
+    "totalCodes": 7
+   },
+   {
+    "id": "SECTOR",
+    "position": 3,
+    "codes": [],
+    "totalCodes": 3
+   },
+   {
+    "id": "WORK_TYPE",
+    "position": 4,
+    "codes": [],
+    "totalCodes": 9
+   },
+   {
+    "id": "BUILDING_TYPE",
+    "position": 5,
+    "codes": [],
+    "totalCodes": 34
+   },
+   {
+    "id": "TSEST",
+    "position": 6,
+    "codes": [],
+    "totalCodes": 5
+   },
+   {
+    "id": "REGION",
+    "position": 7,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "4",
+      "label": "South Australia"
+     },
+     {
+      "code": "5",
+      "label": "Western Australia"
+     },
+     {
+      "code": "8",
+      "label": "Australian Capital Territory"
+     },
+     {
+      "code": "8ACTE",
+      "label": "Australian Capital Territory"
+     }
+    ],
+    "totalCodes": 26
+   },
+   {
+    "id": "FREQ",
+    "position": 8,
+    "codes": [],
+    "totalCodes": 9
+   }
+  ],
+  "keyTemplate": "<MEASURE>.<VALUE>.<SECTOR>.<WORK_TYPE>.<BUILDING_TYPE>.<TSEST>.<REGION>.<FREQ>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:07:34.531Z"
+}

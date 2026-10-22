@@ -1,0 +1,90 @@
+{
+ "tool": "get_labour_force",
+ "args": {
+  "measures": [
+   "unemployment_rate",
+   "participation_rate"
+  ],
+  "states": [
+   "vic"
+  ],
+  "sex": "males",
+  "adjustment": "seasonally_adjusted",
+  "start": "2026-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Labour Force, Australia (monthly)",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12.1.1599.20.2.M?startPeriod=2026-06",
+  "series": [
+   {
+    "name": "Unemployment rate",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      5.1629
+     ],
+     [
+      "2026-07",
+      4.9933
+     ],
+     [
+      "2026-08",
+      5.169
+     ],
+     [
+      "2026-09",
+      5.0077
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 5.1629
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 5.0077
+    },
+    "change": -0.1552
+   },
+   {
+    "name": "Participation rate",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      72.1148
+     ],
+     [
+      "2026-07",
+      71.8262
+     ],
+     [
+      "2026-08",
+      71.8547
+     ],
+     [
+      "2026-09",
+      71.454
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 72.1148
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 71.454
+    },
+    "change": -0.6608
+   }
+  ],
+  "notes": [
+   "All series: Males, Total (age), Seasonally Adjusted, Victoria"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:03:09.310Z"
+}

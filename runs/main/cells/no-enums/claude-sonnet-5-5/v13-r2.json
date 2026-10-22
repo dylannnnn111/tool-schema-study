@@ -1,0 +1,107 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v13",
+ "kind": "vague",
+ "q": "What's the jobless rate in the territory Canberra's in?",
+ "date": "2026-10-19",
+ "cost": 0.00838,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Canberra is in the Australian Capital Territory. Its unemployment rate was **4.7% in September 2026**, the latest month available (4.66% before rounding).\n\n- This figure is the **original (unadjusted)** series. The ABS doesn't publish a seasonally adjusted ACT series through this source. The monthly figures are volatile. They ranged from 3.6% (July) to 4.8% (April) this year, so I wouldn't read much into a single month.\n- The ACT's rate was 3.9% in August and 3.6% in July.\n- For comparison, the national seasonally adjusted rate was 4.7% in September 2026. The two aren't a like-for-like comparison, because one is adjusted and the other isn't.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.8.M?startPeriod=2026-01\",\"series\":[],\"notes\":[\"ABS returned no data. Trend and seasonally adjusted series aren't published for every state/sex combination - try original.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2026-01",
+     "adjustment": "original"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "original",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.10.8.M?startPeriod=2026-01\",\"series\":[{\"name\":\"Australian Capital Territory\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",4.6868],[\"2026-02\",3.8349],[\"2026-03\",4.0945],[\"2026-04\",4.8227],[\"2026-05\",3.7422],[\"2026-06\",3.9022],[\"2026-07\",3.6404],[\"2026-08\",3.9327],[\"2026-09\",4.6645]],\"start\":{\"period\":\"2026-01\",\"value\":4.6868},\"latest\":{\"period\":\"2026-09\",\"value\":4.6645},\"change\":-0.0223}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Original, Australian Capital Territory\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "australia"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.AUS.M?startPeriod=2026-01\",\"series\":[{\"name\":\"Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\",4.7183]],\"start\":{\"period\":\"2026-01\",\"value\":4.0817},\"latest\":{\"period\":\"2026-09\",\"value\":4.7183},\"change\":0.6366}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Seasonally Adjusted, Australia\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 490,
+   "cacheWrite": 859,
+   "cacheRead": 13181
+  },
+  "ms": 5818
+ }
+}

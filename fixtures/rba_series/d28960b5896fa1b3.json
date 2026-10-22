@@ -1,0 +1,36 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f1",
+  "search": "overnight indexed swap",
+  "monthly": false,
+  "start": "2026-07"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F1 F1 INTEREST RATES AND YIELDS – MONEY MARKET",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f1-data.csv",
+  "series": [
+   {
+    "name": "1-month OIS",
+    "unit": "Per cent",
+    "frequency": "Daily",
+    "points": []
+   },
+   {
+    "name": "3-month OIS",
+    "unit": "Per cent",
+    "frequency": "Daily",
+    "points": []
+   },
+   {
+    "name": "6-month OIS",
+    "unit": "Per cent",
+    "frequency": "Daily",
+    "points": []
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:41:31.757Z"
+}

@@ -1,0 +1,59 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v12",
+ "kind": "vague",
+ "q": "Do landlords pay more than owner-occupiers on a standard variable loan?",
+ "date": "2026-10-19",
+ "cost": 0.00097,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Yes, on advertised rates landlords pay about 0.58 percentage points more** on a standard variable loan. In September 2026 the figures were:\n\n- **Owner-occupier standard variable:** 8.77% p.a.\n- **Investor standard variable:** 9.35% p.a.\n\nThe gap has been 0.58 points in every month since January 2022, when owner-occupiers were at 4.52% and investors at 5.10%.\n\nDiscounted variable rates show a smaller gap that has narrowed. In September 2026 owner-occupiers were at 6.80% and investors at 7.13%, a 0.33-point difference. In January 2022 the gap was 0.58 points, the same as the standard rate.\n\nThese are the banks' advertised rates from the RBA's F5 table. The RBA notes that rates actually paid on new loans are lower, and that data is in table F6, which I didn't pull here.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "investor_variable_standard",
+      "owner_occupier_variable_discounted",
+      "investor_variable_discounted"
+     ],
+     "start": "2022-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "investor_variable_standard",
+      "owner_occupier_variable_discounted",
+      "investor_variable_discounted"
+     ],
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2022-01-31\",4.52],[\"2022-02-28\",4.52],[\"2022-03-31\",4.52],[\"2022-04-30\",4.52],[\"2022-05-31\",4.77],[\"2022-06-30\",5.27],[\"2022-07-31\",5.77],[\"2022-08-31\",6.27],[\"2022-09-30\",6.77],[\"2022-10-31\",7.02],[\"2022-11-30\",7.27],[\"2022-12-31\",7.52],[\"2023-01-31\",7.52],[\"2023-02-28\",7.77],[\"2023-03-31\",8.02],[\"2023-04-30\",8.02],[\"2023-05-31\",8.27],[\"2023-06-30\",8.52],[\"2023-07-31\",8.52],[\"2023-08-31\",8.52],[\"2023-09-30\",8.52],[\"2023-10-31\",8.52],[\"2023-11-30\",8.77],[\"2023-12-31\",8.77],[\"2024-01-31\",8.77],[\"2024-02-29\",8.77],[\"2024-03-31\",8.77],[\"2024-04-30\",8.77],[\"2024-05-31\",8.77],[\"2024-06-30\",8.77],[\"2024-07-31\",8.77],[\"2024-08-31\",8.77],[\"2024-09-30\",8.77],[\"2024-10-31\",8.77],[\"2024-11-30\",8.77],[\"2024-12-31\",8.77],[\"2025-01-31\",8.77],[\"2025-02-28\",8.62],[\"2025-03-31\",8.52],[\"2025-04-30\",8.52],[\"2025-05-31\",8.37],[\"2025-06-30\",8.27],[\"2025-07-31\",8.27],[\"2025-08-31\",8.02],[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2022-01-31\",\"value\":4.52},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":4.25},{\""
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 826,
+   "cacheWrite": 3651,
+   "cacheRead": 9513
+  },
+  "ms": 4834
+ }
+}

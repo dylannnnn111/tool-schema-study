@@ -1,0 +1,163 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "WPI",
+  "key": "3.THRPEB...20.AUS.Q",
+  "last_n": 8
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS WPI",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB...20.AUS.Q?lastNObservations=8",
+  "series": [
+   {
+    "name": "Private",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-Q3",
+      3.5
+     ],
+     [
+      "2024-Q4",
+      3.3
+     ],
+     [
+      "2025-Q1",
+      3.3
+     ],
+     [
+      "2025-Q2",
+      3.4
+     ],
+     [
+      "2025-Q3",
+      3.3
+     ],
+     [
+      "2025-Q4",
+      3.4
+     ],
+     [
+      "2026-Q1",
+      3.2
+     ],
+     [
+      "2026-Q2",
+      3.1
+     ]
+    ],
+    "start": {
+     "period": "2024-Q3",
+     "value": 3.5
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.1
+    },
+    "change": -0.4
+   },
+   {
+    "name": "Public",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-Q3",
+      3.7
+     ],
+     [
+      "2024-Q4",
+      2.8
+     ],
+     [
+      "2025-Q1",
+      3.6
+     ],
+     [
+      "2025-Q2",
+      3.7
+     ],
+     [
+      "2025-Q3",
+      3.9
+     ],
+     [
+      "2025-Q4",
+      4
+     ],
+     [
+      "2026-Q1",
+      3.4
+     ],
+     [
+      "2026-Q2",
+      3.4
+     ]
+    ],
+    "start": {
+     "period": "2024-Q3",
+     "value": 3.7
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.4
+    },
+    "change": -0.3
+   },
+   {
+    "name": "Private and Public",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-Q3",
+      3.6
+     ],
+     [
+      "2024-Q4",
+      3.2
+     ],
+     [
+      "2025-Q1",
+      3.5
+     ],
+     [
+      "2025-Q2",
+      3.4
+     ],
+     [
+      "2025-Q3",
+      3.3
+     ],
+     [
+      "2025-Q4",
+      3.4
+     ],
+     [
+      "2026-Q1",
+      3.2
+     ],
+     [
+      "2026-Q2",
+      3.2
+     ]
+    ],
+    "start": {
+     "period": "2024-Q3",
+     "value": 3.6
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.2
+    },
+    "change": -0.4
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from corresponding quarter of previous year, Total hourly rates of pay excluding bonuses, All Industries, Seasonally Adjusted, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:18:32.515Z"
+}

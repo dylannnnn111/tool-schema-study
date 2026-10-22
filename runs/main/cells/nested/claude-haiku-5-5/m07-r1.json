@@ -1,0 +1,109 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m07",
+ "kind": "multi",
+ "q": "What rate are owner-occupiers actually paying on new variable loans, compared with the advertised rate?",
+ "date": "2026-10-19",
+ "cost": 0.00185,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Owner-occupiers are paying about 6.2% on new variable loans, roughly 0.6 percentage points below the advertised discounted rate and about 2.6 points below the standard rate.**\n\n- **Actually paid (new variable loans, owner-occupier, all lenders):** 6.2% in August 2026 (RBA F6, latest available). This is the average rate on loans funded that month, so it reflects the discounts borrowers negotiate.\n- **Advertised discounted variable (banks):** 6.80% in September 2026 (RBA F5). The August figure was also 6.80%, so the comparison holds for the same month.\n- **Advertised standard variable (banks):** 8.77% in September 2026. The August figure was also 8.77%.\n\nThe gap between advertised discounted and actual new-loan rates has narrowed over time. In January 2025 it was about 0.8 points (7.07% advertised discounted vs 6.3% actual). Advertised rates and actual rates both moved up in 2026: the actual new-loan rate rose from a low of 5.5% (August 2025 to January 2026) to 6.3% in June 2026, then eased to 6.2%.\n\nTwo caveats: the F5 advertised rates cover banks only, while the F6 actual rates cover all institutions, so the comparison is close but not exact. Also, F6 runs about a month behind F5, which is why the latest actual figure is August and the advertised one is September.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f6",
+     "select": {
+      "search": "owner-occupier variable"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f6",
+     "search": "owner-occupier variable",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F6\",\"title\":\"F6 - HOUSING LENDING RATES\",\"columns\":[{\"id\":\"FLRHOOTL\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOTA\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOVL\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOVA\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOFA\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOFB\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOI\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOP\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOFT"
+   },
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "select": {
+      "rates": [
+       "owner_occupier_variable_standard",
+       "owner_occupier_variable_discounted",
+       "owner_occupier_3yr_fixed"
+      ]
+     },
+     "period": {
+      "start": "2025-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted",
+      "owner_occupier_3yr_fixed"
+     ],
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",8.77],[\"2025-02-28\",8.62],[\"2025-03-31\",8.52],[\"2025-04-30\",8.52],[\"2025-05-31\",8.37],[\"2025-06-30\",8.27],[\"2025-07-31\",8.27],[\"2025-08-31\",8.02],[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2025-01-31\",\"value\":8.77},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",7.07],[\"2025-02-28\",6.88],[\"2025-03-31\",6.82],[\"2025-04-30\",6.55],[\"2025-05-31\",6.37],[\"2025-06-30\",6.3],[\"2025-07-31\",6.3],[\"2025-08-31\",6.05],[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2025-01-31\",\"value\":7.07},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":-0.27},{\"name\":\"Housing loans; Banks; 3-year fixed; Owner-occupier\",\"unit\":\"Per cent"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f6",
+     "select": {
+      "series": [
+       "FLRHOFVA",
+       "FLRHOOVA",
+       "FLRHOFTA"
+      ]
+     },
+     "period": {
+      "start": "2025-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f6",
+     "series": [
+      "FLRHOFVA",
+      "FLRHOOVA",
+      "FLRHOFTA"
+     ],
+     "monthly": false,
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F6 F6 - HOUSING LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f6-data.csv\",\"series\":[{\"name\":\"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",6.3],[\"2025-02-28\",6.1],[\"2025-03-31\",6],[\"2025-04-30\",6],[\"2025-05-31\",5.8],[\"2025-06-30\",5.8],[\"2025-07-31\",5.8],[\"2025-08-31\",5.5],[\"2025-09-30\",5.5],[\"2025-10-31\",5.5],[\"2025-11-30\",5.5],[\"2025-12-31\",5.5],[\"2026-01-31\",5.5],[\"2026-02-28\",5.7],[\"2026-03-31\",5.9],[\"2026-04-30\",6],[\"2026-05-31\",6.2],[\"2026-06-30\",6.3],[\"2026-07-31\",6.2],[\"2026-08-31\",6.2]],\"start\":{\"period\":\"2025-01-31\",\"value\":6.3},\"latest\":{\"period\":\"2026-08-31\",\"value\":6.2},\"change\":-0.1},{\"name\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",6.3],[\"2025-02-28\",6.2],[\"2025-03-31\",6.1],[\"2025-04-30\",6.1],[\"2025-05-31\",5.9],[\"2025-06-30\",5.8],[\"2025-07-31\",5.8],[\"2025-08-31\",5.5],[\"2025-09-30\",5.5],[\"2025-10-31\",5.5],[\"2025-11-30\",5.5],[\"2025-12-31\",5.5],[\"2026-01-31\",5.5],[\"2026-02-28\",5.8],[\"2026-03-31\",6],[\"2026-04-30\",6],[\"2026-05-31\",6.2],[\"2026-06-30\",6.3],[\"2026-07-31\",6.2],[\"2026-08-31\",6.2]],\"start\":{\"period\":\"2025-01-31\",\"value\":6.3},\"latest\":{\"period\":\"2026-08-31\",\"value\":6.2},\"change\":-0.1},{\"name\":\"Lending rates; Housing credit; New loans funded in the month; "
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1610,
+   "cacheWrite": 6621,
+   "cacheRead": 21171
+  },
+  "ms": 8733
+ }
+}

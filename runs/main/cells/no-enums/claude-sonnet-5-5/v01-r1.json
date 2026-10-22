@@ -1,0 +1,94 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "v01",
+ "kind": "vague",
+ "q": "Is inflation under control?",
+ "date": "2026-10-19",
+ "cost": 0.02279,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**No. On the latest data, inflation is not under control, and it has been getting worse.**\n\n**Inflation (ABS monthly CPI, August 2026)**\n- Headline CPI was **4.0%** over the year to August. That is above the RBA's 2–3% target band. It was 1.9% in June 2025, so it has more than doubled since then.\n- Headline CPI has stayed between 3.4% and 4.6% for the past year. It peaked at 4.6% in March 2026, eased to 3.5% in July, then rose again in August.\n- **Trimmed mean**, the RBA's preferred underlying measure, was **3.6%** in August. That is also above the band. It has risen almost every month, from 2.8% in June 2025 to 3.3% by the end of 2025 and 3.6% from June 2026. This matters because it suggests the problem is broad-based and not just a few volatile items.\n\n**The RBA's response**\n- The RBA has raised rates. The cash rate averaged about 3.60% from September 2025 to January 2026. It rose to about 4.35% by June 2026 and was 4.36% in September 2026.\n- The rate has been steady since June. The August jump in headline inflation may put pressure on the RBA to tighten further.\n\n**The cost to the economy**\n- Unemployment has risen from 4.1% in January 2026 to **4.7% in September 2026**.\n- Rates are higher and the labour market is softening, but underlying inflation has not yet come down.\n\n**Summary:** Inflation is running about 1 percentage point above the top of the target band on the headline measure and 0.6 points above on the trimmed mean. The earlier rate rises haven't brought it down yet. The next monthly CPI release, and whether the RBA hikes again, are the key things to watch.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-06\",\"value\":2.8},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.8},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-06\",\"value\":1.9},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":2.1}],\"notes\":[\"All series: Percentage change from previous year, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-06-30\",\"value\":3.85},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.51}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.AUS.M?startPeriod=2025-10\",\"series\":[{\"name\":\"Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10\",4.3187],[\"2025-11\",4.3144],[\"2025-12\",4.1153],[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\",4.7183]],\"start\":{\"period\":\"2025-10\",\"value\":4.3187},\"latest\":{\"period\":\"2026-09\",\"value\":4.7183},\"change\":0.3996}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Seasonally Adjusted, Australia\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 769,
+   "cacheWrite": 5867,
+   "cacheRead": 4240
+  },
+  "ms": 7454
+ }
+}

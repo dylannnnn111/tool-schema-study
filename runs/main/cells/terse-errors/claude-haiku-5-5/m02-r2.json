@@ -1,0 +1,72 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m02",
+ "kind": "multi",
+ "q": "What's the real cash rate - the cash rate minus trimmed mean inflation?",
+ "date": "2026-10-19",
+ "cost": 0.00063,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The real cash rate is about **0.76 percentage points**, or roughly 0.8%.\n\n- **Cash rate:** 4.36% (monthly average, September 2026)\n- **Trimmed mean inflation:** 3.6% year-on-year (August 2026)\n\n4.36 − 3.6 = 0.76. The latest trimmed mean figure is for August, while the cash rate is available for September. Matching both to August (cash rate 4.35%) gives 0.75, so the answer is about 0.75–0.76 either way.\n\nThe cash rate has risen from 3.60% in December 2025 to 4.36% now. Trimmed mean inflation has risen over the same period from 3.3% to 3.6%, so the real rate has fallen from about 0.3 points to about 0.8 points.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "trimmed_mean"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.999902..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.999902..50.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.9},\"latest\":{\"period\":\"2025-Q3\",\"value\":3},\"change\":0.1}],\"notes\":[\"All series: Percentage change from previous year, Trimmed Mean, Seasonally Adjusted, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 717,
+   "cacheWrite": 1366,
+   "cacheRead": 9612
+  },
+  "ms": 4108
+ }
+}

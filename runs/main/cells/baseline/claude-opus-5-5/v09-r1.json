@@ -1,0 +1,65 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "v09",
+ "kind": "vague",
+ "q": "Has eating out got more expensive in Melbourne?",
+ "date": "2026-10-19",
+ "cost": 0.03071,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes. Eating out in Melbourne keeps getting more expensive. Prices are still rising, though a little more slowly than a few months ago and a bit more slowly than in the rest of the country.\n\n**Latest figure (August 2026):** \"Meals out and takeaway foods\" prices in Melbourne were **3.5% higher than a year earlier** (ABS monthly CPI). Melbourne's overall inflation was also **3.5%**, so restaurant and takeaway prices rose about as fast as everything else.\n\n**Recent trend (year-on-year change, Melbourne):**\n| Period | Meals out & takeaway | All items |\n|---|---|---|\n| Apr 2025 | 2.6% | 2.3% |\n| Aug 2025 | 3.4% | 2.5% |\n| Jan 2026 | 3.8% | 3.3% |\n| May 2026 | **4.4%** (peak) | 3.5% |\n| Jul 2026 | 4.1% | 3.2% |\n| Aug 2026 | 3.5% | 3.5% |\n\n- From early 2025 the annual rate climbed from about 2.5% to a peak of 4.4% in May 2026. It has eased since then, down to 3.5% in August.\n- **Longer view:** the quarterly CPI shows the rate was even higher in early 2024, at **5.8%** in the March quarter. It cooled to about 2.3–2.7% through the first half of 2025 before picking up again. These are yearly growth rates, so they add up: prices are well above where they were two or three years ago, not just slightly up on last year.\n\n**Compared with the rest of Australia:** across the eight capitals, meals out and takeaway prices rose **4.1%** in the year to August 2026, so Melbourne is currently a bit below the national rate.\n\n**In short:** eating out in Melbourne cost about 3.5% more in August 2026 than a year earlier. That's down from 4.4% in May, and in recent months it has risen at or above Melbourne's overall inflation rate.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "meals_out",
+      "all_groups"
+     ],
+     "cities": [
+      "melbourne",
+      "australia"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "meals_out",
+      "all_groups"
+     ],
+     "cities": [
+      "melbourne",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30007+10001..2+50.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30007+10001..2+50.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"All groups CPI - Melbourne (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.3],[\"2025-05\",1.8],[\"2025-06\",1.7],[\"2025-07\",2.3],[\"2025-08\",2.5],[\"2025-09\",2.7],[\"2025-10\",3.3],[\"2025-11\",3],[\"2025-12\",3.1],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",4.6],[\"2026-04\",3.9],[\"2026-05\",3.5],[\"2026-06\",3.2],[\"2026-07\",3.2],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-04\",\"value\":2.3},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":1.2},{\"name\":\"Meals out and take away foods - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3],[\"2025-05\",2.8],[\"2025-06\",3.4],[\"2025-07\",2.9],[\"2025-08\",3.4],[\"2025-09\",3.6],[\"2025-10\",3.6],[\"2025-11\",3.5],[\"2025-12\",3.5],[\"2026-01\",3.9],[\"2026-02\",3.7],[\"2026-03\",3.9],[\"2026-04\",3.7],[\"2026-05\",4],[\"2026-06\",4],[\"2026-07\",4.5],[\"2026-08\",4.1]],\"start\":{\"period\":\"2025-04\",\"value\":3},\"latest\":{\"period\":\"2026-08\",\"value\":4.1},\"change\":1.1},{\"name\":\"Meals out and take away foods - Melbourne (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.6],[\"2025-05\",2.3],[\"2025-06\",3.7],[\"2025-07\",2.5],[\"2025-08\",3.4],[\"2025-09\",3.5],[\"2025-10\",3.5],[\"2025-11\",3.3],[\"2025-12\",3.3],[\"2026-01\",3.8],[\"2026-02\",3.5],[\"2026-03\",3.7],[\"2026-04\",3."
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 890,
+   "cacheWrite": 2197,
+   "cacheRead": 9505
+  },
+  "ms": 13443
+ }
+}

@@ -1,0 +1,316 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v05",
+ "kind": "vague",
+ "q": "Petrol's killing me. How much more am I paying than a year ago?",
+ "date": "2026-10-19",
+ "cost": 0.00233,
+ "score": {
+  "tools": true,
+  "args": false,
+  "answer": true,
+  "recovered": true,
+  "calls": 13,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Fuel prices are about **13.5% higher** than a year ago. That's the ABS figure for August 2026, the latest month available, compared with August 2025.\n\nThe ABS publishes automotive fuel as a price index, not a per-litre petrol price, so this is an average across fuel types. For a rough dollar figure, multiply your usual price per litre by 0.135. At $2.00/L, that's about 27 cents more per litre.\n\nThe rise has been uneven. Fuel prices were falling through the first half of 2025, and by early 2026 they were still roughly flat on the year. They then jumped sharply: up 24.2% year on year in March 2026 and 18.6% in April. They dropped back in June (down 7.3% on the year), then rose again to +13.5% in August.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "measure": "index",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.Automotive fuel..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/1.Automotive fuel..50.Q?startPeriod=2025-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Automotive fuel..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Automotive fuel..50.Q?startPeriod=2025-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "start": "2025-01",
+     "end": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2025-01",
+     "end": "2026-09"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.Automotive fuel..50.M?startPeriod=2025-01&endPeriod=2026-09 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/1.Automotive fuel..50.Q?startPeriod=2025-Q1&endPeriod=2026-Q3\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "Fuel"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Fuel..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Fuel..50.Q?startPeriod=2025-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 2,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups"
+     ],
+     "measure": "annual_change",
+     "start": "2025-Q1"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "start",
+      "problem": "\"2025-Q1\" should be YYYY, YYYY-MM or YYYY-MM-DD"
+     }
+    ],
+    "seen": "Error: invalid arguments for get_cpi:\n- start: \"2025-Q1\" should be YYYY, YYYY-MM or YYYY-MM-DD"
+   },
+   {
+    "turn": 2,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "automotive fuel prices"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "automotive fuel prices"
+    },
+    "seen": "{\"results\":[]}"
+   },
+   {
+    "turn": 3,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.4],[\"2025-Q2\",2.1],[\"2025-Q3\",3.2]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.4},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.2},\"change\":0.8}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 3,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "consumer price index"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "consumer price index"
+    },
+    "seen": "{\"results\":[{\"id\":\"CPI\",\"version\":\"2.0.0\",\"name\":\"Consumer Price Index (CPI)\"},{\"id\":\"CPI_WEIGHTS\",\"version\":\"1.0.0\",\"name\":\"Consumer Price Index (CPI) Weights\"},{\"id\":\"CPI_Q\",\"version\":\"1.0.0\",\"name\":\"Consumer Price Index (CPI) Quarterly\"},{\"id\":\"CPI_M\",\"version\":\"1.2.0\",\"name\":\"Monthly Consumer Price Index (CPI) indicator\"},{\"id\":\"WPI\",\"version\":\"1.2.0\",\"name\":\"Wage Price Index\"},{\"id\":\"ITPI_EXP\",\"version\":\"1.0.0\",\"name\":\"Export Price Index\"},{\"id\":\"ITPI_IMP\",\"version\":\"1.0.0\",\"name\":\"Import Price Index\"},{\"id\":\"RPPI\",\"version\":\"1.0.0\",\"name\":\"Residential Property Price Index\"},{\"id\":\"PPI\",\"version\":\"1.1.3\",\"name\":\"Producer Price Indexes by Industry\"},{\"id\":\"PPI_FD\",\"version\":\"1.1.0\",\"name\":\"Producer Price Indexes, Final Demand\"}]}"
+   },
+   {
+    "turn": 4,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "07.2.2"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "07.2.2"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.07.2.2..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.07.2.2..50.Q?startPeriod=2025-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 4,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "monthly_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "monthly_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/2.Automotive fuel..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/2.Automotive fuel..50.Q?startPeriod=2025-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 5,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "CPI",
+     "code_search": "fuel"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "CPI",
+     "code_search": "fuel"
+    },
+    "seen": "{\"id\":\"CPI\",\"name\":\"Consumer Price Index (CPI)\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"115524\",\"label\":\"Gas and other household fuels\"},{\"code\":\"40081\",\"label\":\"Automotive fuel\"}],\"totalCodes\":166},{\"id\":\"TSEST\",\"position\":3,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":4,\"codes\":[],\"totalCodes\":9},{\"id\":\"FREQ\",\"position\":5,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 6,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "CPI",
+     "key": "3.40081..50.M",
+     "start": "2025-01",
+     "end": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "CPI",
+     "key": "3.40081..50.M",
+     "start": "2025-01",
+     "end": "2026-09"
+    },
+    "seen": "{\"source\":\"ABS CPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081..50.M?startPeriod=2025-01&endPeriod=2026-09\",\"series\":[{\"name\":\"Automotive fuel - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",-1.9],[\"2025-02\",-5.5],[\"2025-03\",-7.7],[\"2025-04\",-12],[\"2025-05\",-10],[\"2025-06\",-7.9],[\"2025-07\",-5.5],[\"2025-08\",-1.7],[\"2025-09\",2.8],[\"2025-10\",1.9],[\"2025-11\",3.5],[\"2025-12\",-0.8],[\"2026-01\",-2.7],[\"2026-02\",-7.2],[\"2026-03\",24.2],[\"2026-04\",18.6],[\"2026-05\",7.7],[\"2026-06\",-7.3],[\"2026-07\",-0.4],[\"2026-08\",13.5]],\"start\":{\"period\":\"2025-01\",\"value\":-1.9},\"latest\":{\"period\":\"2026-08\",\"value\":13.5},\"change\":15.4}],\"notes\":[\"All series: Percentage change from previous year, Automotive fuel, Original, Australia\"]}"
+   },
+   {
+    "turn": 6,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "CPI",
+     "key": "1.40081..50.M",
+     "start": "2025-01",
+     "end": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "CPI",
+     "key": "1.40081..50.M",
+     "start": "2025-01",
+     "end": "2026-09"
+    },
+    "seen": "{\"source\":\"ABS CPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.40081..50.M?startPeriod=2025-01&endPeriod=2026-09\",\"series\":[{\"name\":\"Seasonally Adjusted\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",100.4],[\"2025-02\",101.62],[\"2025-03\",100.84],[\"2025-04\",98.28],[\"2025-05\",95.34],[\"2025-06\",98.75],[\"2025-07\",98.75],[\"2025-08\",99.49],[\"2025-09\",100],[\"2025-10\",99.1],[\"2025-11\",101.55],[\"2025-12\",101],[\"2026-01\",97.72],[\"2026-02\",94.35],[\"2026-03\",125.29],[\"2026-04\",116.53],[\"2026-05\",102.69],[\"2026-06\",91.53],[\"2026-07\",98.4],[\"2026-08\",112.95]],\"start\":{\"period\":\"2025-01\",\"value\":100.4},\"latest\":{\"period\":\"2026-08\",\"value\":112.95},\"change\":12.55},{\"name\":\"Original\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",100.4],[\"2025-02\",101.62],[\"2025-03\",100.84],[\"2025-04\",98.28],[\"2025-05\",95.34],[\"2025-06\",98.75],[\"2025-07\",98.75],[\"2025-08\",99.49],[\"2025-09\",100],[\"2025-10\",99.1],[\"2025-11\",101.55],[\"2025-12\",101],[\"2026-01\",97.72],[\"2026-02\",94.35],[\"2026-03\",125.29],[\"2026-04\",116.53],[\"2026-05\",102.69],[\"2026-06\",91.53],[\"2026-07\",98.4],[\"2026-08\",112.95]],\"start\":{\"period\":\"2025-01\",\"value\":100.4},\"latest\":{\"period\":\"2026-08\",\"value\":112.95},\"change\":12.55}],\"notes\":[\"All series: Index numbers, Automotive fuel, Australia\"]}"
+   }
+  ],
+  "turns": 8,
+  "status": "done",
+  "usage": {
+   "input": 18,
+   "output": 2400,
+   "cacheWrite": 5930,
+   "cacheRead": 39108
+  },
+  "ms": 27483
+ }
+}

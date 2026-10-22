@@ -1,0 +1,49 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o01",
+ "kind": "out-of-scope",
+ "q": "What's the Friday office gap in Melbourne's CBD?",
+ "date": "2026-10-19",
+ "cost": 0.00785,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a figure for Melbourne's CBD. The Friday office gap tool only uses Sydney's Opal tap data from Transport for NSW, and I don't have an equivalent Melbourne source.\n\nSydney CBD's Friday gap is the nearest comparison. It measures Friday evening tap-ons (3pm–7pm) as a share of the Tuesday–Thursday average, so 1.0 would mean no gap.\n\n- **Latest (September 2026):** 0.783, so Friday volumes are about 22% below midweek.\n- **Past 12 months:** the ratio ranged from 0.744 (December 2025 and January 2026) to 0.80 (October 2025).\n- **Recent trend:** it rose from 0.763 in February 2026 to 0.799 in August 2026, then slipped back in September.\n\nTo measure Melbourne, you'd need Public Transport Victoria myki tap data or pedestrian counts from the City of Melbourne. I can't pull either of those here.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10\",0.8],[\"2025-11\",0.759],[\"2025-12\",0.744],[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2025-10\",\"value\":0.8},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":-0.017}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 514,
+   "cacheWrite": 697,
+   "cacheRead": 9600
+  },
+  "ms": 5529
+ }
+}

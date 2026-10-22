@@ -1,0 +1,11 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "rental prices dwelling bedrooms suburb"
+ },
+ "ok": true,
+ "result": {
+  "results": []
+ },
+ "fetchedAt": "2026-10-18T21:48:07.045Z"
+}

@@ -1,0 +1,135 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "v09",
+ "kind": "vague",
+ "q": "Has eating out got more expensive in Melbourne?",
+ "date": "2026-10-19",
+ "cost": 0.01993,
+ "score": {
+  "tools": true,
+  "args": false,
+  "answer": true,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes. Eating out in Melbourne costs more than a year ago, and prices are rising a little faster than they were in 2025.\n\n**Latest figures (August 2026, change on August 2025):**\n- Restaurant meals: **+3.3%**\n- Meals out and takeaway foods, which also includes takeaway: **+3.5%**\n- All items in Melbourne, for comparison: **+3.5%**\n\n**How this has moved:**\n- Restaurant meals rose 2.5% in the year to April 2025 and 3.4% in the year to August 2025. They then held at roughly 2.8–3.2% through to March 2026.\n- Annual restaurant inflation peaked at **4.1% in May 2026**. It was 3.9% in July 2026 and eased to 3.3% in August.\n- Meals out and takeaway foods peaked at 4.4% in May 2026. It has run at 3.3–4.4% since mid-2025.\n\nRestaurant prices are rising at about the same pace as Melbourne prices overall, which is also +3.5%. Takeaway and restaurant prices together (+3.5%) are rising slightly faster than restaurant meals alone (+3.3%). Over the past year, eating out has become more expensive roughly in line with general inflation, not sharply faster.\n\nThese are annual percentage changes from the ABS CPI, using original (not seasonally adjusted) data.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "melbourne"
+     ],
+     "items": [
+      "meals_out_and_takeaway_foods"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "meals_out_and_takeaway_foods"
+     ],
+     "cities": [
+      "melbourne"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.meals_out_and_takeaway_foods..2.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.meals_out_and_takeaway_foods..2.Q?startPeriod=2025-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "melbourne"
+     ],
+     "items": [
+      "all_groups"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "melbourne"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..2.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..2.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"All groups CPI - Melbourne (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.3],[\"2025-05\",1.8],[\"2025-06\",1.7],[\"2025-07\",2.3],[\"2025-08\",2.5],[\"2025-09\",2.7],[\"2025-10\",3.3],[\"2025-11\",3],[\"2025-12\",3.1],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",4.6],[\"2026-04\",3.9],[\"2026-05\",3.5],[\"2026-06\",3.2],[\"2026-07\",3.2],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-04\",\"value\":2.3},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":1.2},{\"name\":\"All groups CPI - Melbourne (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.3],[\"2025-Q2\",2],[\"2025-Q3\",2.6]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.3},\"latest\":{\"period\":\"2025-Q3\",\"value\":2.6},\"change\":0.3}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Melbourne\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "CPI",
+     "code_search": "meals"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "CPI",
+     "code_search": "meals"
+    },
+    "seen": "{\"id\":\"CPI\",\"name\":\"Consumer Price Index (CPI)\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"30007\",\"label\":\"Meals out and take away foods\"},{\"code\":\"40025\",\"label\":\"Restaurant meals\"}],\"totalCodes\":166},{\"id\":\"TSEST\",\"position\":3,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":4,\"codes\":[],\"totalCodes\":9},{\"id\":\"FREQ\",\"position\":5,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 2,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "melbourne"
+     ],
+     "items": [
+      "30007",
+      "40025"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "30007",
+      "40025"
+     ],
+     "cities": [
+      "melbourne"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30007+40025..2.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30007+40025..2.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"Restaurant meals - Melbourne (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.5],[\"2025-05\",2.1],[\"2025-06\",2.7],[\"2025-07\",2.2],[\"2025-08\",3.4],[\"2025-09\",3.4],[\"2025-10\",3.2],[\"2025-11\",2.9],[\"2025-12\",2.9],[\"2026-01\",2.8],[\"2026-02\",2.8],[\"2026-03\",3.2],[\"2026-04\",3.5],[\"2026-05\",4.1],[\"2026-06\",3.2],[\"2026-07\",3.9],[\"2026-08\",3.3]],\"start\":{\"period\":\"2025-04\",\"value\":2.5},\"latest\":{\"period\":\"2026-08\",\"value\":3.3},\"change\":0.8},{\"name\":\"Meals out and take away foods - Melbourne (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.6],[\"2025-05\",2.3],[\"2025-06\",3.7],[\"2025-07\",2.5],[\"2025-08\",3.4],[\"2025-09\",3.5],[\"2025-10\",3.5],[\"2025-11\",3.3],[\"2025-12\",3.3],[\"2026-01\",3.8],[\"2026-02\",3.5],[\"2026-03\",3.7],[\"2026-04\",3.7],[\"2026-05\",4.4],[\"2026-06\",3.9],[\"2026-07\",4.1],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-04\",\"value\":2.6},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":0.9},{\"name\":\"Meals out and take away foods - Melbourne (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.6],[\"2025-Q2\",2.3],[\"2025-Q3\",3.4]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.6},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.4},\"change\":0.8},{\"name\":\"Restaurant meals - Melbourne (quarterly)"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1098,
+   "cacheWrite": 2988,
+   "cacheRead": 14562
+  },
+  "ms": 16831
+ }
+}

@@ -1,0 +1,173 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m09",
+ "kind": "multi",
+ "q": "Have building approvals picked up since the RBA started cutting?",
+ "date": "2026-10-19",
+ "cost": 0.00379,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": null,
+  "recovered": null,
+  "calls": 9,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Yes, modestly.** Dwelling approvals were already rising during the cutting cycle and have stayed higher since, though the rise is not dramatic and the RBA reversed course in early 2026.\n\n**Timeline (cash rate target, monthly average):**\n- Feb 2025: first cut, from 4.35% to 4.25%. The rate fell to 3.60% by Sep 2025 and held there through Jan 2026.\n- Feb 2026: the RBA started lifting the rate. It reached 4.35% by Jun 2026 and was 4.36% in Sep 2026.\n\n**Total dwelling units approved (Australia, original series, monthly average):**\n\n| Period | Avg per month | Change vs pre-cut |\n|---|---|---|\n| Jun 2024 to Jan 2025 (pre-cuts) | ~15,070 | — |\n| Feb to Sep 2025 (cutting phase) | ~16,530 | ~+10% |\n| Mar to Aug 2026 (after hikes began) | ~18,050 | ~+20% |\n\n**Latest comparison:** August 2026 had 16,967 dwellings approved, up about 10% on August 2025 (15,377). June to August 2026 combined was about 10% above the same months in 2025.\n\n**Value of residential building work** rose faster. June to August 2026 totalled about $36.1bn, roughly 22% above the same three months of 2025. Part of that is higher build costs, not just more projects.\n\n**Caveats:**\n- I could only get the original (not seasonally adjusted) series at this level, so I compared averages and year-on-year changes rather than month-to-month moves.\n- Approvals respond to many things besides interest rates, including construction costs, state policy and apartment market conditions. Approvals also lag financing conditions by months, so the rate cuts are only one plausible driver.\n- Approvals are not construction activity. Work can take a year or more to start and finish after approval.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-06-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "building approvals"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "building approvals"
+    },
+    "seen": "{\"results\":[{\"id\":\"BA_SA2_2016-21\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by SA2 and above, 2016 to 2021\"},{\"id\":\"BA_LGA2018\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2018)\"},{\"id\":\"BA_LGA2019\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2019)\"},{\"id\":\"BA_LGA2020\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2020)\"},{\"id\":\"BA_LGA2021\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2021)\"},{\"id\":\"BA_LGA2022\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2022)\"},{\"id\":\"BA_LGA2023\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2023)\"},{\"id\":\"BA_LGA2024\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2024)\"},{\"id\":\"BA_LGA2025\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2025)\"},{\"id\":\"BA_LGA2026\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2026)\"},{\"id\":\"BA_SA2\",\"version\":\"2.0.0\",\"name\":\"Building Approvals by SA2 and above, from July 2021 onwards\"},{\"id\":\"BA_SA2_201116\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by SA2 and above, July 2011 to June 2016\"},{\"id\":\"BA_GCCSA\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above\"}]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "code_search": "Australia"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "code_search": "Australia"
+    },
+    "seen": "{\"id\":\"BA_GCCSA\",\"name\":\"Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":3},{\"id\":\"VALUE\",\"position\":2,\"codes\":[],\"totalCodes\":7},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":3},{\"id\":\"WORK_TYPE\",\"position\":4,\"codes\":[],\"totalCodes\":9},{\"id\":\"BUILDING_TYPE\",\"position\":5,\"codes\":[],\"totalCodes\":34},{\"id\":\"TSEST\",\"position\":6,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":7,\"codes\":[{\"code\":\"AUS\",\"label\":\"Australia\"},{\"code\":\"4\",\"label\":\"South Australia\"},{\"code\":\"5\",\"label\":\"Western Australia\"},{\"code\":\"8\",\"label\":\"Australian Capital Territory\"},{\"code\":\"8ACTE\",\"label\":\"Australian Capital Territory\"}],\"totalCodes\":26},{\"id\":\"FREQ\",\"position\":8,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<VALUE>.<SECTOR>.<WORK_TYPE>.<BUILDING_TYPE>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 2,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "code_search": "Total"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "code_search": "Total"
+    },
+    "seen": "{\"id\":\"BA_GCCSA\",\"name\":\"Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":3},{\"id\":\"VALUE\",\"position\":2,\"codes\":[{\"code\":\"1\",\"label\":\"Total\"}],\"totalCodes\":7},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[{\"code\":\"9\",\"label\":\"Total Sectors\"}],\"totalCodes\":3},{\"id\":\"WORK_TYPE\",\"position\":4,\"codes\":[{\"code\":\"TOT\",\"label\":\"Total Work\"}],\"totalCodes\":9},{\"id\":\"BUILDING_TYPE\",\"position\":5,\"codes\":[{\"code\":\"120\",\"label\":\"Semi-detached, row or terrace houses, townhouses - Total\"},{\"code\":\"130\",\"label\":\"Apartments - Total including those attached to a house\"},{\"code\":\"150\",\"label\":\"Total Other Residential\"},{\"code\":\"100\",\"label\":\"Total Residential\"},{\"code\":\"200\",\"label\":\"Commercial Buildings - Total\"},{\"code\":\"300\",\"label\":\"Industrial Buildings - Total\"},{\"code\":\"400\",\"label\":\"Other Non-residential - Total\"},{\"code\":\"700\",\"label\":\"Total Non-residential\"},{\"code\":\"TOT\",\"label\":\"Total\"}],\"totalCodes\":34},{\"id\":\"TSEST\",\"position\":6,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":7,\"codes\":[],\"totalCodes\":26},{\"id\":\"FREQ\",\"position\":8,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<VALUE>.<SECTOR>.<WORK_TYPE>.<BUILDING_TYPE>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 3,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.1.9.TOT.100.+.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.1.9.TOT.100.+.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/+.1.9.TOT.100.+.AUS.M?startPeriod=2024-06\",\"series\":[{\"name\":\"Value of building jobs\",\"unit\":\"Australian Dollars (Thousands)\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06\",7316998],[\"2024-07\",9295306],[\"2024-08\",8730386],[\"2024-09\",8738183],[\"2024-10\",9716279],[\"2024-11\",8951997],[\"2024-12\",8287450],[\"2025-01\",7596715],[\"2025-02\",9309582],[\"2025-03\",9278067],[\"2025-04\",8516220],[\"2025-05\",10028891],[\"2025-06\",9658395],[\"2025-07\",10562272],[\"2025-08\",9331936],[\"2025-09\",11243549],[\"2025-10\",10594263],[\"2025-11\",11619752],[\"2025-12\",9346193],[\"2026-01\",7141535],[\"2026-02\",12315552],[\"2026-03\",11776255],[\"2026-04\",11191011],[\"2026-05\",10271223],[\"2026-06\",12572929],[\"2026-07\",12298578],[\"2026-08\",11263665]],\"start\":{\"period\":\"2024-06\",\"value\":7316998},\"latest\":{\"period\":\"2026-08\",\"value\":11263665},\"change\":3946667},{\"name\":\"Number of building jobs valued $50,000 or more\",\"unit\":\"Number\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06\",13068],[\"2024-07\",14926],[\"2024-08\",14546],[\"2024-09\",13696],[\"2024-10\",15073],[\"2024-11\",14354],[\"2024-12\",11350],[\"2025-01\",9962],[\"2025-02\",13600],[\"2025-03\",13947],[\"2025-04\",12946],[\"2025-05\",14769],[\"2025-06\",13806],[\"2025-07\",15351],[\"2025-08\",13912],[\"2025-09\",14828],[\"2025-10\",15758],[\"2025-11\",14237],[\"2025-12\",12740],[\"2026-01\",10338],[\"2026-02\",15532],[\"2026-03\",16853],[\"2026-04\",15962],[\"2026-05\",16842],[\"2026-06\",17113],[\"2026-07\",17187],[\"2026-08\",16278]]"
+   },
+   {
+    "turn": 4,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.1.9.TOT.100.20.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.1.9.TOT.100.20.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/+.1.9.TOT.100.20.AUS.M?startPeriod=2024-06\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 5,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "code_search": "seasonal"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "code_search": "seasonal"
+    },
+    "seen": "{\"id\":\"BA_GCCSA\",\"name\":\"Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":3},{\"id\":\"VALUE\",\"position\":2,\"codes\":[],\"totalCodes\":7},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":3},{\"id\":\"WORK_TYPE\",\"position\":4,\"codes\":[],\"totalCodes\":9},{\"id\":\"BUILDING_TYPE\",\"position\":5,\"codes\":[],\"totalCodes\":34},{\"id\":\"TSEST\",\"position\":6,\"codes\":[{\"code\":\"20\",\"label\":\"Seasonally Adjusted\"}],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":7,\"codes\":[],\"totalCodes\":26},{\"id\":\"FREQ\",\"position\":8,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<VALUE>.<SECTOR>.<WORK_TYPE>.<BUILDING_TYPE>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 6,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.1.9.TOT.TOT.20.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.1.9.TOT.TOT.20.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/+.1.9.TOT.TOT.20.AUS.M?startPeriod=2024-06\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 7,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.+.9.TOT.+.20.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "+.+.9.TOT.+.20.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/+.+.9.TOT.+.20.AUS.M?startPeriod=2024-06\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   }
+  ],
+  "turns": 9,
+  "status": "done",
+  "usage": {
+   "input": 20,
+   "output": 4320,
+   "cacheWrite": 7071,
+   "cacheRead": 74219
+  },
+  "ms": 34215
+ }
+}

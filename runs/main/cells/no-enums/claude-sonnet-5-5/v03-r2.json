@@ -1,0 +1,119 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v03",
+ "kind": "vague",
+ "q": "Are things getting harder for people looking for work in Queensland?",
+ "date": "2026-10-19",
+ "cost": 0.01718,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": true,
+  "calls": 2,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Yes, it's getting somewhat harder, though Queensland is still doing a bit better than the national average.**\n\n**Unemployment rate (seasonally adjusted)**\n\n| | Queensland | Australia |\n|---|---|---|\n| Sep 2026 | 4.53% | 4.72% |\n| Sep 2025 | 4.17% | 4.43% |\n| Jan 2025 | 3.96% | 4.13% |\n\n- Queensland's rate is up about 0.4 percentage points on a year ago and about 0.6 points since January 2025.\n- The number of unemployed Queenslanders rose from about 123,000 in January 2025 to about 144,000 in September 2026. It was about 131,000 in September 2025.\n- The latest two months (Aug 4.51%, Sep 4.53%) are the highest in the period I pulled, other than February 2026 (4.44%) and are close to it.\n\n**Other signs of a softer market**\n- The share of Queensland's population in work (employment-to-population ratio) fell from 64.6% in January 2025 to 63.9% in September 2026. It was 64.3% a year earlier.\n- The participation rate has barely changed, at 66.9% against 67.2% in January 2025. The rise in unemployment therefore isn't because people are leaving or entering the labour force. There are fewer jobs relative to the population.\n- Nationally the trend is similar but sharper. Australia's rate rose from 4.08% in January 2026 to 4.72% in September 2026.\n\n**Caveat:** Queensland's monthly figures are noisy. The rate bounced between 3.7% and 4.5% in the first half of 2026, for example (3.75% in March, 4.27% in April, 3.73% in May). A single month's move shouldn't be over-read. The more reliable signal is the upward drift over the past year, which has been steady since mid-2026.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "queensland",
+      "australia"
+     ],
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population_ratio"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "measures",
+      "problem": "\"employment_to_population_ratio\" isn't a valid value",
+      "allowed": [
+       "unemployment_rate",
+       "participation_rate",
+       "employment_to_population",
+       "employed",
+       "employed_full_time",
+       "employed_part_time",
+       "unemployed",
+       "labour_force"
+      ]
+     },
+     {
+      "path": "states",
+      "problem": "\"queensland\" isn't a valid value",
+      "allowed": [
+       "australia",
+       "nsw",
+       "vic",
+       "qld",
+       "sa",
+       "wa",
+       "tas",
+       "nt",
+       "act"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_labour_force:\n- measures: \"employment_to_population_ratio\" isn't a valid value. Use one of: unemployment_rate, participation_rate, employment_to_population, employed, employed_full_time, employed_part_time, unemployed, labour_force\n- states: \"queensland\" isn't a valid value. Use one of: australia, nsw, vic, qld, sa, wa, tas, nt, act"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "unemployed"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "unemployed"
+     ],
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M6.3.1599.20.3+AUS.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",67.1924],[\"2025-02\",66.6675],[\"2025-03\",66.6942],[\"2025-04\",67.0774],[\"2025-05\",66.9885],[\"2025-06\",66.949],[\"2025-07\",67.0025],[\"2025-08\",66.8045],[\"2025-09\",66.9191],[\"2025-10\",66.9122],[\"2025-11\",66.6351],[\"2025-12\",66.6762],[\"2026-01\",66.6826],[\"2026-02\",66.8181],[\"2026-03\",66.7804],[\"2026-04\",66.6726],[\"2026-05\",66.6873],[\"2026-06\",67.0036],[\"2026-07\",66.852],[\"2026-08\",66.996],[\"2026-09\",66.7632]],\"start\":{\"period\":\"2025-01\",\"value\":67.1924},\"latest\":{\"period\":\"2026-09\",\"value\":66.7632},\"change\":-0.4292},{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",4.1285],[\"2025-02\",4.0752],[\"2025-03\",4.0849],[\"2025-04\",4.064],[\"2025-05\",4.1131],[\"2025-06\",4.3379],[\"2025-07\",4.2627],[\"2025-08\",4.2228],[\"2025-09\",4.4263],[\"2025-10\",4.3187],[\"2025-11\",4.3144],[\"2025-12\",4.1153],[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\",4.7183]],\"start\":{\"period\":\"2025-01\",\"value\":4.1285},\"latest\":{\"period\":\"2026-09\",\"value\":4.7183},\"change\":0.5898},{\"name\":\"Participation rate - Queensland\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",67.2303],[\"2025"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 879,
+   "cacheWrite": 2818,
+   "cacheRead": 13329
+  },
+  "ms": 11532
+ }
+}

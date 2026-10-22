@@ -1,0 +1,17 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "rent median suburb"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "CONFINEMENTS_NUPTIALITY",
+    "version": "1.0.0",
+    "name": "Registered births, confinements and median age of parents by nuptiality and state or territory of usual residence, 1975 onwards"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:35:58.601Z"
+}

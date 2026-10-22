@@ -1,0 +1,465 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "WPI"
+ },
+ "ok": true,
+ "result": {
+  "id": "WPI",
+  "name": "Wage Price Index",
+  "dimensions": [
+   {
+    "id": "MEASURE",
+    "position": 1,
+    "codes": [
+     {
+      "code": "1",
+      "label": "Quarterly Index"
+     },
+     {
+      "code": "2",
+      "label": "Percentage change from previous quarter"
+     },
+     {
+      "code": "3",
+      "label": "Percentage change from corresponding quarter of previous year"
+     },
+     {
+      "code": "4",
+      "label": "Financial Year Index"
+     },
+     {
+      "code": "5",
+      "label": "Financial Year Index - Percentage change from previous period"
+     }
+    ],
+    "totalCodes": 5
+   },
+   {
+    "id": "INDEX",
+    "position": 2,
+    "codes": [
+     {
+      "code": "OHRPEB",
+      "label": "Ordinary time hourly rates of pay excluding bonuses"
+     },
+     {
+      "code": "OHRPIB",
+      "label": "Ordinary time hourly rates of pay including bonuses"
+     },
+     {
+      "code": "THRPEB",
+      "label": "Total hourly rates of pay excluding bonuses"
+     },
+     {
+      "code": "THRPIB",
+      "label": "Total hourly rates of pay including bonuses"
+     }
+    ],
+    "totalCodes": 4
+   },
+   {
+    "id": "SECTOR",
+    "position": 3,
+    "codes": [
+     {
+      "code": "7",
+      "label": "Private and Public"
+     },
+     {
+      "code": "1",
+      "label": "Private"
+     },
+     {
+      "code": "2",
+      "label": "Public"
+     },
+     {
+      "code": "3",
+      "label": "Commonwealth"
+     },
+     {
+      "code": "6",
+      "label": "State and Local Government"
+     },
+     {
+      "code": "4",
+      "label": "State Government"
+     },
+     {
+      "code": "5",
+      "label": "Local Government"
+     }
+    ],
+    "totalCodes": 7
+   },
+   {
+    "id": "INDUSTRY",
+    "position": 4,
+    "codes": [
+     {
+      "code": "TOT",
+      "label": "All Industries"
+     },
+     {
+      "code": "A",
+      "label": "Agriculture, Forestry and Fishing"
+     },
+     {
+      "code": "B",
+      "label": "Mining"
+     },
+     {
+      "code": "C",
+      "label": "Manufacturing"
+     },
+     {
+      "code": "D",
+      "label": "Electricity, Gas, Water and Waste Services"
+     },
+     {
+      "code": "E",
+      "label": "Construction"
+     },
+     {
+      "code": "F",
+      "label": "Wholesale Trade"
+     },
+     {
+      "code": "G",
+      "label": "Retail Trade"
+     },
+     {
+      "code": "H",
+      "label": "Accommodation and Food Services"
+     },
+     {
+      "code": "I",
+      "label": "Transport, Postal and Warehousing"
+     },
+     {
+      "code": "J",
+      "label": "Information Media and Telecommunications"
+     },
+     {
+      "code": "K",
+      "label": "Financial and Insurance Services"
+     },
+     {
+      "code": "L",
+      "label": "Rental, Hiring and Real Estate Services"
+     },
+     {
+      "code": "M",
+      "label": "Professional, Scientific and Technical Services"
+     },
+     {
+      "code": "N",
+      "label": "Administrative and Support Services"
+     },
+     {
+      "code": "O",
+      "label": "Public Administration and Safety"
+     },
+     {
+      "code": "P",
+      "label": "Education and Training"
+     },
+     {
+      "code": "Q",
+      "label": "Health Care and Social Assistance"
+     },
+     {
+      "code": "R",
+      "label": "Arts and Recreation Services"
+     },
+     {
+      "code": "S",
+      "label": "Other Services"
+     },
+     {
+      "code": "01",
+      "label": "Agriculture"
+     },
+     {
+      "code": "02",
+      "label": "Aquaculture"
+     },
+     {
+      "code": "03",
+      "label": "Forestry and Logging"
+     },
+     {
+      "code": "04",
+      "label": "Fishing, Hunting and Trapping"
+     },
+     {
+      "code": "05",
+      "label": "Agriculture, Forestry and Fishing Support Services"
+     },
+     {
+      "code": "06",
+      "label": "Coal Mining"
+     },
+     {
+      "code": "07",
+      "label": "Oil and Gas Extraction"
+     },
+     {
+      "code": "08",
+      "label": "Metal Ore Mining"
+     },
+     {
+      "code": "09",
+      "label": "Non-Metallic Mineral Mining and Quarrying"
+     },
+     {
+      "code": "10",
+      "label": "Exploration and Other Mining Support Services"
+     },
+     {
+      "code": "11",
+      "label": "Food Product Manufacturing"
+     },
+     {
+      "code": "12",
+      "label": "Beverage and Tobacco Product Manufacturing"
+     },
+     {
+      "code": "13",
+      "label": "Textile, Leather, Clothing and Footwear Manufacturing"
+     },
+     {
+      "code": "14",
+      "label": "Wood Product Manufacturing"
+     },
+     {
+      "code": "15",
+      "label": "Pulp, Paper and Converted Paper Product Manufacturing"
+     },
+     {
+      "code": "16",
+      "label": "Printing (including the Reproduction of Recorded Media)"
+     },
+     {
+      "code": "17",
+      "label": "Petroleum and Coal Product Manufacturing"
+     },
+     {
+      "code": "18",
+      "label": "Basic Chemical and Chemical Product Manufacturing"
+     },
+     {
+      "code": "19",
+      "label": "Polymer Product and Rubber Product Manufacturing"
+     },
+     {
+      "code": "20",
+      "label": "Non-Metallic Mineral Product Manufacturing"
+     },
+     {
+      "code": "21",
+      "label": "Primary Metal and Metal Product Manufacturing"
+     },
+     {
+      "code": "22",
+      "label": "Fabricated Metal Product Manufacturing"
+     },
+     {
+      "code": "23",
+      "label": "Transport Equipment Manufacturing"
+     },
+     {
+      "code": "24",
+      "label": "Machinery and Equipment Manufacturing"
+     },
+     {
+      "code": "25",
+      "label": "Furniture and Other Manufacturing"
+     },
+     {
+      "code": "26",
+      "label": "Electricity Supply"
+     },
+     {
+      "code": "27",
+      "label": "Gas Supply"
+     },
+     {
+      "code": "28",
+      "label": "Water Supply, Sewerage and Drainage Services"
+     },
+     {
+      "code": "29",
+      "label": "Waste Collection, Treatment and Disposal Services"
+     },
+     {
+      "code": "30",
+      "label": "Building Construction"
+     },
+     {
+      "code": "31",
+      "label": "Heavy and Civil Engineering Construction"
+     },
+     {
+      "code": "32",
+      "label": "Construction Services"
+     },
+     {
+      "code": "33",
+      "label": "Basic Material Wholesaling"
+     },
+     {
+      "code": "34",
+      "label": "Machinery and Equipment Wholesaling"
+     },
+     {
+      "code": "35",
+      "label": "Motor Vehicle and Motor Vehicle Parts Wholesaling"
+     },
+     {
+      "code": "36",
+      "label": "Grocery, Liquor and Tobacco Product Wholesaling"
+     },
+     {
+      "code": "37",
+      "label": "Other Goods Wholesaling"
+     },
+     {
+      "code": "38",
+      "label": "Commission-Based Wholesaling"
+     },
+     {
+      "code": "39",
+      "label": "Motor Vehicle and Motor Vehicle Parts Retailing"
+     },
+     {
+      "code": "40",
+      "label": "Fuel Retailing"
+     }
+    ],
+    "totalCodes": 826
+   },
+   {
+    "id": "TSEST",
+    "position": 5,
+    "codes": [
+     {
+      "code": "10",
+      "label": "Original"
+     },
+     {
+      "code": "20",
+      "label": "Seasonally Adjusted"
+     },
+     {
+      "code": "30",
+      "label": "Trend"
+     },
+     {
+      "code": "40",
+      "label": "Sensitivity Upper"
+     },
+     {
+      "code": "50",
+      "label": "Sensitivity Lower"
+     }
+    ],
+    "totalCodes": 5
+   },
+   {
+    "id": "REGION",
+    "position": 6,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "1",
+      "label": "New South Wales"
+     },
+     {
+      "code": "2",
+      "label": "Victoria"
+     },
+     {
+      "code": "3",
+      "label": "Queensland"
+     },
+     {
+      "code": "4",
+      "label": "South Australia"
+     },
+     {
+      "code": "5",
+      "label": "Western Australia"
+     },
+     {
+      "code": "6",
+      "label": "Tasmania"
+     },
+     {
+      "code": "7",
+      "label": "Northern Territory"
+     },
+     {
+      "code": "8",
+      "label": "Australian Capital Territory"
+     },
+     {
+      "code": "9",
+      "label": "Other Territories"
+     }
+    ],
+    "totalCodes": 10
+   },
+   {
+    "id": "FREQ",
+    "position": 7,
+    "codes": [
+     {
+      "code": "H",
+      "label": "Hourly"
+     },
+     {
+      "code": "D",
+      "label": "Daily"
+     },
+     {
+      "code": "N",
+      "label": "Minutely"
+     },
+     {
+      "code": "B",
+      "label": "Daily or businessweek"
+     },
+     {
+      "code": "W",
+      "label": "Weekly"
+     },
+     {
+      "code": "S",
+      "label": "Half-yearly, semester"
+     },
+     {
+      "code": "A",
+      "label": "Annual"
+     },
+     {
+      "code": "M",
+      "label": "Monthly"
+     },
+     {
+      "code": "Q",
+      "label": "Quarterly"
+     }
+    ],
+    "totalCodes": 9
+   }
+  ],
+  "keyTemplate": "<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:04:12.711Z"
+}

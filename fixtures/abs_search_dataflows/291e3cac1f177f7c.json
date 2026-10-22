@@ -1,0 +1,32 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "restaurant meals consumer price index"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "CPI",
+    "version": "2.0.0",
+    "name": "Consumer Price Index (CPI)"
+   },
+   {
+    "id": "CPI_WEIGHTS",
+    "version": "1.0.0",
+    "name": "Consumer Price Index (CPI) Weights"
+   },
+   {
+    "id": "CPI_Q",
+    "version": "1.0.0",
+    "name": "Consumer Price Index (CPI) Quarterly"
+   },
+   {
+    "id": "CPI_M",
+    "version": "1.2.0",
+    "name": "Monthly Consumer Price Index (CPI) indicator"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:17:20.225Z"
+}

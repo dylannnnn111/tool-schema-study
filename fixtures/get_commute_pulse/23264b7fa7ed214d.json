@@ -1,0 +1,173 @@
+{
+ "tool": "get_commute_pulse",
+ "args": {
+  "view": "friday_gap",
+  "centres": [
+   "Sydney CBD",
+   "North Sydney",
+   "Chatswood",
+   "Macquarie Park",
+   "Strathfield",
+   "Parramatta"
+  ],
+  "start": "2026-07-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "Commute Pulse (TfNSW Opal Tap Data)",
+  "notes": [
+   "Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.",
+   "Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.",
+   "Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.",
+   "Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse",
+   "Months with fewer than 8 usable weekdays are left out."
+  ],
+  "series": [
+   {
+    "name": "Sydney CBD",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0.799
+     ],
+     [
+      "2026-09",
+      0.783
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0.799
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.783
+    },
+    "change": -0.016
+   },
+   {
+    "name": "North Sydney",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0.751
+     ],
+     [
+      "2026-09",
+      0.741
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0.751
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.741
+    },
+    "change": -0.01
+   },
+   {
+    "name": "Chatswood",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      1.051
+     ],
+     [
+      "2026-09",
+      1.03
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 1.051
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 1.03
+    },
+    "change": -0.021
+   },
+   {
+    "name": "Macquarie Park",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0.729
+     ],
+     [
+      "2026-09",
+      0.77
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0.729
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.77
+    },
+    "change": 0.041
+   },
+   {
+    "name": "Strathfield",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      1.001
+     ],
+     [
+      "2026-09",
+      1
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 1.001
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 1
+    },
+    "change": -0.001
+   },
+   {
+    "name": "Parramatta",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0.824
+     ],
+     [
+      "2026-09",
+      0.812
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0.824
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 0.812
+    },
+    "change": -0.012
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:24:13.417Z"
+}

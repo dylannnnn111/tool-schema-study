@@ -1,0 +1,11 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "rental prices by suburb"
+ },
+ "ok": true,
+ "result": {
+  "results": []
+ },
+ "fetchedAt": "2026-10-18T21:28:40.883Z"
+}

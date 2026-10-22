@@ -1,0 +1,86 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "rents"
+  ],
+  "cities": [
+   "sydney"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2025-10"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1.M?startPeriod=2025-10",
+  "series": [
+   {
+    "name": "Rents - Sydney (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-10",
+      3.5
+     ],
+     [
+      "2025-11",
+      3.4
+     ],
+     [
+      "2025-12",
+      3.4
+     ],
+     [
+      "2026-01",
+      3.4
+     ],
+     [
+      "2026-02",
+      3.4
+     ],
+     [
+      "2026-03",
+      3.4
+     ],
+     [
+      "2026-04",
+      3.3
+     ],
+     [
+      "2026-05",
+      3.4
+     ],
+     [
+      "2026-06",
+      3.5
+     ],
+     [
+      "2026-07",
+      3.5
+     ],
+     [
+      "2026-08",
+      3.5
+     ]
+    ],
+    "start": {
+     "period": "2025-10",
+     "value": 3.5
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3.5
+    },
+    "change": 0
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Rents, Original, Sydney",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:36:18.455Z"
+}

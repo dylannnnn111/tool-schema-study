@@ -1,0 +1,74 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "v01",
+ "kind": "vague",
+ "q": "Is inflation under control?",
+ "date": "2026-10-19",
+ "cost": 0.06041,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "No, not by the RBA's measure. Inflation is above the 2–3% target band, and the underlying rate has been rising for about a year.\n\n**Latest figures (August 2026, annual change, ABS monthly CPI, seasonally adjusted)**\n- **Headline CPI: 4.0%.** That's up from 3.5% in July. Its 2026 peak was 4.6% in March.\n- **Trimmed mean: 3.6%.** This is the RBA's preferred measure of underlying inflation. It has held at 3.6% since June, its highest level in this series.\n\n**Trend**\n| Period | Headline | Trimmed mean |\n|---|---|---|\n| Jun 2025 | 1.9% | 2.8% |\n| Dec 2025 | 3.8% | 3.3% |\n| Mar 2026 | 4.6% | 3.3% |\n| Jun 2026 | 3.8% | 3.6% |\n| Aug 2026 | 4.0% | 3.6% |\n\nIn mid-2025 inflation looked beaten: headline was 1.9% and the trimmed mean was 2.8%, both inside the target band. Since then the trimmed mean has climbed nearly a full point. Headline has been above 3% every month since July 2025.\n\n**How the RBA has responded**\n- **2025: four cuts.** It cut the cash rate from 4.35% to 3.60%.\n- **2026: back to hikes.** With inflation rising again, it raised the rate over February to May back to about 4.35%, roughly three 0.25-point increases. That undid the 2025 cuts.\n- **Since June: on hold.** The rate has averaged about 4.35% since then. The September average was 4.36%, which could mean a small move late in the month. It's worth checking the latest RBA decision.\n\n**Bottom line**\n- **Against it being under control:** The underlying rate is the most telling sign. It has gone from 2.8% to 3.6% in about a year and isn't easing yet. Inflation is well above target, 1–1.5 points above the 2.5% midpoint. The RBA has had to reverse its 2025 rate cuts.\n- **Small positive:** The trimmed mean has stopped rising for now (3.6% in June, July and August). Headline is below its March peak.\n\nInflation would look under control again if the trimmed mean started falling clearly toward 3% over the next few releases.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2025-01",
+     "adjustment": "seasonally_adjusted"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+999902..50.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.9},\"latest\":{\"period\":\"2025-Q3\",\"value\":3},\"change\":0.1},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"poin"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1340,
+   "cacheWrite": 6526,
+   "cacheRead": 4788
+  },
+  "ms": 14799
+ }
+}

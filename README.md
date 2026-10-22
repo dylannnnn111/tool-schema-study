@@ -2,7 +2,7 @@
 
 Same tools, different schemas: which design choices actually make models call tools correctly?
 
-The ten tools from [Aussie Data MCP](https://github.com/dylannnnn111/aussie-data-mcp) (ABS, RBA and Sydney Opal data), written five ways. Each variant changes one thing from the schemas as published:
+The ten tools from [Aussie Data MCP](https://github.com/dylannnnn111/aussie-data-mcp) (ABS, RBA and Sydney Opal data), written six ways. Each of the first five changes one thing from the schemas as published; the sixth combines two:
 
 | Variant | What changes |
 |---|---|
@@ -11,10 +11,11 @@ The ten tools from [Aussie Data MCP](https://github.com/dylannnnn111/aussie-data
 | `no-enums` | Enums removed from the schema (the server still only accepts the same values) |
 | `nested` | Arguments grouped into `select` / `period` / `options` objects |
 | `terse-errors` | Error messages say only that the call failed, not why |
+| `no-enums-terse-errors` | No enums and short errors together. Without enums the models make mistakes, so this is the variant where the error wording actually gets tested |
 
 The server behind every variant is identical: same validation, same normalising (`"Sydney"` and `"sydney"` both work everywhere), same data. Only what the model sees changes.
 
-40 questions, harder than the MCP's own eval: 14 vague ("Petrol's killing me, how much more am I paying?"), 10 out of scope (Melbourne's Friday gap, Bitcoin, the ASX 200) where the right answer says the data isn't there, and 16 that need two tools or two series combined. Three Claude models, two runs each: 1,200 runs.
+40 questions, harder than the MCP's own eval: 14 vague ("Petrol's killing me, how much more am I paying?"), 10 out of scope (Melbourne's Friday gap, Bitcoin, the ASX 200) where the right answer says the data isn't there, and 16 that need two tools or two series combined. Three Claude models, two runs each: 1,440 runs.
 
 Each run is scored on:
 - **tools** - called every tool the question needs

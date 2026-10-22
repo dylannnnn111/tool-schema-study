@@ -1,0 +1,75 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m10",
+ "kind": "multi",
+ "q": "Is the Friday dip as big for suburban morning commuters as it is for the CBD?",
+ "date": "2026-10-19",
+ "cost": 0.03426,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Yes. It's about as big in the suburbs, and slightly bigger. It has also grown more since COVID.**\n\n| Friday as a share of the Tue–Thu average | Before COVID (Jan–Mar 2020) | Last 12 months | Change |\n|---|---|---|---|\n| **Suburban mornings, 7–9am, all modes** | 0.933 (6.7% lower) | **0.758 (24.2% lower)** | −17.5 points |\n| Suburban mornings, 7–9am, bus only | 0.941 (5.9% lower) | 0.799 (20.1% lower) | −14.2 points |\n| **Sydney CBD, 3–7pm** | 0.905 (9.5% lower) | **~0.775 (22.5% lower)**\\* | ~−13 points |\n\n\\*This is my average of the monthly CBD figures for Oct 2025 to Sep 2026, which ranged from 0.744 to 0.800. The latest month, September 2026, was 0.783.\n\n**What this shows:**\n- **The suburban Friday dip is now as big as the CBD's, or a bit bigger.** About 24% fewer people tap on in the suburbs on a Friday morning than midweek. For the CBD it's about 22–23%.\n- **The suburbs changed more.** Before COVID, suburban mornings had the smaller dip: Fridays were only about 7% lower than midweek, compared with about 10% for the CBD. That gap has closed, and the suburban dip has grown by about 17.5 points versus about 13 for the CBD.\n- **Buses dip a little less (about 20%) than all modes combined.** That suggests the biggest Friday drop is on trains and other modes, which carry more office commuters.\n\n**Things to keep in mind:**\n- **The two measures aren't quite the same.** The CBD figure counts people *leaving work* (tap-ons in the CBD from 3–7pm). The suburban figure counts people *leaving home* (tap-ons outside the main business centres from 7–9am).\n- **The suburban figure covers everyone.** It includes school trips, shift workers and trips that don't go to the CBD at all, so it isn't purely about office workers.\n- **The exact dates of the suburban 12-month period aren't stated.** I've compared it with the CBD's most recent 12 months as the closest match.\n\nThe source is the Commute Pulse analysis of TfNSW Opal tap data. Even with these caveats, the pattern is clear: more people staying home on Fridays shows up across Sydney's network, not just in the CBD.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "suburban_morning"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "suburban_morning"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Suburban = Opal 'Other' region (everywhere outside the named centres) - people leaving home in the morning.\"],\"series\":[{\"name\":\"Suburban 7-9am tap-ons, bus, pre-COVID\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"pre_covid\",0.941]],\"start\":{\"period\":\"pre_covid\",\"value\":0.941},\"latest\":{\"period\":\"pre_covid\",\"value\":0.941},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, bus, last 12 months\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"last_12m\",0.799]],\"start\":{\"period\":\"last_12m\",\"value\":0.799},\"latest\":{\"period\":\"last_12m\",\"value\":0.799},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, all modes, pre-COVID\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"pre_covid\",0.933]],\"start\":{\"period\":\"pre_covid\",\"value\":0.933},\"latest\":{\"period\":\"pre_covid\",\"value\":0.933},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, all modes, last 12 months\",\"unit\":\"Friday / Tue-Thu\",\"freq"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",0.766],[\"2025-02\",0.799],[\"2025-03\",0.763],[\"2025-04\",0.836],[\"2025-05\",0.773],[\"2025-06\",0.777],[\"2025-07\",0.793],[\"2025-08\",0.796],[\"2025-09\",0.79],[\"2025-10\",0.8],[\"2025-11\",0.759],[\"2025-12\",0.744],[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2025-01\",\"value\":0.766},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.017}]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "baseline"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "baseline"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"Sydney CBD - pre-COVID baseline\",\"unit\":\"ratio to Tue-Thu average\",\"frequency\":\"Baseline window\",\"points\":[[\"fri_vs_midweek\",0.905],[\"mon_vs_midweek\",1.001]],\"start\":{\"period\":\"fri_vs_midweek\",\"value\":0.905},\"latest\":{\"period\":\"mon_vs_midweek\",\"value\":1.001},\"change\":0.096}]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1411,
+   "cacheWrite": 500,
+   "cacheRead": 17546
+  },
+  "ms": 14679
+ }
+}

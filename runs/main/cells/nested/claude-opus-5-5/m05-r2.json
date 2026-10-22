@@ -1,0 +1,74 @@
+{
+ "variant": "nested",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m05",
+ "kind": "multi",
+ "q": "How far above the cash rate is the advertised standard variable home loan rate?",
+ "date": "2026-10-19",
+ "cost": 0.0201,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "In September 2026 the advertised standard variable rate for owner-occupier home loans was **about 4.4 percentage points above the cash rate**.\n\n**September 2026:**\n- Banks' advertised standard variable rate (owner-occupier): **8.77%**\n- Cash rate target (monthly average): **4.36%**\n- **Gap: 4.41 percentage points**\n\n**The gap has barely changed.** Banks have passed rate moves on almost exactly, so the gap has stayed at about 4.4 points:\n\n| Month | Standard variable | Cash rate (avg) | Gap |\n|---|---|---|---|\n| Jun 2025 | 8.27% | 3.85% | 4.42 pts |\n| Dec 2025 | 8.02% | 3.60% | 4.42 pts |\n| Sep 2026 | 8.77% | 4.36% | 4.41 pts |\n\nSome months in between show bigger or smaller gaps, such as 4.56 points in March 2026 and 4.42 in April. That's because the cash rate figure is a monthly average, so when rates were rising in 2026 it trailed the advertised rate, which moved in a single step. The usual gap is still about 4.4 points.\n\n**Hardly anyone pays the standard variable rate.** The advertised *discounted* variable rate was 6.80% in September 2026, only **2.44 points** above the cash rate. Rates actually paid on new loans are usually lower again (RBA table F6).\n\nSources: RBA tables F1.1 (cash rate) and F5 (advertised lending rates).",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2025-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-06-30\",\"value\":3.85},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.51}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "period": {
+      "start": "2025-06"
+     },
+     "select": {
+      "rates": [
+       "owner_occupier_variable_standard",
+       "owner_occupier_variable_discounted"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",8.27],[\"2025-07-31\",8.27],[\"2025-08-31\",8.02],[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2025-06-30\",\"value\":8.27},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0.5},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",6.3],[\"2025-07-31\",6.3],[\"2025-08-31\",6.05],[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2025-06-30\",\"value\":6.3},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":0.5}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 883,
+   "cacheWrite": 0,
+   "cacheRead": 12078
+  },
+  "ms": 9010
+ }
+}

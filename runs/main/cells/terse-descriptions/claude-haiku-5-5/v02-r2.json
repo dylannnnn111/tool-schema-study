@@ -1,0 +1,207 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v02",
+ "kind": "vague",
+ "q": "How bad is the rent situation in Sydney?",
+ "date": "2026-10-19",
+ "cost": 0.00209,
+ "score": {
+  "tools": true,
+  "args": false,
+  "answer": true,
+  "recovered": null,
+  "calls": 8,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Short answer:** Rent growth in Sydney has slowed sharply from its 2024 peak, but rents are still rising, and the CPI data doesn't show rent levels or vacancy.\n\n**Sydney rents, CPI annual change (ABS, original series):**\n- **March 2024:** 8.8%, the peak in the period I pulled\n- **January 2024:** 8.7%\n- **December 2024:** 6.0%\n- **June 2025:** 3.7%\n- **August 2025:** 3.2%, the low point in this run\n- **Early 2026:** about 3.3–3.5% each month\n- **August 2026 (latest):** 3.5%\n\n**National comparison:** Rents in Australia rose 3.6% over the year to August 2026, down from 7.7% in March 2024. Sydney has been running slightly above the national rate since late 2025.\n\n**What this means:** Annual rent increases have fallen by more than half since early 2024, so the pressure is easing. Rents are still increasing about 3.5% a year, so they are not falling. The data measures how fast rents are rising, not how high they are. For the level of rents, vacancy rates, or affordability relative to incomes, I'd need other sources. I can check RBA or other datasets if you want those.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "rental prices"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "rental prices"
+    },
+    "seen": "{\"results\":[]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "sydney"
+     ],
+     "items": [
+      "Rents"
+     ],
+     "start": "2023-01",
+     "end": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Rents"
+     ],
+     "cities": [
+      "sydney"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2023-01",
+     "end": "2026-09"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Rents..1.M?startPeriod=2023-01&endPeriod=2026-09 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Rents..1.Q?startPeriod=2023-Q1&endPeriod=2026-Q3\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "rent"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "rent"
+    },
+    "seen": "{\"results\":[{\"id\":\"ALC\",\"version\":\"1.0.0\",\"name\":\"Apparent Consumption of Alcohol, Australia\"},{\"id\":\"BOP_FACTOR\",\"version\":\"1.0.0\",\"name\":\"Balance of Payments and International Investment Position: Combined current price seasonal adjustment factors\"},{\"id\":\"CONFINEMENTS_NUPTIALITY\",\"version\":\"1.0.0\",\"name\":\"Registered births, confinements and median age of parents by nuptiality and state or territory of usual residence, 1975 onwards\"}]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "sydney"
+     ],
+     "items": [
+      "all_groups",
+      "Rents"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "Rents"
+     ],
+     "cities": [
+      "sydney"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+Rents..1.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+Rents..1.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"All groups CPI - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.1],[\"2025-05\",2.2],[\"2025-06\",1.7],[\"2025-07\",2.9],[\"2025-08\",2.7],[\"2025-09\",3.4],[\"2025-10\",3.6],[\"2025-11\",3.4],[\"2025-12\",3.7],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",4.4],[\"2026-04\",4.2],[\"2026-05\",4.2],[\"2026-06\",4],[\"2026-07\",3.2],[\"2026-08\",3.9]],\"start\":{\"period\":\"2025-04\",\"value\":2.1},\"latest\":{\"period\":\"2026-08\",\"value\":3.9},\"change\":1.8},{\"name\":\"All groups CPI - Sydney (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q1\",3.8],[\"2024-Q2\",3.8],[\"2024-Q3\",2.9],[\"2024-Q4\",2.4],[\"2025-Q1\",2.3],[\"2025-Q2\",1.9],[\"2025-Q3\",2.9]],\"start\":{\"period\":\"2024-Q1\",\"value\":3.8},\"latest\":{\"period\":\"2025-Q3\",\"value\":2.9},\"change\":-0.9}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Sydney\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 2,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "CPI",
+     "code_search": "Rents"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "CPI",
+     "code_search": "Rents"
+    },
+    "seen": "{\"id\":\"CPI\",\"name\":\"Consumer Price Index (CPI)\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"115522\",\"label\":\"Rents\"},{\"code\":\"30014\",\"label\":\"Rents\"}],\"totalCodes\":166},{\"id\":\"TSEST\",\"position\":3,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":4,\"codes\":[],\"totalCodes\":9},{\"id\":\"FREQ\",\"position\":5,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "F5",
+     "search": "rent",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F5",
+     "search": "rent",
+     "monthly": false,
+     "start": "2024-01"
+    },
+    "seen": "{\"table\":\"F5\",\"title\":\"F5  INDICATOR LENDING RATES\",\"columns\":[{\"id\":\"FILRSBVRT\",\"title\":\"Lending rates; Small business; Variable; Term\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRSBVOO\",\"title\":\"Lending rates; Small business; Variable; Overdraft\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHLBVS\",\"title\":\"Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHLBVD\",\"title\":\"Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHLBVO\",\"title\":\"Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHL3YF\",\"title\":\"Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHLBVSI\",\"title\":\"Lending rates; Housing loans; Banks; Variable; Standard; Investor\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHLBVDI\",\"title\":\"Lending rates; Housing loans; Banks; Variable; Discounted; Investor\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHLBVDO\",\"title\":\"Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FILRHL3YFI\",\"title\":\"Lending rates; Housing loans; Banks; 3-year fixed; Investor\",\"unit\":\"Per cent per annu"
+   },
+   {
+    "turn": 3,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "items": [
+      "115522"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "115522"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.115522..1+50.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",7.5],[\"2024-02\",7.5],[\"2024-03\",7.7],[\"2024-04\",7.5],[\"2024-05\",7.4],[\"2024-06\",7.1],[\"2024-07\",6.9],[\"2024-08\",6.7],[\"2024-09\",6.6],[\"2024-10\",6.8],[\"2024-11\",6.6],[\"2024-12\",6.2],[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2024-01\",\"value\":7.5},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-3.9},{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",8.7],[\"2024-02\",8.7],[\"2024-03\",8.8],[\"2024-04\",8.5],[\"2024-05\",8.3],[\"2024-06\",7.8],[\"2024-07\",7.4],[\"2024-08\",7.1],[\"2024-09\",6.9],[\"2024-10\",6.8],[\"2024-11\",6.5],[\"2024-12\",6],[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2024-01\",\"value\":8.7},\"latest\":{\"period\":\"2026"
+   },
+   {
+    "turn": 3,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "sydney"
+     ],
+     "items": [
+      "30014"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "30014"
+     ],
+     "cities": [
+      "sydney"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",8.7],[\"2024-02\",8.7],[\"2024-03\",8.8],[\"2024-04\",8.5],[\"2024-05\",8.3],[\"2024-06\",7.8],[\"2024-07\",7.4],[\"2024-08\",7.1],[\"2024-09\",6.9],[\"2024-10\",6.8],[\"2024-11\",6.5],[\"2024-12\",6],[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2024-01\",\"value\":8.7},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":-5.2}],\"notes\":[\"All series: Percentage change from previous year, Rents, Original, Sydney\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 5,
+  "status": "done",
+  "usage": {
+   "input": 12,
+   "output": 2088,
+   "cacheWrite": 6650,
+   "cacheRead": 21749
+  },
+  "ms": 21642
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "variant": "nested",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v02",
+ "kind": "vague",
+ "q": "How bad is the rent situation in Sydney?",
+ "date": "2026-10-19",
+ "cost": 0.04079,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Sydney rents are still going up, but much more slowly than at the peak. They're no longer rising faster than overall prices. The damage from 2023–24 hasn't been undone, though, because those increases are now built into what people pay.\n\n**Where it stands now (ABS monthly CPI, August 2026)**\n- Sydney rents were **3.5% higher** than a year earlier.\n- Australia-wide, rents rose **3.6%**.\n- Overall prices in Sydney rose **3.9%** (4.0% nationally). That means rents are now rising a bit slower than prices in general, so in real terms they're roughly flat.\n\n**How we got here**\n- **2022:** Sydney rents were actually lower than a year earlier in the March quarter (−1.2%). The surge started in the second half of the year.\n- **Peak:** Annual growth reached **8.9% in the March quarter of 2024**, and stayed around 8.4–8.8% every month from mid-2023 to early 2024. That was faster than the national rate (about 7.5–7.8%) and well above overall inflation.\n- **Slowdown:** Growth fell steadily through 2024 and 2025, to a low of **3.2% in August–September 2025**.\n- **Since then:** It has stopped falling and settled at **3.3–3.5%** throughout 2026. It isn't speeding up again, but it isn't dropping further either.\n\n**Total increase:** Adding up the yearly increases, Sydney rents are roughly **24% higher than in mid-2022** (an approximate figure). Overall prices rose less over the same period. Even with today's slower growth, rents are still rising from that much higher level.\n\n**One caveat:** The CPI rent measure covers all renters, including people still on existing leases. That makes it slow to change and smoother than advertised rents for new leases. Anyone signing a new lease or moving house in Sydney has probably faced bigger jumps than these numbers show, especially in 2023–24.\n\n**Bottom line:** The fast increases are over. Sydney rents are now rising at about the same pace as prices in general. But rents haven't come back down, so affordability is still much worse than before 2022.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "items": [
+       "rents",
+       "all_groups"
+      ],
+      "cities": [
+       "sydney",
+       "australia"
+      ]
+     },
+     "period": {
+      "start": "2022-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents",
+      "all_groups"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014+10001..1+50.M?startPeriod=2022-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30014+10001..1+50.Q?startPeriod=2022-Q1\",\"series\":[{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2023-07\",8.4],[\"2023-08\",8.7],[\"2023-09\",8.6],[\"2023-10\",8.1],[\"2023-11\",8.4],[\"2023-12\",8.7],[\"2024-01\",8.7],[\"2024-02\",8.7],[\"2024-03\",8.8],[\"2024-04\",8.5],[\"2024-05\",8.3],[\"2024-06\",7.8],[\"2024-07\",7.4],[\"2024-08\",7.1],[\"2024-09\",6.9],[\"2024-10\",6.8],[\"2024-11\",6.5],[\"2024-12\",6],[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2023-07\",\"value\":8.4},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":-4.9},{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2023-07\",7.6],[\"2023-08\",7.8],[\"2023-09\",7.5],[\"2023-10\",6.6],[\"2023-11\",7.1],[\"2023-12\",7.4],[\"2024-01\",7.5],[\"2024-02\",7.5],[\"2024-03\",7.7],[\"2024-04\",7.5],[\"2024-05\",7.4],[\"2024-06\",7.1],[\"2024-07\",6.9],[\"2024-08\",6.7],[\"2024-09\",6.6],[\"2024-10\",6.8],[\"2024-11\",6.6],[\"2024-12\",6.2],[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1201,
+   "cacheWrite": 2920,
+   "cacheRead": 10710
+  },
+  "ms": 14595
+ }
+}

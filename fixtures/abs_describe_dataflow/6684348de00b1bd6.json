@@ -1,0 +1,709 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "BA_SA2"
+ },
+ "ok": true,
+ "result": {
+  "id": "BA_SA2",
+  "name": "Building Approvals by SA2 and above, from July 2021 onwards",
+  "dimensions": [
+   {
+    "id": "MEASURE",
+    "position": 1,
+    "codes": [
+     {
+      "code": "1",
+      "label": "Number of dwelling units"
+     },
+     {
+      "code": "2",
+      "label": "Value of building jobs"
+     },
+     {
+      "code": "3",
+      "label": "Number of building jobs valued $50,000 or more"
+     }
+    ],
+    "totalCodes": 3
+   },
+   {
+    "id": "SECTOR",
+    "position": 2,
+    "codes": [
+     {
+      "code": "9",
+      "label": "Total Sectors"
+     },
+     {
+      "code": "1",
+      "label": "Private Sector"
+     },
+     {
+      "code": "5",
+      "label": "Public Sector"
+     }
+    ],
+    "totalCodes": 3
+   },
+   {
+    "id": "WORK_TYPE",
+    "position": 3,
+    "codes": [
+     {
+      "code": "TOT",
+      "label": "Total Work"
+     },
+     {
+      "code": "1",
+      "label": "New"
+     },
+     {
+      "code": "5",
+      "label": "Relocation of dwellings"
+     },
+     {
+      "code": "6",
+      "label": "Demolition of dwellings"
+     },
+     {
+      "code": "8",
+      "label": "Alterations and additions including conversions"
+     },
+     {
+      "code": "2",
+      "label": "Alterations and additions"
+     },
+     {
+      "code": "3",
+      "label": "Alterations and additions creating dwellings"
+     },
+     {
+      "code": "4",
+      "label": "Alterations and additions not creating dwellings"
+     },
+     {
+      "code": "7",
+      "label": "Conversions"
+     }
+    ],
+    "totalCodes": 9
+   },
+   {
+    "id": "BUILDING_TYPE",
+    "position": 4,
+    "codes": [
+     {
+      "code": "110",
+      "label": "Houses"
+     },
+     {
+      "code": "121",
+      "label": "Semi-detached, row or terrace houses, townhouses - One storey"
+     },
+     {
+      "code": "122",
+      "label": "Semi-detached, row or terrace houses, townhouses - Two or more storeys"
+     },
+     {
+      "code": "120",
+      "label": "Semi-detached, row or terrace houses, townhouses - Total"
+     },
+     {
+      "code": "131",
+      "label": "Apartments - In a one or two storey block"
+     },
+     {
+      "code": "132",
+      "label": "Apartments - In a three storey block"
+     },
+     {
+      "code": "133",
+      "label": "Apartments - In a four to eight storey block"
+     },
+     {
+      "code": "134",
+      "label": "Apartments - In a nine or more storey block"
+     },
+     {
+      "code": "135",
+      "label": "Apartments - In a four or more storey block"
+     },
+     {
+      "code": "130",
+      "label": "Apartments - Total including those attached to a house"
+     },
+     {
+      "code": "150",
+      "label": "Total Other Residential"
+     },
+     {
+      "code": "100",
+      "label": "Total Residential"
+     },
+     {
+      "code": "210",
+      "label": "Retail and wholesale trade buildings"
+     },
+     {
+      "code": "220",
+      "label": "Transport buildings"
+     },
+     {
+      "code": "230",
+      "label": "Offices"
+     },
+     {
+      "code": "290",
+      "label": "Commercial buildings n.e.c."
+     },
+     {
+      "code": "200",
+      "label": "Commercial Buildings - Total"
+     },
+     {
+      "code": "310",
+      "label": "Factories and other secondary production buildings"
+     },
+     {
+      "code": "320",
+      "label": "Warehouses"
+     },
+     {
+      "code": "330",
+      "label": "Agricultural and aquacultural buildings"
+     },
+     {
+      "code": "390",
+      "label": "Other industrial buildings n.e.c."
+     },
+     {
+      "code": "300",
+      "label": "Industrial Buildings - Total"
+     },
+     {
+      "code": "410",
+      "label": "Education buildings"
+     },
+     {
+      "code": "420",
+      "label": "Religion buildings"
+     },
+     {
+      "code": "430",
+      "label": "Aged care facilities"
+     },
+     {
+      "code": "440",
+      "label": "Health buildings"
+     },
+     {
+      "code": "450",
+      "label": "Entertainment and recreation buildings"
+     },
+     {
+      "code": "460",
+      "label": "Short term accommodation buildings"
+     },
+     {
+      "code": "490",
+      "label": "Other non-residential n.e.c."
+     },
+     {
+      "code": "400",
+      "label": "Other Non-residential - Total"
+     },
+     {
+      "code": "700",
+      "label": "Total Non-residential"
+     },
+     {
+      "code": "800",
+      "label": "Dwellings excluding new residential"
+     },
+     {
+      "code": "850",
+      "label": "Dwellings excluding houses"
+     },
+     {
+      "code": "TOT",
+      "label": "Total"
+     }
+    ],
+    "totalCodes": 34
+   },
+   {
+    "id": "REGION_TYPE",
+    "position": 5,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "STE",
+      "label": "States and Territories"
+     },
+     {
+      "code": "SA4",
+      "label": "Statistical Area Level 4"
+     },
+     {
+      "code": "SA3",
+      "label": "Statistical Area Level 3"
+     },
+     {
+      "code": "SA2",
+      "label": "Statistical Area Level 2"
+     },
+     {
+      "code": "SA1",
+      "label": "Statistical Area Level 1"
+     },
+     {
+      "code": "RA",
+      "label": "Remoteness Area"
+     },
+     {
+      "code": "SOS",
+      "label": "Section of State"
+     },
+     {
+      "code": "SOSR",
+      "label": "Section of State Ranges"
+     },
+     {
+      "code": "UC",
+      "label": "Urban Centres"
+     },
+     {
+      "code": "UL",
+      "label": "Urban Locations"
+     },
+     {
+      "code": "IREG",
+      "label": "Indigenous Regions"
+     },
+     {
+      "code": "IARE",
+      "label": "Indigenous Areas"
+     },
+     {
+      "code": "ILOC",
+      "label": "Indigenous Locations"
+     },
+     {
+      "code": "GCCSA",
+      "label": "Greater Capital City Statistical Areas"
+     },
+     {
+      "code": "SUA",
+      "label": "Significant Urban Areas"
+     },
+     {
+      "code": "SLA",
+      "label": "2011 Statistical Local Areas"
+     },
+     {
+      "code": "DZN",
+      "label": "Destination Zones"
+     },
+     {
+      "code": "CED",
+      "label": "Commonwealth Electoral Divisions"
+     },
+     {
+      "code": "SED",
+      "label": "State Electoral Divisions"
+     },
+     {
+      "code": "LGA",
+      "label": "Local Government Areas"
+     },
+     {
+      "code": "LGA2011",
+      "label": "Local Government Areas (2011)"
+     },
+     {
+      "code": "LGA2012",
+      "label": "Local Government Areas (2012)"
+     },
+     {
+      "code": "LGA2013",
+      "label": "Local Government Areas (2013)"
+     },
+     {
+      "code": "LGA2014",
+      "label": "Local Government Areas (2014)"
+     },
+     {
+      "code": "LGA2015",
+      "label": "Local Government Areas (2015)"
+     },
+     {
+      "code": "LGA2016",
+      "label": "Local Government Areas (2016)"
+     },
+     {
+      "code": "LGA2017",
+      "label": "Local Government Areas (2017)"
+     },
+     {
+      "code": "LGA2018",
+      "label": "Local Government Areas (2018)"
+     },
+     {
+      "code": "LGA2019",
+      "label": "Local Government Areas (2019)"
+     },
+     {
+      "code": "LGA2020",
+      "label": "Local Government Areas (2020)"
+     },
+     {
+      "code": "LGA2021",
+      "label": "Local Government Areas (2021)"
+     },
+     {
+      "code": "LGA2022",
+      "label": "Local Government Areas (2022)"
+     },
+     {
+      "code": "LGA2023",
+      "label": "Local Government Areas (2023)"
+     },
+     {
+      "code": "LGA2024",
+      "label": "Local Government Areas (2024)"
+     },
+     {
+      "code": "LGA2025",
+      "label": "Local Government Areas (2025)"
+     },
+     {
+      "code": "FED",
+      "label": "Federal Electoral Division"
+     },
+     {
+      "code": "POA",
+      "label": "Postal Areas"
+     },
+     {
+      "code": "NRMR",
+      "label": "National Resource Management Regions"
+     },
+     {
+      "code": "ADD",
+      "label": "Australian Drainage Divisions"
+     },
+     {
+      "code": "TR",
+      "label": "Tourism Regions"
+     },
+     {
+      "code": "SSC",
+      "label": "State Suburbs"
+     },
+     {
+      "code": "OT",
+      "label": "Other"
+     }
+    ],
+    "totalCodes": 43
+   },
+   {
+    "id": "REGION",
+    "position": 6,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "1",
+      "label": "New South Wales"
+     },
+     {
+      "code": "1GSYD",
+      "label": "Greater Sydney"
+     },
+     {
+      "code": "102",
+      "label": "Central Coast"
+     },
+     {
+      "code": "10201",
+      "label": "Gosford"
+     },
+     {
+      "code": "102011028",
+      "label": "Avoca Beach - Copacabana"
+     },
+     {
+      "code": "102011029",
+      "label": "Box Head - MacMasters Beach"
+     },
+     {
+      "code": "102011030",
+      "label": "Calga - Kulnura"
+     },
+     {
+      "code": "102011031",
+      "label": "Erina - Green Point"
+     },
+     {
+      "code": "102011032",
+      "label": "Gosford - Springfield"
+     },
+     {
+      "code": "102011033",
+      "label": "Kariong"
+     },
+     {
+      "code": "102011034",
+      "label": "Kincumber - Picketts Valley"
+     },
+     {
+      "code": "102011035",
+      "label": "Narara"
+     },
+     {
+      "code": "102011036",
+      "label": "Niagara Park - Lisarow"
+     },
+     {
+      "code": "102011037",
+      "label": "Point Clare - Koolewong"
+     },
+     {
+      "code": "102011038",
+      "label": "Saratoga - Davistown"
+     },
+     {
+      "code": "102011039",
+      "label": "Terrigal - North Avoca"
+     },
+     {
+      "code": "102011040",
+      "label": "Umina - Booker Bay - Patonga"
+     },
+     {
+      "code": "102011041",
+      "label": "Wamberal - Forresters Beach"
+     },
+     {
+      "code": "102011042",
+      "label": "Woy Woy - Blackwall"
+     },
+     {
+      "code": "102011043",
+      "label": "Wyoming"
+     },
+     {
+      "code": "10202",
+      "label": "Wyong"
+     },
+     {
+      "code": "102021044",
+      "label": "Bateau Bay - Killarney Vale"
+     },
+     {
+      "code": "102021045",
+      "label": "Blue Haven - San Remo"
+     },
+     {
+      "code": "102021046",
+      "label": "Budgewoi - Buff Point - Halekulani"
+     },
+     {
+      "code": "102021047",
+      "label": "Chittaway Bay - Tumbi Umbi"
+     },
+     {
+      "code": "102021048",
+      "label": "Gorokan - Kanwal - Charmhaven"
+     },
+     {
+      "code": "102021049",
+      "label": "Jilliby - Yarramalong"
+     },
+     {
+      "code": "102021050",
+      "label": "Lake Munmorah - Mannering Park"
+     },
+     {
+      "code": "102021051",
+      "label": "Ourimbah - Fountaindale"
+     },
+     {
+      "code": "102021052",
+      "label": "Summerland Point - Gwandalan"
+     },
+     {
+      "code": "102021053",
+      "label": "The Entrance"
+     },
+     {
+      "code": "102021054",
+      "label": "Toukley - Norah Head"
+     },
+     {
+      "code": "102021055",
+      "label": "Tuggerah - Kangy Angy"
+     },
+     {
+      "code": "102021056",
+      "label": "Warnervale - Wadalba"
+     },
+     {
+      "code": "102021057",
+      "label": "Wyong"
+     },
+     {
+      "code": "115",
+      "label": "Sydney - Baulkham Hills and Hawkesbury"
+     },
+     {
+      "code": "11501",
+      "label": "Baulkham Hills"
+     },
+     {
+      "code": "115011290",
+      "label": "Baulkham Hills - East"
+     },
+     {
+      "code": "115011291",
+      "label": "Baulkham Hills (West) - Bella Vista"
+     },
+     {
+      "code": "115011294",
+      "label": "Glenhaven"
+     },
+     {
+      "code": "115011296",
+      "label": "West Pennant Hills"
+     },
+     {
+      "code": "115011553",
+      "label": "Castle Hill - Central"
+     },
+     {
+      "code": "115011554",
+      "label": "Castle Hill - East"
+     },
+     {
+      "code": "115011555",
+      "label": "Castle Hill - North"
+     },
+     {
+      "code": "115011556",
+      "label": "Castle Hill - South"
+     },
+     {
+      "code": "115011557",
+      "label": "Castle Hill - West"
+     },
+     {
+      "code": "115011558",
+      "label": "Cherrybrook"
+     },
+     {
+      "code": "115011621",
+      "label": "Kellyville - East"
+     },
+     {
+      "code": "115011622",
+      "label": "Kellyville - West"
+     },
+     {
+      "code": "11502",
+      "label": "Dural - Wisemans Ferry"
+     },
+     {
+      "code": "115021297",
+      "label": "Dural - Kenthurst - Wisemans Ferry"
+     },
+     {
+      "code": "115021298",
+      "label": "Galston - Laughtondale"
+     },
+     {
+      "code": "11503",
+      "label": "Hawkesbury"
+     },
+     {
+      "code": "115031299",
+      "label": "Bilpin - Colo - St Albans"
+     },
+     {
+      "code": "115031300",
+      "label": "Kurrajong Heights - Ebenezer"
+     },
+     {
+      "code": "11504",
+      "label": "Rouse Hill - McGraths Hill"
+     },
+     {
+      "code": "115041301",
+      "label": "Pitt Town - McGraths Hill"
+     },
+     {
+      "code": "115041623",
+      "label": "Box Hill - Nelson"
+     },
+     {
+      "code": "115041624",
+      "label": "North Kellyville"
+     }
+    ],
+    "totalCodes": 2985
+   },
+   {
+    "id": "FREQ",
+    "position": 7,
+    "codes": [
+     {
+      "code": "H",
+      "label": "Hourly"
+     },
+     {
+      "code": "D",
+      "label": "Daily"
+     },
+     {
+      "code": "N",
+      "label": "Minutely"
+     },
+     {
+      "code": "B",
+      "label": "Daily or businessweek"
+     },
+     {
+      "code": "W",
+      "label": "Weekly"
+     },
+     {
+      "code": "S",
+      "label": "Half-yearly, semester"
+     },
+     {
+      "code": "A",
+      "label": "Annual"
+     },
+     {
+      "code": "M",
+      "label": "Monthly"
+     },
+     {
+      "code": "Q",
+      "label": "Quarterly"
+     }
+    ],
+    "totalCodes": 9
+   }
+  ],
+  "keyTemplate": "<MEASURE>.<SECTOR>.<WORK_TYPE>.<BUILDING_TYPE>.<REGION_TYPE>.<REGION>.<FREQ>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:16:04.118Z"
+}

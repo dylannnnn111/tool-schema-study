@@ -1,0 +1,92 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o07",
+ "kind": "out-of-scope",
+ "q": "How many Argentine pesos does one Australian dollar buy?",
+ "date": "2026-10-19",
+ "cost": 0.00072,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you that rate. The exchange-rate data I have covers only USD, EUR, GBP, JPY, CNY, NZD and about 15 other currencies, and the Argentine peso isn't among them. The RBA's F11 table doesn't publish it either.\n\nFor a current peso rate, try the Banco Central de la República Argentina (bcra.gob.ar), which publishes official rates, or a live market site such as XE or Google Finance. Argentina has had several exchange-rate regimes and a gap between official and parallel (“blue”) rates, so check which rate you need before converting.\n\nIf you want, I can pull the recent AUD/USD rate, which you could combine with a USD/ARS quote to work out the peso figure.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "ARS"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "currencies",
+      "problem": "\"ARS\" isn't a valid value",
+      "allowed": [
+       "USD",
+       "TWI",
+       "CNY",
+       "JPY",
+       "EUR",
+       "KRW",
+       "GBP",
+       "SGD",
+       "INR",
+       "THB",
+       "NZD",
+       "TWD",
+       "MYR",
+       "IDR",
+       "VND",
+       "HKD",
+       "CAD",
+       "CHF",
+       "PHP"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_exchange_rates:\n- currencies: \"ARS\" isn't a valid value. Use one of: USD, TWI, CNY, JPY, EUR, KRW, GBP, SGD, INR, THB, NZD, TWD, MYR, IDR, VND, HKD, CAD, CHF, PHP"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f11",
+     "search": "peso",
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f11",
+     "search": "peso",
+     "monthly": false,
+     "start": "2026-01"
+    },
+    "seen": "{\"table\":\"F11\",\"title\":\"F11 EXCHANGE RATES\",\"columns\":[{\"id\":\"FXRUSD\",\"title\":\"A$1=USD\",\"unit\":\"USD\",\"frequency\":\"Monthly\"},{\"id\":\"FXRTWI\",\"title\":\"Trade-weighted Index May 1970 = 100\",\"unit\":\"Index\",\"frequency\":\"Monthly\"},{\"id\":\"FXRCR\",\"title\":\"A$1=CNY\",\"unit\":\"CNY\",\"frequency\":\"Monthly\"},{\"id\":\"FXRJY\",\"title\":\"A$1=JPY\",\"unit\":\"JPY\",\"frequency\":\"Monthly\"},{\"id\":\"FXREUR\",\"title\":\"A$1=EUR\",\"unit\":\"EUR\",\"frequency\":\"Monthly\"},{\"id\":\"FXRSKW\",\"title\":\"A$1=KRW\",\"unit\":\"KRW\",\"frequency\":\"Monthly\"},{\"id\":\"FXRUKPS\",\"title\":\"A$1=GBP\",\"unit\":\"GBP\",\"frequency\":\"Monthly\"},{\"id\":\"FXRSD\",\"title\":\"A$1=SGD\",\"unit\":\"SGD\",\"frequency\":\"Monthly\"},{\"id\":\"FXRIRE\",\"title\":\"A$1=INR\",\"unit\":\"INR\",\"frequency\":\"Monthly\"},{\"id\":\"FXRTB\",\"title\":\"A$1=THB\",\"unit\":\"THB\",\"frequency\":\"Monthly\"},{\"id\":\"FXRNZD\",\"title\":\"A$1=NZD\",\"unit\":\"NZD\",\"frequency\":\"Monthly\"},{\"id\":\"FXRNTD\",\"title\":\"A$1=TWD\",\"unit\":\"TWD\",\"frequency\":\"Monthly\"},{\"id\":\"FXRMR\",\"title\":\"A$1=MYR\",\"unit\":\"MYR\",\"frequency\":\"Monthly\"},{\"id\":\"FXRIR\",\"title\":\"A$1=IDR\",\"unit\":\"IDR\",\"frequency\":\"Monthly\"},{\"id\":\"FXRVD\",\"title\":\"A$1=VND\",\"unit\":\"VND\",\"frequency\":\"Monthly\"},{\"id\":\"FXRUAED\",\"title\":\"A$1=AED\",\"unit\":\"AED\",\"frequency\":\"Monthly\"},{\"id\":\"FXRPNGK\",\"title\":\"A$1=PGK\",\"unit\":\"PGK\",\"frequency\":\"Monthly\"},{\"id\":\"FXRHKD\",\"title\":\"A$1=HKD\",\"unit\":\"HKD\",\"frequency\":\"Monthly\"},{\"id\":\"FXRCD\",\"title\":\"A$1=CAD\",\"unit\":\"CAD\",\"frequency\":\"Monthly\"},{\"id\":\"FXRSARD\",\"title\":\"A$1=ZAR\",\"unit\":\"ZAR\",\"frequency\":\"Monthly\"},{\"id\":\"FXRSARY\",\"title\":\"A$1=SAR\",\"unit"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 772,
+   "cacheWrite": 1647,
+   "cacheRead": 12965
+  },
+  "ms": 5877
+ }
+}

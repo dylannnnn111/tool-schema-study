@@ -1,0 +1,11 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "share price index ASX"
+ },
+ "ok": true,
+ "result": {
+  "results": []
+ },
+ "fetchedAt": "2026-10-18T21:04:03.750Z"
+}

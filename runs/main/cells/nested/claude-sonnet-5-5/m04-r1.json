@@ -1,0 +1,67 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m04",
+ "kind": "multi",
+ "q": "Is unemployment higher in NSW or Victoria right now, and by how much?",
+ "date": "2026-10-19",
+ "cost": 0.00599,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Victoria has the higher unemployment rate. In September 2026, the latest month available, the seasonally adjusted rates were:\n\n- **Victoria:** 5.05%\n- **NSW:** 4.71%\n- **Gap:** about 0.35 percentage points\n\nThe gap has narrowed. In August Victoria was at 5.17% and NSW at 4.35%, a gap of about 0.81 points. In June it was about 1.14 points (5.12% against 3.97%). NSW's rate has risen from 3.97% in June to 4.71% in September, while Victoria's has stayed near 5.1%.\n\nMonthly state figures are volatile, so some of that narrowing may be noise.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "select": {
+      "states": [
+       "nsw",
+       "vic"
+      ],
+      "measures": [
+       "unemployment_rate"
+      ]
+     },
+     "period": {
+      "start": "2026-04"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "nsw",
+      "vic"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-04"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.1+2.M?startPeriod=2026-04\",\"series\":[{\"name\":\"New South Wales\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-04\",4.4225],[\"2026-05\",4.3257],[\"2026-06\",3.9741],[\"2026-07\",4.2682],[\"2026-08\",4.3548],[\"2026-09\",4.7076]],\"start\":{\"period\":\"2026-04\",\"value\":4.4225},\"latest\":{\"period\":\"2026-09\",\"value\":4.7076},\"change\":0.2851},{\"name\":\"Victoria\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-04\",4.8452],[\"2026-05\",4.8997],[\"2026-06\",5.1159],[\"2026-07\",5.1095],[\"2026-08\",5.1658],[\"2026-09\",5.052]],\"start\":{\"period\":\"2026-04\",\"value\":4.8452},\"latest\":{\"period\":\"2026-09\",\"value\":5.052},\"change\":0.2068}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Seasonally Adjusted\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 333,
+   "cacheWrite": 634,
+   "cacheRead": 10633
+  },
+  "ms": 3652
+ }
+}

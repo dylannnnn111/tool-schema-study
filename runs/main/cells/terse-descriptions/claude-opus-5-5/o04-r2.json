@@ -1,0 +1,99 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.03357,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you that figure. The data I have doesn't break out Central station, and it doesn't have daily numbers yet for last Friday (16 October 2026).\n\n**What the data covers:**\n- **Area, not stations:** it groups Opal tap-ons by commercial centre. Central is lumped in with the rest of the \"Sydney CBD\" centre.\n- **Hours:** it only counts tap-ons from 3pm to 7pm, when people are leaving work, not the whole day.\n- **Months, not days:** figures are monthly averages, and the latest is September 2026. October isn't available, so there's nothing for 16 October.\n\n**The closest figures I can give (Sydney CBD, 3–7pm):**\n- **Tuesday to Thursday, September 2026:** about **255,900 tap-ons a day** on average.\n- **Fridays, September 2026:** about **0.78 of the midweek level**, or roughly **200,000 tap-ons**. I worked this out from the two figures above; it wasn't reported directly.\n- **Recent trend:** Friday has been 0.78–0.80 of midweek every month from June to September (0.776, 0.778, 0.799, 0.783). So the evening of 16 October was probably about 200,000 for the whole CBD, if nothing unusual happened. That's an estimate, not a count.\n\nThese numbers may also be too low, because it's not clear whether Sydney Metro tap-ons in the CBD are included.\n\nFor an actual count at Central on that day, Transport for NSW publishes station-level Opal data on its Open Data portal. That data usually comes out with a delay, so last Friday may not be there yet.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-10-16",
+     "end": "2026-10-16",
+     "view": "friday_gap"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-10-16",
+     "end": "2026-10-16"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Known centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield, Parramatta.\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[]}]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-01",
+     "view": "evening_volume"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "evening_volume",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"average Tue-Thu evening tap-ons per day\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",226758.3333],[\"2026-02\",279433.3333],[\"2026-03\",273320],[\"2026-04\",261475],[\"2026-05\",257083.3333],[\"2026-06\",246975],[\"2026-07\",252401.6667],[\"2026-08\",262233.3333],[\"2026-09\",255926.6667]],\"start\":{\"period\":\"2026-01\",\"value\":226758.3333},\"latest\":{\"period\":\"2026-09\",\"value\":255926.6667},\"change\":29168.3334}]}"
+   },
+   {
+    "turn": 2,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-06",
+     "view": "friday_gap"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-06"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-06\",\"value\":0.776},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.007}]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1083,
+   "cacheWrite": 1833,
+   "cacheRead": 13525
+  },
+  "ms": 13213
+ }
+}

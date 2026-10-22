@@ -1,0 +1,69 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v03",
+ "kind": "vague",
+ "q": "Are things getting harder for people looking for work in Queensland?",
+ "date": "2026-10-19",
+ "cost": 0.00109,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Yes, somewhat.** Queensland's unemployment rate has been drifting up over the past year, and the latest readings are the highest since the start of 2025. The rise is modest, though, and jobs are not disappearing.\n\n- **Unemployment rate:** 4.53% in September 2026, up from 4.17% in September 2025 and 4.29% in July 2024. It has risen from about 4.2% in July 2026 to 4.5% in August and September.\n- **Unemployed people:** 144,400 in September 2026, up about 14,000 from July 2024 (130,400).\n- **Employment-to-population ratio:** 63.9% in September 2026, essentially unchanged from 63.8% in July 2024. This suggests the number of people with jobs as a share of the population is roughly flat.\n- **Participation rate:** 66.9% in September 2026, compared with 66.7% in July 2024. More people are looking for work, which pushes the unemployment rate up when there aren't enough new jobs.\n\nQueensland is still doing better than the national picture. Australia's unemployment rate was 4.72% in September 2026, up from 4.21% in July 2024, and the national employment-to-population ratio has slipped to 63.6%.\n\nMonthly figures are noisy. Queensland's rate swung from 3.7% in March 2026 to 4.3% in April, so the trend matters more than any single month. The recent rise is still a fairly small move, but the direction has been consistently upward since mid-2026.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "unemployed"
+     ],
+     "start": "2024-07"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "unemployed"
+     ],
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2024-07"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M6.3.1599.20.3+AUS.M?startPeriod=2024-07\",\"series\":[{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-07\",67.0906],[\"2024-08\",67.0605],[\"2024-09\",67.0805],[\"2024-10\",67.0343],[\"2024-11\",66.9147],[\"2024-12\",67.0901],[\"2025-01\",67.1924],[\"2025-02\",66.6675],[\"2025-03\",66.6942],[\"2025-04\",67.0774],[\"2025-05\",66.9885],[\"2025-06\",66.949],[\"2025-07\",67.0025],[\"2025-08\",66.8045],[\"2025-09\",66.9191],[\"2025-10\",66.9122],[\"2025-11\",66.6351],[\"2025-12\",66.6762],[\"2026-01\",66.6826],[\"2026-02\",66.8181],[\"2026-03\",66.7804],[\"2026-04\",66.6726],[\"2026-05\",66.6873],[\"2026-06\",67.0036],[\"2026-07\",66.852],[\"2026-08\",66.996],[\"2026-09\",66.7632]],\"start\":{\"period\":\"2024-07\",\"value\":67.0906},\"latest\":{\"period\":\"2026-09\",\"value\":66.7632},\"change\":-0.3274},{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-07\",4.2148],[\"2024-08\",4.109],[\"2024-09\",4.0053],[\"2024-10\",4.0826],[\"2024-11\",3.9327],[\"2024-12\",3.9982],[\"2025-01\",4.1285],[\"2025-02\",4.0752],[\"2025-03\",4.0849],[\"2025-04\",4.064],[\"2025-05\",4.1131],[\"2025-06\",4.3379],[\"2025-07\",4.2627],[\"2025-08\",4.2228],[\"2025-09\",4.4263],[\"2025-10\",4.3187],[\"2025-11\",4.3144],[\"2025-12\",4.1153],[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\""
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1126,
+   "cacheWrite": 3467,
+   "cacheRead": 9598
+  },
+  "ms": 6015
+ }
+}

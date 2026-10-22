@@ -1,0 +1,153 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f11.1",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "F11.1",
+  "title": "F11.1  EXCHANGE RATES",
+  "columns": [
+   {
+    "id": "FXRUSD",
+    "title": "A$1=USD",
+    "unit": "USD",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRTWI",
+    "title": "Trade-weighted Index May 1970 = 100",
+    "unit": "Index",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRCR",
+    "title": "A$1=CNY",
+    "unit": "CNY",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRJY",
+    "title": "A$1=JPY",
+    "unit": "JPY",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXREUR",
+    "title": "A$1=EUR",
+    "unit": "EUR",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRSKW",
+    "title": "A$1=KRW",
+    "unit": "KRW",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRUKPS",
+    "title": "A$1=GBP",
+    "unit": "GBP",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRSD",
+    "title": "A$1=SGD",
+    "unit": "SGD",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRIRE",
+    "title": "A$1=INR",
+    "unit": "INR",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRTB",
+    "title": "A$1=THB",
+    "unit": "THB",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRNZD",
+    "title": "A$1=NZD",
+    "unit": "NZD",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRNTD",
+    "title": "A$1=TWD",
+    "unit": "TWD",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRMR",
+    "title": "A$1=MYR",
+    "unit": "MYR",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRIR",
+    "title": "A$1=IDR",
+    "unit": "IDR",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRVD",
+    "title": "A$1=VND",
+    "unit": "VND",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRUAED",
+    "title": "A$1=AED",
+    "unit": "AED",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRPNGK",
+    "title": "A$1=PGK",
+    "unit": "PGK",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRHKD",
+    "title": "A$1=HKD",
+    "unit": "HKD",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRCD",
+    "title": "A$1=CAD",
+    "unit": "CAD",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRSARD",
+    "title": "A$1=ZAR",
+    "unit": "ZAR",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRSF",
+    "title": "A$1=CHF",
+    "unit": "CHF",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRPHP",
+    "title": "A$1=PHP",
+    "unit": "PHP",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FXRSDR",
+    "title": "A$1=SDR",
+    "unit": "SDR",
+    "frequency": "Daily"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:35:56.289Z"
+}

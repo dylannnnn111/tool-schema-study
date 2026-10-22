@@ -1,0 +1,57 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "g3",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "G3",
+  "title": "G3 INFLATION EXPECTATIONS",
+  "columns": [
+   {
+    "id": "GCONEXP",
+    "title": "Consumer inflation expectations – 1-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GBUSEXP",
+    "title": "Business inflation expectations – 3-months ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GUNIEXPY",
+    "title": "Union officials' inflation expectations – 1-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GUNIEXPYY",
+    "title": "Union officials' inflation expectations – 2-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GMAREXPY",
+    "title": "Market economists' inflation expectations – 1-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GMAREXPYY",
+    "title": "Market economists' inflation expectations – 2-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GBONYLD",
+    "title": "Break-even 10-year inflation rate",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:05:11.785Z"
+}

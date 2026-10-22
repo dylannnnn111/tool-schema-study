@@ -1,0 +1,162 @@
+{
+ "tool": "get_labour_force",
+ "args": {
+  "measures": [
+   "unemployment_rate",
+   "participation_rate"
+  ],
+  "states": [
+   "australia"
+  ],
+  "sex": "females",
+  "adjustment": "seasonally_adjusted",
+  "start": "2025-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Labour Force, Australia (monthly)",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12.2.1599.20.AUS.M?startPeriod=2025-09",
+  "series": [
+   {
+    "name": "Unemployment rate",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-09",
+      4.1831
+     ],
+     [
+      "2025-10",
+      4.0563
+     ],
+     [
+      "2025-11",
+      4.046
+     ],
+     [
+      "2025-12",
+      3.8515
+     ],
+     [
+      "2026-01",
+      3.92
+     ],
+     [
+      "2026-02",
+      4.0217
+     ],
+     [
+      "2026-03",
+      3.99
+     ],
+     [
+      "2026-04",
+      4.4064
+     ],
+     [
+      "2026-05",
+      4.2024
+     ],
+     [
+      "2026-06",
+      4.4087
+     ],
+     [
+      "2026-07",
+      4.4349
+     ],
+     [
+      "2026-08",
+      4.4639
+     ],
+     [
+      "2026-09",
+      4.6116
+     ]
+    ],
+    "start": {
+     "period": "2025-09",
+     "value": 4.1831
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 4.6116
+    },
+    "change": 0.4285
+   },
+   {
+    "name": "Participation rate",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-09",
+      63.1539
+     ],
+     [
+      "2025-10",
+      63.0472
+     ],
+     [
+      "2025-11",
+      63.0056
+     ],
+     [
+      "2025-12",
+      62.8919
+     ],
+     [
+      "2026-01",
+      62.933
+     ],
+     [
+      "2026-02",
+      63.0369
+     ],
+     [
+      "2026-03",
+      62.9512
+     ],
+     [
+      "2026-04",
+      62.743
+     ],
+     [
+      "2026-05",
+      62.8911
+     ],
+     [
+      "2026-06",
+      63.2831
+     ],
+     [
+      "2026-07",
+      63.1621
+     ],
+     [
+      "2026-08",
+      63.2081
+     ],
+     [
+      "2026-09",
+      63.0785
+     ]
+    ],
+    "start": {
+     "period": "2025-09",
+     "value": 63.1539
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 63.0785
+    },
+    "change": -0.0754
+   }
+  ],
+  "notes": [
+   "All series: Females, Total (age), Seasonally Adjusted, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:35:09.967Z"
+}

@@ -1,0 +1,139 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2025-01",
+  "end": "2026-10"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2025-01&endPeriod=2026-10 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2025-Q1&endPeriod=2026-Q4",
+  "series": [
+   {
+    "name": "All groups CPI - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      2.4
+     ],
+     [
+      "2025-05",
+      2.1
+     ],
+     [
+      "2025-06",
+      1.9
+     ],
+     [
+      "2025-07",
+      3
+     ],
+     [
+      "2025-08",
+      3.2
+     ],
+     [
+      "2025-09",
+      3.6
+     ],
+     [
+      "2025-10",
+      3.8
+     ],
+     [
+      "2025-11",
+      3.4
+     ],
+     [
+      "2025-12",
+      3.8
+     ],
+     [
+      "2026-01",
+      3.8
+     ],
+     [
+      "2026-02",
+      3.7
+     ],
+     [
+      "2026-03",
+      4.6
+     ],
+     [
+      "2026-04",
+      4.2
+     ],
+     [
+      "2026-05",
+      4
+     ],
+     [
+      "2026-06",
+      3.8
+     ],
+     [
+      "2026-07",
+      3.5
+     ],
+     [
+      "2026-08",
+      4
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 2.4
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4
+    },
+    "change": 1.6
+   },
+   {
+    "name": "All groups CPI - Australia (quarterly)",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2025-Q1",
+      2.4
+     ],
+     [
+      "2025-Q2",
+      2.1
+     ],
+     [
+      "2025-Q3",
+      3.2
+     ]
+    ],
+    "start": {
+     "period": "2025-Q1",
+     "value": 2.4
+    },
+    "latest": {
+     "period": "2025-Q3",
+     "value": 3.2
+    },
+    "change": 0.8
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, All groups CPI, Original, Australia",
+   "Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:23:59.231Z"
+}

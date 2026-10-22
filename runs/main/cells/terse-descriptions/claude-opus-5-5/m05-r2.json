@@ -1,0 +1,108 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m05",
+ "kind": "multi",
+ "q": "How far above the cash rate is the advertised standard variable home loan rate?",
+ "date": "2026-10-19",
+ "cost": 0.03827,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "As of September 2026, the advertised standard variable rate was about **4.4 percentage points above the cash rate**. That figure uses the cash rate before the RBA's 30 September hike.\n\n**Figures**\n- **Standard variable rate** (banks, owner-occupier, advertised, RBA table F5): **8.77%** at end-September 2026. It has been at that level since May 2026, when it rose from 8.52%.\n- **Cash rate target:** **4.35%** from 6 May to 29 September 2026. The RBA then raised it by 0.25 points to **4.60%**, effective 30 September 2026.\n\n**The gap**\n- **Before the hike:** 8.77% − 4.35% = **4.42 points**. This has been the gap since May. In May, banks passed on the full 0.25-point hike, so the gap didn't change.\n- **Compared with today's 4.60% cash rate:** 8.77% − 4.60% = 4.17 points. This understates the real gap because the September lending rate figure was recorded before banks could respond to the hike. If they pass on the full increase again, as they did in May, the standard variable rate would rise to about 9.02% and the gap would stay at about 4.4 points. The October lending rate figures will confirm this.\n\n**Most borrowers don't pay the standard rate.** The advertised discounted variable rate was **6.80%** in September, about **2.45 points** above the 4.35% cash rate. The rates banks actually charge on new loans are lower again; those are in RBA table F6.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2026-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2026-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-06-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2026-04"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2026-04"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2026-04-30\",\"value\":8.52},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0.25},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2026-04-30\",\"value\":6.55},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":0.25}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "A2",
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "A2",
+     "monthly": false,
+     "start": "2026-01"
+    },
+    "seen": "{\"table\":\"A2\",\"title\":\"A2 RESERVE BANK OF AUSTRALIA – CHANGES IN MONETARY POLICY AND ADMINISTERED RATES\",\"columns\":[{\"id\":\"ARBAMPCCCR\",\"title\":\"Change in Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPCNCRT\",\"title\":\"New Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPCRPESB\",\"title\":\"Change in ES Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPNRPESB\",\"title\":\"New ES Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPCORR\",\"title\":\"Change in Overnight Repo Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPNORR\",\"title\":\"New Overnight Repo Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"}]}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "A2",
+     "start": "2025-01",
+     "series": [
+      "ARBAMPCCCR",
+      "ARBAMPCNCRT"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "A2",
+     "series": [
+      "ARBAMPCCCR",
+      "ARBAMPCNCRT"
+     ],
+     "monthly": false,
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA A2 A2 RESERVE BANK OF AUSTRALIA – CHANGES IN MONETARY POLICY AND ADMINISTERED RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/a2-data.csv\",\"series\":[{\"name\":\"Change in Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\",\"points\":[[\"2025-02-19\",-0.25],[\"2025-05-21\",-0.25],[\"2025-08-13\",-0.25],[\"2026-02-04\",0.25],[\"2026-03-18\",0.25],[\"2026-05-06\",0.25],[\"2026-09-30\",0.25]],\"start\":{\"period\":\"2025-02-19\",\"value\":-0.25},\"latest\":{\"period\":\"2026-09-30\",\"value\":0.25},\"change\":0.5},{\"name\":\"New Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\",\"points\":[[\"2025-02-19\",4.1],[\"2025-05-21\",3.85],[\"2025-08-13\",3.6],[\"2026-02-04\",3.85],[\"2026-03-18\",4.1],[\"2026-05-06\",4.35],[\"2026-09-30\",4.6]],\"start\":{\"period\":\"2025-02-19\",\"value\":4.1},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.6},\"change\":0.5}],\"notes\":[]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1220,
+   "cacheWrite": 2198,
+   "cacheRead": 14206
+  },
+  "ms": 14152
+ }
+}

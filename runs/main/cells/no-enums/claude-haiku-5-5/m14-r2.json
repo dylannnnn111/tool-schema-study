@@ -1,0 +1,57 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m14",
+ "kind": "multi",
+ "q": "How has the Aussie dollar moved against the US dollar and the euro since the start of 2026?",
+ "date": "2026-10-19",
+ "cost": 0.00064,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The Australian dollar has risen against both currencies since the end of 2025, though it has been volatile along the way.\n\n**Against the US dollar (AUD/USD)**\n- **December 2025 (start of year):** US$0.6693\n- **Latest (October 2026):** US$0.6947\n- **Change:** up about 3.8% (+2.5 US cents)\n\nOver the year, the rate peaked at US$0.7166 in August 2026 and bottomed at US$0.6845 in March 2026. It has eased back about 3 cents since August.\n\n**Against the euro (AUD/EUR)**\n- **December 2025:** €0.5704\n- **Latest (October 2026):** €0.6187\n- **Change:** up about 8.5% (+4.8 euro cents)\n\nThe euro gains are larger because the euro weakened against the US dollar over the same period. Implied from the two series, the euro went from roughly US$1.17 at the start of the year to about US$1.12 in October, a fall of around 4%.\n\nThe figures are RBA month-end rates (last observation in each month). October 2026 is the latest reading so far and may not be a full-month figure.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "USD",
+      "EUR"
+     ],
+     "start": "2025-12",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "USD",
+      "EUR"
+     ],
+     "monthly": true,
+     "start": "2025-12"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/USD (units of foreign currency per A$1)\",\"unit\":\"USD\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-12\",0.6693],[\"2026-01\",0.7004],[\"2026-02\",0.7126],[\"2026-03\",0.6845],[\"2026-04\",0.7113],[\"2026-05\",0.7164],[\"2026-06\",0.6869],[\"2026-07\",0.703],[\"2026-08\",0.7166],[\"2026-09\",0.6977],[\"2026-10\",0.6947]],\"start\":{\"period\":\"2025-12\",\"value\":0.6693},\"latest\":{\"period\":\"2026-10\",\"value\":0.6947},\"change\":0.0254},{\"name\":\"AUD/EUR (units of foreign currency per A$1)\",\"unit\":\"EUR\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-12\",0.5704],[\"2026-01\",0.5874],[\"2026-02\",0.6033],[\"2026-03\",0.5968],[\"2026-04\",0.61],[\"2026-05\",0.6154],[\"2026-06\",0.6034],[\"2026-07\",0.611],[\"2026-08\",0.6182],[\"2026-09\",0.615],[\"2026-10\",0.6187]],\"start\":{\"period\":\"2025-12\",\"value\":0.5704},\"latest\":{\"period\":\"2026-10\",\"value\":0.6187},\"change\":0.0483}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 911,
+   "cacheWrite": 777,
+   "cacheRead": 8422
+  },
+  "ms": 5316
+ }
+}

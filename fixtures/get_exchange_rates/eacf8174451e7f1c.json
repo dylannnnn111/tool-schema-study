@@ -1,0 +1,57 @@
+{
+ "tool": "get_exchange_rates",
+ "args": {
+  "currencies": [
+   "USD"
+  ],
+  "monthly": true,
+  "start": "2026-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F11.1 Exchange Rates (4pm AEST)",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv",
+  "series": [
+   {
+    "name": "AUD/USD (units of foreign currency per A$1)",
+    "unit": "USD",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-06",
+      0.6869
+     ],
+     [
+      "2026-07",
+      0.703
+     ],
+     [
+      "2026-08",
+      0.7166
+     ],
+     [
+      "2026-09",
+      0.6977
+     ],
+     [
+      "2026-10",
+      0.6947
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 0.6869
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 0.6947
+    },
+    "change": 0.0078
+   }
+  ],
+  "notes": [
+   "This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in)."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:06:52.149Z"
+}

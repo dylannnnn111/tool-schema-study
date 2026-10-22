@@ -1,0 +1,109 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "A2",
+  "series": [
+   "ARBAMPCCCR",
+   "ARBAMPCNCRT"
+  ],
+  "monthly": false,
+  "start": "2025-01-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA A2 A2 RESERVE BANK OF AUSTRALIA – CHANGES IN MONETARY POLICY AND ADMINISTERED RATES",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/a2-data.csv",
+  "series": [
+   {
+    "name": "Change in Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "As announced",
+    "points": [
+     [
+      "2025-02-19",
+      -0.25
+     ],
+     [
+      "2025-05-21",
+      -0.25
+     ],
+     [
+      "2025-08-13",
+      -0.25
+     ],
+     [
+      "2026-02-04",
+      0.25
+     ],
+     [
+      "2026-03-18",
+      0.25
+     ],
+     [
+      "2026-05-06",
+      0.25
+     ],
+     [
+      "2026-09-30",
+      0.25
+     ]
+    ],
+    "start": {
+     "period": "2025-02-19",
+     "value": -0.25
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 0.25
+    },
+    "change": 0.5
+   },
+   {
+    "name": "New Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "As announced",
+    "points": [
+     [
+      "2025-02-19",
+      4.1
+     ],
+     [
+      "2025-05-21",
+      3.85
+     ],
+     [
+      "2025-08-13",
+      3.6
+     ],
+     [
+      "2026-02-04",
+      3.85
+     ],
+     [
+      "2026-03-18",
+      4.1
+     ],
+     [
+      "2026-05-06",
+      4.35
+     ],
+     [
+      "2026-09-30",
+      4.6
+     ]
+    ],
+    "start": {
+     "period": "2025-02-19",
+     "value": 4.1
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 4.6
+    },
+    "change": 0.5
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:20:30.540Z"
+}

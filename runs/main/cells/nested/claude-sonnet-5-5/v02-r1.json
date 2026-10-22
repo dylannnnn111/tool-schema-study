@@ -1,0 +1,100 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "v02",
+ "kind": "vague",
+ "q": "How bad is the rent situation in Sydney?",
+ "date": "2026-10-19",
+ "cost": 0.01892,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Sydney rents are still rising, but much more slowly than at the peak. They are not getting cheaper, though.**\n\n**Annual rent inflation in Sydney (ABS CPI, rents)**\n- **Peak:** 8.9% in the March quarter of 2024. It was 8.8% in March 2024 on the monthly series.\n- **August 2024:** 7.1%\n- **August 2025:** 3.2%, the low point\n- **August 2026 (latest):** 3.5%. That is slightly above Australia's 3.6%... or rather just below it, since the national figure is 3.6%.\n\n**Where that leaves renters**\n- By my calculation, compounding the August year-on-year figures from 2023 to 2026 gives about 14% growth over the last three years. Adding the 8.7% for the year to August 2023 gives about 24% over four years. Those increases were not reversed, and rents are still climbing.\n- Sydney rent growth stopped slowing around mid-2025. It has sat between 3.2% and 3.5% for about a year, and the latest 3.5% is a touch higher than a year earlier.\n- Rent inflation of 3.5% is below headline CPI. Sydney's headline CPI was 3.9% in August 2026 (Australia 4.0%), so rents are currently rising more slowly than prices generally. That is a change from 2023–24, when rents were outpacing inflation.\n\n**Caveats**\n- The CPI rent measure covers all tenancies, not only new leases. It lags the market, because many tenants are on existing leases and renew at higher rents over time.\n- Asking rents on new listings, vacancy rates and affordability relative to incomes would show how hard it is to find a place right now. I haven't pulled those, so I can't say how tight the market is today.\n\nIn short, the rent shock of 2023–24 has eased, but rents sit at a much higher level and are still growing at about 3.5% a year.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "cities": [
+       "sydney",
+       "australia"
+      ],
+      "items": [
+       "rents"
+      ]
+     },
+     "period": {
+      "start": "2023-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1+50.M?startPeriod=2023-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30014..1+50.Q?startPeriod=2023-Q1\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2023-07\",7.6],[\"2023-08\",7.8],[\"2023-09\",7.5],[\"2023-10\",6.6],[\"2023-11\",7.1],[\"2023-12\",7.4],[\"2024-01\",7.5],[\"2024-02\",7.5],[\"2024-03\",7.7],[\"2024-04\",7.5],[\"2024-05\",7.4],[\"2024-06\",7.1],[\"2024-07\",6.9],[\"2024-08\",6.7],[\"2024-09\",6.6],[\"2024-10\",6.8],[\"2024-11\",6.6],[\"2024-12\",6.2],[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2023-07\",\"value\":7.6},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-4},{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2023-07\",8.4],[\"2023-08\",8.7],[\"2023-09\",8.6],[\"2023-10\",8.1],[\"2023-11\",8.4],[\"2023-12\",8.7],[\"2024-01\",8.7],[\"2024-02\",8.7],[\"2024-03\",8.8],[\"2024-04\",8.5],[\"2024-05\",8.3],[\"2024-06\",7.8],[\"2024-07\",7.4],[\"2024-08\",7.1],[\"2024-09\",6.9],[\"2024-10\",6.8],[\"2024-11\",6.5],[\"2024-12\",6],[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "cities": [
+       "sydney",
+       "australia"
+      ],
+      "items": [
+       "all_groups"
+      ]
+     },
+     "period": {
+      "start": "2025-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..1+50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"All groups CPI - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.7],[\"2025-07\",2.9],[\"2025-08\",2.7],[\"2025-09\",3.4],[\"2025-10\",3.6],[\"2025-11\",3.4],[\"2025-12\",3.7],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",4.4],[\"2026-04\",4.2],[\"2026-05\",4.2],[\"2026-06\",4],[\"2026-07\",3.2],[\"2026-08\",3.9]],\"start\":{\"period\":\"2025-06\",\"value\":1.7},\"latest\":{\"period\":\"2026-08\",\"value\":3.9},\"change\":2.2},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-06\",\"value\":1.9},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":2.1}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1137,
+   "cacheWrite": 2589,
+   "cacheRead": 10623
+  },
+  "ms": 12494
+ }
+}

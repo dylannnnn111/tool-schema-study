@@ -1,0 +1,41 @@
+{
+ "tool": "get_cash_rate",
+ "args": {
+  "start": "2026-08-15"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F1.1 Interest Rates and Yields - Money Market",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv",
+  "series": [
+   {
+    "name": "Cash rate target (monthly average)",
+    "unit": "Per cent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08-31",
+      4.35
+     ],
+     [
+      "2026-09-30",
+      4.36
+     ]
+    ],
+    "start": {
+     "period": "2026-08-31",
+     "value": 4.35
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 4.36
+    },
+    "change": 0.01
+   }
+  ],
+  "notes": [
+   "Monthly average of the RBA cash rate target. Periods are month-end dates."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:14:58.700Z"
+}

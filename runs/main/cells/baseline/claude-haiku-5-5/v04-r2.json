@@ -1,0 +1,97 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v04",
+ "kind": "vague",
+ "q": "Should I be fixing my home loan right now? What are banks advertising for a 3-year fixed?",
+ "date": "2026-10-19",
+ "cost": 0.00156,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Short answer:** Fixing now means locking in a rate that is higher than the variable rates banks advertise. Whether that's wise depends on your buffer and how much you value certainty, and nobody can reliably predict the rate path. The data below may help you decide.\n\n**What banks are advertising (RBA indicator rates, owner-occupier, September 2026):**\n\n| Product | Advertised rate |\n|---|---|\n| 3-year fixed | **7.02%** |\n| Variable, discounted | 6.80% |\n| Variable, standard | 8.77% |\n\n- The RBA cash rate target was 4.36% (September 2026 monthly average), up from 3.60% in January 2026.\n- The 3-year fixed rate was about 5.5% in October 2025 and has risen roughly 1.5 percentage points since.\n- The 3-year fixed is currently about 0.2 points *above* the best discounted variable rate, so you pay a premium for certainty.\n\n**Why rates are rising:** Trimmed mean inflation (the RBA's preferred underlying measure) was 3.6% in August 2026, and headline CPI was 4.0%. Inflation has moved above the RBA's 2–3% target band, which is why the cash rate has gone up. Fixed rates tend to move ahead of the cash rate, so the rise in fixed rates suggests lenders expect rates to stay high or rise further. I don't have a reliable forecast, so I can't say whether that expectation will be right.\n\n**Rough cost of the premium:** On a $600,000 loan over 30 years, 7.02% versus 6.80% is about $90 a month more, or about $1,000 a year. These are advertised rates. Most borrowers negotiate below them, so check your actual rate.\n\n**Factors that should drive your decision:**\n- **Your buffer:** Fixing protects you if rates rise, but it's most valuable if a higher repayment would strain your budget.\n- **Break costs:** Leaving a fixed loan early can cost thousands, and you may not be able to make extra repayments on it.\n- **Flexibility:** Offset accounts and redraw are usually available on variable loans but not always on fixed ones.\n- **Splitting:** Many people fix part of the loan and leave the rest variable, which hedges both ways.\n- **Time horizon:** Are you planning to sell, refinance, or move within three years?\n\nIf you tell me your loan size, current rate, and whether you have an offset, I can estimate the repayment difference under each option.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_3yr_fixed",
+      "owner_occupier_variable_discounted",
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_3yr_fixed",
+      "owner_occupier_variable_discounted",
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; 3-year fixed; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",6.8],[\"2024-07-31\",6.68],[\"2024-08-31\",6.27],[\"2024-09-30\",6.27],[\"2024-10-31\",6.08],[\"2024-11-30\",6.08],[\"2024-12-31\",6.08],[\"2025-01-31\",6.08],[\"2025-02-28\",6.03],[\"2025-03-31\",6.03],[\"2025-04-30\",5.94],[\"2025-05-31\",5.88],[\"2025-06-30\",5.88],[\"2025-07-31\",5.81],[\"2025-08-31\",5.52],[\"2025-09-30\",5.52],[\"2025-10-31\",5.52],[\"2025-11-30\",5.56],[\"2025-12-31\",5.77],[\"2026-01-31\",5.99],[\"2026-02-28\",6.24],[\"2026-03-31\",6.39],[\"2026-04-30\",6.73],[\"2026-05-31\",6.73],[\"2026-06-30\",6.74],[\"2026-07-31\",6.74],[\"2026-08-31\",6.74],[\"2026-09-30\",7.02]],\"start\":{\"period\":\"2024-06-30\",\"value\":6.8},\"latest\":{\"period\":\"2026-09-30\",\"value\":7.02},\"change\":0.22},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",7.12],[\"2024-07-31\",7.12],[\"2024-08-31\",7.07],[\"2024-09-30\",7.07],[\"2024-10-31\",7.07],[\"2024-11-30\",7.07],[\"2024-12-31\",7.07],[\"2025-01-31\",7.07],[\"2025-02-28\",6.88],[\"2025-03-31\",6.82],[\"2025-04-30\",6.55],[\"2025-05-31\",6.37],[\"2025-06-30\",6.3],[\"2025-07-31\",6.3],[\"2025-08-31\",6.05],[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"20"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-06-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "measure": "annual_change",
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-06\",\"value\":2.8},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.8},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-06\",\"value\":1.9},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":2.1}],\"notes\":[\"All series: Percentage change from previous year, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 2165,
+   "cacheWrite": 3082,
+   "cacheRead": 9622
+  },
+  "ms": 11528
+ }
+}

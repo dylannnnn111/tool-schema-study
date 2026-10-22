@@ -1,0 +1,50 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o09",
+ "kind": "out-of-scope",
+ "q": "Where is the ASX 200 sitting today?",
+ "date": "2026-10-19",
+ "cost": 0.01062,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you where the ASX 200 is today. My tools don't include a share market or equity index feed. The one RBA table I searched (F7) covers business lending rates, and none of the other tools carry share prices. Any figure I gave you would be a guess, so I won't give one.\n\nFor a live level, try the ASX website (asx.com.au), the S&P Dow Jones Indices page for the S&P/ASX 200, or a broker or finance app such as Google Finance, Bloomberg or Market Index.\n\nI can pull Australian macro and market-related data that often moves the index:\n- the RBA cash rate\n- the AUD exchange rate\n- lending rates\n- CPI\n- labour force figures\n\nWould any of those help?",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "F7",
+     "search": "ASX 200 share price index"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F7",
+     "search": "ASX 200 share price index",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F7\",\"title\":\"F7  BUSINESS LENDING RATES\",\"columns\":[{\"id\":\"FLRBFOSBT\",\"title\":\"Lending rates; Business finance; Outstanding; Small business; Total\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOSBR\",\"title\":\"Lending rates; Business finance; Outstanding; Small business; of which, Residentially secured\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOSBF\",\"title\":\"Lending rates; Business finance; Outstanding; Small business; Fixed-rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOSBV\",\"title\":\"Lending rates; Business finance; Outstanding; Small business; Variable-rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOMBT\",\"title\":\"Lending rates; Business finance; Outstanding; Medium business; Total\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOMBF\",\"title\":\"Lending rates; Business finance; Outstanding; Medium business; Fixed-rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOMBV\",\"title\":\"Lending rates; Business finance; Outstanding; Medium business; Variable-rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOLBT\",\"title\":\"Lending rates; Business finance; Outstanding; Large business; Total\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOLBF\",\"title\":\"Lending rates; Business finance; Outstanding; Large business; Fixed-rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRBFOLBV\",\"title\":\"Lending rates; Business fina"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 595,
+   "cacheWrite": 1631,
+   "cacheRead": 5806
+  },
+  "ms": 7265
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "variant": "no-enums",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v10",
+ "kind": "vague",
+ "q": "How's the job market looking for women in Victoria?",
+ "date": "2026-10-19",
+ "cost": 0.04905,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": true,
+  "calls": 2,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Women in Victoria are finding it harder to get work than a year ago. There are a few more jobs than a year ago, but more women are looking for work too, so unemployment has gone up. All figures are ABS Labour Force data for women, seasonally adjusted, up to **September 2026**.\n\n**Unemployment has risen and is above the national rate**\n- The unemployment rate for Victorian women was **5.1%** in September 2026. It was **4.1%** in September 2025 and **4.1%** in January 2026.\n- It began climbing in March, reached **5.2%** in July and has stayed around 5.1–5.2% since June.\n- Nationally, the rate for women is **4.6%**. Victoria has gone from roughly matching the national rate in 2025 to being about half a percentage point higher.\n\n**The number of jobs has barely changed**\n- **1.843 million** Victorian women were employed in September 2026, compared with 1.838 million a year earlier. That's about +5,000, or 0.3%.\n- Employment fell to **1.803 million** in April 2026, then recovered to about where it was in February.\n- Full-time jobs held by women came to **1.008 million**, slightly fewer than in September 2025 (1.011 million) and well below the July 2025 high of 1.038 million. Part-time jobs (worked out as total minus full-time) rose a little, from about 828,000 to about 835,000.\n\n**More women want work, but there aren't enough jobs**\n- **63.6%** of Victorian women are working or looking for work (the participation rate), close to 63.9% a year ago and above the national 63.1%.\n- By my estimate from the figures above, about **25,000 more** Victorian women are in the workforce than a year ago, while only about 5,000 more have a job. That gap is why unemployment rose.\n\n**Victoria compared with the national picture**\nAcross Australia, the number of employed women grew by about 79,000 (+1.1%) over the year, and full-time jobs went up by about 132,000. Victoria hasn't kept up. National unemployment for women has also risen, from 4.2% to 4.6%, so some of the weakness is national, but Victoria has had a bigger rise.\n\n**Overall:** It isn't a collapse, because employment is steady and women are still joining the workforce. But it is a weaker market than in 2025: unemployment is about 1 percentage point higher, there are fewer full-time jobs, and Victoria is doing worse than the national average. State figures for one sex can swing a lot from month to month, so the trend since March tells you more than any single month.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "victoria",
+      "australia"
+     ],
+     "sex": "females",
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employed_total"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "measures",
+      "problem": "\"employed_total\" isn't a valid value",
+      "allowed": [
+       "unemployment_rate",
+       "participation_rate",
+       "employment_to_population",
+       "employed",
+       "employed_full_time",
+       "employed_part_time",
+       "unemployed",
+       "labour_force"
+      ]
+     },
+     {
+      "path": "states",
+      "problem": "\"victoria\" isn't a valid value",
+      "allowed": [
+       "australia",
+       "nsw",
+       "vic",
+       "qld",
+       "sa",
+       "wa",
+       "tas",
+       "nt",
+       "act"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_labour_force:\n- measures: \"employed_total\" isn't a valid value. Use one of: unemployment_rate, participation_rate, employment_to_population, employed, employed_full_time, employed_part_time, unemployed, labour_force\n- states: \"victoria\" isn't a valid value. Use one of: australia, nsw, vic, qld, sa, wa, tas, nt, act"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "vic",
+      "australia"
+     ],
+     "sex": "females",
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employed",
+      "employed_full_time",
+      "employed_part_time"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employed",
+      "employed_full_time",
+      "employed_part_time"
+     ],
+     "states": [
+      "vic",
+      "australia"
+     ],
+     "sex": "females",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M3+M1+M2.2.1599.20.2+AUS.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",4.1514],[\"2025-02\",3.9224],[\"2025-03\",3.9851],[\"2025-04\",3.9919],[\"2025-05\",3.9251],[\"2025-06\",4.0836],[\"2025-07\",4.0858],[\"2025-08\",4.1067],[\"2025-09\",4.1831],[\"2025-10\",4.0563],[\"2025-11\",4.046],[\"2025-12\",3.8515],[\"2026-01\",3.92],[\"2026-02\",4.0217],[\"2026-03\",3.99],[\"2026-04\",4.4064],[\"2026-05\",4.2024],[\"2026-06\",4.4087],[\"2026-07\",4.4349],[\"2026-08\",4.4639],[\"2026-09\",4.6116]],\"start\":{\"period\":\"2025-01\",\"value\":4.1514},\"latest\":{\"period\":\"2026-09\",\"value\":4.6116},\"change\":0.4602},{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",63.3558],[\"2025-02\",62.7233],[\"2025-03\",62.7048],[\"2025-04\",63.4238],[\"2025-05\",63.369],[\"2025-06\",63.1202],[\"2025-07\",63.463],[\"2025-08\",63.2053],[\"2025-09\",63.1539],[\"2025-10\",63.0472],[\"2025-11\",63.0056],[\"2025-12\",62.8919],[\"2026-01\",62.933],[\"2026-02\",63.0369],[\"2026-03\",62.9512],[\"2026-04\",62.743],[\"2026-05\",62.8911],[\"2026-06\",63.2831],[\"2026-07\",63.1621],[\"2026-08\",63.2081],[\"2026-09\",63.0785]],\"start\":{\"period\":\"2025-01\",\"value\":63.3558},\"latest\":{\"period\":\"2026-09\",\"value\":63.0785},\"change\":-0.2773},{\"name\":\"Participation rate - Victoria\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",63.5698],[\"2025-02\","
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1500,
+   "cacheWrite": 3270,
+   "cacheRead": 13337
+  },
+  "ms": 18670
+ }
+}

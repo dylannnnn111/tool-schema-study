@@ -1,0 +1,113 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "v13",
+ "kind": "vague",
+ "q": "What's the jobless rate in the territory Canberra's in?",
+ "date": "2026-10-19",
+ "cost": 0.0097,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": false,
+  "calls": 3,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Canberra is in the Australian Capital Territory (ACT). Its unemployment rate was **4.7% in September 2026**, the latest month available (4.66% before rounding).\n\nThe ABS doesn't publish a seasonally adjusted figure for the ACT through this tool, so this is the original (unadjusted) series. It is volatile from month to month. The rate in 2026 so far:\n\n| Month | Unemployment rate |\n|---|---|\n| Jan | 4.7% |\n| Feb | 3.8% |\n| Mar | 4.1% |\n| Apr | 4.8% |\n| May | 3.7% |\n| Jun | 3.9% |\n| Jul | 3.6% |\n| Aug | 3.9% |\n| Sep | 4.7% |\n\nThe rate has ranged from 3.6% to 4.8% this year. September's jump from August is partly noise, so it's better to read the figure as a range of roughly 4% than as a precise level.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.8.M?startPeriod=2026-01\",\"series\":[],\"notes\":[\"ABS returned no data. Trend and seasonally adjusted series aren't published for every state/sex combination - try original.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2026-01",
+     "adjustment": "original"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "original",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.10.8.M?startPeriod=2026-01\",\"series\":[{\"name\":\"Australian Capital Territory\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",4.6868],[\"2026-02\",3.8349],[\"2026-03\",4.0945],[\"2026-04\",4.8227],[\"2026-05\",3.7422],[\"2026-06\",3.9022],[\"2026-07\",3.6404],[\"2026-08\",3.9327],[\"2026-09\",4.6645]],\"start\":{\"period\":\"2026-01\",\"value\":4.6868},\"latest\":{\"period\":\"2026-09\",\"value\":4.6645},\"change\":-0.0223}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Original, Australian Capital Territory\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "australian_capital_territory"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "states",
+      "problem": "\"australian_capital_territory\" isn't a valid value",
+      "allowed": [
+       "australia",
+       "nsw",
+       "vic",
+       "qld",
+       "sa",
+       "wa",
+       "tas",
+       "nt",
+       "act"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_labour_force:\n- states: \"australian_capital_territory\" isn't a valid value. Use one of: australia, nsw, vic, qld, sa, wa, tas, nt, act"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 607,
+   "cacheWrite": 931,
+   "cacheRead": 12876
+  },
+  "ms": 5904
+ }
+}

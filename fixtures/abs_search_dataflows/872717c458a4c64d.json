@@ -1,0 +1,11 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "housing rental price"
+ },
+ "ok": true,
+ "result": {
+  "results": []
+ },
+ "fetchedAt": "2026-10-18T21:18:03.952Z"
+}

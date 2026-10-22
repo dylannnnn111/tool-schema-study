@@ -1,0 +1,111 @@
+{
+ "variant": "nested",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v03",
+ "kind": "vague",
+ "q": "Are things getting harder for people looking for work in Queensland?",
+ "date": "2026-10-19",
+ "cost": 0.0539,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes, it's getting harder to find work in Queensland, but only gradually. Unemployment has been rising for about six months, though it's still low by historical standards and a bit below the national rate.\n\n**Unemployment rate, Queensland (trend)**\n- Sep 2024: 4.0%\n- Sep 2025: 4.1%\n- Mar 2026: 4.1% (steady through early 2026)\n- Sep 2026: **4.5%**, up every month since March\n\nThe month-to-month seasonally adjusted figures jump around a lot for Queensland. For example, they dropped to 3.7% in March and May 2026 and jumped back above 4.2% in between. The two latest readings were the highest in this two-year series: 4.5% in August 2026 and **4.5% in September 2026**.\n\n**Other signs it's harder (seasonally adjusted)**\n- **More people out of work:** about 144,400 unemployed Queenslanders in September 2026, up from 130,600 a year earlier (+13,700) and 122,100 two years earlier.\n- **Jobs aren't keeping up with population growth:** the share of working-age people who have a job fell from 64.3% (Sep 2025) to 63.9% (Sep 2026). That's the lowest in this two-year series except November 2025.\n- **Not because people stopped looking:** the share of people working or looking for work (participation) has stayed at about 67%. So the rise in unemployment is real, not an effect of people leaving the workforce.\n\n**What's still holding up**\n- **Jobs are still being added:** Queensland gained about 50,000 jobs (+1.7%) between September 2025 and September 2026 (trend). Hiring has slowed since about mid-2026, though, and there are more people looking for work.\n- **Better than nationally:** Australia-wide unemployment rose faster, from 4.4% to **4.7%** over the year to September 2026. Queensland is still a bit below that.\n\n**Bottom line:** Jobseekers in Queensland have more competition than a year ago. The unemployment rate has risen about 0.4 points since March 2026 and there are roughly 14,000 more unemployed people than a year ago. That's a steady softening rather than a sharp downturn, and it matches the broader national trend.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "select": {
+      "states": [
+       "qld",
+       "australia"
+      ],
+      "measures": [
+       "unemployment_rate",
+       "participation_rate",
+       "employment_to_population",
+       "employed",
+       "unemployed"
+      ]
+     },
+     "period": {
+      "start": "2024-09"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed",
+      "unemployed"
+     ],
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2024-09"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M3+M6.3.1599.20.3+AUS.M?startPeriod=2024-09\",\"series\":[{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09\",67.0805],[\"2024-10\",67.0343],[\"2024-11\",66.9147],[\"2024-12\",67.0901],[\"2025-01\",67.1924],[\"2025-02\",66.6675],[\"2025-03\",66.6942],[\"2025-04\",67.0774],[\"2025-05\",66.9885],[\"2025-06\",66.949],[\"2025-07\",67.0025],[\"2025-08\",66.8045],[\"2025-09\",66.9191],[\"2025-10\",66.9122],[\"2025-11\",66.6351],[\"2025-12\",66.6762],[\"2026-01\",66.6826],[\"2026-02\",66.8181],[\"2026-03\",66.7804],[\"2026-04\",66.6726],[\"2026-05\",66.6873],[\"2026-06\",67.0036],[\"2026-07\",66.852],[\"2026-08\",66.996],[\"2026-09\",66.7632]],\"start\":{\"period\":\"2024-09\",\"value\":67.0805},\"latest\":{\"period\":\"2026-09\",\"value\":66.7632},\"change\":-0.3173},{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09\",4.0053],[\"2024-10\",4.0826],[\"2024-11\",3.9327],[\"2024-12\",3.9982],[\"2025-01\",4.1285],[\"2025-02\",4.0752],[\"2025-03\",4.0849],[\"2025-04\",4.064],[\"2025-05\",4.1131],[\"2025-06\",4.3379],[\"2025-07\",4.2627],[\"2025-08\",4.2228],[\"2025-09\",4.4263],[\"2025-10\",4.3187],[\"2025-11\",4.3144],[\"2025-12\",4.1153],[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\",4.7183]],\"start\":{\"period\":\"2024-09\",\"value\":4.0053},\"latest\":{\"period\":\""
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "select": {
+      "states": [
+       "qld"
+      ],
+      "measures": [
+       "unemployment_rate",
+       "employed"
+      ]
+     },
+     "period": {
+      "start": "2024-09"
+     },
+     "options": {
+      "adjustment": "trend"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "employed"
+     ],
+     "states": [
+      "qld"
+     ],
+     "sex": "persons",
+     "adjustment": "trend",
+     "start": "2024-09"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M3.3.1599.30.3.M?startPeriod=2024-09\",\"series\":[{\"name\":\"Employed persons\",\"unit\":\"Number (Thousands)\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09\",2952.3172],[\"2024-10\",2960.8366],[\"2024-11\",2967.7842],[\"2024-12\",2973.1306],[\"2025-01\",2977.5223],[\"2025-02\",2982.1035],[\"2025-03\",2987.4664],[\"2025-04\",2992.9342],[\"2025-05\",2997.8208],[\"2025-06\",3000.5741],[\"2025-07\",3000.6688],[\"2025-08\",2999.2348],[\"2025-09\",2997.7853],[\"2025-10\",2998.3314],[\"2025-11\",3001.2355],[\"2025-12\",3006.1624],[\"2026-01\",3012.4668],[\"2026-02\",3019.5056],[\"2026-03\",3026.4447],[\"2026-04\",3032.5417],[\"2026-05\",3037.0026],[\"2026-06\",3040.0362],[\"2026-07\",3042.5222],[\"2026-08\",3044.8524],[\"2026-09\",3047.5947]],\"start\":{\"period\":\"2024-09\",\"value\":2952.3172},\"latest\":{\"period\":\"2026-09\",\"value\":3047.5947},\"change\":95.2775},{\"name\":\"Unemployment rate\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09\",3.9927],[\"2024-10\",3.9488],[\"2024-11\",3.9264],[\"2024-12\",3.9341],[\"2025-01\",3.9665],[\"2025-02\",4.0099],[\"2025-03\",4.0426],[\"2025-04\",4.062],[\"2025-05\",4.0738],[\"2025-06\",4.0922],[\"2025-07\",4.1155],[\"2025-08\",4.1345],[\"2025-09\",4.1467],[\"2025-10\",4.1464],[\"2025-11\",4.1378],[\"2025-12\",4.1258],[\"2026-01\",4.117],[\"2026-02\",4.1146],[\"2026-03\",4.1224],[\"2026-04\",4.1486],[\"2026-05\",4.1975],[\"2026-06\",4.2637],[\"2026-07\",4.3383],[\"2026-08\",4.4127],[\"2026-09\",4.4714]],\"start\":{\"period\":\"2024-09\",\"value\":3."
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1227,
+   "cacheWrite": 5062,
+   "cacheRead": 20083
+  },
+  "ms": 13948
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "g2",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "G2",
+  "title": "G2 CONSUMER PRICE INFLATION – EXPENDITURE GROUPS",
+  "columns": [
+   {
+    "id": "GCPIFYP",
+    "title": "Food and non-alcoholic beverages year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIATYP",
+    "title": "Alcohol and tobacco year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPICFYP",
+    "title": "Clothing and footwear year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIHOYP",
+    "title": "Housing year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIHCSYP",
+    "title": "Furnishings, household equipment and services year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIHEYP",
+    "title": "Health year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPITYP",
+    "title": "Transport year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPICYP",
+    "title": "Communication year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIRYP",
+    "title": "Recreation and culture year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIEYP",
+    "title": "Education year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIFISYP",
+    "title": "Insurance and financial services year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:39:24.213Z"
+}

@@ -10,9 +10,13 @@ export const VARIANTS = {
   'no-enums': 'Enums removed from the schema (the server still only accepts the same values)',
   nested: 'Arguments grouped into select / period / options objects',
   'terse-errors': 'Error messages say only that the call failed, not why',
+  'no-enums-terse-errors': 'Both at once: no enums to guide the first try, and errors that don\'t say what went wrong',
 } as const;
 export type Variant = keyof typeof VARIANTS;
 export const VARIANT_NAMES = Object.keys(VARIANTS) as Variant[];
+
+export const hidesEnums = (v: Variant) => v === 'no-enums' || v === 'no-enums-terse-errors';
+export const terseErrors = (v: Variant) => v === 'terse-errors' || v === 'no-enums-terse-errors';
 
 export type ToolDef = { name: string; description: string; input_schema: Record<string, unknown> };
 
@@ -20,7 +24,7 @@ const GROUPS = ['select', 'period', 'options'] as const;
 
 function paramSchema(p: Param, v: Variant): Record<string, unknown> {
   const s: Record<string, unknown> = {};
-  const withEnum = p.enum && v !== 'no-enums';
+  const withEnum = p.enum && !hidesEnums(v);
   if (p.type === 'string[]') {
     s.type = 'array';
     s.items = withEnum ? { type: 'string', enum: [...p.enum!] } : { type: 'string' };
@@ -153,13 +157,13 @@ export function canonicalize(tool: ToolSpec, v: Variant, input: unknown): Canoni
 }
 
 export function validationError(tool: ToolSpec, v: Variant, problems: ArgProblem[]): string {
-  if (v === 'terse-errors') return 'Error: invalid arguments.';
+  if (terseErrors(v)) return 'Error: invalid arguments.';
   const lines = problems.map((x) => `- ${x.path}: ${x.problem}${x.allowed ? `. Use one of: ${x.allowed.join(', ')}` : ''}`);
   return `Error: invalid arguments for ${tool.name}:\n${lines.join('\n')}`;
 }
 
 export function runtimeError(v: Variant, message: string): string {
-  return v === 'terse-errors' ? 'Error: request failed.' : `Error: ${message}`;
+  return terseErrors(v) ? 'Error: request failed.' : `Error: ${message}`;
 }
 
 export function specFor(name: string): ToolSpec | undefined {

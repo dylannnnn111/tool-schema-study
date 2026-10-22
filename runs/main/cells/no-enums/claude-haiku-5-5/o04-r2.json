@@ -1,0 +1,62 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.00051,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't get that. My Opal data doesn't cover Central station, and it doesn't give daily counts for any single station.\n\nThe Commute Pulse tool only covers these centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta. It reports monthly aggregates, such as Friday-to-midweek evening tap-on ratios and Tue–Thu evening tap-ons per day, rather than station-level or daily totals. So I can't tell you how many people tapped on at Central last Friday (16 October 2026).\n\nFor that number, you'd need Transport for NSW's Opal tap-on data directly, which is published at station level. I can pull the Sydney CBD return-to-office trend if that would help as context.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Central"
+     ],
+     "view": "evening_volume",
+     "start": "2026-07"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "centres",
+      "problem": "\"Central\" isn't a valid value",
+      "allowed": [
+       "Sydney CBD",
+       "North Sydney",
+       "Chatswood",
+       "Macquarie Park",
+       "Strathfield",
+       "Parramatta"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_commute_pulse:\n- centres: \"Central\" isn't a valid value. Use one of: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield, Parramatta"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 729,
+   "cacheWrite": 449,
+   "cacheRead": 8496
+  },
+  "ms": 4896
+ }
+}

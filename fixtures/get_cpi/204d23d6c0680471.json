@@ -1,0 +1,26 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "Restaurant meals"
+  ],
+  "cities": [
+   "melbourne",
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2024-09",
+  "end": "2026-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Restaurant meals..2+50.M?startPeriod=2024-09&endPeriod=2026-09 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Restaurant meals..2+50.Q?startPeriod=2024-Q3&endPeriod=2026-Q3",
+  "series": [],
+  "notes": [
+   "ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:17:13.420Z"
+}

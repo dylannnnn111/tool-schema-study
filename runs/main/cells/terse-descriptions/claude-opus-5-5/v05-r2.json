@@ -1,0 +1,83 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v05",
+ "kind": "vague",
+ "q": "Petrol's killing me. How much more am I paying than a year ago?",
+ "date": "2026-10-19",
+ "cost": 0.02342,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "You're paying about **13.5% more for petrol than a year ago**, based on ABS figures for **August 2026** compared with August 2025. That's the latest month available.\n\n**How that compares:**\n- Prices overall (all groups CPI) rose **4.0%** over the same 12 months, so petrol is rising more than three times as fast as prices generally.\n- If you were spending $70 a week on fuel a year ago, that's now about **$79.50**, or roughly $490 more over a year.\n\n**Fuel prices have swung a lot this year** (each figure compares with the same month a year earlier):\n\n| Month | Change on a year earlier |\n|---|---|\n| Feb 2026 | −7.2% |\n| **Mar 2026** | **+24.2%** (peak) |\n| Apr 2026 | +18.6% |\n| May 2026 | +7.7% |\n| Jun 2026 | −7.3% |\n| Jul 2026 | −0.4% |\n| **Aug 2026** | **+13.5%** |\n\nSo the spike earlier this year faded by mid-year, with June and July prices about the same as or lower than a year earlier. In August they jumped back up. If it feels like petrol has suddenly got worse again, that matches the data.\n\nThis is a national average from the CPI, not a price per litre, so what you pay will depend on your city and where you fill up.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "start": "2025-06",
+     "measure": "annual_change"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",-7.9],[\"2025-07\",-5.5],[\"2025-08\",-1.7],[\"2025-09\",2.8],[\"2025-10\",1.9],[\"2025-11\",3.5],[\"2025-12\",-0.8],[\"2026-01\",-2.7],[\"2026-02\",-7.2],[\"2026-03\",24.2],[\"2026-04\",18.6],[\"2026-05\",7.7],[\"2026-06\",-7.3],[\"2026-07\",-0.4],[\"2026-08\",13.5]],\"start\":{\"period\":\"2025-06\",\"value\":-7.9},\"latest\":{\"period\":\"2026-08\",\"value\":13.5},\"change\":21.4}],\"notes\":[\"All series: Percentage change from previous year, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups"
+     ],
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-06\",\"value\":1.9},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":2.1}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 821,
+   "cacheWrite": 1167,
+   "cacheRead": 5726
+  },
+  "ms": 9329
+ }
+}

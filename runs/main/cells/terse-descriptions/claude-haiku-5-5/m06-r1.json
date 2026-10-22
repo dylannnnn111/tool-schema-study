@@ -1,0 +1,55 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m06",
+ "kind": "multi",
+ "q": "How does the Sydney CBD Friday gap now compare with before COVID?",
+ "date": "2026-10-19",
+ "cost": 0.00082,
+ "score": {
+  "tools": true,
+  "args": false,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The Friday gap in the Sydney CBD is now wider than it was before COVID. Friday afternoon tap-ons are a smaller share of the Tue–Thu level than they were in early 2020.\n\n- **Pre-COVID (Jan–Mar 2020):** about 0.88–0.89 of the Tue–Thu average. The monthly values were 0.841 (Jan), 0.915 (Feb) and 0.899 (Mar).\n- **Latest (Sep 2026):** 0.783. The July–September 2026 average is about 0.787.\n\nSo Friday 3–7pm volume is now roughly 21% below the midweek level, compared with about 12% below before COVID. The gap is about 0.10 points wider.\n\nThe gap has been fairly stable since 2023, mostly between 0.76 and 0.80. It did not return to the pre-COVID level after the 2021–22 swings. The 2020 figures are a baseline, not a steady norm. The series peaked near 0.98 in April 2020 during lockdown.\n\nThe data source notes that it is unclear whether Sydney Metro taps in the CBD are included. CBD levels compared with 2020 may therefore be understated. The comparison within the same period is not affected.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2018-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2018-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2020-01\",0.841],[\"2020-02\",0.915],[\"2020-03\",0.899],[\"2020-04\",0.984],[\"2020-05\",0.914],[\"2020-06\",0.96],[\"2020-07\",0.944],[\"2020-08\",0.897],[\"2020-09\",0.901],[\"2020-10\",0.88],[\"2020-11\",0.907],[\"2020-12\",0.857],[\"2021-01\",0.897],[\"2021-02\",0.846],[\"2021-03\",0.852],[\"2021-04\",0.795],[\"2021-05\",0.822],[\"2021-06\",0.878],[\"2021-07\",0.944],[\"2021-08\",0.971],[\"2021-09\",0.956],[\"2021-10\",0.895],[\"2021-11\",0.873],[\"2021-12\",0.919],[\"2022-01\",0.911],[\"2022-02\",0.93],[\"2022-03\",0.848],[\"2022-04\",0.718],[\"2022-05\",0.742],[\"2022-06\",0.839],[\"2022-07\",0.818],[\"2022-08\",0.832],[\"2022-09\",0.763],[\"2022-10\",0.811],[\"2022-11\",0.801],[\"2022-12\",0.755],[\"2023-01\",0.785],[\"2023-02\",0.793],[\"2023-03\",0.782],[\"2023-04\",0.798],[\"2023-05\",0.789],[\"2023-06\",0.79],[\"2"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1135,
+   "cacheWrite": 1528,
+   "cacheRead": 5728
+  },
+  "ms": 6676
+ }
+}

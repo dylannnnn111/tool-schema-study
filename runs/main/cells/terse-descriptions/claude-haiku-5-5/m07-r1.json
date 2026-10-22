@@ -1,0 +1,103 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m07",
+ "kind": "multi",
+ "q": "What rate are owner-occupiers actually paying on new variable loans, compared with the advertised rate?",
+ "date": "2026-10-19",
+ "cost": 0.00167,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "Owner-occupiers on new variable loans are paying about **6.2%**, roughly **2.6 percentage points below the 8.77% standard variable advertised rate**.\n\n| Measure | Latest figure | Period |\n|---|---|---|\n| Advertised standard variable rate (banks, owner-occupier) | 8.77% | Sep 2026 |\n| Discounted variable rate (banks, owner-occupier) | 6.80% | Sep 2026 |\n| Actual rate on new variable loans funded (all institutions, owner-occupier) | 6.20% | Aug 2026 |\n\n- **Gap to the advertised standard rate:** about 2.6 percentage points.\n- **Gap to the discounted rate:** about 0.6 percentage points. Most new borrowers appear to get a discount of this size or more, since the actual average sits below the discounted rate.\n\nThe two sources aren't quite like-for-like. The advertised and discounted rates are bank-only indicator rates (RBA table F5), while the 6.2% is the average on loans actually funded across all institutions (RBA table F6). The F6 figure is also a month behind. In the same month, the actual rate on new variable loans was 6.2% in August 2026, while the standard advertised rate was 8.77%.\n\nThe trend has moved with the cash rate. The actual new-loan variable rate fell from 6.3% in January 2025 to 5.5% from August 2025 to January 2026. It then rose back to 6.3% in June 2026 and has eased slightly to 6.2%.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2025-01",
+     "end": "2026-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2025-01",
+     "end": "2026-10"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",8.77],[\"2025-02-28\",8.62],[\"2025-03-31\",8.52],[\"2025-04-30\",8.52],[\"2025-05-31\",8.37],[\"2025-06-30\",8.27],[\"2025-07-31\",8.27],[\"2025-08-31\",8.02],[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2025-01-31\",\"value\":8.77},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",7.07],[\"2025-02-28\",6.88],[\"2025-03-31\",6.82],[\"2025-04-30\",6.55],[\"2025-05-31\",6.37],[\"2025-06-30\",6.3],[\"2025-07-31\",6.3],[\"2025-08-31\",6.05],[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2025-01-31\",\"value\":7.07},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":-0.27}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates act"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "F6",
+     "search": "owner-occupier variable new loans",
+     "start": "2025-01",
+     "end": "2026-10",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F6",
+     "search": "owner-occupier variable new loans",
+     "monthly": true,
+     "start": "2025-01",
+     "end": "2026-10"
+    },
+    "seen": "{\"table\":\"F6\",\"title\":\"F6 - HOUSING LENDING RATES\",\"columns\":[{\"id\":\"FLRHOOTL\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOTA\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOVL\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOVA\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOFA\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOFB\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOI\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOOP\",\"title\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FLRHOFT"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "F6",
+     "series": [
+      "FLRHOFVA"
+     ],
+     "start": "2025-01",
+     "end": "2026-10",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F6",
+     "series": [
+      "FLRHOFVA"
+     ],
+     "monthly": true,
+     "start": "2025-01",
+     "end": "2026-10"
+    },
+    "seen": "{\"source\":\"RBA F6 F6 - HOUSING LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f6-data.csv\",\"series\":[{\"name\":\"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",6.3],[\"2025-02-28\",6.1],[\"2025-03-31\",6],[\"2025-04-30\",6],[\"2025-05-31\",5.8],[\"2025-06-30\",5.8],[\"2025-07-31\",5.8],[\"2025-08-31\",5.5],[\"2025-09-30\",5.5],[\"2025-10-31\",5.5],[\"2025-11-30\",5.5],[\"2025-12-31\",5.5],[\"2026-01-31\",5.5],[\"2026-02-28\",5.7],[\"2026-03-31\",5.9],[\"2026-04-30\",6],[\"2026-05-31\",6.2],[\"2026-06-30\",6.3],[\"2026-07-31\",6.2],[\"2026-08-31\",6.2]],\"start\":{\"period\":\"2025-01-31\",\"value\":6.3},\"latest\":{\"period\":\"2026-08-31\",\"value\":6.2},\"change\":-0.1}],\"notes\":[]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1552,
+   "cacheWrite": 5706,
+   "cacheRead": 17708
+  },
+  "ms": 9158
+ }
+}

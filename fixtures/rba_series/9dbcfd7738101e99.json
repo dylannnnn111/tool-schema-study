@@ -1,0 +1,57 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F13",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "F13",
+  "title": "F13 INTERNATIONAL OFFICIAL INTEREST RATES",
+  "columns": [
+   {
+    "id": "FOOIRUSFFTRMN",
+    "title": "United States Federal Funds Minimum Target Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FOOIRUSFFTRMX",
+    "title": "United States Federal Funds Maximum Target Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FOOIRJTCR",
+    "title": "Japan Policy Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FOOIREARR",
+    "title": "Euro Area Refinancing Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FOOIRUKOBR",
+    "title": "United Kingdom Bank Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FOOIRCTR",
+    "title": "Canada Target Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FOOIRATCR",
+    "title": "Australia Target Cash Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:21:42.022Z"
+}

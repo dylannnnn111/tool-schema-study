@@ -1,0 +1,62 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v06",
+ "kind": "vague",
+ "q": "Is the Aussie dollar weak against the yen at the moment?",
+ "date": "2026-10-19",
+ "cost": 0.00762,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "No. The Aussie is fairly strong against the yen right now, though it has slipped from its recent peak.\n\n- **Latest:** A$1 buys about ¥109.67 (October 2026 data to date).\n- **Over the past year:** It's up about 9%, from ¥100.84 in October 2025.\n- **Peak:** It reached about ¥114.28 in April 2026 and ¥114.54 in August. That's roughly 4% above today's level.\n- **Recent drop:** It fell from ¥114.54 at the end of August to ¥109.47 at the end of September. It has been flat since.\n\nThe Aussie is also holding up against other currencies. The trade-weighted index is 64.4, up from 61.2 a year ago but below its 66.6 high in May. AUD/USD is about 0.695, up from 0.655 a year ago.\n\nSo the yen is weaker than a year ago, and the Aussie has eased a little from its highs. It's not weak by the standards of the past year.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "select": {
+      "currencies": [
+       "JPY",
+       "TWI",
+       "USD"
+      ]
+     },
+     "period": {
+      "start": "2025-10"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY",
+      "TWI",
+      "USD"
+     ],
+     "monthly": true,
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-10\",100.84],[\"2025-11\",102.05],[\"2025-12\",104.83],[\"2026-01\",107.81],[\"2026-02\",110.87],[\"2026-03\",109.27],[\"2026-04\",114.28],[\"2026-05\",114.14],[\"2026-06\",111.48],[\"2026-07\",112.9],[\"2026-08\",114.54],[\"2026-09\",109.47],[\"2026-10\",109.67]],\"start\":{\"period\":\"2025-10\",\"value\":100.84},\"latest\":{\"period\":\"2026-10\",\"value\":109.67},\"change\":8.83},{\"name\":\"AUD trade-weighted index (May 1970 = 100)\",\"unit\":\"Index\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-10\",61.2],[\"2025-11\",61.2],[\"2025-12\",62.2],[\"2026-01\",64.5],[\"2026-02\",65.5],[\"2026-03\",64.3],[\"2026-04\",66.3],[\"2026-05\",66.6],[\"2026-06\",64.6],[\"2026-07\",65.5],[\"2026-08\",66.2],[\"2026-09\",64.7],[\"2026-10\",64.4]],\"start\":{\"period\":\"2025-10\",\"value\":61.2},\"latest\":{\"period\":\"2026-10\",\"value\":64.4},\"change\":3.2},{\"name\":\"AUD/USD (units of foreign currency per A$1)\",\"unit\":\"USD\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-10\",0.6551],[\"2025-11\",0.6533],[\"2025-12\",0.6693],[\"2026-01\",0.7004],[\"2026-02\",0.7126],[\"2026-03\",0.6845],[\"2026-04\",0.7113],[\"2026-05\",0.7164],[\"2026-06\",0.6869],[\"2026-07\",0.703],[\"2026-08\",0.7166],[\"2026-09\",0.6977],[\"2026-10\",0.6947]],\"start\":{\"period\":\"2025-10\",\"value\":0.6551},\"latest\":{\"period\":\"2026"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 421,
+   "cacheWrite": 931,
+   "cacheRead": 10722
+  },
+  "ms": 5407
+ }
+}

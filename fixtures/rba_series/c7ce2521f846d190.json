@@ -1,0 +1,10 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "inf_exp",
+  "monthly": false
+ },
+ "ok": false,
+ "error": "\"inf_exp\" doesn't look like an RBA table id (e.g. f1.1, f5, f6, f11.1, g1).",
+ "fetchedAt": "2026-10-18T21:08:00.180Z"
+}

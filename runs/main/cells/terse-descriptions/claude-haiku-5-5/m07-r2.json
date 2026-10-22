@@ -1,0 +1,78 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m07",
+ "kind": "multi",
+ "q": "What rate are owner-occupiers actually paying on new variable loans, compared with the advertised rate?",
+ "date": "2026-10-19",
+ "cost": 0.00144,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "Owner-occupiers are paying about **6.20%** on new variable-rate loans, roughly **2.6 percentage points below** the advertised standard variable rate of **8.77%**.\n\n| Measure | Rate | Period |\n|---|---|---|\n| Advertised standard variable rate (owner-occupier) | 8.77% | September 2026 (RBA F5) |\n| Advertised discounted variable rate (owner-occupier) | 6.80% | September 2026 (RBA F5) |\n| **Average rate on new owner-occupier variable loans, all institutions** | **6.20%** | **August 2026 (RBA F6)** |\n| Average rate on new owner-occupier variable loans, large institutions | 6.20% | August 2026 (RBA F6) |\n\nThe gap is wide because most borrowers negotiate a discount off the advertised rate. The 6.80% discounted rate is still above what new borrowers actually average, so the typical discount is larger than the headline discount figure suggests.\n\nOver the past year, the average new-loan rate rose from 5.5% (September 2025 to January 2026) to 6.2% (May to August 2026). Over the same period the advertised standard rate went from 8.02% to 8.77%. The advertised rate has moved more, so the gap has narrowed slightly in percentage terms but has stayed large.\n\nThe F6 figures are published with a lag, so August 2026 is the latest available for actual new-loan rates.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2025-01",
+     "end": "2026-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "owner_occupier_variable_discounted"
+     ],
+     "start": "2025-01",
+     "end": "2026-10"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",8.77],[\"2025-02-28\",8.62],[\"2025-03-31\",8.52],[\"2025-04-30\",8.52],[\"2025-05-31\",8.37],[\"2025-06-30\",8.27],[\"2025-07-31\",8.27],[\"2025-08-31\",8.02],[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2025-01-31\",\"value\":8.77},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",7.07],[\"2025-02-28\",6.88],[\"2025-03-31\",6.82],[\"2025-04-30\",6.55],[\"2025-05-31\",6.37],[\"2025-06-30\",6.3],[\"2025-07-31\",6.3],[\"2025-08-31\",6.05],[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2025-01-31\",\"value\":7.07},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":-0.27}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates act"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "F6",
+     "search": "variable",
+     "start": "2025-06",
+     "end": "2026-09",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F6",
+     "search": "variable",
+     "monthly": true,
+     "start": "2025-06",
+     "end": "2026-09"
+    },
+    "seen": "{\"source\":\"RBA F6 F6 - HOUSING LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f6-data.csv\",\"series\":[{\"name\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",5.8],[\"2025-07-31\",5.8],[\"2025-08-31\",5.5],[\"2025-09-30\",5.5],[\"2025-10-31\",5.5],[\"2025-11-30\",5.5],[\"2025-12-31\",5.5],[\"2026-01-31\",5.5],[\"2026-02-28\",5.7],[\"2026-03-31\",6],[\"2026-04-30\",6],[\"2026-05-31\",6.2],[\"2026-06-30\",6.2],[\"2026-07-31\",6.2],[\"2026-08-31\",6.2]],\"start\":{\"period\":\"2025-06-30\",\"value\":5.8},\"latest\":{\"period\":\"2026-08-31\",\"value\":6.2},\"change\":0.4},{\"name\":\"Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",5.8],[\"2025-07-31\",5.8],[\"2025-08-31\",5.5],[\"2025-09-30\",5.5],[\"2025-10-31\",5.5],[\"2025-11-30\",5.5],[\"2025-12-31\",5.5],[\"2026-01-31\",5.5],[\"2026-02-28\",5.8],[\"2026-03-31\",6],[\"2026-04-30\",6],[\"2026-05-31\",6.2],[\"2026-06-30\",6.3],[\"2026-07-31\",6.2],[\"2026-08-31\",6.2]],\"start\":{\"period\":\"2025-06-30\",\"value\":5.8},\"latest\":{\"period\":\"2026-08-31\",\"value\":6.2},\"change\":0.4},{\"name\":\"Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",5.8],[\"2025-07-31\",5.8],[\"2025-08-31\",5.5],[\"2025-09-30\",5.5],[\"2025-10-31\",5.5],"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1645,
+   "cacheWrite": 4116,
+   "cacheRead": 9785
+  },
+  "ms": 9160
+ }
+}

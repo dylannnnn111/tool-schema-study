@@ -1,0 +1,134 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "index",
+  "adjustment": "original",
+  "start": "2024-10"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/1.10001..50.M?startPeriod=2024-10",
+  "series": [
+   {
+    "name": "All groups CPI - Australia (monthly)",
+    "unit": "Index Numbers",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2024-10",
+      96.32
+     ],
+     [
+      "2024-11",
+      96.68
+     ],
+     [
+      "2024-12",
+      97.31
+     ],
+     [
+      "2025-01",
+      97.58
+     ],
+     [
+      "2025-02",
+      97.67
+     ],
+     [
+      "2025-03",
+      97.96
+     ],
+     [
+      "2025-04",
+      98.68
+     ],
+     [
+      "2025-05",
+      98.2
+     ],
+     [
+      "2025-06",
+      98.34
+     ],
+     [
+      "2025-07",
+      99.63
+     ],
+     [
+      "2025-08",
+      99.55
+     ],
+     [
+      "2025-09",
+      100
+     ],
+     [
+      "2025-10",
+      99.99
+     ],
+     [
+      "2025-11",
+      100.01
+     ],
+     [
+      "2025-12",
+      100.97
+     ],
+     [
+      "2026-01",
+      101.33
+     ],
+     [
+      "2026-02",
+      101.31
+     ],
+     [
+      "2026-03",
+      102.44
+     ],
+     [
+      "2026-04",
+      102.8
+     ],
+     [
+      "2026-05",
+      102.09
+     ],
+     [
+      "2026-06",
+      102.03
+     ],
+     [
+      "2026-07",
+      103.07
+     ],
+     [
+      "2026-08",
+      103.5
+     ]
+    ],
+    "start": {
+     "period": "2024-10",
+     "value": 96.32
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 103.5
+    },
+    "change": 7.18
+   }
+  ],
+  "notes": [
+   "All series: Index numbers, All groups CPI, Original, Australia",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:42:26.477Z"
+}

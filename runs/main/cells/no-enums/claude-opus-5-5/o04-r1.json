@@ -1,0 +1,64 @@
+{
+ "variant": "no-enums",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.02634,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**I can't give you that number.** The Opal data I can reach doesn't break down to one station on one day, and it doesn't include last Friday (16 October 2026) yet.\n\n- **It covers areas, not stations.** The Commute Pulse data groups Opal tap-ons by commercial area, such as \"Sydney CBD\". It isn't clear whether Central station is counted inside that area.\n- **It's monthly, not daily.** The latest month is **September 2026**, so October isn't in yet.\n- **It only counts 3pm–7pm.** It measures people leaving work, not tap-ons across the whole day.\n\n**The closest figures I have (Sydney CBD, 3pm–7pm, September 2026):**\n- An average Tuesday to Thursday had about **255,900** evening tap-ons.\n- Fridays were **78.3%** of that midweek level.\n- So an average September Friday evening had roughly **200,000** tap-ons across the CBD. I worked that out from the two figures above; it isn't a published number.\n- That Friday share has stayed between about 78% and 80% since June 2026 (77.6% in June, 79.9% in August).\n\nThese figures leave out public holidays and outages. The source also notes it's unclear whether Sydney Metro tap-ons in the CBD are counted.\n\n**For an actual count at Central on 16 October,** try Transport for NSW's open data portal. It publishes Opal trip data, including station-level tap-on and tap-off counts. Those releases usually come out a few weeks late, so last Friday may not be there yet.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2026-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2026-06"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-06\",\"value\":0.776},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.007}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "evening_volume",
+     "start": "2026-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "evening_volume",
+     "start": "2026-06"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"average Tue-Thu evening tap-ons per day\",\"frequency\":\"Monthly\",\"points\":[[\"2026-06\",246975],[\"2026-07\",252401.6667],[\"2026-08\",262233.3333],[\"2026-09\",255926.6667]],\"start\":{\"period\":\"2026-06\",\"value\":246975},\"latest\":{\"period\":\"2026-09\",\"value\":255926.6667},\"change\":8951.6667}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 908,
+   "cacheWrite": 1294,
+   "cacheRead": 8408
+  },
+  "ms": 10520
+ }
+}

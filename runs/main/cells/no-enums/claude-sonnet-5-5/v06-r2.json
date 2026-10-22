@@ -1,0 +1,76 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v06",
+ "kind": "vague",
+ "q": "Is the Aussie dollar weak against the yen at the moment?",
+ "date": "2026-10-19",
+ "cost": 0.00901,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "No, the Aussie isn't weak against the yen right now. It's fairly strong compared with the past year, though it has slipped a little from its recent peak.\n\n- **Latest:** A$1 bought about ¥109.67 on 16 October 2026.\n- **Over the past year:** It's up about 9% from ¥100.84 at the end of October 2025.\n- **Peak:** It reached about ¥114.3 in April 2026 and ¥114.5 in August 2026.\n- **Recent dip:** It fell from ¥114.63 on 1 September to about ¥109.5 by the end of September. It has held in a ¥109.4–110.7 range through October.\n\nOver the last year the yen has been the weaker currency. The Aussie is roughly 4% below its August high, but that's a pullback, not a weak level.\n\nI only have RBA data from 2023 onward, so I can't compare today's rate with longer-run averages.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "JPY"
+     ],
+     "start": "2025-10",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY"
+     ],
+     "monthly": true,
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-10\",100.84],[\"2025-11\",102.05],[\"2025-12\",104.83],[\"2026-01\",107.81],[\"2026-02\",110.87],[\"2026-03\",109.27],[\"2026-04\",114.28],[\"2026-05\",114.14],[\"2026-06\",111.48],[\"2026-07\",112.9],[\"2026-08\",114.54],[\"2026-09\",109.47],[\"2026-10\",109.67]],\"start\":{\"period\":\"2025-10\",\"value\":100.84},\"latest\":{\"period\":\"2026-10\",\"value\":109.67},\"change\":8.83}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "JPY"
+     ],
+     "start": "2026-09",
+     "monthly": false
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY"
+     ],
+     "monthly": false,
+     "start": "2026-09"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Daily\",\"points\":[[\"2026-09-01\",114.63],[\"2026-09-02\",114.17],[\"2026-09-03\",112.74],[\"2026-09-04\",112.71],[\"2026-09-07\",112.32],[\"2026-09-08\",110.67],[\"2026-09-09\",110.85],[\"2026-09-10\",110.89],[\"2026-09-11\",110.48],[\"2026-09-14\",110.12],[\"2026-09-15\",110.26],[\"2026-09-16\",110.7],[\"2026-09-17\",110.68],[\"2026-09-18\",112.02],[\"2026-09-21\",111.9],[\"2026-09-22\",112.17],[\"2026-09-23\",111.96],[\"2026-09-24\",111.27],[\"2026-09-25\",111.08],[\"2026-09-28\",110.75],[\"2026-09-29\",109.95],[\"2026-09-30\",109.47],[\"2026-10-01\",110.06],[\"2026-10-02\",109.42],[\"2026-10-06\",110.22],[\"2026-10-07\",110.42],[\"2026-10-08\",110.05],[\"2026-10-09\",110.34],[\"2026-10-12\",110.51],[\"2026-10-13\",110.17],[\"2026-10-14\",110.74],[\"2026-10-15\",109.86],[\"2026-10-16\",109.67]],\"start\":{\"period\":\"2026-09-01\",\"value\":114.63},\"latest\":{\"period\":\"2026-10-16\",\"value\":109.67},\"change\":-4.96}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 507,
+   "cacheWrite": 1230,
+   "cacheRead": 8506
+  },
+  "ms": 5099
+ }
+}

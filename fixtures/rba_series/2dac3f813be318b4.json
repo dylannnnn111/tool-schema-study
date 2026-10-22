@@ -1,0 +1,118 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f1",
+  "search": "ASX 200",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "F1",
+  "title": "F1 INTEREST RATES AND YIELDS – MONEY MARKET",
+  "columns": [
+   {
+    "id": "FIRMMCRTD",
+    "title": "Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMCCRT",
+    "title": "Change in the Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "as announced"
+   },
+   {
+    "id": "FIRMMCRID",
+    "title": "Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMCRIH",
+    "title": "Highest Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMCRIL",
+    "title": "Lowest Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMCRIV",
+    "title": "Volume of Cash Market Transactions",
+    "unit": "$m",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMCRIN",
+    "title": "Number of Cash Market Transactions",
+    "unit": "Number",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMCTRI",
+    "title": "Total Return Index",
+    "unit": "Index 04-Jan-2011=100",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMBAB30D",
+    "title": "EOD 1-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMBAB90D",
+    "title": "EOD 3-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMBAB180D",
+    "title": "EOD 6-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMOIS1D",
+    "title": "1-month OIS",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMOIS3D",
+    "title": "3-month OIS",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMOIS6D",
+    "title": "6-month OIS",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMTN1D",
+    "title": "1-month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMTN3D",
+    "title": "3- month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FIRMMTN6D",
+    "title": "6- month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "Daily"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:06:57.327Z"
+}

@@ -1,0 +1,47 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "C21_G40_SAL",
+  "code_search": "median"
+ },
+ "ok": true,
+ "result": {
+  "id": "C21_G40_SAL",
+  "name": "Census 2021, G40 Rent (weekly) by landlord type, Suburbs and Localities (SAL)",
+  "dimensions": [
+   {
+    "id": "RNTRD",
+    "position": 1,
+    "codes": [],
+    "totalCodes": 16
+   },
+   {
+    "id": "LLDD",
+    "position": 2,
+    "codes": [],
+    "totalCodes": 7
+   },
+   {
+    "id": "REGION",
+    "position": 3,
+    "codes": [],
+    "totalCodes": 15365
+   },
+   {
+    "id": "REGION_TYPE",
+    "position": 4,
+    "codes": [],
+    "totalCodes": 45
+   },
+   {
+    "id": "STATE",
+    "position": 5,
+    "codes": [],
+    "totalCodes": 10
+   }
+  ],
+  "keyTemplate": "<RNTRD>.<LLDD>.<REGION>.<REGION_TYPE>.<STATE>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:18:28.201Z"
+}

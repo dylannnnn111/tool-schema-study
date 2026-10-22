@@ -1,0 +1,256 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m01",
+ "kind": "multi",
+ "q": "Are real wages going up? Compare wage growth from the ABS Wage Price Index with inflation.",
+ "date": "2026-10-19",
+ "cost": 0.00355,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": true,
+  "calls": 14,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Short answer: no. Real wages are falling.** Wage growth has been running below inflation since late 2025, and the gap has widened.\n\n**Latest figures**\n\n- **Wages (WPI, June quarter 2026):** up 3.2% over the year. This is total hourly rates of pay excluding bonuses, private and public sectors, all industries.\n- **Inflation (CPI, August 2026):** up 4.0% over the year. The June quarter averaged about 4.0% across April to June (4.2, 4.0, 3.8).\n\nThat puts real wage growth at roughly **−0.6 to −0.8 percentage points**, depending on whether you compare against the June-quarter average or the June monthly figure.\n\n**Trend**\n\n| Period | Wages (WPI, yoy) | Inflation (CPI, yoy) | Real wages |\n|---|---|---|---|\n| 2023 Q1 | 3.6% | 7.0% (quarterly) | Strongly negative |\n| 2024 Q1 | 4.1% | 3.6% (quarterly) | Positive |\n| 2025 Q3 | 3.4% | 3.2% (quarterly) | About flat |\n| 2025 Q4 | 3.4% | ~3.8% (Dec monthly) | Negative |\n| 2026 Q1 | 3.2% | ~4.0% (Q1 average) | Negative |\n| 2026 Q2 | 3.2% | ~4.0% (Q2 average) | Negative |\n\nReal wages were clearly negative in 2023 and turned positive during 2024 as inflation fell faster than wages. That recovery has now reversed. Inflation has climbed back to around 4% while wage growth has stayed near 3.2–3.4%.\n\n**Caveats**\n\n- The WPI measures the price of labour for a fixed job. It does not capture average earnings, which can differ because of composition, overtime, or bonuses. Individual workers' experience varies.\n- The CPI figures for 2025 Q4 and 2026 Q1–Q2 are my own readings from the monthly series, so they are approximate.\n- The September quarter 2026 WPI isn't in the data yet, so the most recent wage figure is for June 2026.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "wage price index"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "wage price index"
+    },
+    "seen": "{\"results\":[{\"id\":\"WPI\",\"version\":\"1.2.0\",\"name\":\"Wage Price Index\"},{\"id\":\"ITPI_EXP\",\"version\":\"1.0.0\",\"name\":\"Export Price Index\"},{\"id\":\"ITPI_IMP\",\"version\":\"1.0.0\",\"name\":\"Import Price Index\"},{\"id\":\"CPI\",\"version\":\"2.0.0\",\"name\":\"Consumer Price Index (CPI)\"},{\"id\":\"RPPI\",\"version\":\"1.0.0\",\"name\":\"Residential Property Price Index\"},{\"id\":\"CPI_WEIGHTS\",\"version\":\"1.0.0\",\"name\":\"Consumer Price Index (CPI) Weights\"},{\"id\":\"PPI\",\"version\":\"1.1.3\",\"name\":\"Producer Price Indexes by Industry\"},{\"id\":\"CPI_Q\",\"version\":\"1.0.0\",\"name\":\"Consumer Price Index (CPI) Quarterly\"},{\"id\":\"PPI_FD\",\"version\":\"1.1.0\",\"name\":\"Producer Price Indexes, Final Demand\"},{\"id\":\"CPI_M\",\"version\":\"1.2.0\",\"name\":\"Monthly Consumer Price Index (CPI) indicator\"}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "start": "2023-01",
+     "measure": "annual_change"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2023-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2023-Q1\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-Q1\",7],[\"2023-Q2\",6],[\"2023-Q3\",5.4],[\"2023-Q4\",4.1],[\"2024-Q1\",3.6],[\"2024-Q2\",3.8],[\"2024-Q3\",2.8],[\"2024-Q4\",2.4],[\"2025-Q1\",2.4],[\"2025-Q2\",2.1],[\"2025-Q3\",3.2]],\"start\":{\"period\":\"2023-Q1\",\"value\":7},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.2},\"change\":-3.8}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "all sectors"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "all sectors"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 2,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Wage Price Index"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Wage Price Index"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 3,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.3.1.TOT.20.AUS.Q",
+     "start": "2024-Q1"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "start",
+      "problem": "\"2024-Q1\" should be YYYY, YYYY-MM or YYYY-MM-DD"
+     }
+    ],
+    "seen": "Error: invalid arguments for abs_get_data:\n- start: \"2024-Q1\" should be YYYY, YYYY-MM or YYYY-MM-DD"
+   },
+   {
+    "turn": 4,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.3.1.TOT.20.AUS.Q",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "key": "3.3.1.TOT.20.AUS.Q",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS WPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,WPI/3.3.1.TOT.20.AUS.Q?startPeriod=2024-01\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 5,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Percentage"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Percentage"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[{\"code\":\"2\",\"label\":\"Percentage change from previous quarter\"},{\"code\":\"3\",\"label\":\"Percentage change from corresponding quarter of previous year\"},{\"code\":\"5\",\"label\":\"Financial Year Index - Percentage change from previous period\"}],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 6,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Hourly"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Hourly"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"OHRPEB\",\"label\":\"Ordinary time hourly rates of pay excluding bonuses\"},{\"code\":\"OHRPIB\",\"label\":\"Ordinary time hourly rates of pay including bonuses\"},{\"code\":\"THRPEB\",\"label\":\"Total hourly rates of pay excluding bonuses\"},{\"code\":\"THRPIB\",\"label\":\"Total hourly rates of pay including bonuses\"}],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[{\"code\":\"H\",\"label\":\"Hourly\"}],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 6,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Total"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Total"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"THRPEB\",\"label\":\"Total hourly rates of pay excluding bonuses\"},{\"code\":\"THRPIB\",\"label\":\"Total hourly rates of pay including bonuses\"}],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 7,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Australia"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Australia"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[{\"code\":\"AUS\",\"label\":\"Australia\"},{\"code\":\"4\",\"label\":\"South Australia\"},{\"code\":\"5\",\"label\":\"Western Australia\"},{\"code\":\"8\",\"label\":\"Australian Capital Territory\"}],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 7,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Original"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Original"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[{\"code\":\"10\",\"label\":\"Original\"}],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 7,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Quarter"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Quarter"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[{\"code\":\"1\",\"label\":\"Quarterly Index\"},{\"code\":\"2\",\"label\":\"Percentage change from previous quarter\"},{\"code\":\"3\",\"label\":\"Percentage change from corresponding quarter of previous year\"}],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[{\"code\":\"Q\",\"label\":\"Quarterly\"}],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 7,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI",
+     "code_search": "Private"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "code_search": "Private"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[{\"code\":\"7\",\"label\":\"Private and Public\"},{\"code\":\"1\",\"label\":\"Private\"}],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[{\"code\":\"96\",\"label\":\"Private Households Employing Staff and Undifferentiated Goods- and Service-Producing Activities\"},{\"code\":\"960\",\"label\":\"Private Households Employing Staff and Undifferentiated Goods- and\"},{\"code\":\"9601\",\"label\":\"Private Households Employing Staff\"},{\"code\":\"9602\",\"label\":\"Undifferentiated Goods-Producing Activities of Private Households for Own Use\"},{\"code\":\"9603\",\"label\":\"Undifferentiated Service-Producing Activities of Private Households for Own Use\"}],\"totalCodes\":826},{\"id\":\"TSEST\",\"position\":5,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":6,\"codes\":[],\"totalCodes\":10},{\"id\":\"FREQ\",\"position\":7,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 8,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.10.AUS.Q",
+     "start": "2023-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.10.AUS.Q",
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"ABS WPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB.7.TOT.10.AUS.Q?startPeriod=2023-01\",\"series\":[{\"name\":\"Total hourly rates of pay excluding bonuses - Private and Public - All Industries - Australia\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-Q1\",3.6],[\"2023-Q2\",3.6],[\"2023-Q3\",4.1],[\"2023-Q4\",4.3],[\"2024-Q1\",4.1],[\"2024-Q2\",4.1],[\"2024-Q3\",3.5],[\"2024-Q4\",3.2],[\"2025-Q1\",3.4],[\"2025-Q2\",3.4],[\"2025-Q3\",3.4],[\"2025-Q4\",3.4],[\"2026-Q1\",3.2],[\"2026-Q2\",3.2]],\"start\":{\"period\":\"2023-Q1\",\"value\":3.6},\"latest\":{\"period\":\"2026-Q2\",\"value\":3.2},\"change\":-0.4}],\"notes\":[\"All series: Percentage change from corresponding quarter of previous year, Total hourly rates of pay excluding bonuses, Private and Public, All Industries, Original, Australia\"]}"
+   }
+  ],
+  "turns": 10,
+  "status": "done",
+  "usage": {
+   "input": 22,
+   "output": 3578,
+   "cacheWrite": 7962,
+   "cacheRead": 76038
+  },
+  "ms": 29654
+ }
+}

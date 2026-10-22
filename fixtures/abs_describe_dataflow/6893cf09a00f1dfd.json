@@ -1,0 +1,129 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "BA_SA2",
+  "code_search": "Australia"
+ },
+ "ok": true,
+ "result": {
+  "id": "BA_SA2",
+  "name": "Building Approvals by SA2 and above, from July 2021 onwards",
+  "dimensions": [
+   {
+    "id": "MEASURE",
+    "position": 1,
+    "codes": [],
+    "totalCodes": 3
+   },
+   {
+    "id": "SECTOR",
+    "position": 2,
+    "codes": [],
+    "totalCodes": 3
+   },
+   {
+    "id": "WORK_TYPE",
+    "position": 3,
+    "codes": [],
+    "totalCodes": 9
+   },
+   {
+    "id": "BUILDING_TYPE",
+    "position": 4,
+    "codes": [],
+    "totalCodes": 34
+   },
+   {
+    "id": "REGION_TYPE",
+    "position": 5,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "ADD",
+      "label": "Australian Drainage Divisions"
+     }
+    ],
+    "totalCodes": 43
+   },
+   {
+    "id": "REGION",
+    "position": 6,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "4",
+      "label": "South Australia"
+     },
+     {
+      "code": "406",
+      "label": "South Australia - Outback"
+     },
+     {
+      "code": "407",
+      "label": "South Australia - South East"
+     },
+     {
+      "code": "5",
+      "label": "Western Australia"
+     },
+     {
+      "code": "509",
+      "label": "Western Australia - Wheat Belt"
+     },
+     {
+      "code": "510",
+      "label": "Western Australia - Outback (North)"
+     },
+     {
+      "code": "511",
+      "label": "Western Australia - Outback (South)"
+     },
+     {
+      "code": "8",
+      "label": "Australian Capital Territory"
+     },
+     {
+      "code": "8ACTE",
+      "label": "Australian Capital Territory"
+     },
+     {
+      "code": "801",
+      "label": "Australian Capital Territory"
+     },
+     {
+      "code": "ZZZ",
+      "label": "Outside Australia"
+     },
+     {
+      "code": "Z",
+      "label": "Outside Australia"
+     },
+     {
+      "code": "ZZZZZ",
+      "label": "Outside Australia"
+     },
+     {
+      "code": "ZZZZZZZZZ",
+      "label": "Outside Australia"
+     }
+    ],
+    "totalCodes": 2985
+   },
+   {
+    "id": "FREQ",
+    "position": 7,
+    "codes": [],
+    "totalCodes": 9
+   }
+  ],
+  "keyTemplate": "<MEASURE>.<SECTOR>.<WORK_TYPE>.<BUILDING_TYPE>.<REGION_TYPE>.<REGION>.<FREQ>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:48:59.329Z"
+}

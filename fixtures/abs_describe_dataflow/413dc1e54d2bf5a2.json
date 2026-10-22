@@ -1,0 +1,56 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "CPI",
+  "code_search": "meals"
+ },
+ "ok": true,
+ "result": {
+  "id": "CPI",
+  "name": "Consumer Price Index (CPI)",
+  "dimensions": [
+   {
+    "id": "MEASURE",
+    "position": 1,
+    "codes": [],
+    "totalCodes": 7
+   },
+   {
+    "id": "INDEX",
+    "position": 2,
+    "codes": [
+     {
+      "code": "30007",
+      "label": "Meals out and take away foods"
+     },
+     {
+      "code": "40025",
+      "label": "Restaurant meals"
+     }
+    ],
+    "totalCodes": 166
+   },
+   {
+    "id": "TSEST",
+    "position": 3,
+    "codes": [],
+    "totalCodes": 5
+   },
+   {
+    "id": "REGION",
+    "position": 4,
+    "codes": [],
+    "totalCodes": 9
+   },
+   {
+    "id": "FREQ",
+    "position": 5,
+    "codes": [],
+    "totalCodes": 9
+   }
+  ],
+  "keyTemplate": "<MEASURE>.<INDEX>.<TSEST>.<REGION>.<FREQ>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:13:47.294Z"
+}

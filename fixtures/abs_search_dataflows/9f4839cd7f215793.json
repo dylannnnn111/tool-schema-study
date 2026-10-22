@@ -1,0 +1,11 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "Argentina exchange rate"
+ },
+ "ok": true,
+ "result": {
+  "results": []
+ },
+ "fetchedAt": "2026-10-18T21:14:40.460Z"
+}

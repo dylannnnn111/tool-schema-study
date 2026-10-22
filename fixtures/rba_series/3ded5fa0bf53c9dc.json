@@ -1,0 +1,77 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f2",
+  "series": [
+   "FCMYGBAG2D",
+   "FCMYGBAG3D"
+  ],
+  "monthly": true,
+  "start": "2026-08"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f2-data.csv",
+  "series": [
+   {
+    "name": "Australian Government 2 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-08",
+      4.677
+     ],
+     [
+      "2026-09",
+      4.942
+     ],
+     [
+      "2026-10",
+      4.919
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 4.677
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 4.919
+    },
+    "change": 0.242
+   },
+   {
+    "name": "Australian Government 3 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-08",
+      4.658
+     ],
+     [
+      "2026-09",
+      4.922
+     ],
+     [
+      "2026-10",
+      4.909
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 4.658
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 4.909
+    },
+    "change": 0.251
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:25:36.617Z"
+}

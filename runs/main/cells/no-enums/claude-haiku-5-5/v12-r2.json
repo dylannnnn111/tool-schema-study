@@ -1,0 +1,55 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v12",
+ "kind": "vague",
+ "q": "Do landlords pay more than owner-occupiers on a standard variable loan?",
+ "date": "2026-10-19",
+ "cost": 0.0006,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes. On advertised rates, investors pay about 0.58 percentage points more than owner-occupiers on a standard variable home loan.\n\n- **Owner-occupier standard variable:** 8.77% p.a. in September 2026 (latest data)\n- **Investor standard variable:** 9.35% p.a. in September 2026\n\nThe gap has been 0.58 points every month since January 2024, even though both rates moved up and down with the cash rate. For example, both fell in late 2025 (to 8.02% and 8.60%) and both rose again in 2026.\n\nThese are the RBA's advertised standard rates. Most borrowers, especially owner-occupiers, end up on discounted rates, which are lower than these, so the rate actually paid may differ. The RBA's F6 table has the actual rates paid on new loans if you need that comparison.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "investor_variable_standard"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "investor_variable_standard"
+     ],
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",8.77],[\"2024-02-29\",8.77],[\"2024-03-31\",8.77],[\"2024-04-30\",8.77],[\"2024-05-31\",8.77],[\"2024-06-30\",8.77],[\"2024-07-31\",8.77],[\"2024-08-31\",8.77],[\"2024-09-30\",8.77],[\"2024-10-31\",8.77],[\"2024-11-30\",8.77],[\"2024-12-31\",8.77],[\"2025-01-31\",8.77],[\"2025-02-28\",8.62],[\"2025-03-31\",8.52],[\"2025-04-30\",8.52],[\"2025-05-31\",8.37],[\"2025-06-30\",8.27],[\"2025-07-31\",8.27],[\"2025-08-31\",8.02],[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2024-01-31\",\"value\":8.77},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0},{\"name\":\"Housing loans; Banks; Variable; Standard; Investor\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",9.35],[\"2024-02-29\",9.35],[\"2024-03-31\",9.35],[\"2024-04-30\",9.35],[\"2024-05-31\",9.35],[\"2024-06-30\",9.35],[\"2024-07-31\",9.35],[\"2024-08-31\",9.35],[\"2024-09-30\",9.35],[\"2024-10-31\",9.35],[\"2024-11-30\",9.35],[\"2024-12-31\",9.35],[\"2025-01-31\",9.35],[\"2025-02-28\",9.2],[\"2025-03-31\",9.1],[\"2025-04-30\",9.1],[\"2025-05-31\",8.95],[\"2025-06-30\",8.85],[\"2025-"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 687,
+   "cacheWrite": 1381,
+   "cacheRead": 8514
+  },
+  "ms": 4551
+ }
+}

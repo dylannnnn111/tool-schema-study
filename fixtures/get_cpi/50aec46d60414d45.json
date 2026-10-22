@@ -1,0 +1,90 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2025-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2025-09",
+  "series": [
+   {
+    "name": "All groups CPI - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-09",
+      3.6
+     ],
+     [
+      "2025-10",
+      3.8
+     ],
+     [
+      "2025-11",
+      3.4
+     ],
+     [
+      "2025-12",
+      3.8
+     ],
+     [
+      "2026-01",
+      3.8
+     ],
+     [
+      "2026-02",
+      3.7
+     ],
+     [
+      "2026-03",
+      4.6
+     ],
+     [
+      "2026-04",
+      4.2
+     ],
+     [
+      "2026-05",
+      4
+     ],
+     [
+      "2026-06",
+      3.8
+     ],
+     [
+      "2026-07",
+      3.5
+     ],
+     [
+      "2026-08",
+      4
+     ]
+    ],
+    "start": {
+     "period": "2025-09",
+     "value": 3.6
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4
+    },
+    "change": 0.4
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, All groups CPI, Original, Australia",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:12:11.853Z"
+}

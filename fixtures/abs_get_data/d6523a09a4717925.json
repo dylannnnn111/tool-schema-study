@@ -1,0 +1,11 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "C21_G40_SAL",
+  "key": "..12969..1",
+  "last_n": 20
+ },
+ "ok": false,
+ "error": "That key matches 112 series - too many to return. Narrow it (pin more dimensions).",
+ "fetchedAt": "2026-10-18T21:18:33.215Z"
+}

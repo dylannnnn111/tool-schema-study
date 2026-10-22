@@ -1,0 +1,90 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v09",
+ "kind": "vague",
+ "q": "Has eating out got more expensive in Melbourne?",
+ "date": "2026-10-19",
+ "cost": 0.00069,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes. Eating out and takeaway food in Melbourne is up **3.5% over the year to August 2026**, according to the ABS Consumer Price Index.\n\n- **Recent trend:** Melbourne's annual increase has been between about 2.3% and 4.4% since April 2025. It peaked at 4.4% in May 2026 and has eased a little since.\n- **Early 2024 was steeper:** Annual growth was 5.8% in the March quarter 2024, then slowed through 2024 to 2.6% by the March quarter 2025.\n- **Compared with the nation:** Australia-wide, the figure was 4.1% in August 2026, so Melbourne is running slightly below the average.\n\nThe ABS category combines restaurant and café meals with takeaway food, so it doesn't isolate sit-down dining. The Melbourne monthly series is also more recent than the quarterly one, which ends in September 2025.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "melbourne"
+     ],
+     "items": [
+      "meals_out"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "meals_out"
+     ],
+     "cities": [
+      "melbourne"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30007..2.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30007..2.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"Meals out and take away foods - Melbourne (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.6],[\"2025-05\",2.3],[\"2025-06\",3.7],[\"2025-07\",2.5],[\"2025-08\",3.4],[\"2025-09\",3.5],[\"2025-10\",3.5],[\"2025-11\",3.3],[\"2025-12\",3.3],[\"2026-01\",3.8],[\"2026-02\",3.5],[\"2026-03\",3.7],[\"2026-04\",3.7],[\"2026-05\",4.4],[\"2026-06\",3.9],[\"2026-07\",4.1],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-04\",\"value\":2.6},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":0.9},{\"name\":\"Meals out and take away foods - Melbourne (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q1\",5.8],[\"2024-Q2\",5],[\"2024-Q3\",3.6],[\"2024-Q4\",2.7],[\"2025-Q1\",2.6],[\"2025-Q2\",2.3],[\"2025-Q3\",3.4]],\"start\":{\"period\":\"2024-Q1\",\"value\":5.8},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.4},\"change\":-2.4}],\"notes\":[\"All series: Percentage change from previous year, Meals out and take away foods, Original, Melbourne\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "australia"
+     ],
+     "items": [
+      "meals_out"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "meals_out"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30007..50.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30007..50.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"Meals out and take away foods - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3],[\"2025-05\",2.8],[\"2025-06\",3.4],[\"2025-07\",2.9],[\"2025-08\",3.4],[\"2025-09\",3.6],[\"2025-10\",3.6],[\"2025-11\",3.5],[\"2025-12\",3.5],[\"2026-01\",3.9],[\"2026-02\",3.7],[\"2026-03\",3.9],[\"2026-04\",3.7],[\"2026-05\",4],[\"2026-06\",4],[\"2026-07\",4.5],[\"2026-08\",4.1]],\"start\":{\"period\":\"2025-04\",\"value\":3},\"latest\":{\"period\":\"2026-08\",\"value\":4.1},\"change\":1.1},{\"name\":\"Meals out and take away foods - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q1\",5.3],[\"2024-Q2\",4.2],[\"2024-Q3\",2.9],[\"2024-Q4\",2.6],[\"2025-Q1\",2.7],[\"2025-Q2\",2.7],[\"2025-Q3\",3.3]],\"start\":{\"period\":\"2024-Q1\",\"value\":5.3},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.3},\"change\":-2}],\"notes\":[\"All series: Percentage change from previous year, Meals out and take away foods, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 738,
+   "cacheWrite": 1866,
+   "cacheRead": 8409
+  },
+  "ms": 7822
+ }
+}

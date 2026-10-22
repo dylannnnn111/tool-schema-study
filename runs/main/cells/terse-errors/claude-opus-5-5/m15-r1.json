@@ -1,0 +1,65 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "m15",
+ "kind": "multi",
+ "q": "Which of Sydney's commercial centres has the busiest Fridays relative to midweek right now, and which the quietest?",
+ "date": "2026-10-19",
+ "cost": 0.02903,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "In September 2026 (the latest month), **Chatswood** had the busiest Fridays compared with midweek and **North Sydney** had the quietest. This is measured as Friday tap-ons between 3pm and 7pm divided by the Tuesday–Thursday average.\n\n**Friday evening tap-ons as a share of the Tue–Thu average, September 2026:**\n\n| Centre | Ratio |\n|---|---|\n| Chatswood | **1.030** (Fridays about 3% busier than midweek) |\n| Strathfield | 1.000 (no gap) |\n| Parramatta | 0.812 |\n| Sydney CBD | 0.783 |\n| Macquarie Park | 0.770 |\n| North Sydney | **0.741** (Fridays about 26% quieter than midweek) |\n\n**This isn't a one-off month:**\n- **Chatswood** has been at or near 1.0 all year. It was above 1 in May (1.008) and August (1.051), and its lowest month was December 2025 (0.865).\n- **Strathfield** has also stayed close to 1.0, between 0.93 and 1.01 over the past 12 months.\n- **North Sydney** has been at or near the bottom almost every month, between 0.688 and 0.760 over the past year. Macquarie Park was close to it and sometimes lower, for example 0.729 in August 2026.\n- **Sydney CBD** has stayed between 0.74 and 0.80. September's 0.783 is about the same as a year ago (0.800 in October 2025).\n\n**A caveat:** Chatswood and Strathfield are big shopping and transport-interchange areas. Their Friday evening tap-ons probably include many shoppers and people going out, not just office workers heading home. So their ratios of 1.0 or more don't necessarily mean office attendance is high on Fridays there. North Sydney, Macquarie Park and the CBD are more purely office districts, so their gaps are a cleaner measure of the Friday work-from-home drop.\n\nSource: Commute Pulse analysis of TfNSW Opal tap data.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ],
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ],
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10\",0.8],[\"2025-11\",0.759],[\"2025-12\",0.744],[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2025-10\",\"value\":0.8},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":-0.017},{\"name\":\"North Sydney\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10\",0.731],[\"2025-11\",0.722],[\"2025-12\",0.688],[\"2026-01\",0.718],[\"2026-02\",0.76],[\"2026-03\",0.716],[\"2026-04\",0.705],[\"2026-05\",0.752],[\"2026-06\",0.743],[\"2026-07\",0.712],[\"2026-08\",0.751],[\"2026-09\",0.741]],\"start\":{\"period\":\"2025-10\",\"value\":0.731},\"latest\":{\"period\":\"2026-09\",\"value\":0.741},\"change\":0.01},{\"name\":\"Chatswood\",\"unit\":\"Fri"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 903,
+   "cacheWrite": 1809,
+   "cacheRead": 9526
+  },
+  "ms": 9896
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.00104,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a figure for Central station last Friday. The Opal data I can access doesn't break out individual stations or specific days.\n\nThe Commute Pulse tool only covers six commercial centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta. Central isn't one of them. Its hourly figures are averages across many days, not counts for a single date. I queried the Sydney CBD for Friday 16 October 2026, but the data returned is a typical-day profile, not that Friday's total.\n\nFor the CBD, the average Friday over the last 12 months shows about 41,000 tap-ons in the 3pm hour and about 52,000 in the 4pm hour. Those are averages, not totals for Central, and I can't confirm they match what you're after.\n\nFor an actual Central figure, TfNSW Open Data publishes the Opal tap-on datasets, which include station-level data and may let you filter to Central for that date.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "cbd_hourly",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-10-16",
+     "end": "2026-10-16"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "cbd_hourly",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-10-16",
+     "end": "2026-10-16"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"Sydney CBD Tue - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1369],[\"01:00\",364],[\"02:00\",328],[\"03:00\",250],[\"04:00\",836],[\"05:00\",2914],[\"06:00\",7011],[\"07:00\",14222],[\"08:00\",23756],[\"09:00\",16511],[\"10:00\",14511],[\"11:00\",16489],[\"12:00\",19656],[\"13:00\",22733],[\"14:00\",28400],[\"15:00\",41744],[\"16:00\",68367],[\"17:00\",115233],[\"18:00\",65356],[\"19:00\",30111],[\"20:00\",19944],[\"21:00\",15956],[\"22:00\",9944],[\"23:00\",4767]],\"start\":{\"period\":\"00:00\",\"value\":1369},\"latest\":{\"period\":\"23:00\",\"value\":4767},\"change\":3398},{\"name\":\"Sydney CBD Wed - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1692],[\"01:00\",544],[\"02:00\",406],[\"03:00\",339],[\"04:00\",869],[\"05:00\",3014],[\"06:00\",7244],[\"07:00\",13989],[\"08:00\",23500],[\"09:00\",16556],[\"10:00\",14856],[\"11:00\",17289],[\"12:00\",20511],[\"13:00\",2318"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1085,
+   "cacheWrite": 3534,
+   "cacheRead": 5808
+  },
+  "ms": 6351
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m16",
+ "kind": "multi",
+ "q": "How do credit card and personal loan rates compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.00239,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Short answer:** Credit card rates sit about 17 percentage points above the cash rate. Personal loan rates can't be compared with current data because the RBA's series ends in February 2020.\n\n**Credit cards (standard, advertised)**\n- September 2026: **21.24%** p.a., against a cash rate of **4.36%**. The gap is about **16.9 points**.\n- January 2022: 19.94% against a cash rate of 0.10%, a gap of about 19.8 points.\n- Since January 2022 the cash rate has risen 4.26 points, but card rates have risen only 1.30 points.\n- The card rate barely responds to cash rate moves. It stayed at 20.99% through the 2025 cuts (cash rate 4.35% to 3.60%), and it rose only 0.25 points in September 2026, when the cash rate was already back at 4.36%.\n\n**Personal loans (unsecured, fixed)**\n- The RBA's F5 table has the fixed personal loan series only up to **February 2020**, at **12.46%**, when the cash rate was much lower. That series shows no data after that date, so I can't give a current personal loan rate or a reliable current spread from these sources.\n- The variable personal loan series also ends in February 2020, at 14.41%.\n\n**Bottom line:** Credit cards are priced far above the cash rate and move only slightly with it. The most recent personal loan figures I can get are from before the 2022–23 tightening cycle, so I can't say how they compare today.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2022-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2022-01-31\",0.1],[\"2022-02-28\",0.1],[\"2022-03-31\",0.1],[\"2022-04-30\",0.1],[\"2022-05-31\",0.33],[\"2022-06-30\",0.73],[\"2022-07-31\",1.28],[\"2022-08-31\",1.81],[\"2022-09-30\",2.25],[\"2022-10-31\",2.58],[\"2022-11-30\",2.84],[\"2022-12-31\",3.05],[\"2023-01-31\",3.1],[\"2023-02-28\",3.29],[\"2023-03-31\",3.54],[\"2023-04-30\",3.6],[\"2023-05-31\",3.83],[\"2023-06-30\",4.05],[\"2023-07-31\",4.1],[\"2023-08-31\",4.1],[\"2023-09-30\",4.1],[\"2023-10-31\",4.1],[\"2023-11-30\",4.29],[\"2023-12-31\",4.35],[\"2024-01-31\",4.35],[\"2024-02-29\",4.35],[\"2024-03-31\",4.35],[\"2024-04-30\",4.35],[\"2024-05-31\",4.35],[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2022-01-31\",\"value\":0.1},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":4.26}],\"notes\":[\"Monthly average of the"
+   },
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "credit_card_standard",
+      "personal_loan_fixed"
+     ],
+     "start": "2022-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "credit_card_standard",
+      "personal_loan_fixed"
+     ],
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Personal loans; Revolving credit; Credit cards; Standard\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2022-01-31\",19.94],[\"2022-02-28\",19.94],[\"2022-03-31\",19.94],[\"2022-04-30\",19.94],[\"2022-05-31\",19.94],[\"2022-06-30\",19.94],[\"2022-07-31\",19.94],[\"2022-08-31\",19.94],[\"2022-09-30\",19.94],[\"2022-10-31\",19.94],[\"2022-11-30\",19.94],[\"2022-12-31\",19.94],[\"2023-01-31\",19.94],[\"2023-02-28\",19.82],[\"2023-03-31\",19.82],[\"2023-04-30\",19.82],[\"2023-05-31\",19.82],[\"2023-06-30\",19.82],[\"2023-07-31\",19.82],[\"2023-08-31\",19.82],[\"2023-09-30\",19.87],[\"2023-10-31\",19.87],[\"2023-11-30\",20.07],[\"2023-12-31\",20.07],[\"2024-01-31\",20.07],[\"2024-02-29\",20.16],[\"2024-03-31\",20.16],[\"2024-04-30\",20.16],[\"2024-05-31\",20.16],[\"2024-06-30\",20.57],[\"2024-07-31\",20.57],[\"2024-08-31\",20.57],[\"2024-09-30\",20.78],[\"2024-10-31\",20.78],[\"2024-11-30\",20.78],[\"2024-12-31\",20.78],[\"2025-01-31\",20.99],[\"2025-02-28\",20.99],[\"2025-03-31\",20.99],[\"2025-04-30\",20.99],[\"2025-05-31\",20.99],[\"2025-06-30\",20.99],[\"2025-07-31\",20.99],[\"2025-08-31\",20.99],[\"2025-09-30\",20.99],[\"2025-10-31\",20.99],[\"2025-11-30\",20.99],[\"2025-12-31\",20.99],[\"2026-01-31\",20.99],[\"2026-02-28\",20.99],[\"2026-03-31\",20.99],[\"2026-04-30\",20.99],[\"2026-05-31\",20.99],[\"2026-06-30\",20.99],[\"2026-07-31\",20.99],[\"2026-08-31\",20.99],[\"2026-09-30\",21.24]],\"start\":{\"period\":\"2022-01-31\",\"value\":19.94},\"late"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f5",
+     "search": "Personal loans fixed",
+     "start": "2022-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f5",
+     "search": "Personal loans fixed",
+     "monthly": false,
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"RBA F5 F5  INDICATOR LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Lending rates; Personal loans; Term loans (unsecured); Fixed\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "f5",
+     "search": "Term loans unsecured"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f5",
+     "search": "Term loans unsecured",
+     "monthly": false
+    },
+    "seen": "{\"source\":\"RBA F5 F5  INDICATOR LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Lending rates; Personal loans; Term loans (unsecured); Fixed\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"1988-12-31\",19],[\"1989-01-31\",19],[\"1989-02-28\",19],[\"1989-03-31\",19.5],[\"1989-04-30\",19.9],[\"1989-05-31\",20.4],[\"1989-06-30\",20.4],[\"1989-07-31\",20.65],[\"1989-08-31\",20.65],[\"1989-09-30\",20.65],[\"1989-10-31\",20.7],[\"1989-11-30\",20.7],[\"1989-12-31\",20.7],[\"1990-01-31\",20.7],[\"1990-02-28\",20.7],[\"1990-03-31\",20.65],[\"1990-04-30\",20.65],[\"1990-05-31\",20.65],[\"1990-06-30\",20.65],[\"1990-07-31\",20.65],[\"1990-08-31\",20.65],[\"1990-09-30\",20.65],[\"1990-10-31\",19.75],[\"1990-11-30\",19.75],[\"1990-12-31\",19.75],[\"1991-01-31\",19.5],[\"1991-02-28\",19.5],[\"1991-03-31\",19.5],[\"1991-04-30\",19.1],[\"1991-05-31\",18.65],[\"1991-06-30\",18.65],[\"1991-07-31\",18.65],[\"1991-08-31\",18.65],[\"1991-09-30\",18.4],[\"1991-10-31\",18.4],[\"1991-11-30\",18.15],[\"1991-12-31\",17.4],[\"1992-01-31\",17],[\"1992-02-29\",17],[\"1992-03-31\",17],[\"1992-04-30\",16.9],[\"1992-05-31\",16.3],[\"1992-06-30\",15.8],[\"1992-07-31\",15.8],[\"1992-08-31\",15.65],[\"1992-09-30\",15.65],[\"1992-10-31\",15.65],[\"1992-11-30\",15.65],[\"1992-12-31\",15.65],[\"1993-01-31\",15.65],[\"1993-02-28\",15.65],[\"1993-03-31\",15.4],[\"1993-04-30\",15.4],[\"1993-05-31\",14.75],[\"1993-06-30\",14.75],[\"1993-07-31\",14.4],[\"1993-08-31\",14.15],[\"1993-09-30\",13.5],[\"1993-10-31\",13.5],[\"1993-11-30\",13.5],[\"1993-12-31\",13.5],[\"199"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1646,
+   "cacheWrite": 10650,
+   "cacheRead": 23845
+  },
+  "ms": 11502
+ }
+}

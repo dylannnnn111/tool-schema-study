@@ -1,0 +1,105 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "v02",
+ "kind": "vague",
+ "q": "How bad is the rent situation in Sydney?",
+ "date": "2026-10-19",
+ "cost": 0.03193,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Sydney rents are still rising, but much more slowly than in 2024. Rent growth is now slightly below general inflation.**\n\n**Annual rent inflation (ABS CPI)**\n\n| Period | Sydney | Australia |\n|---|---|---|\n| Jan–Mar 2024 | 8.7–8.8% (peak) | 7.5–7.7% |\n| Aug 2025 | 3.2% (low) | 3.7% |\n| Aug 2026 (latest) | 3.5% | 3.6% |\n\n- **Slowdown:** Sydney's annual rent growth fell by about 5 percentage points between early 2024 and the latest reading (Aug 2026).\n- **Flattening out:** It has stayed around 3.3–3.5% since late 2025, and it has edged up slightly since April 2026, when it was 3.3%.\n- **Versus other prices:** The Sydney all-items CPI index rose about 3.9% over the year to Aug 2026 (103.61 against 99.69), so rents are growing a bit slower than prices overall. That is my calculation from the index levels.\n\n**Cumulative effect**\n- The Sydney rent index went from 92.63 in Jan 2024 to 103.29 in Aug 2026, an increase of about 11.5%.\n- Over the last two years (Aug 2024 to Aug 2026) it rose about 6.8%, from 96.72 to 103.29.\n- Rents are not falling. The slower growth means they are still climbing from a high level, so earlier increases have not been reversed.\n\n**Caveat:** The CPI rent measure covers all existing tenancies, not just new leases. It lags what a person signing a lease today would face, and asking rents for new listings can differ from it. I haven't looked at vacancy rates or advertised rents, which would show how tight the market feels right now.\n\nI can also compare Sydney with other capital cities, or set rent growth against wages or the cash rate.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "cities": [
+       "sydney",
+       "australia"
+      ],
+      "items": [
+       "rents"
+      ]
+     },
+     "period": {
+      "start": "2024-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1+50.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",7.5],[\"2024-02\",7.5],[\"2024-03\",7.7],[\"2024-04\",7.5],[\"2024-05\",7.4],[\"2024-06\",7.1],[\"2024-07\",6.9],[\"2024-08\",6.7],[\"2024-09\",6.6],[\"2024-10\",6.8],[\"2024-11\",6.6],[\"2024-12\",6.2],[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2024-01\",\"value\":7.5},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-3.9},{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",8.7],[\"2024-02\",8.7],[\"2024-03\",8.8],[\"2024-04\",8.5],[\"2024-05\",8.3],[\"2024-06\",7.8],[\"2024-07\",7.4],[\"2024-08\",7.1],[\"2024-09\",6.9],[\"2024-10\",6.8],[\"2024-11\",6.5],[\"2024-12\",6],[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2024-01\",\"value\":8.7},\"latest\":{\"period\":\"2026-"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "cities": [
+       "sydney",
+       "australia"
+      ],
+      "items": [
+       "rents",
+       "all_groups"
+      ]
+     },
+     "period": {
+      "start": "2024-01"
+     },
+     "options": {
+      "measure": "index"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents",
+      "all_groups"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.30014+10001..1+50.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",92.01],[\"2024-02\",92.72],[\"2024-03\",93.3],[\"2024-04\",93.81],[\"2024-05\",94.53],[\"2024-06\",95.11],[\"2024-07\",95.7],[\"2024-08\",96.23],[\"2024-09\",96.35],[\"2024-10\",96.14],[\"2024-11\",96.68],[\"2024-12\",97.01],[\"2025-01\",97.37],[\"2025-02\",97.83],[\"2025-03\",98.14],[\"2025-04\",98.45],[\"2025-05\",98.82],[\"2025-06\",99.11],[\"2025-07\",99.44],[\"2025-08\",99.77],[\"2025-09\",100],[\"2025-10\",100.18],[\"2025-11\",100.58],[\"2025-12\",100.83],[\"2026-01\",101.15],[\"2026-02\",101.52],[\"2026-03\",101.73],[\"2026-04\",101.9],[\"2026-05\",102.33],[\"2026-06\",102.64],[\"2026-07\",103],[\"2026-08\",103.34]],\"start\":{\"period\":\"2024-01\",\"value\":92.01},\"latest\":{\"period\":\"2026-08\",\"value\":103.34},\"change\":11.33},{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",92.63],[\"2024-02\",93.27],[\"2024-03\",93.81],[\"2024-04\",94.38],[\"2024-05\",95.12],[\"2024-06\",95.68],[\"2024-07\",96.23],[\"2024-08\",96.72],[\"2024-09\",96.88],[\"2024-10\",96.79],[\"2024-11\",97.27],[\"2024-12\",97.53],[\"2025-01\",97.8],[\"2025-02\",98.13],[\"2025-03\",98.36],[\"2025-04\",98.64],[\"2025-05\",98.98],[\"2025-06\",99.23],[\"2025-07\",99.51],[\"2025-08\",99.79],[\"2025-09\",100],[\"2025-10\",100.2],[\"2025-11\",100.59],[\"2025-12\",100.84],[\"2026-01\",101.15],[\"2026-02\",101.46],[\"2026-03\",101."
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1056,
+   "cacheWrite": 8327,
+   "cacheRead": 5355
+  },
+  "ms": 11089
+ }
+}

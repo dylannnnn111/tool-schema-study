@@ -1,0 +1,109 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "meals_out"
+  ],
+  "cities": [
+   "melbourne"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30007..2.M",
+  "series": [
+   {
+    "name": "Meals out and take away foods - Melbourne (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      2.6
+     ],
+     [
+      "2025-05",
+      2.3
+     ],
+     [
+      "2025-06",
+      3.7
+     ],
+     [
+      "2025-07",
+      2.5
+     ],
+     [
+      "2025-08",
+      3.4
+     ],
+     [
+      "2025-09",
+      3.5
+     ],
+     [
+      "2025-10",
+      3.5
+     ],
+     [
+      "2025-11",
+      3.3
+     ],
+     [
+      "2025-12",
+      3.3
+     ],
+     [
+      "2026-01",
+      3.8
+     ],
+     [
+      "2026-02",
+      3.5
+     ],
+     [
+      "2026-03",
+      3.7
+     ],
+     [
+      "2026-04",
+      3.7
+     ],
+     [
+      "2026-05",
+      4.4
+     ],
+     [
+      "2026-06",
+      3.9
+     ],
+     [
+      "2026-07",
+      4.1
+     ],
+     [
+      "2026-08",
+      3.5
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 2.6
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3.5
+    },
+    "change": 0.9
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Meals out and take away foods, Original, Melbourne",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T20:50:27.990Z"
+}

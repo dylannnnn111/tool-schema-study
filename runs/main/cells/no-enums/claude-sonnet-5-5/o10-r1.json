@@ -1,0 +1,64 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "o10",
+ "kind": "out-of-scope",
+ "q": "How many people rode the Sydney Metro last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.01194,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you how many people rode the Sydney Metro last Friday (16 October 2026). None of my data sources has daily Metro ridership. The closest is Opal tap data, which is monthly and covers Sydney CBD evening taps (3–7pm). It isn't broken down by mode, and it may not include Metro taps at all.\n\nHere is what the Opal data shows for the CBD, with September 2026 the latest month:\n\n- **Friday evening vs midweek:** Friday evening tap-ons were 0.783 of the Tuesday–Thursday average in September 2026. That is up from 0.744 in January 2026 and close to the year's high of 0.799 in August.\n- **Midweek evening volume:** Tuesday–Thursday evening tap-ons averaged about 255,900 a day in September 2026. That implies roughly 200,000 on a typical Friday (255,900 × 0.783). This is my own estimate, and it covers all Opal modes, not just Metro.\n\nFor an actual Metro count, you'd need to ask Transport for NSW or Sydney Metro. They may publish patronage figures, and the TfNSW Open Data portal has the Opal tap data.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-01\",\"value\":0.744},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.039}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "evening_volume",
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "evening_volume",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"average Tue-Thu evening tap-ons per day\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",226758.3333],[\"2026-02\",279433.3333],[\"2026-03\",273320],[\"2026-04\",261475],[\"2026-05\",257083.3333],[\"2026-06\",246975],[\"2026-07\",252401.6667],[\"2026-08\",262233.3333],[\"2026-09\",255926.6667]],\"start\":{\"period\":\"2026-01\",\"value\":226758.3333},\"latest\":{\"period\":\"2026-09\",\"value\":255926.6667},\"change\":29168.3334}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 739,
+   "cacheWrite": 1479,
+   "cacheRead": 8410
+  },
+  "ms": 7181
+ }
+}

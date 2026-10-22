@@ -1,0 +1,63 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m04",
+ "kind": "multi",
+ "q": "Is unemployment higher in NSW or Victoria right now, and by how much?",
+ "date": "2026-10-19",
+ "cost": 0.00036,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Victoria's unemployment rate is higher than NSW's.** In September 2026 (seasonally adjusted), Victoria was **5.1%** and NSW was **4.7%**, a gap of about **0.3 percentage points**.\n\nThe gap has been widening. In January 2026 the two states were close (NSW 4.2%, Victoria 4.2%). Since then Victoria has risen more steeply, while NSW has also climbed. Victoria's rate has been above 5% since June.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "nsw",
+      "vic"
+     ],
+     "measures": [
+      "unemployment_rate"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "nsw",
+      "vic"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.1+2.M?startPeriod=2026-01\",\"series\":[{\"name\":\"New South Wales\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",4.1515],[\"2026-02\",4.1154],[\"2026-03\",4.2681],[\"2026-04\",4.4225],[\"2026-05\",4.3257],[\"2026-06\",3.9741],[\"2026-07\",4.2682],[\"2026-08\",4.3548],[\"2026-09\",4.7076]],\"start\":{\"period\":\"2026-01\",\"value\":4.1515},\"latest\":{\"period\":\"2026-09\",\"value\":4.7076},\"change\":0.5561},{\"name\":\"Victoria\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",4.2499],[\"2026-02\",4.687],[\"2026-03\",4.815],[\"2026-04\",4.8452],[\"2026-05\",4.8997],[\"2026-06\",5.1159],[\"2026-07\",5.1095],[\"2026-08\",5.1658],[\"2026-09\",5.052]],\"start\":{\"period\":\"2026-01\",\"value\":4.2499},\"latest\":{\"period\":\"2026-09\",\"value\":5.052},\"change\":0.8021}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Seasonally Adjusted\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 351,
+   "cacheWrite": 701,
+   "cacheRead": 9513
+  },
+  "ms": 2909
+ }
+}

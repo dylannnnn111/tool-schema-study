@@ -1,0 +1,24 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f5",
+  "search": "Personal loans fixed",
+  "monthly": false,
+  "start": "2022-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F5 F5  INDICATOR LENDING RATES",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f5-data.csv",
+  "series": [
+   {
+    "name": "Lending rates; Personal loans; Term loans (unsecured); Fixed",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": []
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:08:12.524Z"
+}

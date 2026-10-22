@@ -1,0 +1,64 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.01102,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you how many people tapped on at Central station last Friday (16 October 2026). The Commute Pulse data I have doesn't go down to a single station or a single day. It's monthly, and it covers whole commercial centres, such as the Sydney CBD, rather than individual stations. It also only counts evening tap-ons, between 3pm and 7pm.\n\nHere is the closest I can get, for the Sydney CBD as a whole:\n\n- **Typical Tue–Thu evening tap-ons:** about 255,900 a day in September 2026. The figure was about 252,400 in July and 262,200 in August.\n- **Friday compared with Tue–Thu:** the Friday ratio was 0.783 in September 2026. It was 0.778 in July and 0.799 in August.\n- **Implied Friday evening tap-ons:** about 200,000 in September (255,900 × 0.783). This is my own calculation from the monthly averages, not a measured count.\n\nTwo caveats. The data may not include Sydney Metro taps in the CBD, so these levels could be understated. The latest month available is September, so nothing here covers 16 October.\n\nFor actual station-level counts, TfNSW publishes the Opal tap data this analysis is built from. You can download it from TfNSW Open Data.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "evening_volume",
+     "start": "2026-07"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "evening_volume",
+     "start": "2026-07"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"average Tue-Thu evening tap-ons per day\",\"frequency\":\"Monthly\",\"points\":[[\"2026-07\",252401.6667],[\"2026-08\",262233.3333],[\"2026-09\",255926.6667]],\"start\":{\"period\":\"2026-07\",\"value\":252401.6667},\"latest\":{\"period\":\"2026-09\",\"value\":255926.6667},\"change\":3525}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2026-07"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2026-07"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-07\",\"value\":0.778},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.005}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 697,
+   "cacheWrite": 1278,
+   "cacheRead": 8408
+  },
+  "ms": 7049
+ }
+}

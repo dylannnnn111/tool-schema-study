@@ -1,0 +1,83 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v07",
+ "kind": "vague",
+ "q": "Where is the RBA at with rates?",
+ "date": "2026-10-19",
+ "cost": 0.04448,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The RBA's cash rate target is **4.60%**. It went up 25 basis points from 4.35% on **30 September 2026**, and was still 4.60% in the latest daily figure (15 October 2026).\n\n**How it got here**\n\nThe RBA cut rates three times in 2025, then reversed course in 2026. The September rise is the fourth increase this year.\n\n| Period | Move | Cash rate |\n|---|---|---|\n| Nov 2023 – Jan 2025 | On hold | 4.35% |\n| Feb 2025 | Cut | 4.10% |\n| May 2025 | Cut | 3.85% |\n| Aug 2025 | Cut | 3.60% |\n| Sep 2025 – Jan 2026 | On hold | 3.60% |\n| Feb 2026 | Rise | 3.85% |\n| Mar 2026 | Rise | 4.10% |\n| May 2026 | Rise | 4.35% |\n| Jun – Sep 2026 | On hold | 4.35% |\n| **30 Sep 2026** | **Rise** | **4.60%** |\n\nI only have month-by-month averages for 2025 to August 2026, so those dates come from how the averages shifted. The exact day of each move isn't confirmed. The September rise is confirmed by the RBA's daily figures.\n\n**What it means**\n- The rate is now 100 basis points (one percentage point) higher than at the start of 2026. That has undone all of the 2025 cuts and taken it 25 basis points above the old 4.35% peak.\n- 4.60% is the highest cash rate since late 2011.\n- Four rises in about eight months means the RBA is clearly worried about inflation picking up again.\n\nI can also show the latest inflation figures (CPI and trimmed mean) or how much of the rises banks have passed on to mortgage rates.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-06-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f1.1",
+     "search": "Cash Rate Target",
+     "start": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1.1",
+     "search": "Cash Rate Target",
+     "monthly": false,
+     "start": "2026-09"
+    },
+    "seen": "{\"source\":\"RBA F1.1 F1.1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-09-30\",\"value\":4.36},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0}],\"notes\":[]}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "f1",
+     "search": "Cash Rate Target",
+     "start": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1",
+     "search": "Cash Rate Target",
+     "monthly": false,
+     "start": "2026-09"
+    },
+    "seen": "{\"source\":\"RBA F1 F1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1-data.csv\",\"series\":[{\"name\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Daily\",\"points\":[[\"2026-09-01\",4.35],[\"2026-09-02\",4.35],[\"2026-09-03\",4.35],[\"2026-09-04\",4.35],[\"2026-09-07\",4.35],[\"2026-09-08\",4.35],[\"2026-09-09\",4.35],[\"2026-09-10\",4.35],[\"2026-09-11\",4.35],[\"2026-09-14\",4.35],[\"2026-09-15\",4.35],[\"2026-09-16\",4.35],[\"2026-09-17\",4.35],[\"2026-09-18\",4.35],[\"2026-09-21\",4.35],[\"2026-09-22\",4.35],[\"2026-09-23\",4.35],[\"2026-09-24\",4.35],[\"2026-09-25\",4.35],[\"2026-09-28\",4.35],[\"2026-09-29\",4.35],[\"2026-09-30\",4.6],[\"2026-10-01\",4.6],[\"2026-10-02\",4.6],[\"2026-10-05\",4.6],[\"2026-10-06\",4.6],[\"2026-10-07\",4.6],[\"2026-10-08\",4.6],[\"2026-10-09\",4.6],[\"2026-10-12\",4.6],[\"2026-10-13\",4.6],[\"2026-10-14\",4.6],[\"2026-10-15\",4.6]],\"start\":{\"period\":\"2026-09-01\",\"value\":4.35},\"latest\":{\"period\":\"2026-10-15\",\"value\":4.6},\"change\":0.25},{\"name\":\"Change in the Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"as announced\",\"points\":[]}],\"notes\":[]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1453,
+   "cacheWrite": 2233,
+   "cacheRead": 21091
+  },
+  "ms": 17784
+ }
+}

@@ -1,0 +1,519 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9.TOT...AUS.M",
+  "last_n": 1
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT...AUS.M?lastNObservations=1",
+  "series": [
+   {
+    "name": "Health buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Warehouses",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Total Residential",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      16967
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "change": 0
+   },
+   {
+    "name": "Commercial Buildings - Total",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Dwellings excluding houses",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      5834
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 5834
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 5834
+    },
+    "change": 0
+   },
+   {
+    "name": "Total Non-residential",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      1
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 1
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1
+    },
+    "change": 0
+   },
+   {
+    "name": "Houses",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      11134
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 11134
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 11134
+    },
+    "change": 0
+   },
+   {
+    "name": "Transport buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Total",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      16968
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 16968
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16968
+    },
+    "change": 0
+   },
+   {
+    "name": "Industrial Buildings - Total",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Factories and other secondary production buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Other Non-residential - Total",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      1
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 1
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1
+    },
+    "change": 0
+   },
+   {
+    "name": "Total Other Residential",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2001-06",
+      3571
+     ]
+    ],
+    "start": {
+     "period": "2001-06",
+     "value": 3571
+    },
+    "latest": {
+     "period": "2001-06",
+     "value": 3571
+    },
+    "change": 0
+   },
+   {
+    "name": "Aged care facilities",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      1
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 1
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 1
+    },
+    "change": 0
+   },
+   {
+    "name": "Entertainment and recreation buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Other non-residential n.e.c.",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Retail and wholesale trade buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Offices",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Dwellings excluding new residential",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      54
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 54
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 54
+    },
+    "change": 0
+   },
+   {
+    "name": "Education buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Commercial buildings n.e.c.",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Short term accommodation buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Agricultural and aquacultural buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Religion buildings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Other industrial buildings n.e.c.",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Sectors, Total Work, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:43:21.187Z"
+}

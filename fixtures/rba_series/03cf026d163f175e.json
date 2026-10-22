@@ -1,0 +1,197 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F5",
+  "search": "rent",
+  "monthly": false,
+  "start": "2024-01"
+ },
+ "ok": true,
+ "result": {
+  "table": "F5",
+  "title": "F5  INDICATOR LENDING RATES",
+  "columns": [
+   {
+    "id": "FILRSBVRT",
+    "title": "Lending rates; Small business; Variable; Term",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSBVOO",
+    "title": "Lending rates; Small business; Variable; Overdraft",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLBVS",
+    "title": "Lending rates; Housing loans; Banks; Variable; Standard; Owner-occupier",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLBVD",
+    "title": "Lending rates; Housing loans; Banks; Variable; Discounted; Owner-occupier",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLBVO",
+    "title": "Lending rates; Housing loans; Banks; Variable; Standard interest-only; Owner-occupier",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHL3YF",
+    "title": "Lending rates; Housing loans; Banks; 3-year fixed; Owner-occupier",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLBVSI",
+    "title": "Lending rates; Housing loans; Banks; Variable; Standard; Investor",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLBVDI",
+    "title": "Lending rates; Housing loans; Banks; Variable; Discounted; Investor",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLBVDO",
+    "title": "Lending rates; Housing loans; Banks; Variable; Standard interest-only; Investor",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHL3YFI",
+    "title": "Lending rates; Housing loans; Banks; 3-year fixed; Investor",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRPLRCCS",
+    "title": "Lending rates; Personal loans; Revolving credit; Credit cards; Standard",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRPLRCCL",
+    "title": "Lending rates; Personal loans; Revolving credit; Credit cards; Low rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSBVOT",
+    "title": "Lending rates; Small business; Variable; Other; Term",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSBVRO",
+    "title": "Lending rates; Small business; Variable; Residential-secured; Overdraft",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSBVSO",
+    "title": "Lending rates; Small business; Variable; Small overdraft",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSBVWA",
+    "title": "Lending rates; Small business; Variable; Weighted-average rate on credit outstanding",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSB3YF",
+    "title": "Lending rates; Small business; 3-year fixed",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRLBWAV",
+    "title": "Lending rates; Large business; Weighted-average rate on credit outstanding; Variable",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRLBWAB",
+    "title": "Lending rates; Large business; Weighted-average rate on credit outstanding; Bills",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRPLTUF",
+    "title": "Lending rates; Personal loans; Term loans (unsecured); Fixed",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRPLTUV",
+    "title": "Lending rates; Personal loans; Term loans (unsecured); Variable",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRPLRCHE",
+    "title": "Lending rates; Personal loans; Revolving credit; Home equity loans",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRPLRCML",
+    "title": "Lending rates; Personal loans; Revolving credit; Margin loans",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLMMS",
+    "title": "Lending rates; Housing loans; Mortgage managers; Variable; Standard",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRHLMMB",
+    "title": "Lending rates; Housing loans; Mortgage managers; Variable; Basic",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSAVR",
+    "title": "Lending rates; Securitised housing loans; Average outstanding variable rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSAVOPI",
+    "title": "Lending rates; Securitised housing loans; Average outstanding variable rate; Owner-occupier; Principal & Interest",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSAVOI",
+    "title": "Lending rates; Securitised housing loans; Average outstanding variable rate; Owner-occupier; Interest Only",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSAVIPI",
+    "title": "Lending rates; Securitised housing loans; Average outstanding variable rate; Investor; Principal & Interest",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FILRSAVIIO",
+    "title": "Lending rates; Securitised housing loans; Average outstanding variable rate; Investor; Interest Only",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:16:43.311Z"
+}

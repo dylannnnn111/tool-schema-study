@@ -1,0 +1,69 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m15",
+ "kind": "multi",
+ "q": "Which of Sydney's commercial centres has the busiest Fridays relative to midweek right now, and which the quietest?",
+ "date": "2026-10-19",
+ "cost": 0.00077,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Busiest Friday relative to midweek: Chatswood.** In September 2026, Friday 3–7pm tap-ons were 1.03 times the Tue–Thu average, meaning Chatswood's Friday evenings were slightly busier than midweek. It was also above 1.0 in August (1.05).\n\n**Quietest: North Sydney.** Its September 2026 ratio was 0.74, so Friday evenings ran about a quarter below midweek.\n\nFor comparison, September 2026 ratios were:\n\n| Centre | Friday / Tue–Thu |\n|---|---|\n| Chatswood | 1.03 |\n| Strathfield | 1.00 |\n| Parramatta | 0.81 |\n| Sydney CBD | 0.78 |\n| Macquarie Park | 0.77 |\n| North Sydney | 0.74 |\n\nThe latest data is for September 2026, not October, so \"right now\" means the most recent full month. Month to month the ratios move around quite a bit, so one month isn't a firm trend. Over the past year, Chatswood and Strathfield have been the only centres near or above 1.0, while the CBD has risen modestly from 0.80 in October 2025 to 0.78. The CBD has also been below its 0.80 starting point for most of the period, with a low of 0.74 in December and January.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "select": {
+      "view": "friday_gap",
+      "centres": [
+       "Sydney CBD",
+       "North Sydney",
+       "Chatswood",
+       "Macquarie Park",
+       "Strathfield",
+       "Parramatta"
+      ]
+     },
+     "period": {
+      "start": "2025-10"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ],
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10\",0.8],[\"2025-11\",0.759],[\"2025-12\",0.744],[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2025-10\",\"value\":0.8},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":-0.017},{\"name\":\"North Sydney\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10\",0.731],[\"2025-11\",0.722],[\"2025-12\",0.688],[\"2026-01\",0.718],[\"2026-02\",0.76],[\"2026-03\",0.716],[\"2026-04\",0.705],[\"2026-05\",0.752],[\"2026-06\",0.743],[\"2026-07\",0.712],[\"2026-08\",0.751],[\"2026-09\",0.741]],\"start\":{\"period\":\"2025-10\",\"value\":0.731},\"latest\":{\"period\":\"2026-09\",\"value\":0.741},\"change\":0.01},{\"name\":\"Chatswood\",\"unit\":\"Fri"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 866,
+   "cacheWrite": 1806,
+   "cacheRead": 10756
+  },
+  "ms": 4802
+ }
+}

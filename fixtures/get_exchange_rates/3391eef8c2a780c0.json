@@ -1,0 +1,90 @@
+{
+ "tool": "get_exchange_rates",
+ "args": {
+  "currencies": [
+   "JPY"
+  ],
+  "monthly": true,
+  "start": "2025-10",
+  "end": "2026-10-19"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F11.1 Exchange Rates (4pm AEST)",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv",
+  "series": [
+   {
+    "name": "AUD/JPY (units of foreign currency per A$1)",
+    "unit": "JPY",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2025-10",
+      100.84
+     ],
+     [
+      "2025-11",
+      102.05
+     ],
+     [
+      "2025-12",
+      104.83
+     ],
+     [
+      "2026-01",
+      107.81
+     ],
+     [
+      "2026-02",
+      110.87
+     ],
+     [
+      "2026-03",
+      109.27
+     ],
+     [
+      "2026-04",
+      114.28
+     ],
+     [
+      "2026-05",
+      114.14
+     ],
+     [
+      "2026-06",
+      111.48
+     ],
+     [
+      "2026-07",
+      112.9
+     ],
+     [
+      "2026-08",
+      114.54
+     ],
+     [
+      "2026-09",
+      109.47
+     ],
+     [
+      "2026-10",
+      109.67
+     ]
+    ],
+    "start": {
+     "period": "2025-10",
+     "value": 100.84
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 109.67
+    },
+    "change": 8.83
+   }
+  ],
+  "notes": [
+   "This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in)."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:13:26.106Z"
+}

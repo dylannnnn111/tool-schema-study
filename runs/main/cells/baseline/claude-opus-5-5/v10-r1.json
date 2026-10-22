@@ -1,0 +1,102 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "v10",
+ "kind": "vague",
+ "q": "How's the job market looking for women in Victoria?",
+ "date": "2026-10-19",
+ "cost": 0.03778,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Over the past year it has got harder for women in Victoria to find work, though things have levelled off in the last few months. These are seasonally adjusted ABS Labour Force figures, and the latest month is **September 2026**.\n\n**Headline figures (women, Victoria, Sep 2026)**\n- **Unemployment rate: 5.1%**, up from 4.1% in September 2025.\n- **Participation rate: 63.6%**, about the same as a year ago (63.9%).\n- **Employment-to-population ratio: 60.4%**, down from 61.3% a year ago.\n- **Employed: 1.843 million women**, up about 5,000 on the year. About 1.008 million work full-time and about 835,000 part-time. Full-time jobs fell slightly from 1.011 million and part-time jobs grew by roughly 7,000.\n\n**How it changed**\n- Through most of 2025, unemployment for Victorian women held steady at around **3.9–4.1%**.\n- It started rising in early 2026: 4.2% in February, 4.5% in March and 4.7% in April. It then jumped to **5.1% in June** and peaked at **5.2% in July**.\n- April 2026 was the low point. Employment fell to about 1.803 million, roughly 37,000 below December 2025, and participation dropped to 62.4%.\n- Since then, jobs have recovered to about 1.843 million in August and September, back to late-2025 levels. Unemployment has eased a little, from 5.2% to 5.1%.\n\n**Compared with men in Victoria (Sep 2026)**\n- Unemployment for men is **5.0%**, about the same as for women. In early 2026 women were doing better: in January the rate was 4.1% for women and 4.4% for men. Since mid-year, women's unemployment has caught up.\n- Participation is much higher for men (71.5% vs 63.6%), which is the usual gap.\n\n**Bottom line:** Victorian women's unemployment has risen by about a percentage point over the past year, and the share of women in work has fallen. Nearly all the extra people looking for work over the year ended up unemployed, because the number of jobs barely grew. The good news is that employment has recovered since April and unemployment has stopped rising for now, at around 5.1%.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "vic"
+     ],
+     "sex": "females",
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed",
+      "employed_full_time",
+      "employed_part_time"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed",
+      "employed_full_time",
+      "employed_part_time"
+     ],
+     "states": [
+      "vic"
+     ],
+     "sex": "females",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M3+M1+M2.2.1599.20.2.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Participation rate\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",63.5698],[\"2025-02\",62.7643],[\"2025-03\",63.1846],[\"2025-04\",63.8267],[\"2025-05\",63.7662],[\"2025-06\",63.6645],[\"2025-07\",63.9035],[\"2025-08\",63.838],[\"2025-09\",63.9474],[\"2025-10\",63.6675],[\"2025-11\",63.9657],[\"2025-12\",63.6937],[\"2026-01\",63.33],[\"2026-02\",63.5135],[\"2026-03\",62.971],[\"2026-04\",62.4134],[\"2026-05\",62.9593],[\"2026-06\",63.3195],[\"2026-07\",63.4711],[\"2026-08\",63.777],[\"2026-09\",63.6163]],\"start\":{\"period\":\"2025-01\",\"value\":63.5698},\"latest\":{\"period\":\"2026-09\",\"value\":63.6163},\"change\":0.0465},{\"name\":\"Employed persons\",\"unit\":\"Number (Thousands)\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",1791.1536],[\"2025-02\",1781.0938],[\"2025-03\",1803.7524],[\"2025-04\",1825.9547],[\"2025-05\",1825.1942],[\"2025-06\",1823.6927],[\"2025-07\",1830.2101],[\"2025-08\",1833.4588],[\"2025-09\",1838.0874],[\"2025-10\",1835.1701],[\"2025-11\",1843.5217],[\"2025-12\",1839.5165],[\"2026-01\",1832.0255],[\"2026-02\",1838.4217],[\"2026-03\",1822.2525],[\"2026-04\",1802.7099],[\"2026-05\",1826.4203],[\"2026-06\",1826.4792],[\"2026-07\",1830.4415],[\"2026-08\",1843.5787],[\"2026-09\",1843.039]],\"start\":{\"period\":\"2025-01\",\"value\":1791.1536},\"latest\":{\"period\":\"2026-09\",\"value\":1843.039},\"change\":51.8854},{\"name\":\"Unemployment rate\",\"unit\":\"Percent\",\"frequency\":\"Month"
+   },
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "vic"
+     ],
+     "sex": "males",
+     "measures": [
+      "unemployment_rate",
+      "participation_rate"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate"
+     ],
+     "states": [
+      "vic"
+     ],
+     "sex": "males",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12.1.1599.20.2.M?startPeriod=2026-01\",\"series\":[{\"name\":\"Unemployment rate\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",4.4034],[\"2026-02\",5.1089],[\"2026-03\",5.1446],[\"2026-04\",4.9415],[\"2026-05\",5.3358],[\"2026-06\",5.1629],[\"2026-07\",4.9933],[\"2026-08\",5.169],[\"2026-09\",5.0077]],\"start\":{\"period\":\"2026-01\",\"value\":4.4034},\"latest\":{\"period\":\"2026-09\",\"value\":5.0077},\"change\":0.6043},{\"name\":\"Participation rate\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",71.5178],[\"2026-02\",71.755],[\"2026-03\",71.1432],[\"2026-04\",71.6234],[\"2026-05\",71.8017],[\"2026-06\",72.1148],[\"2026-07\",71.8262],[\"2026-08\",71.8547],[\"2026-09\",71.454]],\"start\":{\"period\":\"2026-01\",\"value\":71.5178},\"latest\":{\"period\":\"2026-09\",\"value\":71.454},\"change\":-0.0638}],\"notes\":[\"All series: Males, Total (age), Seasonally Adjusted, Victoria\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1123,
+   "cacheWrite": 2680,
+   "cacheRead": 9503
+  },
+  "ms": 14123
+ }
+}

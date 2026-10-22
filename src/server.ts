@@ -5,7 +5,7 @@
 import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { canonicalize, runtimeError, specFor, validationError, type ArgProblem, type Variant } from './variants.ts';
+import { canonicalize, runtimeError, specFor, terseErrors, validationError, type ArgProblem, type Variant } from './variants.ts';
 
 export interface CallResult {
   text: string; // what the model sees
@@ -66,7 +66,7 @@ export function createServer(opts: ServerOptions) {
   async function call(variant: Variant, name: string, input: unknown): Promise<CallResult> {
     const spec = specFor(name);
     if (!spec) {
-      return { isError: true, kind: 'unknown-tool', text: variant === 'terse-errors' ? 'Error: request failed.' : `Error: there's no tool called ${name}.` };
+      return { isError: true, kind: 'unknown-tool', text: terseErrors(variant) ? 'Error: request failed.' : `Error: there's no tool called ${name}.` };
     }
     const c = canonicalize(spec, variant, input);
     if (!c.ok) return { isError: true, kind: 'invalid', problems: c.problems, text: validationError(spec, variant, c.problems) };

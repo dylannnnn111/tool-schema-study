@@ -1,0 +1,347 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups",
+   "trimmed_mean"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2022-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2022-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+999902..50.Q?startPeriod=2022-Q1",
+  "series": [
+   {
+    "name": "Trimmed Mean - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      3.2
+     ],
+     [
+      "2025-05",
+      3
+     ],
+     [
+      "2025-06",
+      2.8
+     ],
+     [
+      "2025-07",
+      3.1
+     ],
+     [
+      "2025-08",
+      3.1
+     ],
+     [
+      "2025-09",
+      3.2
+     ],
+     [
+      "2025-10",
+      3.3
+     ],
+     [
+      "2025-11",
+      3.2
+     ],
+     [
+      "2025-12",
+      3.3
+     ],
+     [
+      "2026-01",
+      3.3
+     ],
+     [
+      "2026-02",
+      3.3
+     ],
+     [
+      "2026-03",
+      3.3
+     ],
+     [
+      "2026-04",
+      3.4
+     ],
+     [
+      "2026-05",
+      3.5
+     ],
+     [
+      "2026-06",
+      3.6
+     ],
+     [
+      "2026-07",
+      3.6
+     ],
+     [
+      "2026-08",
+      3.6
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 3.2
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3.6
+    },
+    "change": 0.4
+   },
+   {
+    "name": "All groups CPI - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      2.4
+     ],
+     [
+      "2025-05",
+      2.1
+     ],
+     [
+      "2025-06",
+      1.9
+     ],
+     [
+      "2025-07",
+      3
+     ],
+     [
+      "2025-08",
+      3.2
+     ],
+     [
+      "2025-09",
+      3.6
+     ],
+     [
+      "2025-10",
+      3.8
+     ],
+     [
+      "2025-11",
+      3.4
+     ],
+     [
+      "2025-12",
+      3.8
+     ],
+     [
+      "2026-01",
+      3.8
+     ],
+     [
+      "2026-02",
+      3.7
+     ],
+     [
+      "2026-03",
+      4.6
+     ],
+     [
+      "2026-04",
+      4.2
+     ],
+     [
+      "2026-05",
+      4
+     ],
+     [
+      "2026-06",
+      3.8
+     ],
+     [
+      "2026-07",
+      3.5
+     ],
+     [
+      "2026-08",
+      4
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 2.4
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4
+    },
+    "change": 1.6
+   },
+   {
+    "name": "Trimmed Mean - Australia (quarterly)",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2022-Q1",
+      3.8
+     ],
+     [
+      "2022-Q2",
+      4.9
+     ],
+     [
+      "2022-Q3",
+      6.1
+     ],
+     [
+      "2022-Q4",
+      6.8
+     ],
+     [
+      "2023-Q1",
+      6.5
+     ],
+     [
+      "2023-Q2",
+      5.8
+     ],
+     [
+      "2023-Q3",
+      5.1
+     ],
+     [
+      "2023-Q4",
+      4.2
+     ],
+     [
+      "2024-Q1",
+      4
+     ],
+     [
+      "2024-Q2",
+      4
+     ],
+     [
+      "2024-Q3",
+      3.6
+     ],
+     [
+      "2024-Q4",
+      3.3
+     ],
+     [
+      "2025-Q1",
+      2.9
+     ],
+     [
+      "2025-Q2",
+      2.7
+     ],
+     [
+      "2025-Q3",
+      3
+     ]
+    ],
+    "start": {
+     "period": "2022-Q1",
+     "value": 3.8
+    },
+    "latest": {
+     "period": "2025-Q3",
+     "value": 3
+    },
+    "change": -0.8
+   },
+   {
+    "name": "All groups CPI - Australia (quarterly)",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2022-Q1",
+      5.1
+     ],
+     [
+      "2022-Q2",
+      6.1
+     ],
+     [
+      "2022-Q3",
+      7.3
+     ],
+     [
+      "2022-Q4",
+      7.8
+     ],
+     [
+      "2023-Q1",
+      7
+     ],
+     [
+      "2023-Q2",
+      6
+     ],
+     [
+      "2023-Q3",
+      5.4
+     ],
+     [
+      "2023-Q4",
+      4.1
+     ],
+     [
+      "2024-Q1",
+      3.6
+     ],
+     [
+      "2024-Q2",
+      3.8
+     ],
+     [
+      "2024-Q3",
+      2.8
+     ],
+     [
+      "2024-Q4",
+      2.4
+     ],
+     [
+      "2025-Q1",
+      2.4
+     ],
+     [
+      "2025-Q2",
+      2.1
+     ],
+     [
+      "2025-Q3",
+      3.2
+     ]
+    ],
+    "start": {
+     "period": "2022-Q1",
+     "value": 5.1
+    },
+    "latest": {
+     "period": "2025-Q3",
+     "value": 3.2
+    },
+    "change": -1.9
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Australia",
+   "Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:10:59.819Z"
+}

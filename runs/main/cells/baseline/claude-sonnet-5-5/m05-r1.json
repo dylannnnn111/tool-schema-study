@@ -1,0 +1,68 @@
+{
+ "variant": "baseline",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m05",
+ "kind": "multi",
+ "q": "How far above the cash rate is the advertised standard variable home loan rate?",
+ "date": "2026-10-19",
+ "cost": 0.0095,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "In September 2026 (the latest data), the advertised standard variable owner-occupier rate was **8.77%**. The cash rate was **4.36%** (monthly average). That puts the home loan rate about **4.41 percentage points** above the cash rate.\n\nThe investor standard variable rate was 9.35%, which is about 4.99 points above the cash rate.\n\nThe gap has narrowed over the past year:\n- In October 2025, the owner-occupier standard rate was 8.02% and the cash rate was 3.60%, a gap of about 4.42 points.\n- The gap was about the same in September 2026. Between those dates, the cash rate rose about 0.76 points and the standard variable rate rose 0.75 points.\n- Banks have passed the increases through almost fully. The gap moved around in between because the cash rate monthly average moves in steps while the advertised rate moves in 0.25-point steps. For example, it was about 4.44 points in February and 4.56 in March.\n\nThese are advertised indicator rates from the RBA's F5 table. Most borrowers pay less than this because of discounts. The discounted variable rate series or the RBA's F6 table would show what new borrowers actually pay.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "investor_variable_standard"
+     ],
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard",
+      "investor_variable_standard"
+     ],
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2025-10-31\",\"value\":8.02},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0.75},{\"name\":\"Housing loans; Banks; Variable; Standard; Investor\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",8.6],[\"2025-11-30\",8.6],[\"2025-12-31\",8.6],[\"2026-01-31\",8.6],[\"2026-02-28\",8.85],[\"2026-03-31\",9.1],[\"2026-04-30\",9.1],[\"2026-05-31\",9.35],[\"2026-06-30\",9.35],[\"2026-07-31\",9.35],[\"2026-08-31\",9.35],[\"2026-09-30\",9.35]],\"start\":{\"period\":\"2025-10-31\",\"value\":8.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":9.35},\"change\":0.75}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-10-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 535,
+   "cacheWrite": 1273,
+   "cacheRead": 9511
+  },
+  "ms": 5209
+ }
+}

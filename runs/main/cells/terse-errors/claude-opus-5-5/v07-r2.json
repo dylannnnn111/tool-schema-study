@@ -1,0 +1,92 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v07",
+ "kind": "vague",
+ "q": "Where is the RBA at with rates?",
+ "date": "2026-10-19",
+ "cost": 0.03715,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The RBA cash rate target was **4.35%** as of the latest data (September 2026). That's after a run of hikes in the first half of 2026, which undid the 2025 easing cycle.\n\n**How it got there (monthly average cash rate target, RBA table F1.1):**\n\n| Period | Rate | What happened |\n|---|---|---|\n| Up to Jan 2025 | 4.35% | Peak of the 2022–23 hiking cycle |\n| Feb–Sep 2025 | Fell to 3.60% | Four cuts of 25 basis points (Feb, May, Aug 2025, plus one in Mar–Apr shown by the averages) |\n| Sep 2025 – Jan 2026 | 3.60% | On hold |\n| Feb–May 2026 | Rose to 4.35% | Three hikes of 25 basis points, in about early Feb, mid-Mar and early May (dates estimated from the monthly averages) |\n| Jun–Sep 2026 | 4.35% | On hold |\n\nSo the rate is back at the 2023–24 peak. All of the 2025 easing has been reversed.\n\n**One thing to check:** September's average was 4.36%, not 4.35%. That small difference could mean the target changed in the last day or so of the month, possibly at a late-September meeting. I couldn't get daily figures to confirm it, so check the RBA's latest decision before relying on 4.35%.\n\n**Why they've been hiking:** inflation has picked up again and is above the RBA's 2–3% target band.\n- **Headline CPI:** 4.0% year-on-year in August 2026, up from 3.5% in July and as high as 4.6% in March.\n- **Trimmed mean** (the RBA's preferred underlying measure): 3.6% in August 2026, up steadily from 3.3% in January. This rise in underlying inflation is the main reason for the hikes.\n\nWith underlying inflation still climbing, the data point to the RBA staying firm rather than cutting any time soon.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-10"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-10-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f1.1",
+     "search": "Cash Rate Target",
+     "start": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1.1",
+     "search": "Cash Rate Target",
+     "monthly": false,
+     "start": "2026-09"
+    },
+    "seen": "{\"source\":\"RBA F1.1 F1.1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-09-30\",\"value\":4.36},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0}],\"notes\":[]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2026-01",
+     "adjustment": "seasonally_adjusted"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2026-01\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2026-01\",\"value\":3.8},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":0.2},{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2026-01\",\"value\":3.3},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.3}],\"notes\":[\"All series: Percentage change from previous year, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1375,
+   "cacheWrite": 1304,
+   "cacheRead": 15468
+  },
+  "ms": 15974
+ }
+}

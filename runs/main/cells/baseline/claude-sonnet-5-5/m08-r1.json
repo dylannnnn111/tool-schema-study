@@ -1,0 +1,63 @@
+{
+ "variant": "baseline",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.03766,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year Australian Government bond yield is about 0.95 percentage points above the cash rate. It is the higher of the two, so the curve between overnight and 10-year rates slopes upward.\n\n| | Latest | Level |\n|---|---|---|\n| 10-year government bond yield | 14 Oct 2026 | **5.31%** |\n| Cash rate target (monthly average) | Sep 2026 | **4.36%** (the target itself is 4.35%) |\n| **Gap** | | **about +0.95 pts** |\n\n**Compared with a year ago**\n- On 14 Oct 2025 the 10-year yield was 4.22% and the cash rate was 3.60%. That is a gap of about 0.6 points.\n- Over the past year the 10-year yield has risen about 1.1 points, and the cash rate has risen about 0.75 points.\n\n**How the cash rate moved**\n- The cash rate was 3.60% from Sep 2025 to Jan 2026.\n- It then rose in steps to about 4.35% by Jun 2026 (monthly averages: 3.83% in Feb, 3.96% in Mar, 4.10% in Apr, 4.31% in May).\n- It has been steady at 4.35% since June.\n\n**How the 10-year yield moved**\n- The 10-year yield rose from about 4.4% in Nov 2025 to about 5.0% in Apr 2026.\n- It eased to about 4.73% in late June.\n- It has climbed again since, to 5.18% on 8 Sep, 5.28% on 21 Sep and 5.31% on 14 Oct. That is its highest level in the data I pulled, which starts in 2013.\n\nThe 10-year yield has kept rising while the cash rate has been on hold since June, so the gap has widened. A positive gap like this usually means the market expects the cash rate to stay elevated, or wants more compensation for holding long-term debt. The data alone doesn't tell me which of those is driving it.\n\nThe bond yield figures are RBA daily readings, and the series is thinned to about 400 evenly spaced points, so the dates are not every trading day.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "search": "10 year"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "search": "10 year",
+     "monthly": false
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\",\"points\":[[\"2013-05-20\",3.229],[\"2013-05-30\",3.403],[\"2013-06-12\",3.464],[\"2013-06-25\",3.813],[\"2013-07-05\",3.836],[\"2013-07-18\",3.687],[\"2013-07-30\",3.726],[\"2013-08-13\",3.78],[\"2013-08-23\",4.082],[\"2013-09-04\",4.055],[\"2013-09-17\",4.087],[\"2013-09-27\",3.902],[\"2013-10-11\",4.079],[\"2013-10-23\",3.944],[\"2013-11-05\",4.095],[\"2013-11-15\",4.16],[\"2013-11-28\",4.21],[\"2013-12-10\",4.348],[\"2013-12-20\",4.249],[\"2014-01-07\",4.282],[\"2014-01-17\",4.074],[\"2014-01-31\",3.976],[\"2014-02-12\",4.199],[\"2014-02-25\",4.152],[\"2014-03-07\",4.134],[\"2014-03-19\",4.052],[\"2014-04-01\",4.124],[\"2014-04-11\",4.015],[\"2014-04-29\",3.938],[\"2014-05-09\",3.823],[\"2014-05-22\",3.752],[\"2014-06-03\",3.729],[\"2014-06-17\",3.709],[\"2014-06-27\",3.553],[\"2014-07-09\",3.536],[\"2014-07-22\",3.389],[\"2014-08-01\",3.537],[\"2014-08-15\",3.413],[\"2014-08-27\",3.355],[\"2014-09-09\",3.591],[\"2014-09-19\",3.757],[\"2014-10-01\",3.518],[\"2014-10-15\",3.375],[\"2014-10-27\",3.331],[\"2014-11-07\",3.389],[\"2014-11-19\",3.309],[\"2014-12-02\",3.151],[\"2014-12-12\",2.938],[\"2014-12-29\",2.893],[\"2015-01-09\",2.702],[\"2015-01-21\",2.581],[\"2015-02-04\",2.452],[\"2015-02-16\",2.541],[\"2015-02-27\",2.447],[\"2015-03-11\",2.58],[\"2015-03-24\",2.365],[\"2015-04-07\",2.345],[\"2015-04-17\",2.349],[\"2015-04-30\",2.647],[\"2015-05-12\",3.04"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-06-30\",\"value\":3.85},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.51}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 999,
+   "cacheWrite": 10683,
+   "cacheRead": 9509
+  },
+  "ms": 8772
+ }
+}

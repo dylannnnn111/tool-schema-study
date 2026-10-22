@@ -1,0 +1,109 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m01",
+ "kind": "multi",
+ "q": "Are real wages going up? Compare wage growth from the ABS Wage Price Index with inflation.",
+ "date": "2026-10-19",
+ "cost": 0.0277,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**No. Real wages are falling.** Wages are growing more slowly than consumer prices, and the gap has opened up over the past year.\n\n**Latest figures (annual change)**\n\n| Measure | Period | Annual change |\n|---|---|---|\n| Wage Price Index (total hourly rates excl. bonuses, seasonally adjusted) | June quarter 2026 | 3.2% |\n| CPI, all groups | June 2026 | 3.8% |\n| CPI, all groups | August 2026 (latest) | 4.0% |\n| CPI trimmed mean (underlying) | August 2026 | 3.6% |\n\n- **Against June 2026 CPI:** real wages are down about 0.6 percentage points, using the same month as the wage data.\n- **Against the latest CPI:** the gap is about 0.8 points with headline CPI at 4.0% in August. The wage data hasn't caught up to that month.\n- **Against underlying inflation:** wages are still about 0.4 points behind trimmed mean at 3.6%.\n\n**How it has changed**\n\n| Period | WPI | CPI | Real wage growth |\n|---|---|---|---|\n| 2025 Q2 | 3.4% | 2.1% (May) to 1.9% (June) | Clearly positive |\n| 2025 Q3 | 3.3% | 3.2% (quarterly) | Roughly flat, about +0.1 |\n| 2025 Q4 | 3.4% | 3.8% (Dec) | About –0.4 |\n| 2026 Q1 | 3.2% | 4.6% (Mar) | About –1.4 |\n| 2026 Q2 | 3.2% | 3.8% (Jun) | About –0.6 |\n\nReal wages were growing through mid-2025, when inflation fell to around 2%. Since then, inflation has risen from 1.9% in June 2025 to 4.0% in August 2026. Wage growth has stayed at 3.2–3.4%, so real wages have slipped back below zero.\n\n**Caveats**\n- Quarterly WPI is compared here with a single month of CPI, because the monthly CPI series is what's available. Quarterly CPI would differ slightly.\n- The WPI measures pay for the same jobs, so it leaves out promotions and changes in hours. It doesn't show take-home pay after tax.\n- The September quarter 2026 WPI hasn't been published yet. With CPI running at 3.5–4.0% through July and August, wages would need to grow faster than 3.2% to close the gap.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[{\"code\":\"1\",\"label\":\"Quarterly Index\"},{\"code\":\"2\",\"label\":\"Percentage change from previous quarter\"},{\"code\":\"3\",\"label\":\"Percentage change from corresponding quarter of previous year\"},{\"code\":\"4\",\"label\":\"Financial Year Index\"},{\"code\":\"5\",\"label\":\"Financial Year Index - Percentage change from previous period\"}],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"OHRPEB\",\"label\":\"Ordinary time hourly rates of pay excluding bonuses\"},{\"code\":\"OHRPIB\",\"label\":\"Ordinary time hourly rates of pay including bonuses\"},{\"code\":\"THRPEB\",\"label\":\"Total hourly rates of pay excluding bonuses\"},{\"code\":\"THRPIB\",\"label\":\"Total hourly rates of pay including bonuses\"}],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[{\"code\":\"7\",\"label\":\"Private and Public\"},{\"code\":\"1\",\"label\":\"Private\"},{\"code\":\"2\",\"label\":\"Public\"},{\"code\":\"3\",\"label\":\"Commonwealth\"},{\"code\":\"6\",\"label\":\"State and Local Government\"},{\"code\":\"4\",\"label\":\"State Government\"},{\"code\":\"5\",\"label\":\"Local Government\"}],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[{\"code\":\"TOT\",\"label\":\"All Industries\"},{\"code\":\"A\",\"label\":\"Agriculture, Forestry and Fishing\"},{\"code\":\"B\",\"label\":\"Mining\"},{\"code\":\"C\",\"label\":\"Manufacturing\"},{\"code\":\"D\",\"label\":\"Electricity, Gas, Water and Waste Services\"},{\"code\":\"E\",\"label\":\"Construction\"},{\"code\":\"F\",\"label\":\"Wholesale Trade\"},{\"code\":\"G\",\"label\":\"Retail Trade\"},{\"code\":\"H\",\"labe"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2024-06 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2024-Q2\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q2\",3.8],[\"2024-Q3\",2.8],[\"2024-Q4\",2.4],[\"2025-Q1\",2.4],[\"2025-Q2\",2.1],[\"2025-Q3\",3.2]],\"start\":{\"period\":\"2024-Q2\",\"value\":3.8},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.2},\"change\":-0.6}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.20.AUS.Q",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7.TOT.20.AUS.Q",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS WPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB.7.TOT.20.AUS.Q?startPeriod=2024-06\",\"series\":[{\"name\":\"Total hourly rates of pay excluding bonuses - Private and Public - All Industries - Australia\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q3\",3.6],[\"2024-Q4\",3.2],[\"2025-Q1\",3.5],[\"2025-Q2\",3.4],[\"2025-Q3\",3.3],[\"2025-Q4\",3.4],[\"2026-Q1\",3.2],[\"2026-Q2\",3.2]],\"start\":{\"period\":\"2024-Q3\",\"value\":3.6},\"latest\":{\"period\":\"2026-Q2\",\"value\":3.2},\"change\":-0.4}],\"notes\":[\"All series: Percentage change from corresponding quarter of previous year, Total hourly rates of pay excluding bonuses, Private and Public, All Industries, Seasonally Adjusted, Australia\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "start": "2025-06",
+     "items": [
+      "trimmed_mean"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.999902..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-06\",\"value\":2.8},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.8}],\"notes\":[\"All series: Percentage change from previous year, Trimmed Mean, Seasonally Adjusted, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1445,
+   "cacheWrite": 4583,
+   "cacheRead": 17784
+  },
+  "ms": 13073
+ }
+}

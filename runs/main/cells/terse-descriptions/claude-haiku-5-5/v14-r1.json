@@ -1,0 +1,122 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v14",
+ "kind": "vague",
+ "q": "My power bill in Perth feels huge. Is that just me?",
+ "date": "2026-10-19",
+ "cost": 0.00121,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Probably not just you, but Perth electricity prices aren't the main reason.** The latest ABS data (August 2026) shows Perth electricity prices up **2.4%** on a year earlier. Nationally they're up **13.2%**. So, on average, Perth prices are currently rising more slowly than the rest of the country.\n\nPerth's year-on-year figures have swung wildly over the past two years. They jumped as high as +289% in August and September 2025 and +250% in January 2026, then dropped to around +2.5% by April 2026. I can't confirm the cause from this data, but that pattern looks like the timing of state government rebates or credits, which distort year-on-year comparisons. Those swings don't reflect what most households pay.\n\nThings more likely to explain a high bill:\n- **Usage:** Perth's summer heat (from around November) drives air-conditioning use. Compare your kWh for this billing period with the same period last year, since that's the most direct check.\n- **A rebate or credit ending or not showing:** Check whether a state energy rebate appears on this bill.\n- **Billing period length:** Some bills cover more days than you expect, or include a catch-up estimate.\n- **Tariff or plan changes:** Check your supply charge and usage rates against your last bill.\n\nIf you can share this bill's total, its billing days, and kWh used, plus last year's equivalent, I can help you work out whether the increase is in price or usage.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "items": [
+      "Electricity"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "Electricity"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Electricity..5+50.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Electricity..5+50.Q?startPeriod=2024-Q1\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "items": [
+      "electricity"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40055..5+50.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Electricity - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",0.8],[\"2024-02\",0.2],[\"2024-03\",5.2],[\"2024-04\",4.2],[\"2024-05\",6.6],[\"2024-06\",7.4],[\"2024-07\",-5.1],[\"2024-08\",-17.9],[\"2024-09\",-24.1],[\"2024-10\",-35.6],[\"2024-11\",-21.5],[\"2024-12\",-17.9],[\"2025-01\",-11.4],[\"2025-02\",-13.2],[\"2025-03\",-9.6],[\"2025-04\",-6.5],[\"2025-05\",-5.9],[\"2025-06\",-6.3],[\"2025-07\",13.6],[\"2025-08\",24.6],[\"2025-09\",33.9],[\"2025-10\",37.1],[\"2025-11\",19.7],[\"2025-12\",21.5],[\"2026-01\",32.2],[\"2026-02\",37],[\"2026-03\",25.4],[\"2026-04\",22.5],[\"2026-05\",21.1],[\"2026-06\",22.4],[\"2026-07\",6.1],[\"2026-08\",13.2]],\"start\":{\"period\":\"2024-01\",\"value\":0.8},\"latest\":{\"period\":\"2026-08\",\"value\":13.2},\"change\":12.4},{\"name\":\"Electricity - Perth (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",-44.4],[\"2024-02\",-44.4],[\"2024-03\",2.5],[\"2024-04\",2.5],[\"2024-05\",2.5],[\"2024-06\",2.5],[\"2024-07\",42.6],[\"2024-08\",-50.2],[\"2024-09\",-50.2],[\"2024-10\",-47.8],[\"2024-11\",2.5],[\"2024-12\",-23.7],[\"2025-01\",-50.2],[\"2025-02\",-50.2],[\"2025-03\",-11.8],[\"2025-04\",2.5],[\"2025-05\",2.5],[\"2025-06\",2.5],[\"2025-07\",35.9],[\"2025-08\",289],[\"2025-09\",289],[\"2025-10\",59.4],[\"2025-11\",-29.1],[\"2025-12\",75.8],[\"2026-01\",250.3],[\"2026-02\",289],[\"2026-03\",19.2],[\"2026-04\",2.5],[\"2026-05\",2.5],[\"2026-06\",2.5],[\"2026-07\",2.4],[\"2026-08\""
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "perth"
+     ],
+     "items": [
+      "housing"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "housing"
+     ],
+     "cities": [
+      "perth"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.20003..5.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.20003..5.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"Housing - Perth (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",5.8],[\"2025-05\",5.2],[\"2025-06\",4.6],[\"2025-07\",7],[\"2025-08\",13.5],[\"2025-09\",14.1],[\"2025-10\",7.9],[\"2025-11\",0.9],[\"2025-12\",8.6],[\"2026-01\",13.5],[\"2026-02\",14.8],[\"2026-03\",6.7],[\"2026-04\",5.5],[\"2026-05\",5.6],[\"2026-06\",5.7],[\"2026-07\",5.6],[\"2026-08\",5.5]],\"start\":{\"period\":\"2025-04\",\"value\":5.8},\"latest\":{\"period\":\"2026-08\",\"value\":5.5},\"change\":-0.3},{\"name\":\"Housing - Perth (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q1\",4.2],[\"2024-Q2\",10.2],[\"2024-Q3\",9],[\"2024-Q4\",5.8],[\"2025-Q1\",4.1],[\"2025-Q2\",5.4],[\"2025-Q3\",11.5]],\"start\":{\"period\":\"2024-Q1\",\"value\":4.2},\"latest\":{\"period\":\"2025-Q3\",\"value\":11.5},\"change\":7.3}],\"notes\":[\"All series: Percentage change from previous year, Housing, Original, Perth\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1611,
+   "cacheWrite": 2495,
+   "cacheRead": 9078
+  },
+  "ms": 16896
+ }
+}

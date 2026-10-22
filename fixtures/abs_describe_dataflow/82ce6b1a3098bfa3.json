@@ -1,0 +1,603 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "C21_G40_SAL"
+ },
+ "ok": true,
+ "result": {
+  "id": "C21_G40_SAL",
+  "name": "Census 2021, G40 Rent (weekly) by landlord type, Suburbs and Localities (SAL)",
+  "dimensions": [
+   {
+    "id": "RNTRD",
+    "position": 1,
+    "codes": [
+     {
+      "code": "_T",
+      "label": "Total"
+     },
+     {
+      "code": "1",
+      "label": "$1-$74"
+     },
+     {
+      "code": "2",
+      "label": "$75-$99"
+     },
+     {
+      "code": "3",
+      "label": "$100-$149"
+     },
+     {
+      "code": "4",
+      "label": "$150-$199"
+     },
+     {
+      "code": "5",
+      "label": "$200-$224"
+     },
+     {
+      "code": "6",
+      "label": "$225-$274"
+     },
+     {
+      "code": "7",
+      "label": "$275-$349"
+     },
+     {
+      "code": "8",
+      "label": "$350-$449"
+     },
+     {
+      "code": "9",
+      "label": "$450-$549"
+     },
+     {
+      "code": "10",
+      "label": "$550-$649"
+     },
+     {
+      "code": "11",
+      "label": "$650-$749"
+     },
+     {
+      "code": "12",
+      "label": "$750-$849"
+     },
+     {
+      "code": "13",
+      "label": "$850-$949"
+     },
+     {
+      "code": "14",
+      "label": "$950 and over"
+     },
+     {
+      "code": "_N",
+      "label": "Not stated"
+     }
+    ],
+    "totalCodes": 16
+   },
+   {
+    "id": "LLDD",
+    "position": 2,
+    "codes": [
+     {
+      "code": "_T",
+      "label": "Total"
+     },
+     {
+      "code": "1",
+      "label": "Real estate agent"
+     },
+     {
+      "code": "2",
+      "label": "State or territory housing authority"
+     },
+     {
+      "code": "3",
+      "label": "Community housing provider"
+     },
+     {
+      "code": "4",
+      "label": "Person not in the same household"
+     },
+     {
+      "code": "_O",
+      "label": "Other landlord type"
+     },
+     {
+      "code": "_N",
+      "label": "Not stated"
+     }
+    ],
+    "totalCodes": 7
+   },
+   {
+    "id": "REGION",
+    "position": 3,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "1",
+      "label": "New South Wales"
+     },
+     {
+      "code": "10001",
+      "label": "Aarons Pass"
+     },
+     {
+      "code": "10002",
+      "label": "Abbotsbury"
+     },
+     {
+      "code": "10003",
+      "label": "Abbotsford (NSW)"
+     },
+     {
+      "code": "10004",
+      "label": "Abercrombie"
+     },
+     {
+      "code": "10005",
+      "label": "Abercrombie River"
+     },
+     {
+      "code": "10006",
+      "label": "Aberdare"
+     },
+     {
+      "code": "10007",
+      "label": "Aberdeen (NSW)"
+     },
+     {
+      "code": "10008",
+      "label": "Aberfoyle"
+     },
+     {
+      "code": "10009",
+      "label": "Aberglasslyn"
+     },
+     {
+      "code": "10010",
+      "label": "Abermain"
+     },
+     {
+      "code": "10011",
+      "label": "Abernethy"
+     },
+     {
+      "code": "10012",
+      "label": "Abington (NSW)"
+     },
+     {
+      "code": "10013",
+      "label": "Acacia Creek"
+     },
+     {
+      "code": "10014",
+      "label": "Acacia Gardens"
+     },
+     {
+      "code": "10015",
+      "label": "Adaminaby"
+     },
+     {
+      "code": "10016",
+      "label": "Adamstown"
+     },
+     {
+      "code": "10017",
+      "label": "Adamstown Heights"
+     },
+     {
+      "code": "10018",
+      "label": "Adelong"
+     },
+     {
+      "code": "10019",
+      "label": "Adjungbilly"
+     },
+     {
+      "code": "10020",
+      "label": "Afterlee"
+     },
+     {
+      "code": "10021",
+      "label": "Agnes Banks"
+     },
+     {
+      "code": "10022",
+      "label": "Airds"
+     },
+     {
+      "code": "10023",
+      "label": "Akolele"
+     },
+     {
+      "code": "10024",
+      "label": "Albert"
+     },
+     {
+      "code": "10025",
+      "label": "Albion Park"
+     },
+     {
+      "code": "10026",
+      "label": "Albion Park Rail"
+     },
+     {
+      "code": "10027",
+      "label": "Albury"
+     },
+     {
+      "code": "10028",
+      "label": "Aldavilla"
+     },
+     {
+      "code": "10029",
+      "label": "Alectown"
+     },
+     {
+      "code": "10030",
+      "label": "Alexandria"
+     },
+     {
+      "code": "10031",
+      "label": "Alfords Point"
+     },
+     {
+      "code": "10032",
+      "label": "Alfredtown"
+     },
+     {
+      "code": "10033",
+      "label": "Alice"
+     },
+     {
+      "code": "10034",
+      "label": "Alison (Central Coast - NSW)"
+     },
+     {
+      "code": "10035",
+      "label": "Alison (Dungog - NSW)"
+     },
+     {
+      "code": "10036",
+      "label": "Allambie Heights"
+     },
+     {
+      "code": "10037",
+      "label": "Allandale (NSW)"
+     },
+     {
+      "code": "10038",
+      "label": "Allawah"
+     },
+     {
+      "code": "10039",
+      "label": "Alleena"
+     },
+     {
+      "code": "10040",
+      "label": "Allgomera"
+     },
+     {
+      "code": "10041",
+      "label": "Allworth"
+     },
+     {
+      "code": "10042",
+      "label": "Allynbrook"
+     },
+     {
+      "code": "10043",
+      "label": "Alma Park"
+     },
+     {
+      "code": "10044",
+      "label": "Alpine"
+     },
+     {
+      "code": "10045",
+      "label": "Alstonvale"
+     },
+     {
+      "code": "10046",
+      "label": "Alstonville"
+     },
+     {
+      "code": "10047",
+      "label": "Alumy Creek"
+     },
+     {
+      "code": "10048",
+      "label": "Amaroo (NSW)"
+     },
+     {
+      "code": "10049",
+      "label": "Ambarvale"
+     },
+     {
+      "code": "10050",
+      "label": "Amosfield"
+     },
+     {
+      "code": "10051",
+      "label": "Anabranch North"
+     },
+     {
+      "code": "10052",
+      "label": "Anabranch South"
+     },
+     {
+      "code": "10053",
+      "label": "Anambah"
+     },
+     {
+      "code": "10054",
+      "label": "Ando"
+     },
+     {
+      "code": "10055",
+      "label": "Anembo"
+     },
+     {
+      "code": "10056",
+      "label": "Angledale"
+     },
+     {
+      "code": "10057",
+      "label": "Angledool"
+     },
+     {
+      "code": "10058",
+      "label": "Anglers Reach"
+     }
+    ],
+    "totalCodes": 15365
+   },
+   {
+    "id": "REGION_TYPE",
+    "position": 4,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "STE",
+      "label": "States and Territories"
+     },
+     {
+      "code": "SA4",
+      "label": "Statistical Area Level 4"
+     },
+     {
+      "code": "SA3",
+      "label": "Statistical Area Level 3"
+     },
+     {
+      "code": "SA2",
+      "label": "Statistical Area Level 2"
+     },
+     {
+      "code": "SA1",
+      "label": "Statistical Area Level 1"
+     },
+     {
+      "code": "RA",
+      "label": "Remoteness Areas"
+     },
+     {
+      "code": "SOS",
+      "label": "Section of State"
+     },
+     {
+      "code": "SOSR",
+      "label": "Section of State Ranges"
+     },
+     {
+      "code": "UC",
+      "label": "Urban Centres"
+     },
+     {
+      "code": "UL",
+      "label": "Urban Locations"
+     },
+     {
+      "code": "IREG",
+      "label": "Indigenous Regions"
+     },
+     {
+      "code": "IARE",
+      "label": "Indigenous Areas"
+     },
+     {
+      "code": "ILOC",
+      "label": "Indigenous Locations"
+     },
+     {
+      "code": "GCCSA",
+      "label": "Greater Capital City Statistical Areas"
+     },
+     {
+      "code": "SUA",
+      "label": "Significant Urban Areas"
+     },
+     {
+      "code": "SLA",
+      "label": "2011 Statistical Local Areas"
+     },
+     {
+      "code": "DZN",
+      "label": "Destination Zones"
+     },
+     {
+      "code": "CED",
+      "label": "Commonwealth Electoral Divisions"
+     },
+     {
+      "code": "SED",
+      "label": "State Electoral Divisions"
+     },
+     {
+      "code": "LGA",
+      "label": "Local Government Areas"
+     },
+     {
+      "code": "LGA2011",
+      "label": "Local Government Areas (2011)"
+     },
+     {
+      "code": "LGA2012",
+      "label": "Local Government Areas (2012)"
+     },
+     {
+      "code": "LGA2013",
+      "label": "Local Government Areas (2013)"
+     },
+     {
+      "code": "LGA2014",
+      "label": "Local Government Areas (2014)"
+     },
+     {
+      "code": "LGA2015",
+      "label": "Local Government Areas (2015)"
+     },
+     {
+      "code": "LGA2016",
+      "label": "Local Government Areas (2016)"
+     },
+     {
+      "code": "LGA2017",
+      "label": "Local Government Areas (2017)"
+     },
+     {
+      "code": "LGA2018",
+      "label": "Local Government Areas (2018)"
+     },
+     {
+      "code": "LGA2019",
+      "label": "Local Government Areas (2019)"
+     },
+     {
+      "code": "LGA2020",
+      "label": "Local Government Areas (2020)"
+     },
+     {
+      "code": "LGA2021",
+      "label": "Local Government Areas (2021)"
+     },
+     {
+      "code": "LGA2022",
+      "label": "Local Government Areas (2022)"
+     },
+     {
+      "code": "LGA2023",
+      "label": "Local Government Areas (2023)"
+     },
+     {
+      "code": "LGA2024",
+      "label": "Local Government Areas (2024)"
+     },
+     {
+      "code": "LGA2025",
+      "label": "Local Government Areas (2025)"
+     },
+     {
+      "code": "FED",
+      "label": "Federal Electoral Division"
+     },
+     {
+      "code": "POA",
+      "label": "Postal Areas"
+     },
+     {
+      "code": "NRMR",
+      "label": "National Resource Management Regions"
+     },
+     {
+      "code": "ADD",
+      "label": "Australian Drainage Divisions"
+     },
+     {
+      "code": "TR",
+      "label": "Tourism Regions"
+     },
+     {
+      "code": "SSC",
+      "label": "State Suburbs"
+     },
+     {
+      "code": "SAL",
+      "label": "Suburbs and Localities"
+     },
+     {
+      "code": "UCL",
+      "label": "Urban Centres and Localities"
+     },
+     {
+      "code": "OT",
+      "label": "Other"
+     }
+    ],
+    "totalCodes": 45
+   },
+   {
+    "id": "STATE",
+    "position": 5,
+    "codes": [
+     {
+      "code": "AUS",
+      "label": "Australia"
+     },
+     {
+      "code": "1",
+      "label": "New South Wales"
+     },
+     {
+      "code": "2",
+      "label": "Victoria"
+     },
+     {
+      "code": "3",
+      "label": "Queensland"
+     },
+     {
+      "code": "4",
+      "label": "South Australia"
+     },
+     {
+      "code": "5",
+      "label": "Western Australia"
+     },
+     {
+      "code": "6",
+      "label": "Tasmania"
+     },
+     {
+      "code": "7",
+      "label": "Northern Territory"
+     },
+     {
+      "code": "8",
+      "label": "Australian Capital Territory"
+     },
+     {
+      "code": "9",
+      "label": "Other Territories"
+     }
+    ],
+    "totalCodes": 10
+   }
+  ],
+  "keyTemplate": "<RNTRD>.<LLDD>.<REGION>.<REGION_TYPE>.<STATE>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:18:09.947Z"
+}

@@ -1,0 +1,77 @@
+{
+ "tool": "get_labour_force",
+ "args": {
+  "measures": [
+   "unemployment_rate"
+  ],
+  "states": [
+   "act"
+  ],
+  "sex": "persons",
+  "adjustment": "trend",
+  "start": "2026-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Labour Force, Australia (monthly)",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.30.8.M?startPeriod=2026-01",
+  "series": [
+   {
+    "name": "Australian Capital Territory",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-01",
+      4.1724
+     ],
+     [
+      "2026-02",
+      4.1431
+     ],
+     [
+      "2026-03",
+      4.1184
+     ],
+     [
+      "2026-04",
+      4.1027
+     ],
+     [
+      "2026-05",
+      4.1011
+     ],
+     [
+      "2026-06",
+      4.1156
+     ],
+     [
+      "2026-07",
+      4.1417
+     ],
+     [
+      "2026-08",
+      4.1746
+     ],
+     [
+      "2026-09",
+      4.2087
+     ]
+    ],
+    "start": {
+     "period": "2026-01",
+     "value": 4.1724
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 4.2087
+    },
+    "change": 0.0363
+   }
+  ],
+  "notes": [
+   "All series: Unemployment rate, Persons, Total (age), Trend, Australian Capital Territory"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:03:29.256Z"
+}

@@ -1,0 +1,87 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "weekly rent"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "ABS_CENSUS2011_B34",
+    "version": "1.0.0",
+    "name": "B34 Rent (weekly) by Landlord Type"
+   },
+   {
+    "id": "ABS_CENSUS2011_T19",
+    "version": "1.0.0",
+    "name": "T19 Rent (weekly) by Landlord Type"
+   },
+   {
+    "id": "ABS_CENSUS2011_B34_LGA",
+    "version": "1.0.0",
+    "name": "B34 Rent (weekly) by Landlord Type (LGA)"
+   },
+   {
+    "id": "ABS_CENSUS2011_T19_LGA",
+    "version": "1.0.0",
+    "name": "T19 Rent (weekly) by Landlord Type (LGA)"
+   },
+   {
+    "id": "ABS_CENSUS2011_B34_SA1_SA",
+    "version": "1.0.0",
+    "name": "B34 Rent (weekly) by Landlord Type (SA1 SA)"
+   },
+   {
+    "id": "ABS_CENSUS2011_T24",
+    "version": "1.0.0",
+    "name": "T24 Total Household Income (weekly) by Rent (weekly)"
+   },
+   {
+    "id": "ABS_C16_T26_LGA",
+    "version": "1.0.0",
+    "name": "Census 2016, Rent (weekly) by Dwelling Structure (LGA)"
+   },
+   {
+    "id": "ABS_C16_T26_SA",
+    "version": "1.0.0",
+    "name": "Census 2016, Rent (weekly) by Dwelling Structure (SA2+)"
+   },
+   {
+    "id": "ABS_CENSUS2011_T24_LGA",
+    "version": "1.0.0",
+    "name": "T24 Total Household Income (weekly) by Rent (weekly) (LGA)"
+   },
+   {
+    "id": "ABS_CENSUS2011_T20",
+    "version": "1.0.0",
+    "name": "T20 Rent (weekly) by Family Composition for Couple Families"
+   },
+   {
+    "id": "ABS_CENSUS2011_T21",
+    "version": "1.0.0",
+    "name": "T21 Rent (weekly) by Family Composition for One Parent Families"
+   },
+   {
+    "id": "ABS_CENSUS2011_T20_LGA",
+    "version": "1.0.0",
+    "name": "T20 Rent (weekly) by Family Composition for Couple Families (LGA)"
+   },
+   {
+    "id": "C21_G40_POA",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Postal Areas (POA)"
+   },
+   {
+    "id": "ABS_CENSUS2011_T21_LGA",
+    "version": "1.0.0",
+    "name": "T21 Rent (weekly) by Family Composition for One Parent Families (LGA)"
+   },
+   {
+    "id": "C21_G40_RA",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Remoteness Areas (RA)"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:22:03.375Z"
+}

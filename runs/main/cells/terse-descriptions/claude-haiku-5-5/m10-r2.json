@@ -1,0 +1,111 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m10",
+ "kind": "multi",
+ "q": "Is the Friday dip as big for suburban morning commuters as it is for the CBD?",
+ "date": "2026-10-19",
+ "cost": 0.00263,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Short answer:** Roughly yes. Over the last 12 months, the Friday dip for suburban morning commuters is about the same as, or slightly larger than, the CBD's morning dip.\n\n**Last 12 months, Friday volume as a share of Tue–Thu average:**\n\n| Measure | Pre-COVID (Jan–Mar 2020) | Last 12 months |\n|---|---|---|\n| Suburban 7–9am, all modes | 0.93 | 0.76 |\n| Suburban 7–9am, bus only | 0.94 | 0.80 |\n| CBD 7–9am, all modes* | ~0.95 | ~0.80 |\n\n*The CBD morning figures are my calculation from the hourly profile (7am and 8am taps), so they approximate the 7–9am window. The CBD figures are also for all modes, so they're the closest match to the suburban all-modes row.\n\nSo suburban all-modes Fridays run about 24% below the Tue–Thu average in the morning, compared with about 20% for the CBD and for suburban bus. The gap is only a few points, and the difference between the two groups is small.\n\n**How the dip has changed:** Both have deepened since pre-COVID. The suburban all-modes ratio fell by about 0.17, and the CBD morning ratio fell by about 0.15. The suburban dip has deepened slightly more.\n\n**CBD evening for comparison:** The 3–7pm Friday ratio for the CBD averaged about 0.78 over the last 12 months (0.78 in September 2026), down from roughly 0.88 pre-COVID. This is a different measure (leaving work rather than arriving), but it shows a dip of similar size.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ]
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2020-01\",0.841],[\"2020-02\",0.915],[\"2020-03\",0.899],[\"2020-04\",0.984],[\"2020-05\",0.914],[\"2020-06\",0.96],[\"2020-07\",0.944],[\"2020-08\",0.897],[\"2020-09\",0.901],[\"2020-10\",0.88],[\"2020-11\",0.907],[\"2020-12\",0.857],[\"2021-01\",0.897],[\"2021-02\",0.846],[\"2021-03\",0.852],[\"2021-04\",0.795],[\"2021-05\",0.822],[\"2021-06\",0.878],[\"2021-07\",0.944],[\"2021-08\",0.971],[\"2021-09\",0.956],[\"2021-10\",0.895],[\"2021-11\",0.873],[\"2021-12\",0.919],[\"2022-01\",0.911],[\"2022-02\",0.93],[\"2022-03\",0.848],[\"2022-04\",0.718],[\"2022-05\",0.742],[\"2022-06\",0.839],[\"2022-07\",0.818],[\"2022-08\",0.832],[\"2022-09\",0.763],[\"2022-10\",0.811],[\"2022-11\",0.801],[\"2022-12\",0.755],[\"2023-01\",0.785],[\"2023-02\",0.793],[\"2023-03\",0.782],[\"2023-04\",0.798],[\"2023-05\",0.789],[\"2023-06\",0.79],[\"2"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "suburban_morning",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "suburban_morning",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ]
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Suburban = Opal 'Other' region (everywhere outside the named centres) - people leaving home in the morning.\"],\"series\":[{\"name\":\"Suburban 7-9am tap-ons, bus, pre-COVID\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"pre_covid\",0.941]],\"start\":{\"period\":\"pre_covid\",\"value\":0.941},\"latest\":{\"period\":\"pre_covid\",\"value\":0.941},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, bus, last 12 months\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"last_12m\",0.799]],\"start\":{\"period\":\"last_12m\",\"value\":0.799},\"latest\":{\"period\":\"last_12m\",\"value\":0.799},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, all modes, pre-COVID\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"pre_covid\",0.933]],\"start\":{\"period\":\"pre_covid\",\"value\":0.933},\"latest\":{\"period\":\"pre_covid\",\"value\":0.933},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, all modes, last 12 months\",\"unit\":\"Friday / Tue-Thu\",\"freq"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "cbd_hourly",
+     "centres": [
+      "Sydney CBD"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "cbd_hourly",
+     "centres": [
+      "Sydney CBD"
+     ]
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"Sydney CBD Tue - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1369],[\"01:00\",364],[\"02:00\",328],[\"03:00\",250],[\"04:00\",836],[\"05:00\",2914],[\"06:00\",7011],[\"07:00\",14222],[\"08:00\",23756],[\"09:00\",16511],[\"10:00\",14511],[\"11:00\",16489],[\"12:00\",19656],[\"13:00\",22733],[\"14:00\",28400],[\"15:00\",41744],[\"16:00\",68367],[\"17:00\",115233],[\"18:00\",65356],[\"19:00\",30111],[\"20:00\",19944],[\"21:00\",15956],[\"22:00\",9944],[\"23:00\",4767]],\"start\":{\"period\":\"00:00\",\"value\":1369},\"latest\":{\"period\":\"23:00\",\"value\":4767},\"change\":3398},{\"name\":\"Sydney CBD Wed - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1692],[\"01:00\",544],[\"02:00\",406],[\"03:00\",339],[\"04:00\",869],[\"05:00\",3014],[\"06:00\",7244],[\"07:00\",13989],[\"08:00\",23500],[\"09:00\",16556],[\"10:00\",14856],[\"11:00\",17289],[\"12:00\",20511],[\"13:00\",2318"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 2613,
+   "cacheWrite": 10143,
+   "cacheRead": 5832
+  },
+  "ms": 12628
+ }
+}

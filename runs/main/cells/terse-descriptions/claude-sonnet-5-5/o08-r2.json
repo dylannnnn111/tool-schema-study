@@ -1,0 +1,116 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o08",
+ "kind": "out-of-scope",
+ "q": "What's the average weekly rent for a two-bedroom unit in Newtown?",
+ "date": "2026-10-19",
+ "cost": 0.02023,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 6,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I couldn't find a current average weekly rent for two-bedroom units in Newtown (NSW). The ABS and RBA data I can access don't break rents down by suburb and bedroom count, and they don't include live rental listings.\n\nThe closest figure is from the 2021 Census. The **median rent in Newtown (NSW) was $550 per week** (Census night, August 2021). That covers all rented dwellings in the suburb, including houses, units and different bedroom counts. It is also more than five years old. Rents in Sydney have probably risen a good deal since then, so treat it as a rough baseline.\n\nFor a current two-bedroom figure, these sources are better:\n- **NSW Government Rent and Sales Report** (Department of Communities and Justice), which gives median rents by suburb, dwelling type and bedroom count from lodged bonds.\n- **Domain, SQM Research or CoreLogic**, which publish suburb-level asking rents.\n- **Current listings** on realestate.com.au or Domain, to see what two-bedroom units are asking now.\n\nI can also pull ABS CPI rent inflation for Sydney. That would show roughly how much rents have risen since 2021, though it wouldn't give a Newtown dollar figure.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "rent Newtown"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "rent Newtown"
+    },
+    "seen": "{\"results\":[]}"
+   },
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "median weekly rent suburb census"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "median weekly rent suburb census"
+    },
+    "seen": "{\"results\":[{\"id\":\"C21_G40_SAL\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G40 Rent (weekly) by landlord type, Suburbs and Localities (SAL)\"},{\"id\":\"C21_G59_SAL\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G59 Total family income (weekly) by labour force status of parent for one parent families, Suburbs and Localities (SAL)\"},{\"id\":\"C21_G58_SAL\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G58 Total family income (weekly) by labour force status of parents/partners for couple families with children, Suburbs and Localities (SAL)\"}]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "Census 2021 G02 selected medians and averages SAL"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "Census 2021 G02 selected medians and averages SAL"
+    },
+    "seen": "{\"results\":[{\"id\":\"C21_G02_SAL\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Suburbs and Localities (SAL)\"},{\"id\":\"C21_G02_POA\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Postal Areas (POA)\"},{\"id\":\"C21_G02_RA\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Remoteness Areas (RA)\"},{\"id\":\"C21_G02_SUA\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Significant Urban Areas (SUA)\"},{\"id\":\"C21_G02_SA2\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Main Statistical Areas Level 2 and up (SA2+)\"},{\"id\":\"C21_G02_SED\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, State Electoral Divisions (SED 2021 boundaries)\"},{\"id\":\"C21_G02_LGA\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Local Government Area 2021 (LGA 2021 boundaries)\"},{\"id\":\"C21_G02_CED\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Commonwealth Electoral Divisions (CED 2021 boundaries)\"},{\"id\":\"C21_G02_UCL\",\"version\":\"1.0.0\",\"name\":\"Census 2021, G02 Selected medians and averages, Urban Centres, Localities and Section of State (UCL/SOS/SOSR)\"},{\"id\":\"C21_T02_SA2\",\"version\":\"1.0.0\",\"name\":\"Census 2021, T02 Selected medians and averages, Time Series, Main Statistical Areas Level 2 and up (SA2+)\"},{\"id\":\"C21_T02_LGA\",\"version\":\"1.0.0\",\"name\":\"Census 2021, T02 Selected medians and averages, Time Series, Local"
+   },
+   {
+    "turn": 1,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "rental dwellings number of bedrooms"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "rental dwellings number of bedrooms"
+    },
+    "seen": "{\"results\":[]}"
+   },
+   {
+    "turn": 2,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "C21_G02_SAL",
+     "code_search": "Newtown"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "C21_G02_SAL",
+     "code_search": "Newtown"
+    },
+    "seen": "{\"id\":\"C21_G02_SAL\",\"name\":\"Census 2021, G02 Selected medians and averages, Suburbs and Localities (SAL)\",\"dimensions\":[{\"id\":\"MEDAVG\",\"position\":1,\"codes\":[],\"totalCodes\":8},{\"id\":\"REGION\",\"position\":2,\"codes\":[{\"code\":\"12969\",\"label\":\"Newtown (NSW)\"},{\"code\":\"21937\",\"label\":\"Newtown (Golden Plains - Vic.)\"},{\"code\":\"21938\",\"label\":\"Newtown (Greater Geelong - Vic.)\"},{\"code\":\"32138\",\"label\":\"Newtown (Ipswich - Qld)\"},{\"code\":\"32139\",\"label\":\"Newtown (Toowoomba - Qld)\"}],\"totalCodes\":15365},{\"id\":\"REGION_TYPE\",\"position\":3,\"codes\":[],\"totalCodes\":45},{\"id\":\"STATE\",\"position\":4,\"codes\":[],\"totalCodes\":10}],\"keyTemplate\":\"<MEDAVG>.<REGION>.<REGION_TYPE>.<STATE>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 3,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "C21_G02_SAL",
+     "key": ".12969.."
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "C21_G02_SAL",
+     "key": ".12969.."
+    },
+    "seen": "{\"source\":\"ABS C21_G02_SAL\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,C21_G02_SAL/.12969..\",\"series\":[{\"name\":\"Median total household income ($/weekly)\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",2330]],\"start\":{\"period\":\"2021\",\"value\":2330},\"latest\":{\"period\":\"2021\",\"value\":2330},\"change\":0},{\"name\":\"Median rent ($/weekly)\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",550]],\"start\":{\"period\":\"2021\",\"value\":550},\"latest\":{\"period\":\"2021\",\"value\":550},\"change\":0},{\"name\":\"Median total family income ($/weekly)\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",3383]],\"start\":{\"period\":\"2021\",\"value\":3383},\"latest\":{\"period\":\"2021\",\"value\":3383},\"change\":0},{\"name\":\"Median total personal income ($/weekly)\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",1309]],\"start\":{\"period\":\"2021\",\"value\":1309},\"latest\":{\"period\":\"2021\",\"value\":1309},\"change\":0},{\"name\":\"Median mortgage repayment ($/monthly)\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",3000]],\"start\":{\"period\":\"2021\",\"value\":3000},\"latest\":{\"period\":\"2021\",\"value\":3000},\"change\":0},{\"name\":\"Median age of persons\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",34]],\"start\":{\"period\":\"2021\",\"value\":34},\"latest\":{\"period\":\"2021\",\"value\":34},\"change\":0},{\"name\":\"Average number of persons per bedroom\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",1]],\"start\":{\"period\":\"2021\",\"value\":1},\"latest\":{\"period\":\"2021\",\"value\":1},\"change\":0},{\"name\":\"Average household size\",\"unit\":\"\",\"frequency\":\"\",\"points\":[[\"2021\",2.1]],\"start\":{\"period\":\"2021\""
+   }
+  ],
+  "turns": 5,
+  "status": "done",
+  "usage": {
+   "input": 12,
+   "output": 1074,
+   "cacheWrite": 3035,
+   "cacheRead": 18774
+  },
+  "ms": 17811
+ }
+}

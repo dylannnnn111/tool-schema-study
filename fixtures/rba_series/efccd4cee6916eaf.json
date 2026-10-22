@@ -1,0 +1,269 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F6",
+  "search": "owner-occupier variable new loans",
+  "monthly": true,
+  "start": "2025-10"
+ },
+ "ok": true,
+ "result": {
+  "table": "F6",
+  "title": "F6 - HOUSING LENDING RATES",
+  "columns": [
+   {
+    "id": "FLRHOOTL",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOTA",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; All loans; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOVL",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOVA",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOFA",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOFB",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOI",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Interest-only",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOOP",
+    "title": "Lending rates; Housing credit; Outstanding; Owner-occupied; By repayment type; Principal-and-interest",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFTL",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFTA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; All loans; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFVL",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFVA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFFA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFFB",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFI",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Interest-only",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOFP",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By repayment type; Principal-and-interest",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOLA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Less than 81%",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOLB",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By loan-to-valuation ratio at commitment; Greater than or equal to 81%",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOVA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Less than or equal to $600,000",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOVB",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; $600,000 - $1,000,000",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHOVC",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; By value at commitment; Greater than $1,000,000",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOTL",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; All loans; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOTA",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; All loans; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOVL",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; Variable-rate; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOVA",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; Variable-rate; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOFA",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOFB",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOI",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; By repayment type; Interest-only",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIOP",
+    "title": "Lending rates; Housing credit; Outstanding; Investment; By repayment type; Principal-and-interest",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFTL",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; All loans; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFTA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; All loans; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFVL",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFVA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; Variable-rate; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFFA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFFB",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFI",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Interest-only",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIFP",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By repayment type; Principal-and-interest",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHILA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Less than 81%",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHILB",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By loan-to-valuation ratio at commitment; Greater than or equal to 81%",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIVA",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Less than or equal to $600,000",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIVB",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; $600,000 - $1,000,000",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRHIVC",
+    "title": "Lending rates; Housing credit; New loans funded in the month; Investment; By value at commitment; Greater than $1,000,000",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:23:06.121Z"
+}

@@ -1,0 +1,85 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v06",
+ "kind": "vague",
+ "q": "Is the Aussie dollar weak against the yen at the moment?",
+ "date": "2026-10-19",
+ "cost": 0.00091,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**No. The Aussie is strong against the yen right now, not weak.** The yen has weakened over the past two years.\n\n- **Latest:** A$1 bought ¥109.67 on 16 October 2026, the most recent RBA reading.\n- **A year ago:** About ¥100.84 at the end of October 2025, so the Aussie is up roughly 9%.\n- **Early 2024:** About ¥97 in January 2024, so the Aussie is up roughly 13% since then.\n- **Recent high:** About ¥114.80 on 28 August 2026. The pair has since fallen about 4.5%, with most of that drop in September.\n\nA higher number means more yen per Aussie dollar. The pair is near the top of its range over the past few years, which points to a weak yen rather than a weak Aussie dollar. The Aussie has eased from its late-August peak, though.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "select": {
+      "currencies": [
+       "JPY"
+      ]
+     },
+     "period": {
+      "start": "2024-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY"
+     ],
+     "monthly": true,
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2024-01\",97.05],[\"2024-02\",97.67],[\"2024-03\",98.87],[\"2024-04\",102.33],[\"2024-05\",104.08],[\"2024-06\",106.61],[\"2024-07\",99.23],[\"2024-08\",98.59],[\"2024-09\",98.22],[\"2024-10\",100.45],[\"2024-11\",97.75],[\"2024-12\",97.14],[\"2025-01\",96.14],[\"2025-02\",92.97],[\"2025-03\",93.62],[\"2025-04\",91.43],[\"2025-05\",92.57],[\"2025-06\",94.26],[\"2025-07\",96.25],[\"2025-08\",96.12],[\"2025-09\",97.91],[\"2025-10\",100.84],[\"2025-11\",102.05],[\"2025-12\",104.83],[\"2026-01\",107.81],[\"2026-02\",110.87],[\"2026-03\",109.27],[\"2026-04\",114.28],[\"2026-05\",114.14],[\"2026-06\",111.48],[\"2026-07\",112.9],[\"2026-08\",114.54],[\"2026-09\",109.47],[\"2026-10\",109.67]],\"start\":{\"period\":\"2024-01\",\"value\":97.05},\"latest\":{\"period\":\"2026-10\",\"value\":109.67},\"change\":12.62}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "select": {
+      "currencies": [
+       "JPY"
+      ]
+     },
+     "options": {
+      "monthly": false
+     },
+     "period": {
+      "start": "2026-07"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY"
+     ],
+     "monthly": false,
+     "start": "2026-07"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Daily\",\"points\":[[\"2026-07-01\",112.19],[\"2026-07-02\",111.92],[\"2026-07-03\",111.87],[\"2026-07-06\",112.34],[\"2026-07-07\",112.37],[\"2026-07-08\",112.69],[\"2026-07-09\",112.7],[\"2026-07-10\",112.29],[\"2026-07-13\",112.46],[\"2026-07-14\",112.55],[\"2026-07-15\",113.35],[\"2026-07-16\",113.47],[\"2026-07-17\",113.36],[\"2026-07-20\",113.51],[\"2026-07-21\",113.9],[\"2026-07-22\",114.11],[\"2026-07-23\",114.39],[\"2026-07-24\",114.28],[\"2026-07-27\",114.57],[\"2026-07-28\",114.08],[\"2026-07-29\",113.72],[\"2026-07-30\",113.68],[\"2026-07-31\",112.9],[\"2026-08-04\",110.7],[\"2026-08-05\",111.12],[\"2026-08-06\",111.21],[\"2026-08-07\",111.29],[\"2026-08-10\",111.93],[\"2026-08-11\",112.35],[\"2026-08-12\",112.57],[\"2026-08-13\",112.29],[\"2026-08-14\",112.57],[\"2026-08-17\",113.18],[\"2026-08-18\",113.38],[\"2026-08-19\",112.63],[\"2026-08-20\",112.89],[\"2026-08-21\",113.49],[\"2026-08-24\",113.92],[\"2026-08-25\",113.92],[\"2026-08-26\",114.2],[\"2026-08-27\",114.48],[\"2026-08-28\",114.8],[\"2026-08-31\",114.54],[\"2026-09-01\",114.63],[\"2026-09-02\",114.17],[\"2026-09-03\",112.74],[\"2026-09-04\",112.71],[\"2026-09-07\",112.32],[\"2026-09-08\",110.67],[\"2026-09-09\",110.85],[\"2026-09-10\",110.89],[\"2026-09-11\",110.48],[\"2026-09-14\",110.12],[\"2026-09-15\",110.26],[\"2026-09-16\",110.7],[\"2026-09-17\",110.68],[\"2026-09-18\",112.02],[\"2026-09-21\",111.9],[\"2"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1085,
+   "cacheWrite": 2082,
+   "cacheRead": 10722
+  },
+  "ms": 6362
+ }
+}

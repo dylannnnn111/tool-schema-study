@@ -1,0 +1,155 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups",
+   "Rents"
+  ],
+  "cities": [
+   "sydney"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2024-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+Rents..1.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+Rents..1.Q?startPeriod=2024-Q1",
+  "series": [
+   {
+    "name": "All groups CPI - Sydney (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      2.1
+     ],
+     [
+      "2025-05",
+      2.2
+     ],
+     [
+      "2025-06",
+      1.7
+     ],
+     [
+      "2025-07",
+      2.9
+     ],
+     [
+      "2025-08",
+      2.7
+     ],
+     [
+      "2025-09",
+      3.4
+     ],
+     [
+      "2025-10",
+      3.6
+     ],
+     [
+      "2025-11",
+      3.4
+     ],
+     [
+      "2025-12",
+      3.7
+     ],
+     [
+      "2026-01",
+      3.9
+     ],
+     [
+      "2026-02",
+      3.8
+     ],
+     [
+      "2026-03",
+      4.4
+     ],
+     [
+      "2026-04",
+      4.2
+     ],
+     [
+      "2026-05",
+      4.2
+     ],
+     [
+      "2026-06",
+      4
+     ],
+     [
+      "2026-07",
+      3.2
+     ],
+     [
+      "2026-08",
+      3.9
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 2.1
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3.9
+    },
+    "change": 1.8
+   },
+   {
+    "name": "All groups CPI - Sydney (quarterly)",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-Q1",
+      3.8
+     ],
+     [
+      "2024-Q2",
+      3.8
+     ],
+     [
+      "2024-Q3",
+      2.9
+     ],
+     [
+      "2024-Q4",
+      2.4
+     ],
+     [
+      "2025-Q1",
+      2.3
+     ],
+     [
+      "2025-Q2",
+      1.9
+     ],
+     [
+      "2025-Q3",
+      2.9
+     ]
+    ],
+    "start": {
+     "period": "2024-Q1",
+     "value": 3.8
+    },
+    "latest": {
+     "period": "2025-Q3",
+     "value": 2.9
+    },
+    "change": -0.9
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, All groups CPI, Original, Sydney",
+   "Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:16:40.841Z"
+}

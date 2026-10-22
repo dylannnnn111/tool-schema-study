@@ -1,0 +1,77 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m13",
+ "kind": "multi",
+ "q": "Are inflation expectations in line with actual inflation?",
+ "date": "2026-10-19",
+ "cost": 0.00112,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Short answer: no, not for consumers. Market economists' expectations are closer to actual inflation, but they sit below it.**\n\n**Actual inflation (ABS CPI, annual change, all groups)**\n- August 2026: **4.0%**\n- Peak in the period: 4.6% in March 2026\n- Low in the period: 3.5% in July 2026\n\n**Inflation expectations (RBA G3 survey)**\n\n| Measure | Latest (Sep qtr 2026) | Gap to actual CPI (4.0%) |\n|---|---|---|\n| Consumers, 1-year ahead | **4.9%** | about +0.9 pts |\n| Market economists, 1-year ahead | **3.0%** | about −1.0 pts |\n| Market economists, 2-year ahead | **2.5%** | n/a (longer horizon) |\n| Businesses, 3-months ahead | **2.0%** | about −2.0 pts |\n\n**What this means**\n- **Consumers** expect inflation well above the current rate. Their 1-year-ahead expectation has run between 4.7% and 5.5% since mid-2025, peaking at 5.5% in the June quarter 2026, and was 4.9% in the September quarter. That suggests households expect price pressures to persist, which is a concern for the RBA. Consumer surveys have tended to run high relative to outturns, so the gap should be read with some caution.\n- **Market economists** expect inflation to ease. Their 1-year view of 3.0% is below current CPI, and their 2-year view of 2.5% is in the RBA's 2–3% target band.\n- **Businesses** are, on this measure, not expecting high inflation in the near term. Their 3-month-ahead figure has been around 2% for most of the past two years, apart from a spike to 3.6% in the June quarter 2026.\n\nOverall, professional forecasters and the 2-year horizon look anchored near the target, while short-term consumer expectations are elevated relative to both actual inflation and the target. The September quarter 2026 CPI, due in late October, will show whether the 4.0% August reading is continuing to ease or rising.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "start": "2024-09",
+     "end": "2026-09",
+     "measure": "annual_change"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-09",
+     "end": "2026-09"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2024-09&endPeriod=2026-09 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2024-Q3&endPeriod=2026-Q3\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q3\",2.8],[\"2024-Q4\",2.4],[\"2025-Q1\",2.4],[\"2025-Q2\",2.1],[\"2025-Q3\",3.2]],\"start\":{\"period\":\"2024-Q3\",\"value\":2.8},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.2},\"change\":0.4}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "G3",
+     "search": "expectations",
+     "start": "2024-01",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "G3",
+     "search": "expectations",
+     "monthly": true,
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA G3 G3 INFLATION EXPECTATIONS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/g3-data.csv\",\"series\":[{\"name\":\"Consumer inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-03-31\",4.3],[\"2024-06-30\",4.4],[\"2024-09-30\",4.4],[\"2024-12-31\",4.2],[\"2025-03-31\",3.6],[\"2025-06-30\",5],[\"2025-09-30\",4.7],[\"2025-12-31\",4.7],[\"2026-03-31\",5.2],[\"2026-06-30\",5.5],[\"2026-09-30\",4.9]],\"start\":{\"period\":\"2024-03-31\",\"value\":4.3},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.9},\"change\":0.6},{\"name\":\"Business inflation expectations – 3-months ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-03-31\",2],[\"2024-06-30\",3.1],[\"2024-09-30\",1.7],[\"2024-12-31\",2],[\"2025-03-31\",1.7],[\"2025-06-30\",2.5],[\"2025-09-30\",1.7],[\"2025-12-31\",1.9],[\"2026-03-31\",2],[\"2026-06-30\",3.6],[\"2026-09-30\",2]],\"start\":{\"period\":\"2024-03-31\",\"value\":2},\"latest\":{\"period\":\"2026-09-30\",\"value\":2},\"change\":0},{\"name\":\"Union officials' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[]},{\"name\":\"Union officials' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[]},{\"name\":\"Market economists' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-03-31\",3.1],[\"2024-06-30\",2.9],[\"2024-09-30\",2.7],[\"2024-12-31\",3.1],[\"2025-03-31\",3.1],[\"2025-06-30\",2.8],[\"2025-09-30\",2.8],[\"2025-12-31\",2.8],[\"2026-03-31\",3],[\"2026-06-30\",3]"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1571,
+   "cacheWrite": 2244,
+   "cacheRead": 5721
+  },
+  "ms": 12488
+ }
+}

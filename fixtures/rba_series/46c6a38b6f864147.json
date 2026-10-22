@@ -1,0 +1,106 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f1.1",
+  "monthly": false,
+  "start": "2026-07"
+ },
+ "ok": true,
+ "result": {
+  "table": "F1.1",
+  "title": "F1.1 INTEREST RATES AND YIELDS – MONEY MARKET",
+  "columns": [
+   {
+    "id": "FIRMMCRT",
+    "title": "Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMCRI",
+    "title": "Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMCRIHM",
+    "title": "Highest Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMCRILM",
+    "title": "Lowest Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMCRIVM",
+    "title": "Volume of Cash Market Transactions",
+    "unit": "$m",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMCRINM",
+    "title": "Number of Cash Market Transactions",
+    "unit": "Number",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMBAB30",
+    "title": "1-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMBAB90",
+    "title": "3-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMBAB180",
+    "title": "6-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMOIS1",
+    "title": "1-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMOIS3",
+    "title": "3-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMOIS6",
+    "title": "6-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FIRMMTN1",
+    "title": "1-month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "See notes"
+   },
+   {
+    "id": "FIRMMTN3",
+    "title": "3- month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "See notes"
+   },
+   {
+    "id": "FIRMMTN6",
+    "title": "6- month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "See notes"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:10:16.488Z"
+}

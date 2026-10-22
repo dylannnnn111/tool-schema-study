@@ -1,0 +1,65 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.00211,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year government bond yield is about **0.95 percentage points above the cash rate**, at 5.31% against 4.36%.\n\n- **10-year bond:** 5.314% on 14 October 2026, the latest reading in the RBA data.\n- **Cash rate target:** 4.36% as a September 2026 monthly average. The October average isn't published yet.\n\nThe gap has narrowed since the start of the year but has been positive throughout:\n\n| Date | 10-year yield | Cash rate | Spread |\n|---|---|---|---|\n| 2 Jan 2025 | 4.44% | 4.35% | +0.09 pp |\n| Oct 2025 (cash rate Oct avg) | ~4.14% (17 Oct) | 3.60% | ~+0.5 pp |\n| 2 Jan 2026 | 4.82% | 3.60% | +1.22 pp |\n| 14 Oct 2026 | 5.31% | 4.36% | +0.95 pp |\n\nOver 2026 the cash rate rose from 3.60% in January to 4.36% by September, and the 10-year yield rose faster, from about 4.8% to 5.3%. Long-term yields sitting above the cash rate is the normal shape of the curve. It suggests markets expect rates to stay at or above current levels, and they also include a term premium for holding 10-year debt. The 10-year yield has been well above the cash rate for most of 2026, so the market is pricing in more than the current policy setting.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "search": "10 year",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "search": "10 year",
+     "monthly": false,
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\",\"points\":[[\"2025-01-02\",4.435],[\"2025-01-03\",4.384],[\"2025-01-06\",4.47],[\"2025-01-07\",4.479],[\"2025-01-08\",4.502],[\"2025-01-09\",4.487],[\"2025-01-10\",4.547],[\"2025-01-13\",4.636],[\"2025-01-15\",4.626],[\"2025-01-16\",4.498],[\"2025-01-17\",4.498],[\"2025-01-20\",4.482],[\"2025-01-21\",4.409],[\"2025-01-22\",4.464],[\"2025-01-23\",4.474],[\"2025-01-24\",4.48],[\"2025-01-29\",4.375],[\"2025-01-30\",4.385],[\"2025-01-31\",4.435],[\"2025-02-03\",4.386],[\"2025-02-04\",4.421],[\"2025-02-05\",4.363],[\"2025-02-06\",4.324],[\"2025-02-07\",4.364],[\"2025-02-11\",4.395],[\"2025-02-12\",4.469],[\"2025-02-13\",4.479],[\"2025-02-14\",4.424],[\"2025-02-17\",4.46],[\"2025-02-18\",4.514],[\"2025-02-19\",4.534],[\"2025-02-20\",4.534],[\"2025-02-24\",4.446],[\"2025-02-25\",4.407],[\"2025-02-26\",4.372],[\"2025-02-27\",4.348],[\"2025-02-28\",4.303],[\"2025-03-03\",4.338],[\"2025-03-04\",4.278],[\"2025-03-05\",4.363],[\"2025-03-07\",4.413],[\"2025-03-10\",4.449],[\"2025-03-11\",4.389],[\"2025-03-12\",4.449],[\"2025-03-13\",4.43],[\"2025-03-14\",4.434],[\"2025-03-17\",4.422],[\"2025-03-18\",4.413],[\"2025-03-20\",4.389],[\"2025-03-21\",4.409],[\"2025-03-24\",4.415],[\"2025-03-25\",4.439],[\"2025-03-26\",4.493],[\"2025-03-27\",4.523],[\"2025-03-28\",4.478],[\"2025-04-01\",4.391],[\"2025-04-02\",4.397],[\"2025-04-03\",4.242],[\"2025-04-04\",4.199],[\"2025-04-07\",4.08"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1324,
+   "cacheWrite": 10822,
+   "cacheRead": 9509
+  },
+  "ms": 7173
+ }
+}

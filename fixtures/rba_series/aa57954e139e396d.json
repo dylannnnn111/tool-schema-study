@@ -1,0 +1,24 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F13",
+  "series": [
+   "United States Federal Funds Minimum Target Rate",
+   "United States Federal Funds Maximum Target Rate"
+  ],
+  "monthly": false,
+  "start": "2024-01",
+  "end": "2026-10"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f13-data.csv",
+  "series": [],
+  "notes": [
+   "Series United States Federal Funds Minimum Target Rate isn't in RBA table F13.",
+   "Series United States Federal Funds Maximum Target Rate isn't in RBA table F13."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:21:40.718Z"
+}

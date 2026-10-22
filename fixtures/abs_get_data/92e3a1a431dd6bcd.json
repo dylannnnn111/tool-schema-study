@@ -1,0 +1,11 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1......AUS.M",
+  "last_n": 3
+ },
+ "ok": false,
+ "error": "That key matches 1644 series - too many to return. Narrow it (pin more dimensions).",
+ "fetchedAt": "2026-10-18T21:12:05.493Z"
+}

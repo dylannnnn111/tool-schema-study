@@ -1,0 +1,133 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f2",
+  "series": [
+   "FCMYGBAG10D",
+   "FCMYGBAG2D"
+  ],
+  "monthly": true,
+  "start": "2026-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f2-data.csv",
+  "series": [
+   {
+    "name": "Australian Government 10 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-01",
+      4.799
+     ],
+     [
+      "2026-02",
+      4.646
+     ],
+     [
+      "2026-03",
+      4.972
+     ],
+     [
+      "2026-04",
+      5.067
+     ],
+     [
+      "2026-05",
+      4.838
+     ],
+     [
+      "2026-06",
+      4.734
+     ],
+     [
+      "2026-07",
+      4.942
+     ],
+     [
+      "2026-08",
+      5.085
+     ],
+     [
+      "2026-09",
+      5.344
+     ],
+     [
+      "2026-10",
+      5.314
+     ]
+    ],
+    "start": {
+     "period": "2026-01",
+     "value": 4.799
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 5.314
+    },
+    "change": 0.515
+   },
+   {
+    "name": "Australian Government 2 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-01",
+      4.195
+     ],
+     [
+      "2026-02",
+      4.184
+     ],
+     [
+      "2026-03",
+      4.66
+     ],
+     [
+      "2026-04",
+      4.771
+     ],
+     [
+      "2026-05",
+      4.52
+     ],
+     [
+      "2026-06",
+      4.412
+     ],
+     [
+      "2026-07",
+      4.509
+     ],
+     [
+      "2026-08",
+      4.677
+     ],
+     [
+      "2026-09",
+      4.942
+     ],
+     [
+      "2026-10",
+      4.919
+     ]
+    ],
+    "start": {
+     "period": "2026-01",
+     "value": 4.195
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 4.919
+    },
+    "change": 0.724
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:36:33.076Z"
+}

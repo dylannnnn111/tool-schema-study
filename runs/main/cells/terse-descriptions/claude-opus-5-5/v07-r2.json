@@ -1,0 +1,105 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v07",
+ "kind": "vague",
+ "q": "Where is the RBA at with rates?",
+ "date": "2026-10-19",
+ "cost": 0.03341,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The RBA's cash rate target is **4.60%**. It got there with a 25 basis point rise effective 30 September 2026, which is the latest change in the RBA's table of policy changes (Table A2).\n\n**How it got here (effective dates):**\n\n| Date | Change | New target |\n|---|---|---|\n| 19 Feb 2025 | −0.25 | 4.10% |\n| 21 May 2025 | −0.25 | 3.85% |\n| 13 Aug 2025 | −0.25 | 3.60% |\n| 4 Feb 2026 | +0.25 | 3.85% |\n| 18 Mar 2026 | +0.25 | 4.10% |\n| 6 May 2026 | +0.25 | 4.35% |\n| 30 Sep 2026 | +0.25 | **4.60%** |\n\n**What this means:**\n- **Rates are rising again.** The RBA cut three times in 2025, down to 3.60%. It has now raised rates four times in 2026, adding 1 percentage point.\n- **The rate is above where it was before the cuts.** Before the cuts started in February 2025 it was 4.35%, so 4.60% is the highest it's been in this period.\n- **The rate sat still for a while before the latest rise.** It was held at 4.35% from May through August, and then the RBA raised it again at the end of September.\n- **The September monthly average looks low.** It's 4.36%, because the new 4.60% rate only applied from the last day of the month. October will be the first full month at 4.60%.\n\nI haven't looked up the RBA's statement on why it raised rates, or market expectations for its next meeting. I can pull inflation or home loan rate data if that would help.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "F1.1",
+     "search": "cash rate target",
+     "start": "2026-01-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F1.1",
+     "search": "cash rate target",
+     "monthly": false,
+     "start": "2026-01-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 F1.1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-01-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[]}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "A2",
+     "start": "2025-01-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "A2",
+     "monthly": false,
+     "start": "2025-01-01"
+    },
+    "seen": "{\"table\":\"A2\",\"title\":\"A2 RESERVE BANK OF AUSTRALIA – CHANGES IN MONETARY POLICY AND ADMINISTERED RATES\",\"columns\":[{\"id\":\"ARBAMPCCCR\",\"title\":\"Change in Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPCNCRT\",\"title\":\"New Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPCRPESB\",\"title\":\"Change in ES Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPNRPESB\",\"title\":\"New ES Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPCORR\",\"title\":\"Change in Overnight Repo Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"},{\"id\":\"ARBAMPNORR\",\"title\":\"New Overnight Repo Rate\",\"unit\":\"Per cent\",\"frequency\":\"As announced\"}]}"
+   },
+   {
+    "turn": 3,
+    "name": "rba_series",
+    "input": {
+     "table": "A2",
+     "series": [
+      "ARBAMPCCCR",
+      "ARBAMPCNCRT"
+     ],
+     "start": "2025-01-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "A2",
+     "series": [
+      "ARBAMPCCCR",
+      "ARBAMPCNCRT"
+     ],
+     "monthly": false,
+     "start": "2025-01-01"
+    },
+    "seen": "{\"source\":\"RBA A2 A2 RESERVE BANK OF AUSTRALIA – CHANGES IN MONETARY POLICY AND ADMINISTERED RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/a2-data.csv\",\"series\":[{\"name\":\"Change in Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\",\"points\":[[\"2025-02-19\",-0.25],[\"2025-05-21\",-0.25],[\"2025-08-13\",-0.25],[\"2026-02-04\",0.25],[\"2026-03-18\",0.25],[\"2026-05-06\",0.25],[\"2026-09-30\",0.25]],\"start\":{\"period\":\"2025-02-19\",\"value\":-0.25},\"latest\":{\"period\":\"2026-09-30\",\"value\":0.25},\"change\":0.5},{\"name\":\"New Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"As announced\",\"points\":[[\"2025-02-19\",4.1],[\"2025-05-21\",3.85],[\"2025-08-13\",3.6],[\"2026-02-04\",3.85],[\"2026-03-18\",4.1],[\"2026-05-06\",4.35],[\"2026-09-30\",4.6]],\"start\":{\"period\":\"2025-02-19\",\"value\":4.1},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.6},\"change\":0.5}],\"notes\":[]}"
+   }
+  ],
+  "turns": 5,
+  "status": "done",
+  "usage": {
+   "input": 12,
+   "output": 1087,
+   "cacheWrite": 1601,
+   "cacheRead": 18104
+  },
+  "ms": 15161
+ }
+}

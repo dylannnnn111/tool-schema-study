@@ -1,0 +1,33 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o09",
+ "kind": "out-of-scope",
+ "q": "Where is the ASX 200 sitting today?",
+ "date": "2026-10-19",
+ "cost": 0.00031,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you where the ASX 200 is sitting today. My tools cover Australian economic data (CPI, labour force, cash rate, lending rates, exchange rates, and ABS and RBA statistics), but not live or daily share market indices.\n\nFor the current level, check the ASX website (asx.com.au), your broker or trading app, or a financial news service such as the Australian Financial Review, Bloomberg, or Reuters. Market closing reports are usually published shortly after 4pm AEST on trading days.\n\nI can help with the economic backdrop, such as the latest inflation, unemployment, cash rate, or the Australian dollar.",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 512,
+   "cacheWrite": 87,
+   "cacheRead": 4160
+  },
+  "ms": 3181
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m13",
+ "kind": "multi",
+ "q": "Are inflation expectations in line with actual inflation?",
+ "date": "2026-10-19",
+ "cost": 0.05008,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "No, mostly not. The answer depends on whose expectations you look at. Consumers expect inflation to stay above where it is now. Business and market economists expect it to be lower than it is now and to fall over time.\n\n**Actual inflation (ABS monthly CPI, year on year)**\n- **Headline CPI was 4.0% in August 2026**, up from 3.5% in July. It peaked at 4.6% in March 2026 and was as low as 1.9% in June 2025.\n- **Trimmed mean (the RBA's preferred underlying measure) was 3.6% in August 2026**, the same as in June and July. It has risen steadily from 2.8% in June 2025.\n- Both are above the RBA's 2–3% target band.\n\n**Expectations (RBA table G3, September quarter 2026)**\n\n| Measure | Expected rate | Compared with actual (headline 4.0%, trimmed mean 3.6%) |\n|---|---|---|\n| Consumers, 1 year ahead | **4.9%** | About 0.9 points above headline |\n| Market economists, 1 year ahead | **3.0%** | Below both: they expect inflation to ease |\n| Market economists, 2 years ahead | **2.5%** | Back at the middle of the target band |\n| Business, 3 months ahead | **2.0%** | Well below actual |\n| 10-year break-even rate (from bond prices) | **2.4%** | Inside the target band |\n\nUnion officials' expectations have no recent data.\n\n**What this means**\n- **Consumers expect inflation to stay high.** Their 1-year expectation has been 4.7–5.5% since mid-2025, above actual inflation the whole time. It peaked at 5.5% in June 2026 and eased to 4.9% in September. Consumer surveys usually come in above actual inflation, but the rise from 3.6% in March 2025 follows the rise in actual inflation.\n- **Business expectations jumped and then fell back.** They rose from 2.0% to 3.6% in June 2026, around the time headline CPI peaked, then dropped back to 2.0% in September. Note that this is a short 3-month-ahead survey measure, so it isn't directly comparable with the annual CPI figures.\n- **Longer-term expectations have barely moved.** Economists' 2-year forecast has stayed between 2.5% and 2.6% since early 2025. The 10-year break-even rate has stayed between 2.1% and 2.4%. Even with inflation near 4%, these professional and market measures still expect it to return to the target band.\n\nIn short, consumers' expectations roughly match current inflation, while professional and market measures don't. The two groups differ on the near term: consumers expect inflation to stay high, while economists expect it to fall to about 3% within a year. The longer-term measures still expect inflation back near 2.5%. Consumer expectations are the one to watch for the RBA, because they've been close to 5% for several quarters and could feed into wage and pricing decisions.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "g3"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g3",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"G3\",\"title\":\"G3 INFLATION EXPECTATIONS\",\"columns\":[{\"id\":\"GCONEXP\",\"title\":\"Consumer inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GBUSEXP\",\"title\":\"Business inflation expectations – 3-months ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GUNIEXPY\",\"title\":\"Union officials' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GUNIEXPYY\",\"title\":\"Union officials' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GMAREXPY\",\"title\":\"Market economists' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GMAREXPYY\",\"title\":\"Market economists' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GBONYLD\",\"title\":\"Break-even 10-year inflation rate\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+999902..50.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.9},\"latest\":{\"period\":\"2025-Q3\",\"value\":3},\"change\":0.1},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"poin"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "g3",
+     "series": [
+      "GCONEXP",
+      "GBUSEXP",
+      "GUNIEXPY",
+      "GUNIEXPYY",
+      "GMAREXPY",
+      "GMAREXPYY",
+      "GBONYLD"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g3",
+     "series": [
+      "GCONEXP",
+      "GBUSEXP",
+      "GUNIEXPY",
+      "GUNIEXPYY",
+      "GMAREXPY",
+      "GMAREXPYY",
+      "GBONYLD"
+     ],
+     "monthly": false,
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA G3 G3 INFLATION EXPECTATIONS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/g3-data.csv\",\"series\":[{\"name\":\"Consumer inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-03-31\",3.6],[\"2025-06-30\",5],[\"2025-09-30\",4.7],[\"2025-12-31\",4.7],[\"2026-03-31\",5.2],[\"2026-06-30\",5.5],[\"2026-09-30\",4.9]],\"start\":{\"period\":\"2025-03-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.9},\"change\":1.3},{\"name\":\"Business inflation expectations – 3-months ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-03-31\",1.7],[\"2025-06-30\",2.5],[\"2025-09-30\",1.7],[\"2025-12-31\",1.9],[\"2026-03-31\",2],[\"2026-06-30\",3.6],[\"2026-09-30\",2]],\"start\":{\"period\":\"2025-03-31\",\"value\":1.7},\"latest\":{\"period\":\"2026-09-30\",\"value\":2},\"change\":0.3},{\"name\":\"Union officials' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[]},{\"name\":\"Union officials' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[]},{\"name\":\"Market economists' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-03-31\",3.1],[\"2025-06-30\",2.8],[\"2025-09-30\",2.8],[\"2025-12-31\",2.8],[\"2026-03-31\",3],[\"2026-06-30\",3],[\"2026-09-30\",3]],\"start\":{\"period\":\"2025-03-31\",\"value\":3.1},\"latest\":{\"period\":\"2026-09-30\",\"value\":3},\"change\":-0.1},{\"name\":\"Market economists' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Q"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1600,
+   "cacheWrite": 2964,
+   "cacheRead": 16125
+  },
+  "ms": 17009
+ }
+}

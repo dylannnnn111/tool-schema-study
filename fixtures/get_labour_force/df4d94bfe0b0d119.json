@@ -1,0 +1,24 @@
+{
+ "tool": "get_labour_force",
+ "args": {
+  "measures": [
+   "unemployment_rate"
+  ],
+  "states": [
+   "act"
+  ],
+  "sex": "persons",
+  "adjustment": "seasonally_adjusted",
+  "start": "2025-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Labour Force, Australia (monthly)",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.8.M?startPeriod=2025-01",
+  "series": [],
+  "notes": [
+   "ABS returned no data. Trend and seasonally adjusted series aren't published for every state/sex combination - try original."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:17:39.674Z"
+}

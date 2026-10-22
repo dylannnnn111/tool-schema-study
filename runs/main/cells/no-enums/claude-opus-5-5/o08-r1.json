@@ -1,0 +1,63 @@
+{
+ "variant": "no-enums",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "o08",
+ "kind": "out-of-scope",
+ "q": "What's the average weekly rent for a two-bedroom unit in Newtown?",
+ "date": "2026-10-19",
+ "cost": 0.02451,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a dollar figure for a two-bedroom unit in Newtown. My data sources are ABS and RBA statistics, and none of them publish rent levels by suburb or by number of bedrooms. I'd rather not guess at a number.\n\n**What I can tell you is how fast Sydney rents are rising.** According to the ABS Consumer Price Index:\n\n- **Sydney rents were up 3.5% in the year to August 2026.** That rate has held at about 3.3–3.5% since early 2026.\n- That's well below the 5.6% annual rise in January 2025, so rents are still going up, but more slowly.\n- **Across Australia, rents rose 3.6%** over the same period, so Sydney is close to the national rate.\n\nThese figures measure how much rents are changing across the whole city, not what rents cost. An inner-west suburb like Newtown could be moving faster or slower than the Sydney average.\n\n**Where to find the Newtown figure:**\n- **NSW Government Rent and Sales Report** (Department of Communities and Justice): This is the best official source. It gives median weekly rents for new bonds by postcode (2042 for Newtown) and by dwelling type and number of bedrooms. It comes out every quarter, based on bonds lodged with NSW Fair Trading.\n- **Domain or realestate.com.au suburb profiles**: These show median asking rents for two-bedroom units, which are usually more up to date than the bond data.\n- **SQM Research**: This has weekly asking-rent data by postcode.\n\nIf you get a figure from one of these, I can help you compare it with Sydney-wide rent growth.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1+50.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-01\",\"value\":5.8},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-2.2},{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-01\",\"value\":5.6},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":-2.1}],\"notes\":[\"All series: Percentage change from previous year, Rents, Original\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 867,
+   "cacheWrite": 1092,
+   "cacheRead": 8417
+  },
+  "ms": 10389
+ }
+}

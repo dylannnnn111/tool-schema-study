@@ -1,0 +1,74 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v10",
+ "kind": "vague",
+ "q": "How's the job market looking for women in Victoria?",
+ "date": "2026-10-19",
+ "cost": 0.00103,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Short answer:** The job market for women in Victoria has weakened over the past year. Unemployment has climbed to about 5%, and fewer women relative to the population are in work.\n\nFigures are seasonally adjusted, for September 2026 unless noted:\n\n- **Unemployment rate: 5.1%**, up from about 4.0% in late 2025 and a low of 3.9% in April 2025. It peaked at 5.2% in July 2026.\n- **Employment-to-population ratio: 60.4%**, down from 61.3% in September 2025.\n- **Participation rate: 63.6%**, roughly where it was a year ago, so the rise in unemployment isn't mainly due to more women entering the labour force.\n- **Employed: about 1,843,000**, up about 52,000 since January 2025 but roughly flat over the past 12 months (1,838,000 in September 2025). Employment fell to 1,803,000 in April 2026 before recovering.\n\nFor comparison, the national rate for women is 4.6% (September 2026), up from 4.2% in January 2025, so Victoria's rise is part of a broader national trend, and Victoria's female unemployment is now above the national figure.\n\nThe labour force survey is noisy month to month, so the direction over several months matters more than any single reading.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "select": {
+      "measures": [
+       "unemployment_rate",
+       "participation_rate",
+       "employment_to_population",
+       "employed"
+      ],
+      "sex": "females",
+      "states": [
+       "vic",
+       "australia"
+      ]
+     },
+     "period": {
+      "start": "2025-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed"
+     ],
+     "states": [
+      "vic",
+      "australia"
+     ],
+     "sex": "females",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M3.2.1599.20.2+AUS.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",4.1514],[\"2025-02\",3.9224],[\"2025-03\",3.9851],[\"2025-04\",3.9919],[\"2025-05\",3.9251],[\"2025-06\",4.0836],[\"2025-07\",4.0858],[\"2025-08\",4.1067],[\"2025-09\",4.1831],[\"2025-10\",4.0563],[\"2025-11\",4.046],[\"2025-12\",3.8515],[\"2026-01\",3.92],[\"2026-02\",4.0217],[\"2026-03\",3.99],[\"2026-04\",4.4064],[\"2026-05\",4.2024],[\"2026-06\",4.4087],[\"2026-07\",4.4349],[\"2026-08\",4.4639],[\"2026-09\",4.6116]],\"start\":{\"period\":\"2025-01\",\"value\":4.1514},\"latest\":{\"period\":\"2026-09\",\"value\":4.6116},\"change\":0.4602},{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",63.3558],[\"2025-02\",62.7233],[\"2025-03\",62.7048],[\"2025-04\",63.4238],[\"2025-05\",63.369],[\"2025-06\",63.1202],[\"2025-07\",63.463],[\"2025-08\",63.2053],[\"2025-09\",63.1539],[\"2025-10\",63.0472],[\"2025-11\",63.0056],[\"2025-12\",62.8919],[\"2026-01\",62.933],[\"2026-02\",63.0369],[\"2026-03\",62.9512],[\"2026-04\",62.743],[\"2026-05\",62.8911],[\"2026-06\",63.2831],[\"2026-07\",63.1621],[\"2026-08\",63.2081],[\"2026-09\",63.0785]],\"start\":{\"period\":\"2025-01\",\"value\":63.3558},\"latest\":{\"period\":\"2026-09\",\"value\":63.0785},\"change\":-0.2773},{\"name\":\"Participation rate - Victoria\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",63.5698],[\"2025-02\",62"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1139,
+   "cacheWrite": 2852,
+   "cacheRead": 10710
+  },
+  "ms": 8898
+ }
+}

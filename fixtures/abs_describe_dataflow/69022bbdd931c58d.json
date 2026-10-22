@@ -1,0 +1,60 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "ABS_C16_T26_SA",
+  "code_search": "Newtown"
+ },
+ "ok": true,
+ "result": {
+  "id": "ABS_C16_T26_SA",
+  "name": "Census 2016, Rent (weekly) by Dwelling Structure (SA2+)",
+  "dimensions": [
+   {
+    "id": "STRD_2016",
+    "position": 1,
+    "codes": [],
+    "totalCodes": 14
+   },
+   {
+    "id": "RNTRD_2016",
+    "position": 2,
+    "codes": [],
+    "totalCodes": 26
+   },
+   {
+    "id": "STATE",
+    "position": 3,
+    "codes": [],
+    "totalCodes": 10
+   },
+   {
+    "id": "REGIONTYPE",
+    "position": 4,
+    "codes": [],
+    "totalCodes": 37
+   },
+   {
+    "id": "ASGS_2016",
+    "position": 5,
+    "codes": [
+     {
+      "code": "117031332",
+      "label": "Newtown - Camperdown - Darlington"
+     },
+     {
+      "code": "203021046",
+      "label": "Newtown (Vic.)"
+     },
+     {
+      "code": "317011453",
+      "label": "Newtown (Qld)"
+     }
+    ],
+    "totalCodes": 2819
+   }
+  ],
+  "keyTemplate": "<STRD_2016>.<RNTRD_2016>.<STATE>.<REGIONTYPE>.<ASGS_2016>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:18:08.558Z"
+}

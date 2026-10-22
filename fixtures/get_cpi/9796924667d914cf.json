@@ -1,0 +1,131 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups",
+   "trimmed_mean"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2025-12"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-12",
+  "series": [
+   {
+    "name": "Trimmed Mean - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-12",
+      3.3
+     ],
+     [
+      "2026-01",
+      3.3
+     ],
+     [
+      "2026-02",
+      3.3
+     ],
+     [
+      "2026-03",
+      3.3
+     ],
+     [
+      "2026-04",
+      3.4
+     ],
+     [
+      "2026-05",
+      3.5
+     ],
+     [
+      "2026-06",
+      3.6
+     ],
+     [
+      "2026-07",
+      3.6
+     ],
+     [
+      "2026-08",
+      3.6
+     ]
+    ],
+    "start": {
+     "period": "2025-12",
+     "value": 3.3
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3.6
+    },
+    "change": 0.3
+   },
+   {
+    "name": "All groups CPI - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-12",
+      3.8
+     ],
+     [
+      "2026-01",
+      3.8
+     ],
+     [
+      "2026-02",
+      3.7
+     ],
+     [
+      "2026-03",
+      4.6
+     ],
+     [
+      "2026-04",
+      4.2
+     ],
+     [
+      "2026-05",
+      4
+     ],
+     [
+      "2026-06",
+      3.8
+     ],
+     [
+      "2026-07",
+      3.5
+     ],
+     [
+      "2026-08",
+      4
+     ]
+    ],
+    "start": {
+     "period": "2025-12",
+     "value": 3.8
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4
+    },
+    "change": 0.2
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Australia",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:09:11.232Z"
+}

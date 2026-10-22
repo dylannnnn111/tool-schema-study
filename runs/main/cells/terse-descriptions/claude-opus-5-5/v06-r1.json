@@ -1,0 +1,56 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "v06",
+ "kind": "vague",
+ "q": "Is the Aussie dollar weak against the yen at the moment?",
+ "date": "2026-10-19",
+ "cost": 0.02161,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**No, the Aussie dollar is fairly strong against the yen right now.** It's slightly below its recent peak, though.\n\n**Latest figure:** about **¥109.67 per A$1** in October 2026. This is the latest reading for the month so far (RBA, 4pm rate).\n\n**How that compares (end-of-month values):**\n- **Recent peak:** ¥114.54 in August 2026. Today's rate is about **4% lower**. Most of that drop came in September, when it fell to ¥109.47, and it has held steady since.\n- **Last year:** ¥100.84 in October 2025, so the A$ is up about **9%** over the year.\n- **Recent low:** ¥91.43 in April 2025. Today's rate is about **20% higher**.\n- **2024 high:** ¥106.61 in June 2024. Today's rate is above it, so the A$ is still higher than at any point before late 2025 in this data.\n\n**Longer-term:** The data I can get only goes back to January 2023. Over that time the rate has mostly been between the low ¥90s and ¥114, and today's level is in the upper part of that range. From memory, not this data: before 2023 it rarely went above about ¥100 for long. So ¥110 is high by historical standards too.\n\n**In practical terms:** if you're buying yen, for example for a trip to Japan, A$1 gets you about ¥18 more than in early 2025. It's a bit less than at the August peak, but still a good rate. If you're paid in yen or exporting to Japan, the strong A$ works against you.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "JPY"
+     ],
+     "start": "2016-01",
+     "end": "2026-10-19"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY"
+     ],
+     "monthly": true,
+     "start": "2016-01",
+     "end": "2026-10-19"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2023-01\",91.69],[\"2023-02\",91.68],[\"2023-03\",89.1],[\"2023-04\",89.22],[\"2023-05\",90.56],[\"2023-06\",95.92],[\"2023-07\",94.75],[\"2023-08\",94.63],[\"2023-09\",96.33],[\"2023-10\",95.29],[\"2023-11\",97.77],[\"2023-12\",96.77],[\"2024-01\",97.05],[\"2024-02\",97.67],[\"2024-03\",98.87],[\"2024-04\",102.33],[\"2024-05\",104.08],[\"2024-06\",106.61],[\"2024-07\",99.23],[\"2024-08\",98.59],[\"2024-09\",98.22],[\"2024-10\",100.45],[\"2024-11\",97.75],[\"2024-12\",97.14],[\"2025-01\",96.14],[\"2025-02\",92.97],[\"2025-03\",93.62],[\"2025-04\",91.43],[\"2025-05\",92.57],[\"2025-06\",94.26],[\"2025-07\",96.25],[\"2025-08\",96.12],[\"2025-09\",97.91],[\"2025-10\",100.84],[\"2025-11\",102.05],[\"2025-12\",104.83],[\"2026-01\",107.81],[\"2026-02\",110.87],[\"2026-03\",109.27],[\"2026-04\",114.28],[\"2026-05\",114.14],[\"2026-06\",111.48],[\"2026-07\",112.9],[\"2026-08\",114.54],[\"2026-09\",109.47],[\"2026-10\",109.67]],\"start\":{\"period\":\"2023-01\",\"value\":91.69},\"latest\":{\"period\":\"2026-10\",\"value\":109.67},\"change\":17.98}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 801,
+   "cacheWrite": 884,
+   "cacheRead": 5725
+  },
+  "ms": 10375
+ }
+}

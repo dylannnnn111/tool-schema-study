@@ -1,0 +1,181 @@
+{
+ "tool": "get_lending_rates",
+ "args": {
+  "rates": [
+   "owner_occupier_variable_standard",
+   "investor_variable_standard"
+  ],
+  "start": "2025-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F5 Indicator Lending Rates",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f5-data.csv",
+  "series": [
+   {
+    "name": "Housing loans; Banks; Variable; Standard; Owner-occupier",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      8.27
+     ],
+     [
+      "2025-07-31",
+      8.27
+     ],
+     [
+      "2025-08-31",
+      8.02
+     ],
+     [
+      "2025-09-30",
+      8.02
+     ],
+     [
+      "2025-10-31",
+      8.02
+     ],
+     [
+      "2025-11-30",
+      8.02
+     ],
+     [
+      "2025-12-31",
+      8.02
+     ],
+     [
+      "2026-01-31",
+      8.02
+     ],
+     [
+      "2026-02-28",
+      8.27
+     ],
+     [
+      "2026-03-31",
+      8.52
+     ],
+     [
+      "2026-04-30",
+      8.52
+     ],
+     [
+      "2026-05-31",
+      8.77
+     ],
+     [
+      "2026-06-30",
+      8.77
+     ],
+     [
+      "2026-07-31",
+      8.77
+     ],
+     [
+      "2026-08-31",
+      8.77
+     ],
+     [
+      "2026-09-30",
+      8.77
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 8.27
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 8.77
+    },
+    "change": 0.5
+   },
+   {
+    "name": "Housing loans; Banks; Variable; Standard; Investor",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      8.85
+     ],
+     [
+      "2025-07-31",
+      8.85
+     ],
+     [
+      "2025-08-31",
+      8.6
+     ],
+     [
+      "2025-09-30",
+      8.6
+     ],
+     [
+      "2025-10-31",
+      8.6
+     ],
+     [
+      "2025-11-30",
+      8.6
+     ],
+     [
+      "2025-12-31",
+      8.6
+     ],
+     [
+      "2026-01-31",
+      8.6
+     ],
+     [
+      "2026-02-28",
+      8.85
+     ],
+     [
+      "2026-03-31",
+      9.1
+     ],
+     [
+      "2026-04-30",
+      9.1
+     ],
+     [
+      "2026-05-31",
+      9.35
+     ],
+     [
+      "2026-06-30",
+      9.35
+     ],
+     [
+      "2026-07-31",
+      9.35
+     ],
+     [
+      "2026-08-31",
+      9.35
+     ],
+     [
+      "2026-09-30",
+      9.35
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 8.85
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 9.35
+    },
+    "change": 0.5
+   }
+  ],
+  "notes": [
+   "RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:46:01.111Z"
+}

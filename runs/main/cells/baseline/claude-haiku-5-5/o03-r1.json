@@ -1,0 +1,52 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o03",
+ "kind": "out-of-scope",
+ "q": "What's the US Federal Reserve's interest rate right now?",
+ "date": "2026-10-19",
+ "cost": 0.00069,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't get the current Federal Reserve rate with the tools I have. They cover Australian data, and the RBA's money-market tables don't include the US federal funds rate.\n\nFrom my training data, the Fed's target range was 3.50–3.75% after a series of cuts in late 2025. That may be out of date by October 2026, so please check the current range on the Federal Reserve's website (federalreserve.gov) or a financial data service before relying on it.\n\nI can pull Australian figures instead, such as the RBA cash rate, lending rates, or inflation, if that would help with a comparison.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f1",
+     "search": "federal funds",
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1",
+     "search": "federal funds",
+     "monthly": false,
+     "start": "2025-06"
+    },
+    "seen": "{\"table\":\"F1\",\"title\":\"F1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"columns\":[{\"id\":\"FIRMMCRTD\",\"title\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCCRT\",\"title\":\"Change in the Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"as announced\"},{\"id\":\"FIRMMCRID\",\"title\":\"Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIH\",\"title\":\"Highest Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIL\",\"title\":\"Lowest Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIV\",\"title\":\"Volume of Cash Market Transactions\",\"unit\":\"$m\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIN\",\"title\":\"Number of Cash Market Transactions\",\"unit\":\"Number\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCTRI\",\"title\":\"Total Return Index\",\"unit\":\"Index 04-Jan-2011=100\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB30D\",\"title\":\"EOD 1-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB90D\",\"title\":\"EOD 3-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB180D\",\"title\":\"EOD 6-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS1D\",\"title\":\"1-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS3D\",\"title\":\"3-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS6D\",\"title\":\"6-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMTN1D\",\"title\":\"1-month Treasury Note\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMTN3D\",\"title\":\"3"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 851,
+   "cacheWrite": 1367,
+   "cacheRead": 9507
+  },
+  "ms": 6099
+ }
+}

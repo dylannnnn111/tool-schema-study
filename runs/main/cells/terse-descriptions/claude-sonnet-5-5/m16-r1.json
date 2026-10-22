@@ -1,0 +1,87 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m16",
+ "kind": "multi",
+ "q": "How do credit card and personal loan rates compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.01462,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": false,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Credit card rates have barely moved while the cash rate has risen. I couldn't get personal loan rates.\n\n**Cash rate (monthly average of the target)**\n- It was 3.60% from Oct 2025 to Jan 2026.\n- It then rose in steps to 4.35% by Jun 2026.\n- It was 4.36% in Sep 2026, up 0.76 percentage points over the 12 months.\n\n**Credit cards (RBA indicator, advertised rates)**\n- The standard card rate was 20.99% from Oct 2025 to Aug 2026. It rose to 21.24% in Sep 2026, up 0.25 points.\n- The gap to the cash rate was about 17.4 points in Oct 2025 (20.99 vs 3.60). It was about 16.9 points in Sep 2026 (21.24 vs 4.36).\n- The low-rate card was 13.49% throughout, with no change. That is about 9.1 points above the cash rate in Sep 2026, down from about 9.9 points in Oct 2025.\n\n**Personal loans**\n- The RBA's F5 series for unsecured personal loans, fixed and variable, returned no data for this period. The `personal_loan_fixed` series was empty too. I can't give a comparison for them.\n- The RBA's F6 table, which covers rates actually paid on new loans, might have figures. I haven't checked it.\n\n**Takeaway:** Card rates are far above the cash rate and have barely responded to its increases. Standard cards passed on only about 0.25 points of the 0.76-point rise, and low-rate cards passed on none. These are advertised rates, and the RBA notes that rates actually paid are generally lower.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-10-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "credit_card_standard",
+      "personal_loan_fixed"
+     ],
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "credit_card_standard",
+      "personal_loan_fixed"
+     ],
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Personal loans; Revolving credit; Credit cards; Standard\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",20.99],[\"2025-11-30\",20.99],[\"2025-12-31\",20.99],[\"2026-01-31\",20.99],[\"2026-02-28\",20.99],[\"2026-03-31\",20.99],[\"2026-04-30\",20.99],[\"2026-05-31\",20.99],[\"2026-06-30\",20.99],[\"2026-07-31\",20.99],[\"2026-08-31\",20.99],[\"2026-09-30\",21.24]],\"start\":{\"period\":\"2025-10-31\",\"value\":20.99},\"latest\":{\"period\":\"2026-09-30\",\"value\":21.24},\"change\":0.25},{\"name\":\"Personal loans; Term loans (unsecured); Fixed\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "F5",
+     "search": "personal loans",
+     "start": "2025-10",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F5",
+     "search": "personal loans",
+     "monthly": true,
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F5 F5  INDICATOR LENDING RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Lending rates; Personal loans; Revolving credit; Credit cards; Standard\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",20.99],[\"2025-11-30\",20.99],[\"2025-12-31\",20.99],[\"2026-01-31\",20.99],[\"2026-02-28\",20.99],[\"2026-03-31\",20.99],[\"2026-04-30\",20.99],[\"2026-05-31\",20.99],[\"2026-06-30\",20.99],[\"2026-07-31\",20.99],[\"2026-08-31\",20.99],[\"2026-09-30\",21.24]],\"start\":{\"period\":\"2025-10-31\",\"value\":20.99},\"latest\":{\"period\":\"2026-09-30\",\"value\":21.24},\"change\":0.25},{\"name\":\"Lending rates; Personal loans; Revolving credit; Credit cards; Low rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",13.49],[\"2025-11-30\",13.49],[\"2025-12-31\",13.49],[\"2026-01-31\",13.49],[\"2026-02-28\",13.49],[\"2026-03-31\",13.49],[\"2026-04-30\",13.49],[\"2026-05-31\",13.49],[\"2026-06-30\",13.49],[\"2026-07-31\",13.49],[\"2026-08-31\",13.49],[\"2026-09-30\",13.49]],\"start\":{\"period\":\"2025-10-31\",\"value\":13.49},\"latest\":{\"period\":\"2026-09-30\",\"value\":13.49},\"change\":0},{\"name\":\"Lending rates; Personal loans; Term loans (unsecured); Fixed\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"Lending rates; Personal loans; Term loans (unsecured); Variable\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"Lending rates; Personal loans; Revolving credit; Home equity loans\",\"unit\":\"Per cent per "
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 853,
+   "cacheWrite": 2044,
+   "cacheRead": 9611
+  },
+  "ms": 7661
+ }
+}

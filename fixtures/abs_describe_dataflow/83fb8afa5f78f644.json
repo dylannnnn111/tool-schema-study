@@ -1,0 +1,59 @@
+{
+ "tool": "abs_describe_dataflow",
+ "args": {
+  "dataflow": "WPI",
+  "code_search": "all sectors"
+ },
+ "ok": true,
+ "result": {
+  "id": "WPI",
+  "name": "Wage Price Index",
+  "dimensions": [
+   {
+    "id": "MEASURE",
+    "position": 1,
+    "codes": [],
+    "totalCodes": 5
+   },
+   {
+    "id": "INDEX",
+    "position": 2,
+    "codes": [],
+    "totalCodes": 4
+   },
+   {
+    "id": "SECTOR",
+    "position": 3,
+    "codes": [],
+    "totalCodes": 7
+   },
+   {
+    "id": "INDUSTRY",
+    "position": 4,
+    "codes": [],
+    "totalCodes": 826
+   },
+   {
+    "id": "TSEST",
+    "position": 5,
+    "codes": [],
+    "totalCodes": 5
+   },
+   {
+    "id": "REGION",
+    "position": 6,
+    "codes": [],
+    "totalCodes": 10
+   },
+   {
+    "id": "FREQ",
+    "position": 7,
+    "codes": [],
+    "totalCodes": 9
+   }
+  ],
+  "keyTemplate": "<MEASURE>.<INDEX>.<SECTOR>.<INDUSTRY>.<TSEST>.<REGION>.<FREQ>",
+  "howToBuildKey": "Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M)."
+ },
+ "fetchedAt": "2026-10-18T21:07:05.916Z"
+}

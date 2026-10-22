@@ -1,0 +1,80 @@
+{
+ "variant": "nested",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m02",
+ "kind": "multi",
+ "q": "What's the real cash rate - the cash rate minus trimmed mean inflation?",
+ "date": "2026-10-19",
+ "cost": 0.02849,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The real cash rate is about **+0.75 percentage points**. That's from August 2026, the latest month where both figures are available:\n\n- **Cash rate target:** 4.35% (August 2026 monthly average)\n- **Trimmed mean inflation:** 3.6% year-on-year (August 2026, seasonally adjusted)\n- **Real cash rate:** 4.35 − 3.6 = **0.75 points**\n\nIf you use the newest figure for each, the result is almost the same: the September cash rate average of 4.36% minus August inflation of 3.6% gives about 0.76 points. The September average being slightly above 4.35% may mean the rate changed late in the month. A monthly average can't show that clearly, so check the RBA's latest decision before relying on it.\n\n**How it's changed:**\n\n| Month | Cash rate | Trimmed mean | Real rate |\n|---|---|---|---|\n| Jun 2025 | 3.85 | 2.8 | **+1.05** |\n| Sep 2025 | 3.60 | 3.2 | +0.40 |\n| Dec 2025 | 3.60 | 3.3 | +0.30 |\n| Mar 2026 | 3.96 | 3.3 | +0.66 |\n| Jun 2026 | 4.35 | 3.6 | +0.75 |\n| Aug 2026 | 4.35 | 3.6 | **+0.75** |\n\n**What happened:**\n- The RBA's 2025 cuts and rising inflation pushed the real rate down from about 1 point in mid-2025 to a low of about 0.3 points around December 2025 and January 2026.\n- The RBA then raised rates by about 75 basis points between February and May 2026. That roughly doubled the real rate, even though trimmed mean inflation kept rising to 3.6%.\n\n**Caveat:** This compares today's cash rate with inflation over the past year. Using expected inflation instead, which is the more forward-looking measure, could give a somewhat different number.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2025-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-06-30\",\"value\":3.85},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.51}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "items": [
+       "trimmed_mean"
+      ]
+     },
+     "period": {
+      "start": "2025-06"
+     },
+     "options": {
+      "measure": "annual_change"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.999902..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-06\",\"value\":2.8},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.8}],\"notes\":[\"All series: Percentage change from previous year, Trimmed Mean, Seasonally Adjusted, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1056,
+   "cacheWrite": 1039,
+   "cacheRead": 10732
+  },
+  "ms": 11168
+ }
+}

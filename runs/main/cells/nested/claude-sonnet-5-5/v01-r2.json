@@ -1,0 +1,89 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v01",
+ "kind": "vague",
+ "q": "Is inflation under control?",
+ "date": "2026-10-19",
+ "cost": 0.01524,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Short answer: no, not at the moment.** Inflation is above the RBA's 2–3% target and has risen over the past year.\n\n**Latest figures (August 2026, change from a year earlier)**\n- **Headline CPI:** 4.0%. It was 1.9% in June 2025 and peaked at 4.6% in March 2026. It eased to 3.5% in July, then rose again.\n- **Trimmed mean:** 3.6%. This is the RBA's preferred underlying measure. It was 2.8% in June 2025 and has risen steadily since, so the pressure is broad and not just a few volatile items.\n- **Weighted median:** 3.6%, up from 3.1% in June 2025.\n\n**Where the pressure is**\n- **Electricity:** up 13.2% over the year. It was up 37% in February 2026, so the pace has slowed.\n- **Housing:** up 5.7%. It was as high as 7.2% in February.\n- **Rents:** up 3.6%, down from 4.2% in June 2025. This is a modest improvement.\n- **Food:** up 3.0%, down from 3.5% in June 2025.\n\n**RBA response**\n- The cash rate was cut to about 3.6% in late 2025.\n- The RBA then raised it from February 2026. The monthly average was about 4.35% from June to August and 4.36% in September.\n- That is roughly 0.75 percentage points of tightening since the low.\n\n**Is it improving?**\n- Rents and food inflation are easing.\n- Electricity inflation is well below its peak.\n- Headline CPI jumped back up from 3.5% to 4.0% in August.\n- Underlying inflation has stayed at 3.6% for three months. It is still above the 3% top of the target band and has not started to fall.\n\nInflation looks contained rather than under control. It has stopped accelerating, but it is still well above target. The rate rises may not have fully worked through yet.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "items": [
+       "all_groups",
+       "trimmed_mean",
+       "weighted_median",
+       "rents",
+       "electricity",
+       "food",
+       "housing"
+      ]
+     },
+     "period": {
+      "start": "2025-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean",
+      "weighted_median",
+      "rents",
+      "electricity",
+      "food",
+      "housing"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902+999903+30014+40055+20001+20003..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Food and non-alcoholic beverages - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",3.5],[\"2025-07\",3.1],[\"2025-08\",3],[\"2025-09\",3.2],[\"2025-10\",3.2],[\"2025-11\",3.3],[\"2025-12\",3.4],[\"2026-01\",3.1],[\"2026-02\",3.1],[\"2026-03\",3.1],[\"2026-04\",2.8],[\"2026-05\",3.3],[\"2026-06\",3.3],[\"2026-07\",3.2],[\"2026-08\",3]],\"start\":{\"period\":\"2025-06\",\"value\":3.5},\"latest\":{\"period\":\"2026-08\",\"value\":3},\"change\":-0.5},{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-06\",\"value\":4.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-0.6},{\"name\":\"Housing - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",1.5],[\"2025-07\",3.7],[\"2025-08\",4.5],[\"2025-09\",5.7],[\"2025-10\",5.9],[\"2025-11\",5.2],[\"2025-12\",5.5],[\"2026-01\",6.8],[\"2026-02\",7.2],[\"2026-03\",6.5],[\"2026-04\",6.3],[\"2026-05\",6.5],[\"2026-06\",6.8],[\"2026-07\",5],[\"2026-08\",5.7]],\"start\":{\"period\":\"2025-06\",\"value\":1.5},\"latest\":{\"period\":\"2026-08\",\"value\":5.7},\"change\":4.2},{\"name\":\"Trimmed Mean - A"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2025-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-06-30\",\"value\":3.85},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.51}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 803,
+   "cacheWrite": 2451,
+   "cacheRead": 10696
+  },
+  "ms": 9051
+ }
+}

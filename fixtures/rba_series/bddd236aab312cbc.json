@@ -1,0 +1,166 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F6",
+  "series": [
+   "FLRHOFVA",
+   "FLRHOFVL",
+   "FLRHOOVA"
+  ],
+  "monthly": true,
+  "start": "2026-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F6 F6 - HOUSING LENDING RATES",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f6-data.csv",
+  "series": [
+   {
+    "name": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-01-31",
+      5.5
+     ],
+     [
+      "2026-02-28",
+      5.7
+     ],
+     [
+      "2026-03-31",
+      5.9
+     ],
+     [
+      "2026-04-30",
+      6
+     ],
+     [
+      "2026-05-31",
+      6.2
+     ],
+     [
+      "2026-06-30",
+      6.3
+     ],
+     [
+      "2026-07-31",
+      6.2
+     ],
+     [
+      "2026-08-31",
+      6.2
+     ]
+    ],
+    "start": {
+     "period": "2026-01-31",
+     "value": 5.5
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.2
+    },
+    "change": 0.7
+   },
+   {
+    "name": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Variable-rate; Large institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-01-31",
+      5.5
+     ],
+     [
+      "2026-02-28",
+      5.7
+     ],
+     [
+      "2026-03-31",
+      5.9
+     ],
+     [
+      "2026-04-30",
+      6
+     ],
+     [
+      "2026-05-31",
+      6.2
+     ],
+     [
+      "2026-06-30",
+      6.2
+     ],
+     [
+      "2026-07-31",
+      6.2
+     ],
+     [
+      "2026-08-31",
+      6.2
+     ]
+    ],
+    "start": {
+     "period": "2026-01-31",
+     "value": 5.5
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.2
+    },
+    "change": 0.7
+   },
+   {
+    "name": "Lending rates; Housing credit; Outstanding; Owner-occupied; Variable-rate; All institutions",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-01-31",
+      5.5
+     ],
+     [
+      "2026-02-28",
+      5.8
+     ],
+     [
+      "2026-03-31",
+      6
+     ],
+     [
+      "2026-04-30",
+      6
+     ],
+     [
+      "2026-05-31",
+      6.2
+     ],
+     [
+      "2026-06-30",
+      6.3
+     ],
+     [
+      "2026-07-31",
+      6.2
+     ],
+     [
+      "2026-08-31",
+      6.2
+     ]
+    ],
+    "start": {
+     "period": "2026-01-31",
+     "value": 5.5
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.2
+    },
+    "change": 0.7
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:15:23.297Z"
+}

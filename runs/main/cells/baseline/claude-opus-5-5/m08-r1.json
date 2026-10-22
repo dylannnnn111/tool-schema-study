@@ -1,0 +1,66 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.04275,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year government bond yield is about **1 percentage point above the cash rate**. That's a normal, upward-sloping yield curve, and the gap is much wider than it was two years ago.\n\n**Latest figures**\n- **10-year bond yield: 5.31%** (latest reading in October 2026, so the month isn't finished). It was 5.34% at the end of September, the highest in this two-year period.\n- **Cash rate: 4.36%** (average for September 2026, the latest month available).\n- **Gap: about 0.95–1.0 percentage points.**\n\nThe September average of 4.36% is slightly above the 4.35% target that held from June to August. That could mean a small change near the end of September, or it could just be rounding. The data can't tell us which.\n\n**How the gap has changed (bond yield at month end minus the average cash rate)**\n\n| Month | 10-yr yield | Cash rate | Gap |\n|---|---|---|---|\n| Oct 2024 | 4.50% | 4.35% | +0.15 |\n| Apr 2025 | 4.15% | 4.10% | +0.05 |\n| Sep 2025 | 4.31% | 3.60% | +0.71 |\n| Jan 2026 | 4.80% | 3.60% | **+1.20** (widest) |\n| Apr 2026 | 5.07% | 4.10% | +0.97 |\n| Jun 2026 | 4.73% | 4.35% | +0.38 |\n| Sep 2026 | 5.34% | 4.36% | +0.98 |\n\n**What happened**\n- **Late 2024 to mid-2025:** the curve was nearly flat, with the 10-year yield only 0.05–0.15 points above the cash rate. Markets were expecting rate cuts.\n- **Feb–Sep 2025:** the RBA cut the cash rate from 4.35% to 3.60%, but the 10-year yield stayed around 4.2–4.3%. So the gap widened.\n- **Late 2025 to early 2026:** the 10-year yield rose to about 4.8% while the cash rate stayed at 3.60%. The gap peaked at about 1.2 points in January 2026, as markets began expecting rates to rise again.\n- **Feb–Jun 2026:** the RBA raised the cash rate back to 4.35%, which narrowed the gap to about 0.4 points by June.\n- **Since mid-2026:** the 10-year yield has climbed above 5.3% while the cash rate has stayed about the same. That suggests markets expect rates to stay high or rise further, or are demanding more to hold long-term bonds.\n\n**Caveats**\n- The two measures are timed differently: the bond yield is the last reading of each month, while the cash rate is a monthly average.\n- Inflation-indexed government bonds now yield about 2.98%. Compared with the regular 10-year yield, that implies markets expect inflation to average roughly 2.3% over the next decade.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "search": "10 years",
+     "monthly": true,
+     "start": "2024-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "search": "10 years",
+     "monthly": true,
+     "start": "2024-10"
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2024-10\",4.496],[\"2024-11\",4.335],[\"2024-12\",4.366],[\"2025-01\",4.435],[\"2025-02\",4.303],[\"2025-03\",4.402],[\"2025-04\",4.148],[\"2025-05\",4.249],[\"2025-06\",4.161],[\"2025-07\",4.262],[\"2025-08\",4.28],[\"2025-09\",4.307],[\"2025-10\",4.29],[\"2025-11\",4.511],[\"2025-12\",4.74],[\"2026-01\",4.799],[\"2026-02\",4.646],[\"2026-03\",4.972],[\"2026-04\",5.067],[\"2026-05\",4.838],[\"2026-06\",4.734],[\"2026-07\",4.942],[\"2026-08\",5.085],[\"2026-09\",5.344],[\"2026-10\",5.314]],\"start\":{\"period\":\"2024-10\",\"value\":4.496},\"latest\":{\"period\":\"2026-10\",\"value\":5.314},\"change\":0.818},{\"name\":\"Australian Government Indexed Bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2024-10\",2.086],[\"2024-11\",1.941],[\"2024-12\",2.035],[\"2025-01\",2.117],[\"2025-02\",2.055],[\"2025-03\",2.243],[\"2025-04\",2.108],[\"2025-05\",2.124],[\"2025-06\",2.059],[\"2025-07\",2.111],[\"2025-08\",2.03],[\"2025-09\",1.969],[\"2025-10\",1.981],[\"2025-11\",2.147],[\"2025-12\",2.436],[\"2026-01\",2.456],[\"2026-02\",2.395],[\"2026-03\",2.621],[\"2026-04\",2.545],[\"2026-05\",2.473],[\"2026-06\",2.461],[\"2026-07\",2.62],[\"2026-08\",2.756],[\"2026-09\",2.942],[\"2026-10\",2.983]],\"start\":{\"period\":\"2024-10\",\"value\":2.086},\"latest\":{\"period\":\"2026-10\",\"value\":2.983},\"ch"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-10"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-10-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1633,
+   "cacheWrite": 1632,
+   "cacheRead": 9509
+  },
+  "ms": 15711
+ }
+}

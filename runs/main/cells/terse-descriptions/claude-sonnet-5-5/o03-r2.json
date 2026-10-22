@@ -1,0 +1,178 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o03",
+ "kind": "out-of-scope",
+ "q": "What's the US Federal Reserve's interest rate right now?",
+ "date": "2026-10-19",
+ "cost": 0.02172,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 7,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I couldn't get a current US Federal Reserve rate. The only source I have is the RBA's international official interest rates table (F13), which lists the US federal funds target range. Every query I ran on it returned no data points. That includes the Australian cash rate series in the same table, so the problem is with the table, not just the US series.\n\nI don't want to quote a figure from memory. The Fed's rate changes often, and my recollection could be out of date as of today (19 October 2026).\n\nYou can get the current target range from the Federal Reserve's website (federalreserve.gov, under Monetary Policy) or from the New York Fed's effective federal funds rate page.\n\nI can pull the RBA cash rate and Australian lending rates instead, if that would help.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "search": "United States",
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "search": "United States",
+     "monthly": false,
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f13-data.csv\",\"series\":[{\"name\":\"United States Federal Funds Minimum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "search": "United States",
+     "start": "2024-01",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "search": "United States",
+     "monthly": true,
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f13-data.csv\",\"series\":[{\"name\":\"United States Federal Funds Minimum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "search": "United States"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "search": "United States",
+     "monthly": false
+    },
+    "seen": "{\"source\":\"RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f13-data.csv\",\"series\":[{\"name\":\"United States Federal Funds Minimum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "monthly": false,
+     "start": "2025-01"
+    },
+    "seen": "{\"table\":\"F13\",\"title\":\"F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"columns\":[{\"id\":\"FOOIRUSFFTRMN\",\"title\":\"United States Federal Funds Minimum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FOOIRUSFFTRMX\",\"title\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FOOIRJTCR\",\"title\":\"Japan Policy Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FOOIREARR\",\"title\":\"Euro Area Refinancing Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FOOIRUKOBR\",\"title\":\"United Kingdom Bank Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FOOIRCTR\",\"title\":\"Canada Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"},{\"id\":\"FOOIRATCR\",\"title\":\"Australia Target Cash Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\"}]}"
+   },
+   {
+    "turn": 3,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "series": [
+      "FOOIRUSFFTRMN",
+      "FOOIRUSFFTRMX"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "series": [
+      "FOOIRUSFFTRMN",
+      "FOOIRUSFFTRMX"
+     ],
+     "monthly": false,
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f13-data.csv\",\"series\":[{\"name\":\"United States Federal Funds Minimum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   },
+   {
+    "turn": 4,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "series": [
+      "FOOIRUSFFTRMN",
+      "FOOIRUSFFTRMX"
+     ],
+     "start": "2020-01",
+     "end": "2026-10",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "series": [
+      "FOOIRUSFFTRMN",
+      "FOOIRUSFFTRMX"
+     ],
+     "monthly": true,
+     "start": "2020-01",
+     "end": "2026-10"
+    },
+    "seen": "{\"source\":\"RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f13-data.csv\",\"series\":[{\"name\":\"United States Federal Funds Minimum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   },
+   {
+    "turn": 5,
+    "name": "rba_series",
+    "input": {
+     "table": "F13",
+     "series": [
+      "FOOIRATCR",
+      "FOOIRUSFFTRMX"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F13",
+     "series": [
+      "FOOIRATCR",
+      "FOOIRUSFFTRMX"
+     ],
+     "monthly": false,
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f13-data.csv\",\"series\":[{\"name\":\"Australia Target Cash Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]},{\"name\":\"United States Federal Funds Maximum Target Rate\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[]}],\"notes\":[]}"
+   }
+  ],
+  "turns": 7,
+  "status": "done",
+  "usage": {
+   "input": 16,
+   "output": 1242,
+   "cacheWrite": 2611,
+   "cacheRead": 27432
+  },
+  "ms": 14211
+ }
+}

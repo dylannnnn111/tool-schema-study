@@ -1,0 +1,96 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v14",
+ "kind": "vague",
+ "q": "My power bill in Perth feels huge. Is that just me?",
+ "date": "2026-10-19",
+ "cost": 0.05862,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "You're not imagining a bigger bill, but the price of electricity in Perth has barely moved. What's changed is that the government rebates have stopped.\n\n**The Perth electricity tariff is up only about 2.4% in a year**\n- Perth electricity prices rose **2.4% in the year to August 2026** (ABS monthly CPI). Since 2023 they've gone up about 2.5% each July: the price index went from 95.2 to 97.6, then 100.0, then 102.4.\n- Across Australia, electricity prices rose **13.2% over the same year**. Over the three years from June 2023 to August 2026, Perth's underlying price rose about **10%**, compared with about **21%** nationally. So Perth has done relatively well on the price itself.\n\n**Why the bill still feels huge: the rebates have run out**\nThe CPI counts state and federal energy bill credits as price cuts. That's why Perth's figures swing wildly, from –50% to +289% year on year. Looking at the Perth electricity price index (100 = full price, no credit):\n\n| Period | Index | What it means |\n|---|---|---|\n| Aug 2024 – Feb 2025 | about 26–50 | Large credits wiped out most of the bill |\n| Oct 2025 – Jan 2026 | about 69–90 | Smaller credits |\n| Feb 2026 onward | 100 → 102.4 | No credits: you pay the full bill |\n\nSo if your last bill or two had a credit on them, today's bill can look several times bigger even though the tariff has only gone up a few per cent. Two other things may be adding to it:\n- **How much power you use.** Heating or cooling in heavy-use seasons pushes the bill up, and the CPI doesn't measure this because it tracks prices, not usage.\n- **General cost of living.** Overall inflation in Perth was **4.3% in August 2026**, a bit above the national **4.0%**, so other costs are adding to the pressure too.\n\n**In short:** it's not just you. Every Perth household has lost its bill credits since early 2026. But the actual price of electricity there is up only about 2.4% in the past year, well below the national rise of 13%. Comparing your kWh usage with the same bill last year should show whether usage is also part of the jump.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "electricity",
+      "all_groups"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "start": "2024-01",
+     "measure": "annual_change"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "electricity",
+      "all_groups"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40055+10001..5+50.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Electricity - Perth (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",-44.4],[\"2024-02\",-44.4],[\"2024-03\",2.5],[\"2024-04\",2.5],[\"2024-05\",2.5],[\"2024-06\",2.5],[\"2024-07\",42.6],[\"2024-08\",-50.2],[\"2024-09\",-50.2],[\"2024-10\",-47.8],[\"2024-11\",2.5],[\"2024-12\",-23.7],[\"2025-01\",-50.2],[\"2025-02\",-50.2],[\"2025-03\",-11.8],[\"2025-04\",2.5],[\"2025-05\",2.5],[\"2025-06\",2.5],[\"2025-07\",35.9],[\"2025-08\",289],[\"2025-09\",289],[\"2025-10\",59.4],[\"2025-11\",-29.1],[\"2025-12\",75.8],[\"2026-01\",250.3],[\"2026-02\",289],[\"2026-03\",19.2],[\"2026-04\",2.5],[\"2026-05\",2.5],[\"2026-06\",2.5],[\"2026-07\",2.4],[\"2026-08\",2.4]],\"start\":{\"period\":\"2024-01\",\"value\":-44.4},\"latest\":{\"period\":\"2026-08\",\"value\":2.4},\"change\":46.8},{\"name\":\"All groups CPI - Perth (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",2.6],[\"2025-06\",2.6],[\"2025-07\",3.5],[\"2025-08\",4.8],[\"2025-09\",5],[\"2025-10\",4.3],[\"2025-11\",2.8],[\"2025-12\",4.4],[\"2026-01\",4.9],[\"2026-02\",4.9],[\"2026-03\",4.6],[\"2026-04\",3.9],[\"2026-05\",4],[\"2026-06\",3.7],[\"2026-07\",3.8],[\"2026-08\",4.3]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":4.3},\"change\":1.1},{\"name\":\"Electricity - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",0.8],[\"2024-02\",0.2],[\"2024-03\",5.2],[\"2024-04\",4.2],[\"2024-"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "start": "2023-01",
+     "measure": "index"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.40055..5+50.M?startPeriod=2023-01\",\"series\":[{\"name\":\"Electricity - Australia (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2023-01\",96.35],[\"2023-02\",96.35],[\"2023-03\",96.24],[\"2023-04\",95.32],[\"2023-05\",94.57],[\"2023-06\",93.79],[\"2023-07\",99.46],[\"2023-08\",98.19],[\"2023-09\",98.4],[\"2023-10\",101.7],[\"2023-11\",102.09],[\"2023-12\",96.22],[\"2024-01\",97.12],[\"2024-02\",96.58],[\"2024-03\",101.29],[\"2024-04\",99.35],[\"2024-05\",100.77],[\"2024-06\",100.77],[\"2024-07\",94.37],[\"2024-08\",80.59],[\"2024-09\",74.68],[\"2024-10\",65.53],[\"2024-11\",80.11],[\"2024-12\",78.96],[\"2025-01\",86],[\"2025-02\",83.84],[\"2025-03\",91.55],[\"2025-04\",92.89],[\"2025-05\",94.78],[\"2025-06\",94.41],[\"2025-07\",107.16],[\"2025-08\",100.45],[\"2025-09\",100],[\"2025-10\",89.82],[\"2025-11\",95.9],[\"2025-12\",95.92],[\"2026-01\",113.68],[\"2026-02\",114.83],[\"2026-03\",114.83],[\"2026-04\",113.78],[\"2026-05\",114.81],[\"2026-06\",115.59],[\"2026-07\",113.69],[\"2026-08\",113.69]],\"start\":{\"period\":\"2023-01\",\"value\":96.35},\"latest\":{\"period\":\"2026-08\",\"value\":113.69},\"change\":17.34},{\"name\":\"Electricity - Perth (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2023-01\",92.86],[\"2023-02\",92.86],[\"2023-03\",92.86],[\"2023-04\",92.86],[\"2023-05\",92.86],[\"2023-06\",92.86],[\"2023-07\",51.61],[\"2023-08\",51.61],[\"2023-09\",51.61],[\"2023-10\",95.18],[\"2023-11\",95.18],[\"2023-12\",51.61],[\"2024-01\",51.61],[\"2024-02\",51.61],[\"2024-"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1946,
+   "cacheWrite": 3293,
+   "cacheRead": 16006
+  },
+  "ms": 22856
+ }
+}

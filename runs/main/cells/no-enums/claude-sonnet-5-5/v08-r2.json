@@ -1,0 +1,74 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v08",
+ "kind": "vague",
+ "q": "Do people still bother going into North Sydney on Fridays?",
+ "date": "2026-10-19",
+ "cost": 0.01095,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes, most people still do. North Sydney's Friday evening traffic is about 74% of a typical Tuesday–Thursday.\n\n**Latest figure:** In September 2026, Friday tap-ons between 3pm and 7pm were 0.741 of the Tuesday–Thursday average. These are Opal tap-ons from people leaving work, from TfNSW data.\n\n**Against pre-COVID:** In January–March 2020, Fridays ran at 0.926 of midweek. So the Friday gap has widened from about 7% to about 26%. Fridays are well down on midweek, but they aren't empty.\n\n**Trend:** The ratio has been flat for about two years.\n- Most months since early 2024 fall between 0.70 and 0.78.\n- The 2026 range is 0.705 to 0.760: 0.760 in February, 0.705 in April and 0.752 in May.\n- The 2025 peak was 0.780 in April.\n- Summer months dip, with 0.688 in December 2025 and 0.621 in January 2024. That is probably holiday timing.\n- The only clear rise was from the low 2024 start. The 0.621 for January 2024 looks like a holiday dip rather than a trend.\n\nThis measure only compares Friday with midweek. It doesn't show how busy North Sydney is overall. Midweek volumes could have moved too, and I haven't checked them.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "centres": [
+      "North Sydney"
+     ],
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "North Sydney"
+     ],
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"North Sydney\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",0.621],[\"2024-02\",0.74],[\"2024-03\",0.731],[\"2024-04\",0.659],[\"2024-05\",0.745],[\"2024-06\",0.727],[\"2024-07\",0.707],[\"2024-08\",0.746],[\"2024-09\",0.765],[\"2024-10\",0.732],[\"2024-11\",0.728],[\"2024-12\",0.719],[\"2025-01\",0.666],[\"2025-02\",0.769],[\"2025-03\",0.748],[\"2025-04\",0.78],[\"2025-05\",0.746],[\"2025-06\",0.746],[\"2025-07\",0.735],[\"2025-08\",0.767],[\"2025-09\",0.753],[\"2025-10\",0.731],[\"2025-11\",0.722],[\"2025-12\",0.688],[\"2026-01\",0.718],[\"2026-02\",0.76],[\"2026-03\",0.716],[\"2026-04\",0.705],[\"2026-05\",0.752],[\"2026-06\",0.743],[\"2026-07\",0.712],[\"2026-08\",0.751],[\"2026-09\",0.741]],\"start\":{\"period\":\"2024-01\",\"value\":0.621},\"latest\":{\"period\":\"2026-09\",\"value\":0.741},\"change\":0.12}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "baseline",
+     "centres": [
+      "North Sydney"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "baseline",
+     "centres": [
+      "North Sydney"
+     ]
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"North Sydney - pre-COVID baseline\",\"unit\":\"ratio to Tue-Thu average\",\"frequency\":\"Baseline window\",\"points\":[[\"fri_vs_midweek\",0.926],[\"mon_vs_midweek\",0.996]],\"start\":{\"period\":\"fri_vs_midweek\",\"value\":0.926},\"latest\":{\"period\":\"mon_vs_midweek\",\"value\":0.996},\"change\":0.07}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 641,
+   "cacheWrite": 1473,
+   "cacheRead": 8411
+  },
+  "ms": 6337
+ }
+}

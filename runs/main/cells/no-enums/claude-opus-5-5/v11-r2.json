@@ -1,0 +1,62 @@
+{
+ "variant": "no-enums",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v11",
+ "kind": "vague",
+ "q": "When does the CBD empty out on a Friday compared with midweek?",
+ "date": "2026-10-19",
+ "cost": 0.06468,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "Friday in the Sydney CBD doesn't empty out earlier. Both days peak in the 5–6pm hour. The difference is that the Friday peak is much smaller, the evening is spread out more, and after 9pm the CBD is busier than midweek. Figures are average Opal tap-ons per hour over the last 12 months, compared with the Tue–Thu average. 3pm means 3–4pm, and so on.\n\n| Hour | Tue–Thu avg | Friday | Fri vs midweek |\n|---|---|---|---|\n| 2pm | 31,567 | 32,142 | 102% |\n| 3pm | 43,026 | 41,067 | 95% |\n| 4pm | 65,505 | 51,933 | 79% |\n| **5pm (peak)** | **95,306** | **64,573** | **68%** |\n| 6pm | 51,566 | 40,833 | 79% |\n| 7pm | 27,622 | 25,185 | 91% |\n| 8pm | 22,037 | 21,033 | 95% |\n| 9pm | 19,043 | 21,447 | 113% |\n| 10pm | 12,358 | 19,586 | 158% |\n| 11pm | 5,550 | 11,342 | 204% |\n\n**What this shows**\n- **The usual 5pm rush is mostly missing on Fridays.** Friday's 5–6pm peak is only about two-thirds of the midweek peak (64.6k vs 95.3k). That's because fewer people are in the office, not because they leave early. Mornings show the same thing: Friday 8–9am tap-ons are about 78% of midweek.\n- **Friday is front-loaded, but only slightly.** Between 3pm and 7pm, about 47% of Friday tap-ons happen before 5pm, compared with about 42% midweek. Friday's 4pm hour is 80% of its 5pm peak, against 69% midweek. So the people who are in leave a bit earlier, but there's no early exodus. Through to 3pm, Friday traffic is about the same as midweek (95–103%).\n- **Friday nights flip the pattern.** From 9pm onwards Friday is busier than midweek, reaching double the midweek level in the 11pm hour. That's people going out, not commuters.\n\n**How this has changed since COVID**\nBefore COVID (Jan–Mar 2020), Friday's 5pm hour was already about 85% of the midweek peak, and its 4pm hour was about 97%. Both gaps have grown, to 68% and 79%.\n\nThe overall Friday gap (Friday 3–7pm tap-ons as a share of Tue–Thu) was **0.783 in September 2026**. It has stayed between about 0.74 and 0.84 every month since January 2025, so this pattern is stable.\n\nCaveats: the source isn't sure whether Sydney Metro taps in the CBD are counted. That may make current levels look lower than 2020, but it doesn't affect the Friday-vs-midweek ratios. Public holidays and outages are excluded. The data comes from TfNSW Opal Tap Data, analysed by Commute Pulse.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "cbd_hourly"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "cbd_hourly"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"Sydney CBD Tue - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1369],[\"01:00\",364],[\"02:00\",328],[\"03:00\",250],[\"04:00\",836],[\"05:00\",2914],[\"06:00\",7011],[\"07:00\",14222],[\"08:00\",23756],[\"09:00\",16511],[\"10:00\",14511],[\"11:00\",16489],[\"12:00\",19656],[\"13:00\",22733],[\"14:00\",28400],[\"15:00\",41744],[\"16:00\",68367],[\"17:00\",115233],[\"18:00\",65356],[\"19:00\",30111],[\"20:00\",19944],[\"21:00\",15956],[\"22:00\",9944],[\"23:00\",4767]],\"start\":{\"period\":\"00:00\",\"value\":1369},\"latest\":{\"period\":\"23:00\",\"value\":4767},\"change\":3398},{\"name\":\"Sydney CBD Wed - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1692],[\"01:00\",544],[\"02:00\",406],[\"03:00\",339],[\"04:00\",869],[\"05:00\",3014],[\"06:00\",7244],[\"07:00\",13989],[\"08:00\",23500],[\"09:00\",16556],[\"10:00\",14856],[\"11:00\",17289],[\"12:00\",20511],[\"13:00\",2318"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",0.766],[\"2025-02\",0.799],[\"2025-03\",0.763],[\"2025-04\",0.836],[\"2025-05\",0.773],[\"2025-06\",0.777],[\"2025-07\",0.793],[\"2025-08\",0.796],[\"2025-09\",0.79],[\"2025-10\",0.8],[\"2025-11\",0.759],[\"2025-12\",0.744],[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2025-01\",\"value\":0.766},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.017}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 2157,
+   "cacheWrite": 3962,
+   "cacheRead": 8506
+  },
+  "ms": 21256
+ }
+}

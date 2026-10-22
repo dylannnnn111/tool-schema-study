@@ -1,0 +1,74 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "all_groups"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2021-01",
+  "end": "2022-12"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001..50.M?startPeriod=2021-01&endPeriod=2022-12 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001..50.Q?startPeriod=2021-Q1&endPeriod=2022-Q4",
+  "series": [
+   {
+    "name": "All groups CPI - Australia (quarterly)",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2021-Q1",
+      1.1
+     ],
+     [
+      "2021-Q2",
+      3.8
+     ],
+     [
+      "2021-Q3",
+      3
+     ],
+     [
+      "2021-Q4",
+      3.5
+     ],
+     [
+      "2022-Q1",
+      5.1
+     ],
+     [
+      "2022-Q2",
+      6.1
+     ],
+     [
+      "2022-Q3",
+      7.3
+     ],
+     [
+      "2022-Q4",
+      7.8
+     ]
+    ],
+    "start": {
+     "period": "2021-Q1",
+     "value": 1.1
+    },
+    "latest": {
+     "period": "2022-Q4",
+     "value": 7.8
+    },
+    "change": 6.7
+   }
+  ],
+  "notes": [
+   "Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:52:14.583Z"
+}

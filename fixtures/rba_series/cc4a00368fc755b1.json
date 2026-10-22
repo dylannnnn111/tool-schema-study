@@ -1,0 +1,117 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "g1",
+  "series": [
+   "GCPIAGYP",
+   "GCPIOCPMTMYP"
+  ],
+  "monthly": false,
+  "start": "2024-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA G1 G1 CONSUMER PRICE INFLATION",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/g1-data.csv",
+  "series": [
+   {
+    "name": "Year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-09-30",
+      2.9
+     ],
+     [
+      "2024-12-31",
+      2.4
+     ],
+     [
+      "2025-03-31",
+      2.4
+     ],
+     [
+      "2025-06-30",
+      2.1
+     ],
+     [
+      "2025-09-30",
+      3.2
+     ],
+     [
+      "2025-12-31",
+      3.6
+     ],
+     [
+      "2026-03-31",
+      4.1
+     ],
+     [
+      "2026-06-30",
+      3.9
+     ]
+    ],
+    "start": {
+     "period": "2024-09-30",
+     "value": 2.9
+    },
+    "latest": {
+     "period": "2026-06-30",
+     "value": 3.9
+    },
+    "change": 1
+   },
+   {
+    "name": "Year-ended trimmed mean inflation – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-09-30",
+      3.6
+     ],
+     [
+      "2024-12-31",
+      3.2
+     ],
+     [
+      "2025-03-31",
+      2.9
+     ],
+     [
+      "2025-06-30",
+      2.7
+     ],
+     [
+      "2025-09-30",
+      2.9
+     ],
+     [
+      "2025-12-31",
+      3.3
+     ],
+     [
+      "2026-03-31",
+      3.5
+     ],
+     [
+      "2026-06-30",
+      3.6
+     ]
+    ],
+    "start": {
+     "period": "2024-09-30",
+     "value": 3.6
+    },
+    "latest": {
+     "period": "2026-06-30",
+     "value": 3.6
+    },
+    "change": 0
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:05:19.447Z"
+}

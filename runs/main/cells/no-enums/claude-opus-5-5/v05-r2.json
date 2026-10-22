@@ -1,0 +1,60 @@
+{
+ "variant": "no-enums",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v05",
+ "kind": "vague",
+ "q": "Petrol's killing me. How much more am I paying than a year ago?",
+ "date": "2026-10-19",
+ "cost": 0.01362,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Petrol prices were **13.5% higher in August 2026 than in August 2025**, based on the ABS monthly CPI for automotive fuel (average of the eight capital cities). August is the latest month published. Overall inflation was 4.0% over the same year, so fuel is rising more than three times as fast as prices in general.\n\n**What that means for your budget:** if you spent $70 a week on fuel a year ago, the same driving now costs about **$79 a week**. That's roughly $9 more a week, or about $490 a year.\n\n**How the price has moved over the past year (fuel compared with 12 months earlier):**\n- **Late 2025:** roughly flat, between -1% and +3.5%\n- **February 2026:** -7.2%, so cheaper than a year before\n- **March 2026:** +24.2%, a sudden jump\n- **April–May 2026:** +18.6%, then +7.7%\n- **June–July 2026:** -7.3%, then -0.4%. Part of this is because prices were already high in mid-2025, so the yearly comparison looks smaller.\n- **August 2026:** +13.5%, rising again\n\nFuel prices swing a lot from month to month, so the yearly figure changes quickly. Your own costs will also depend on your city and where you fill up. If you tell me which city you're in, I can look up the local figure.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "automotive_fuel",
+      "all_groups"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive_fuel",
+      "all_groups"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081+10001..50.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",-1.9],[\"2025-02\",-5.5],[\"2025-03\",-7.7],[\"2025-04\",-12],[\"2025-05\",-10],[\"2025-06\",-7.9],[\"2025-07\",-5.5],[\"2025-08\",-1.7],[\"2025-09\",2.8],[\"2025-10\",1.9],[\"2025-11\",3.5],[\"2025-12\",-0.8],[\"2026-01\",-2.7],[\"2026-02\",-7.2],[\"2026-03\",24.2],[\"2026-04\",18.6],[\"2026-05\",7.7],[\"2026-06\",-7.3],[\"2026-07\",-0.4],[\"2026-08\",13.5]],\"start\":{\"period\":\"2025-01\",\"value\":-1.9},\"latest\":{\"period\":\"2026-08\",\"value\":13.5},\"change\":15.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6}],\"notes\":[\"All series: Percentage change from previous year, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 587,
+   "cacheWrite": 0,
+   "cacheRead": 9300
+  },
+  "ms": 7462
+ }
+}

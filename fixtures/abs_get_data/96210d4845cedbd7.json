@@ -1,0 +1,131 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9..TOT..AUS.M",
+  "last_n": 3
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9..TOT..AUS.M?lastNObservations=3",
+  "series": [
+   {
+    "name": "Total Work",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      19092
+     ],
+     [
+      "2026-07",
+      19277
+     ],
+     [
+      "2026-08",
+      16968
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 19092
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16968
+    },
+    "change": -2124
+   },
+   {
+    "name": "New",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2001-04",
+      9076
+     ],
+     [
+      "2001-05",
+      13346
+     ],
+     [
+      "2001-06",
+      11963
+     ]
+    ],
+    "start": {
+     "period": "2001-04",
+     "value": 9076
+    },
+    "latest": {
+     "period": "2001-06",
+     "value": 11963
+    },
+    "change": 2887
+   },
+   {
+    "name": "Conversions",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2001-04",
+      148
+     ],
+     [
+      "2001-05",
+      260
+     ],
+     [
+      "2001-06",
+      188
+     ]
+    ],
+    "start": {
+     "period": "2001-04",
+     "value": 148
+    },
+    "latest": {
+     "period": "2001-06",
+     "value": 188
+    },
+    "change": 40
+   },
+   {
+    "name": "Alterations and additions including conversions",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2001-04",
+      194
+     ],
+     [
+      "2001-05",
+      309
+     ],
+     [
+      "2001-06",
+      262
+     ]
+    ],
+    "start": {
+     "period": "2001-04",
+     "value": 194
+    },
+    "latest": {
+     "period": "2001-06",
+     "value": 262
+    },
+    "change": 68
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Sectors, Total, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:39:21.345Z"
+}

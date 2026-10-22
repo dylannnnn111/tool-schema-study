@@ -1,0 +1,66 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "m05",
+ "kind": "multi",
+ "q": "How far above the cash rate is the advertised standard variable home loan rate?",
+ "date": "2026-10-19",
+ "cost": 0.02027,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "In September 2026, the advertised standard variable rate for owner-occupier home loans was **about 4.4 percentage points above the cash rate**.\n\n- **Standard variable rate (banks, owner-occupier):** 8.77% p.a. (RBA table F5, September 2026)\n- **Cash rate target:** 4.36% (average for September 2026)\n- **Gap:** 8.77 − 4.36 = **4.41 percentage points**\n\n**The gap has stayed about the same through 2026.** In January it was 4.42 points (8.02% vs 3.60%). Since then the cash rate has risen about 0.76 points and the standard variable rate about 0.75 points, so banks have passed on the increases almost exactly.\n\nSome things to keep in mind:\n- The cash rate figure is a monthly average. The 4.36% for September is slightly above the 4.35% of the previous three months, which may mean the target changed late in the month. The gap based on the actual target at month-end could therefore be a bit different.\n- The standard variable rate is an advertised benchmark that few borrowers actually pay. Discounted and new-loan rates are much lower, so the real gap over the cash rate is usually about 2 to 2.5 points less. I can get the figures for rates actually paid (RBA table F6) if that would help.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-01-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"period\":\"2026-01-31\",\"value\":8.02},\"latest\":{\"period\":\"2026-09-30\",\"value\":8.77},\"change\":0.75}],\"notes\":[\"RBA indicator (advertised) rates from table F5, monthly. Rates actually paid on new loans are lower - see RBA table F6 via rba_series.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 719,
+   "cacheWrite": 944,
+   "cacheRead": 5727
+  },
+  "ms": 8512
+ }
+}

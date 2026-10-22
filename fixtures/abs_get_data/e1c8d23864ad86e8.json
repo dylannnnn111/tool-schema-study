@@ -1,0 +1,235 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "WPI",
+  "key": "3.OHRPEB..TOT..AUS.Q",
+  "start": "2023-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS WPI",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,WPI/3.OHRPEB..TOT..AUS.Q?startPeriod=2023-01",
+  "series": [
+   {
+    "name": "Public",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2023-Q1",
+      2.9
+     ],
+     [
+      "2023-Q2",
+      3.1
+     ],
+     [
+      "2023-Q3",
+      3.5
+     ],
+     [
+      "2023-Q4",
+      4.3
+     ],
+     [
+      "2024-Q1",
+      3.8
+     ],
+     [
+      "2024-Q2",
+      3.9
+     ],
+     [
+      "2024-Q3",
+      3.7
+     ],
+     [
+      "2024-Q4",
+      2.9
+     ],
+     [
+      "2025-Q1",
+      3.6
+     ],
+     [
+      "2025-Q2",
+      3.6
+     ],
+     [
+      "2025-Q3",
+      3.8
+     ],
+     [
+      "2025-Q4",
+      3.9
+     ],
+     [
+      "2026-Q1",
+      3.3
+     ],
+     [
+      "2026-Q2",
+      3.4
+     ]
+    ],
+    "start": {
+     "period": "2023-Q1",
+     "value": 2.9
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.4
+    },
+    "change": 0.5
+   },
+   {
+    "name": "Private and Public",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2023-Q1",
+      3.7
+     ],
+     [
+      "2023-Q2",
+      3.6
+     ],
+     [
+      "2023-Q3",
+      4.1
+     ],
+     [
+      "2023-Q4",
+      4.2
+     ],
+     [
+      "2024-Q1",
+      4
+     ],
+     [
+      "2024-Q2",
+      4.1
+     ],
+     [
+      "2024-Q3",
+      3.5
+     ],
+     [
+      "2024-Q4",
+      3.2
+     ],
+     [
+      "2025-Q1",
+      3.4
+     ],
+     [
+      "2025-Q2",
+      3.4
+     ],
+     [
+      "2025-Q3",
+      3.4
+     ],
+     [
+      "2025-Q4",
+      3.4
+     ],
+     [
+      "2026-Q1",
+      3.2
+     ],
+     [
+      "2026-Q2",
+      3.2
+     ]
+    ],
+    "start": {
+     "period": "2023-Q1",
+     "value": 3.7
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.2
+    },
+    "change": -0.5
+   },
+   {
+    "name": "Private",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2023-Q1",
+      3.8
+     ],
+     [
+      "2023-Q2",
+      3.8
+     ],
+     [
+      "2023-Q3",
+      4.2
+     ],
+     [
+      "2023-Q4",
+      4.2
+     ],
+     [
+      "2024-Q1",
+      4.2
+     ],
+     [
+      "2024-Q2",
+      4.1
+     ],
+     [
+      "2024-Q3",
+      3.5
+     ],
+     [
+      "2024-Q4",
+      3.3
+     ],
+     [
+      "2025-Q1",
+      3.3
+     ],
+     [
+      "2025-Q2",
+      3.3
+     ],
+     [
+      "2025-Q3",
+      3.3
+     ],
+     [
+      "2025-Q4",
+      3.4
+     ],
+     [
+      "2026-Q1",
+      3.2
+     ],
+     [
+      "2026-Q2",
+      3.2
+     ]
+    ],
+    "start": {
+     "period": "2023-Q1",
+     "value": 3.8
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.2
+    },
+    "change": -0.6
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from corresponding quarter of previous year, Ordinary time hourly rates of pay excluding bonuses, All Industries, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:48:29.791Z"
+}

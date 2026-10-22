@@ -1,0 +1,24 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "Automotive fuel"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "index",
+  "adjustment": "original",
+  "start": "2025-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/1.Automotive fuel..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/1.Automotive fuel..50.Q?startPeriod=2025-Q1",
+  "series": [],
+  "notes": [
+   "ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:16:54.720Z"
+}

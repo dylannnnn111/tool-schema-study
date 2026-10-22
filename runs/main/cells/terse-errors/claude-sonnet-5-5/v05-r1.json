@@ -1,0 +1,84 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "v05",
+ "kind": "vague",
+ "q": "Petrol's killing me. How much more am I paying than a year ago?",
+ "date": "2026-10-19",
+ "cost": 0.01069,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Petrol was **13.5% more expensive in August 2026 than in August 2025**. That is the latest ABS CPI figure for automotive fuel, averaged across the eight capital cities. The fuel price index rose from 99.5 to 113.0 over those 12 months.\n\n- **Rough cost:** every $100 you spent on petrol in August 2025 now costs about $113.50. If you spend $80 a week, that's roughly $11 more a week, or about $560 more over a year. Swap in your own weekly spend to get your figure.\n- **Recent swings:** the year-on-year rise was 24.2% in March 2026 and 18.6% in April. It then eased to 7.7% in May and turned negative in June (-7.3%) and July (-0.4%). August's jump to 13.5% reflects prices rising again. The index went from 91.5 in June to 113.0 in August, a 23% rise in two months.\n- **Caveat:** these are average prices across the capital cities, so what you pay locally may differ. The CPI doesn't show pump prices in cents per litre.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "measure": "annual_change",
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",-7.9],[\"2025-07\",-5.5],[\"2025-08\",-1.7],[\"2025-09\",2.8],[\"2025-10\",1.9],[\"2025-11\",3.5],[\"2025-12\",-0.8],[\"2026-01\",-2.7],[\"2026-02\",-7.2],[\"2026-03\",24.2],[\"2026-04\",18.6],[\"2026-05\",7.7],[\"2026-06\",-7.3],[\"2026-07\",-0.4],[\"2026-08\",13.5]],\"start\":{\"period\":\"2025-06\",\"value\":-7.9},\"latest\":{\"period\":\"2026-08\",\"value\":13.5},\"change\":21.4}],\"notes\":[\"All series: Percentage change from previous year, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "measure": "index",
+     "start": "2025-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.40081..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",98.75],[\"2025-07\",98.75],[\"2025-08\",99.49],[\"2025-09\",100],[\"2025-10\",99.1],[\"2025-11\",101.55],[\"2025-12\",101],[\"2026-01\",97.72],[\"2026-02\",94.35],[\"2026-03\",125.29],[\"2026-04\",116.53],[\"2026-05\",102.69],[\"2026-06\",91.53],[\"2026-07\",98.4],[\"2026-08\",112.95]],\"start\":{\"period\":\"2025-06\",\"value\":98.75},\"latest\":{\"period\":\"2026-08\",\"value\":112.95},\"change\":14.2}],\"notes\":[\"All series: Index numbers, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 685,
+   "cacheWrite": 1150,
+   "cacheRead": 9510
+  },
+  "ms": 7697
+ }
+}

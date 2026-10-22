@@ -1,0 +1,103 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m01",
+ "kind": "multi",
+ "q": "Are real wages going up? Compare wage growth from the ABS Wage Price Index with inflation.",
+ "date": "2026-10-19",
+ "cost": 0.0835,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Not at the moment. Real wages have been falling again since late 2025.** Wages grew about 3.4% faster than prices through most of 2024 and 2025, but inflation picked up in late 2025 and has stayed above wage growth since.\n\n**Latest figures**\n- **Wages:** The Wage Price Index (WPI) rose **3.2%** in the year to the June quarter 2026. This is all sectors, seasonally adjusted. Private-sector wages rose 3.1% and public-sector wages 3.4%.\n- **Prices:** Headline consumer prices (CPI) rose **3.8%** in the year to June 2026. By August 2026 the rate was **4.0%**.\n- **Underlying inflation:** The RBA's preferred measure, the trimmed mean, was **3.6%** in August 2026. That's also above wage growth, so the squeeze isn't just from volatile items.\n\nThat puts real wages down about **0.6%** in the year to June 2026. With wages at 3.2% and inflation at 4.0% in August, the gap is probably close to 0.8% now.\n\n**How the gap has moved (annual % change)**\n\n| Quarter | Wages | CPI | Real wage change |\n|---|---|---|---|\n| Q4 2022 | 3.3 | 7.8 | **−4.5** |\n| Q2 2023 | 3.7 | 6.0 | −2.3 |\n| Q4 2023 | 4.3 | 4.1 | **+0.2** (first rise) |\n| Q3 2024 | 3.6 | 2.8 | +0.8 |\n| Q2 2025 | 3.4 | 2.1 | **+1.3** (peak) |\n| Q3 2025 | 3.3 | 3.2 | +0.1 |\n| Q4 2025 | 3.4 | 3.8* | −0.4 |\n| Q1 2026 | 3.2 | 4.6* | **−1.4** |\n| Q2 2026 | 3.2 | 3.8* | −0.6 |\n\n*The ABS stopped publishing quarterly CPI after September 2025, so from then on I've used the monthly CPI for the last month of each quarter (December, March, June). The two measures aren't exactly the same, so treat these rows as close estimates. Also, the wage figures are seasonally adjusted and the CPI figures aren't.\n\n**What this shows**\n1. **2022–23 was a large real wage cut.** Inflation peaked at 7.8% while wages grew only 3.3%.\n2. **Late 2023 to mid-2025 was a partial recovery.** Inflation fell faster than wage growth, and the real gain peaked at +1.3% in the June quarter 2025.\n3. **Since late 2025 real wages have been falling again.** Wage growth eased to 3.2%, while inflation rose to between 3.8% and 4.6%.\n\n**Over the whole period:** I estimate wages rose about 15% from Q4 2021 to Q4 2025, while prices rose about 19%. That leaves real wages roughly **3.5% below their late-2021 level**, and the losses in 2026 have added to that gap. This figure is less precise than the quarterly ones because it joins the quarterly and monthly CPI.\n\nThe September quarter 2026 wage figures should come out around mid-November.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "wage price index"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "wage price index"
+    },
+    "seen": "{\"results\":[{\"id\":\"WPI\",\"version\":\"1.2.0\",\"name\":\"Wage Price Index\"},{\"id\":\"ITPI_EXP\",\"version\":\"1.0.0\",\"name\":\"Export Price Index\"},{\"id\":\"ITPI_IMP\",\"version\":\"1.0.0\",\"name\":\"Import Price Index\"},{\"id\":\"CPI\",\"version\":\"2.0.0\",\"name\":\"Consumer Price Index (CPI)\"},{\"id\":\"RPPI\",\"version\":\"1.0.0\",\"name\":\"Residential Property Price Index\"},{\"id\":\"CPI_WEIGHTS\",\"version\":\"1.0.0\",\"name\":\"Consumer Price Index (CPI) Weights\"},{\"id\":\"PPI\",\"version\":\"1.1.3\",\"name\":\"Producer Price Indexes by Industry\"},{\"id\":\"CPI_Q\",\"version\":\"1.0.0\",\"name\":\"Consumer Price Index (CPI) Quarterly\"},{\"id\":\"PPI_FD\",\"version\":\"1.1.0\",\"name\":\"Producer Price Indexes, Final Demand\"},{\"id\":\"CPI_M\",\"version\":\"1.2.0\",\"name\":\"Monthly Consumer Price Index (CPI) indicator\"}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "start": "2022-01",
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2022-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+999902..50.Q?startPeriod=2022-Q1\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2022-Q1\",3.8],[\"2022-Q2\",4.9],[\"2022-Q3\",6.1],[\"2022-Q4\",6.8],[\"2023-Q1\",6.5],[\"2023-Q2\",5.8],[\"2023-Q3\",5.1],[\"2023-Q4\",4.2],[\"2024-Q1\",4],[\"2024-Q2\",4],[\"2024-Q3\",3.6],[\"2024-Q4\",3.3],[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"s"
+   },
+   {
+    "turn": 1,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "WPI"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI"
+    },
+    "seen": "{\"id\":\"WPI\",\"name\":\"Wage Price Index\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[{\"code\":\"1\",\"label\":\"Quarterly Index\"},{\"code\":\"2\",\"label\":\"Percentage change from previous quarter\"},{\"code\":\"3\",\"label\":\"Percentage change from corresponding quarter of previous year\"},{\"code\":\"4\",\"label\":\"Financial Year Index\"},{\"code\":\"5\",\"label\":\"Financial Year Index - Percentage change from previous period\"}],\"totalCodes\":5},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"OHRPEB\",\"label\":\"Ordinary time hourly rates of pay excluding bonuses\"},{\"code\":\"OHRPIB\",\"label\":\"Ordinary time hourly rates of pay including bonuses\"},{\"code\":\"THRPEB\",\"label\":\"Total hourly rates of pay excluding bonuses\"},{\"code\":\"THRPIB\",\"label\":\"Total hourly rates of pay including bonuses\"}],\"totalCodes\":4},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[{\"code\":\"7\",\"label\":\"Private and Public\"},{\"code\":\"1\",\"label\":\"Private\"},{\"code\":\"2\",\"label\":\"Public\"},{\"code\":\"3\",\"label\":\"Commonwealth\"},{\"code\":\"6\",\"label\":\"State and Local Government\"},{\"code\":\"4\",\"label\":\"State Government\"},{\"code\":\"5\",\"label\":\"Local Government\"}],\"totalCodes\":7},{\"id\":\"INDUSTRY\",\"position\":4,\"codes\":[{\"code\":\"TOT\",\"label\":\"All Industries\"},{\"code\":\"A\",\"label\":\"Agriculture, Forestry and Fishing\"},{\"code\":\"B\",\"label\":\"Mining\"},{\"code\":\"C\",\"label\":\"Manufacturing\"},{\"code\":\"D\",\"label\":\"Electricity, Gas, Water and Waste Services\"},{\"code\":\"E\",\"label\":\"Construction\"},{\"code\":\"F\",\"label\":\"Wholesale Trade\"},{\"code\":\"G\",\"label\":\"Retail Trade\"},{\"code\":\"H\",\"labe"
+   },
+   {
+    "turn": 2,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7+1+2.TOT.20.AUS.Q",
+     "start": "2021-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "WPI",
+     "key": "3.THRPEB.7+1+2.TOT.20.AUS.Q",
+     "start": "2021-01"
+    },
+    "seen": "{\"source\":\"ABS WPI\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB.7+1+2.TOT.20.AUS.Q?startPeriod=2021-01\",\"series\":[{\"name\":\"Public\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2021-Q1\",1.5],[\"2021-Q2\",1.3],[\"2021-Q3\",1.7],[\"2021-Q4\",2.1],[\"2022-Q1\",2.2],[\"2022-Q2\",2.4],[\"2022-Q3\",2.4],[\"2022-Q4\",2.5],[\"2023-Q1\",3],[\"2023-Q2\",3.1],[\"2023-Q3\",3.5],[\"2023-Q4\",4.3],[\"2024-Q1\",3.8],[\"2024-Q2\",3.9],[\"2024-Q3\",3.7],[\"2024-Q4\",2.8],[\"2025-Q1\",3.6],[\"2025-Q2\",3.7],[\"2025-Q3\",3.9],[\"2025-Q4\",4],[\"2026-Q1\",3.4],[\"2026-Q2\",3.4]],\"start\":{\"period\":\"2021-Q1\",\"value\":1.5},\"latest\":{\"period\":\"2026-Q2\",\"value\":3.4},\"change\":1.9},{\"name\":\"Private\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2021-Q1\",1.5],[\"2021-Q2\",1.9],[\"2021-Q3\",2.3],[\"2021-Q4\",2.4],[\"2022-Q1\",2.4],[\"2022-Q2\",2.7],[\"2022-Q3\",3.4],[\"2022-Q4\",3.6],[\"2023-Q1\",3.8],[\"2023-Q2\",3.9],[\"2023-Q3\",4.3],[\"2023-Q4\",4.2],[\"2024-Q1\",4.2],[\"2024-Q2\",4.1],[\"2024-Q3\",3.5],[\"2024-Q4\",3.3],[\"2025-Q1\",3.3],[\"2025-Q2\",3.4],[\"2025-Q3\",3.3],[\"2025-Q4\",3.4],[\"2026-Q1\",3.2],[\"2026-Q2\",3.1]],\"start\":{\"period\":\"2021-Q1\",\"value\":1.5},\"latest\":{\"period\":\"2026-Q2\",\"value\":3.1},\"change\":1.6},{\"name\":\"Private and Public\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2021-Q1\",1.5],[\"2021-Q2\",1.8],[\"2021-Q3\",2.2],[\"2021-Q4\",2.4],[\"2022-Q1\",2.4],[\"2022-Q2\",2.6],[\"2022-Q3\",3.1],[\"2022-Q4\",3.3],[\"2023-Q1\",3.7],[\"2023-Q2\",3.7],[\"2023-Q3\",4],[\"2023-Q4\",4.3],[\"2024-Q1\",4],[\"2024-Q2\",4.1],[\"2024-Q3\",3.6],[\"2024-Q4\",3."
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 2436,
+   "cacheWrite": 5917,
+   "cacheRead": 25767
+  },
+  "ms": 29848
+ }
+}

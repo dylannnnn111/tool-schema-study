@@ -1,0 +1,106 @@
+{
+ "tool": "get_labour_force",
+ "args": {
+  "measures": [
+   "unemployment_rate"
+  ],
+  "states": [
+   "nsw",
+   "vic"
+  ],
+  "sex": "persons",
+  "adjustment": "seasonally_adjusted",
+  "start": "2026-04"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Labour Force, Australia (monthly)",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.1+2.M?startPeriod=2026-04",
+  "series": [
+   {
+    "name": "New South Wales",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-04",
+      4.4225
+     ],
+     [
+      "2026-05",
+      4.3257
+     ],
+     [
+      "2026-06",
+      3.9741
+     ],
+     [
+      "2026-07",
+      4.2682
+     ],
+     [
+      "2026-08",
+      4.3548
+     ],
+     [
+      "2026-09",
+      4.7076
+     ]
+    ],
+    "start": {
+     "period": "2026-04",
+     "value": 4.4225
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 4.7076
+    },
+    "change": 0.2851
+   },
+   {
+    "name": "Victoria",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-04",
+      4.8452
+     ],
+     [
+      "2026-05",
+      4.8997
+     ],
+     [
+      "2026-06",
+      5.1159
+     ],
+     [
+      "2026-07",
+      5.1095
+     ],
+     [
+      "2026-08",
+      5.1658
+     ],
+     [
+      "2026-09",
+      5.052
+     ]
+    ],
+    "start": {
+     "period": "2026-04",
+     "value": 4.8452
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 5.052
+    },
+    "change": 0.2068
+   }
+  ],
+  "notes": [
+   "All series: Unemployment rate, Persons, Total (age), Seasonally Adjusted"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:04:28.767Z"
+}

@@ -1,0 +1,149 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v05",
+ "kind": "vague",
+ "q": "Petrol's killing me. How much more am I paying than a year ago?",
+ "date": "2026-10-19",
+ "cost": 0.01833,
+ "score": {
+  "tools": true,
+  "args": false,
+  "answer": true,
+  "recovered": null,
+  "calls": 5,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Automotive fuel was **13.5% dearer in August 2026 than in August 2025**. That's the latest month the ABS has published. The CPI fuel index rose from 99.49 to 112.95.\n\nI don't know how much you buy, so here's a rough guide. Every $100 you spent on petrol in August 2025 now costs about $113.50 for the same amount. If you spend $250 a month on fuel, that's about $34 more a month, or roughly $400 over a year.\n\nThis is a national average for all automotive fuel, not just petrol, so your local prices may differ.\n\nThe past year has been volatile:\n- **Late 2025:** Fuel was up about 2–3.5% on a year earlier.\n- **February 2026:** It was down 7.2% on a year earlier.\n- **March 2026:** It jumped to 24.2% above a year earlier, with the index at 125.29, the peak of the period.\n- **April–May 2026:** It stayed high, at +18.6% and then +7.7%.\n- **June–July 2026:** It dipped to −7.3% and then −0.4%. The index fell to 91.53 in June.\n- **August 2026:** It rebounded to +13.5%, and the index rose from 98.40 in July to 112.95.\n\nPrices are rising again after the mid-year dip. The September figure isn't out yet.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "automotive fuel"
+     ],
+     "measure": "annual_change",
+     "start": "2025-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-08"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.automotive fuel..50.M?startPeriod=2025-08 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.automotive fuel..50.Q?startPeriod=2025-Q3\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "automotive fuel"
+     ],
+     "measure": "index",
+     "start": "2025-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2025-08"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.automotive fuel..50.M?startPeriod=2025-08 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/1.automotive fuel..50.Q?startPeriod=2025-Q3\",\"series\":[],\"notes\":[\"ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "CPI",
+     "code_search": "fuel"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "CPI",
+     "code_search": "fuel"
+    },
+    "seen": "{\"id\":\"CPI\",\"name\":\"Consumer Price Index (CPI)\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[],\"totalCodes\":7},{\"id\":\"INDEX\",\"position\":2,\"codes\":[{\"code\":\"115524\",\"label\":\"Gas and other household fuels\"},{\"code\":\"40081\",\"label\":\"Automotive fuel\"}],\"totalCodes\":166},{\"id\":\"TSEST\",\"position\":3,\"codes\":[],\"totalCodes\":5},{\"id\":\"REGION\",\"position\":4,\"codes\":[],\"totalCodes\":9},{\"id\":\"FREQ\",\"position\":5,\"codes\":[],\"totalCodes\":9}],\"keyTemplate\":\"<MEASURE>.<INDEX>.<TSEST>.<REGION>.<FREQ>\",\"howToBuildKey\":\"Join one code per dimension with '.', in this order. Use '+' for several codes (1+2) and leave a dimension empty for all codes (1..50.M).\"}"
+   },
+   {
+    "turn": 2,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "40081"
+     ],
+     "measure": "annual_change",
+     "start": "2025-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "40081"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-08"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081..50.M?startPeriod=2025-08\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-08\",-1.7],[\"2025-09\",2.8],[\"2025-10\",1.9],[\"2025-11\",3.5],[\"2025-12\",-0.8],[\"2026-01\",-2.7],[\"2026-02\",-7.2],[\"2026-03\",24.2],[\"2026-04\",18.6],[\"2026-05\",7.7],[\"2026-06\",-7.3],[\"2026-07\",-0.4],[\"2026-08\",13.5]],\"start\":{\"period\":\"2025-08\",\"value\":-1.7},\"latest\":{\"period\":\"2026-08\",\"value\":13.5},\"change\":15.2}],\"notes\":[\"All series: Percentage change from previous year, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   },
+   {
+    "turn": 2,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "40081"
+     ],
+     "measure": "index",
+     "start": "2025-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "40081"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2025-08"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.40081..50.M?startPeriod=2025-08\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2025-08\",99.49],[\"2025-09\",100],[\"2025-10\",99.1],[\"2025-11\",101.55],[\"2025-12\",101],[\"2026-01\",97.72],[\"2026-02\",94.35],[\"2026-03\",125.29],[\"2026-04\",116.53],[\"2026-05\",102.69],[\"2026-06\",91.53],[\"2026-07\",98.4],[\"2026-08\",112.95]],\"start\":{\"period\":\"2025-08\",\"value\":99.49},\"latest\":{\"period\":\"2026-08\",\"value\":112.95},\"change\":13.46}],\"notes\":[\"All series: Index numbers, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1134,
+   "cacheWrite": 2249,
+   "cacheRead": 13428
+  },
+  "ms": 17706
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "m15",
+ "kind": "multi",
+ "q": "Which of Sydney's commercial centres has the busiest Fridays relative to midweek right now, and which the quietest?",
+ "date": "2026-10-19",
+ "cost": 0.01126,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Busiest Fridays: Chatswood.** In September 2026 (the latest month available), its Friday evening tap-ons were 1.03 times the Tue–Thu average. Fridays there are slightly busier than midweek.\n\n**Quietest Fridays: North Sydney.** Its Friday figure was 0.741 of midweek in September 2026.\n\nThe measure is Opal tap-ons from 3pm to 7pm, as people leave work. Friday volume is divided by the Tue–Thu average. September 2026 figures for all six centres:\n\n| Centre | Friday / Tue–Thu |\n|---|---|\n| Chatswood | 1.030 |\n| Strathfield | 1.000 |\n| Parramatta | 0.812 |\n| Sydney CBD | 0.783 |\n| Macquarie Park | 0.770 |\n| North Sydney | 0.741 |\n\n- **Close at the bottom:** Macquarie Park (0.770) and the CBD (0.783) are only a little ahead of North Sydney. North Sydney has been at or near the bottom for most of 2026. Macquarie Park was lower in August (0.729).\n- **Not a one-month result:** Chatswood has been the highest or second-highest all year, alongside Strathfield. Both are in the 0.9–1.05 range.\n- **CBD caveat:** The source says it's unclear whether Sydney Metro taps in the CBD are included. The CBD's level against 2020 may therefore be understated. Comparisons between centres in the same month are not affected.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ],
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-01\",\"value\":0.744},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.039},{\"name\":\"North Sydney\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.718],[\"2026-02\",0.76],[\"2026-03\",0.716],[\"2026-04\",0.705],[\"2026-05\",0.752],[\"2026-06\",0.743],[\"2026-07\",0.712],[\"2026-08\",0.751],[\"2026-09\",0.741]],\"start\":{\"period\":\"2026-01\",\"value\":0.718},\"latest\":{\"period\":\"2026-09\",\"value\":0.741},\"change\":0.023},{\"name\":\"Chatswood\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.901],[\"2026-02\",0.999],[\"2026-03\",0."
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 649,
+   "cacheWrite": 1517,
+   "cacheRead": 9636
+  },
+  "ms": 5524
+ }
+}

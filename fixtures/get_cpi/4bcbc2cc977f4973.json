@@ -1,0 +1,102 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "automotive_fuel"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "index",
+  "adjustment": "original",
+  "start": "2025-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/1.40081..50.M?startPeriod=2025-06",
+  "series": [
+   {
+    "name": "Automotive fuel - Australia (monthly)",
+    "unit": "Index Numbers",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06",
+      98.75
+     ],
+     [
+      "2025-07",
+      98.75
+     ],
+     [
+      "2025-08",
+      99.49
+     ],
+     [
+      "2025-09",
+      100
+     ],
+     [
+      "2025-10",
+      99.1
+     ],
+     [
+      "2025-11",
+      101.55
+     ],
+     [
+      "2025-12",
+      101
+     ],
+     [
+      "2026-01",
+      97.72
+     ],
+     [
+      "2026-02",
+      94.35
+     ],
+     [
+      "2026-03",
+      125.29
+     ],
+     [
+      "2026-04",
+      116.53
+     ],
+     [
+      "2026-05",
+      102.69
+     ],
+     [
+      "2026-06",
+      91.53
+     ],
+     [
+      "2026-07",
+      98.4
+     ],
+     [
+      "2026-08",
+      112.95
+     ]
+    ],
+    "start": {
+     "period": "2025-06",
+     "value": 98.75
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 112.95
+    },
+    "change": 14.2
+   }
+  ],
+  "notes": [
+   "All series: Index numbers, Automotive fuel, Original, Australia",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:02:48.333Z"
+}

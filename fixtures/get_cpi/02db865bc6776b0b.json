@@ -1,0 +1,154 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "meals_out"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2024-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30007..50.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30007..50.Q?startPeriod=2024-Q1",
+  "series": [
+   {
+    "name": "Meals out and take away foods - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      3
+     ],
+     [
+      "2025-05",
+      2.8
+     ],
+     [
+      "2025-06",
+      3.4
+     ],
+     [
+      "2025-07",
+      2.9
+     ],
+     [
+      "2025-08",
+      3.4
+     ],
+     [
+      "2025-09",
+      3.6
+     ],
+     [
+      "2025-10",
+      3.6
+     ],
+     [
+      "2025-11",
+      3.5
+     ],
+     [
+      "2025-12",
+      3.5
+     ],
+     [
+      "2026-01",
+      3.9
+     ],
+     [
+      "2026-02",
+      3.7
+     ],
+     [
+      "2026-03",
+      3.9
+     ],
+     [
+      "2026-04",
+      3.7
+     ],
+     [
+      "2026-05",
+      4
+     ],
+     [
+      "2026-06",
+      4
+     ],
+     [
+      "2026-07",
+      4.5
+     ],
+     [
+      "2026-08",
+      4.1
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 3
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4.1
+    },
+    "change": 1.1
+   },
+   {
+    "name": "Meals out and take away foods - Australia (quarterly)",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-Q1",
+      5.3
+     ],
+     [
+      "2024-Q2",
+      4.2
+     ],
+     [
+      "2024-Q3",
+      2.9
+     ],
+     [
+      "2024-Q4",
+      2.6
+     ],
+     [
+      "2025-Q1",
+      2.7
+     ],
+     [
+      "2025-Q2",
+      2.7
+     ],
+     [
+      "2025-Q3",
+      3.3
+     ]
+    ],
+    "start": {
+     "period": "2024-Q1",
+     "value": 5.3
+    },
+    "latest": {
+     "period": "2025-Q3",
+     "value": 3.3
+    },
+    "change": -2
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Meals out and take away foods, Original, Australia",
+   "Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:27:58.357Z"
+}

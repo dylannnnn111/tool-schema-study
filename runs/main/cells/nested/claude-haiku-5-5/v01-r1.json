@@ -1,0 +1,86 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v01",
+ "kind": "vague",
+ "q": "Is inflation under control?",
+ "date": "2026-10-19",
+ "cost": 0.00149,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Not yet.** Inflation has picked back up over the past year and is above the RBA's 2–3% target band, though it isn't running away.\n\n- **Headline CPI:** 4.0% year-on-year in August 2026, up from 1.9% in June 2025. It peaked at 4.6% in March 2026 and has eased somewhat since.\n- **Trimmed mean (the RBA's preferred underlying measure):** 3.6% in August 2026, up from 2.8% in June 2025. This is the better guide to persistent inflation, and it has risen steadily for over a year.\n- **Electricity:** up 13.2% year-on-year in August 2026, after a sharp fall in late 2024. Electricity prices are a large part of the headline increase.\n- **Rents:** 3.6% in August 2026, down from 7.1% in June 2024. This is the one clearly cooling component.\n\nThe RBA has responded by lifting the cash rate from 3.60% (January 2026) to 4.35% by June 2026. It was 4.36% as a September 2026 monthly average, so policy is tighter. The latest CPI data run to August 2026, and the September quarter figures are not yet in.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "options": {
+      "measure": "annual_change"
+     },
+     "select": {
+      "items": [
+       "all_groups",
+       "trimmed_mean",
+       "rents",
+       "electricity"
+      ]
+     },
+     "period": {
+      "start": "2024-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean",
+      "rents",
+      "electricity"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902+30014+40055..50.M?startPeriod=2024-06\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06\",7.1],[\"2024-07\",6.9],[\"2024-08\",6.7],[\"2024-09\",6.6],[\"2024-10\",6.8],[\"2024-11\",6.6],[\"2024-12\",6.2],[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2024-06\",\"value\":7.1},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-3.5},{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"Electricity - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06\",7.4],[\"2024-07\",-5.1],[\"2024-08\",-17.9],[\"2024-09\",-24.1],[\"2024-10\",-35.6],[\"2024-11\",-21.5],[\"2024-12\",-17.9],[\"2025-01\",-11.4],[\"2025-02\",-13.2],[\"2025-03\""
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2024-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-06-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 957,
+   "cacheWrite": 7624,
+   "cacheRead": 5348
+  },
+  "ms": 5741
+ }
+}

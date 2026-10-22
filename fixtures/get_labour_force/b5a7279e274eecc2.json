@@ -1,0 +1,155 @@
+{
+ "tool": "get_labour_force",
+ "args": {
+  "measures": [
+   "unemployment_rate",
+   "participation_rate"
+  ],
+  "states": [
+   "vic",
+   "australia"
+  ],
+  "sex": "persons",
+  "adjustment": "seasonally_adjusted",
+  "start": "2026-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Labour Force, Australia (monthly)",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12.3.1599.20.2+AUS.M?startPeriod=2026-06",
+  "series": [
+   {
+    "name": "Participation rate - Australia",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      67.0036
+     ],
+     [
+      "2026-07",
+      66.852
+     ],
+     [
+      "2026-08",
+      66.996
+     ],
+     [
+      "2026-09",
+      66.7632
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 67.0036
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 66.7632
+    },
+    "change": -0.2404
+   },
+   {
+    "name": "Unemployment rate - Australia",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      4.4494
+     ],
+     [
+      "2026-07",
+      4.4892
+     ],
+     [
+      "2026-08",
+      4.6516
+     ],
+     [
+      "2026-09",
+      4.7183
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 4.4494
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 4.7183
+    },
+    "change": 0.2689
+   },
+   {
+    "name": "Unemployment rate - Victoria",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      5.1159
+     ],
+     [
+      "2026-07",
+      5.1095
+     ],
+     [
+      "2026-08",
+      5.1658
+     ],
+     [
+      "2026-09",
+      5.052
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 5.1159
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 5.052
+    },
+    "change": -0.0639
+   },
+   {
+    "name": "Participation rate - Victoria",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      67.617
+     ],
+     [
+      "2026-07",
+      67.5535
+     ],
+     [
+      "2026-08",
+      67.7238
+     ],
+     [
+      "2026-09",
+      67.4458
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 67.617
+    },
+    "latest": {
+     "period": "2026-09",
+     "value": 67.4458
+    },
+    "change": -0.1712
+   }
+  ],
+  "notes": [
+   "All series: Persons, Total (age), Seasonally Adjusted"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:50:33.530Z"
+}

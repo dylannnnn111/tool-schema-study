@@ -1,0 +1,101 @@
+{
+ "tool": "get_commute_pulse",
+ "args": {
+  "view": "suburban_morning",
+  "start": "2025-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "Commute Pulse (TfNSW Opal Tap Data)",
+  "notes": [
+   "Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.",
+   "Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.",
+   "Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.",
+   "Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse",
+   "Suburban = Opal 'Other' region (everywhere outside the named centres) - people leaving home in the morning."
+  ],
+  "series": [
+   {
+    "name": "Suburban 7-9am tap-ons, bus, pre-COVID",
+    "unit": "Friday / Tue-Thu",
+    "frequency": "Window",
+    "points": [
+     [
+      "pre_covid",
+      0.941
+     ]
+    ],
+    "start": {
+     "period": "pre_covid",
+     "value": 0.941
+    },
+    "latest": {
+     "period": "pre_covid",
+     "value": 0.941
+    },
+    "change": 0
+   },
+   {
+    "name": "Suburban 7-9am tap-ons, bus, last 12 months",
+    "unit": "Friday / Tue-Thu",
+    "frequency": "Window",
+    "points": [
+     [
+      "last_12m",
+      0.799
+     ]
+    ],
+    "start": {
+     "period": "last_12m",
+     "value": 0.799
+    },
+    "latest": {
+     "period": "last_12m",
+     "value": 0.799
+    },
+    "change": 0
+   },
+   {
+    "name": "Suburban 7-9am tap-ons, all modes, pre-COVID",
+    "unit": "Friday / Tue-Thu",
+    "frequency": "Window",
+    "points": [
+     [
+      "pre_covid",
+      0.933
+     ]
+    ],
+    "start": {
+     "period": "pre_covid",
+     "value": 0.933
+    },
+    "latest": {
+     "period": "pre_covid",
+     "value": 0.933
+    },
+    "change": 0
+   },
+   {
+    "name": "Suburban 7-9am tap-ons, all modes, last 12 months",
+    "unit": "Friday / Tue-Thu",
+    "frequency": "Window",
+    "points": [
+     [
+      "last_12m",
+      0.758
+     ]
+    ],
+    "start": {
+     "period": "last_12m",
+     "value": 0.758
+    },
+    "latest": {
+     "period": "last_12m",
+     "value": 0.758
+    },
+    "change": 0
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:29:19.632Z"
+}

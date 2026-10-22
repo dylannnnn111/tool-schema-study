@@ -1,0 +1,34 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F13",
+  "series": [
+   "FOOIRUSFFTRMN",
+   "FOOIRUSFFTRMX"
+  ],
+  "monthly": true,
+  "start": "2020-01",
+  "end": "2026-10"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F13 F13 INTERNATIONAL OFFICIAL INTEREST RATES",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f13-data.csv",
+  "series": [
+   {
+    "name": "United States Federal Funds Minimum Target Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": []
+   },
+   {
+    "name": "United States Federal Funds Maximum Target Rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": []
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:14:29.529Z"
+}

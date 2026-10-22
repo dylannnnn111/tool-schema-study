@@ -1,0 +1,171 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m13",
+ "kind": "multi",
+ "q": "Are inflation expectations in line with actual inflation?",
+ "date": "2026-10-19",
+ "cost": 0.00212,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 6,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Short answer: households' expectations are running well above actual inflation, while professional forecasters and bond markets are closer to the RBA's 2–3% target.**\n\n**Actual inflation (latest)**\n- Headline CPI: 4.0% year-on-year, August 2026 (monthly CPI). It peaked at 4.6% in March 2026.\n- Trimmed mean (the RBA's preferred underlying measure): 3.6% year-on-year, August 2026, up from 3.2% in April 2025.\n\n**Inflation expectations (September quarter 2026)**\n- Consumers, 1-year ahead: 4.9%. This was 5.5% in the June quarter, and it has been above 4.2% in every quarter since late 2024.\n- Market economists, 1-year ahead: 3.0%.\n- Market economists, 2-year ahead: 2.5%.\n- Break-even 10-year inflation (bond market): 2.4%.\n\n**How they compare**\n- **Consumers:** Expectations sit about 0.9 points above headline inflation and about 1.3 points above trimmed mean. Households are expecting prices to keep rising faster than the underlying trend, which is not in line with actual inflation.\n- **Economists:** The 1-year forecast of 3.0% is close to trimmed mean (3.6%) and below headline. Their 2-year forecast of 2.5% is in the target band, so they expect inflation to ease back.\n- **Markets:** The 10-year break-even of 2.4% is consistent with inflation returning to target over the long run. Markets show no sign that the inflation shock has become permanent.\n\n**Interpretation**\nConsumer surveys tend to be more volatile and closer to what people see in everyday prices (food, fuel, rents), so they usually run above measured inflation when prices are rising. The professional and market measures suggest expectations are broadly anchored, but the gap between consumers and forecasters is wide. If it persists, it could make wage and price setting harder to bring back to target.\n\nNote that the September quarter CPI is not yet published, so the expectations figures are the most recent quarterly survey results, and the inflation figures are for August.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "options": {
+      "measure": "annual_change"
+     },
+     "period": {
+      "start": "2024-01"
+     },
+     "select": {
+      "items": [
+       "all_groups",
+       "trimmed_mean"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+999902..50.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q1\",4],[\"2024-Q2\",4],[\"2024-Q3\",3.6],[\"2024-Q4\",3.3],[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"start\":{\"period\":\"2024-Q1\",\"value\":4},\"latest\":{\"period\":\"2025-Q3\",\"value\":3},\"change\":-1},{\"name\":\"All groups CPI - Australia (q"
+   },
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "g1"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g1",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"G1\",\"title\":\"G1 CONSUMER PRICE INFLATION\",\"columns\":[{\"id\":\"GCPIAG\",\"title\":\"Consumer price index\",\"unit\":\"Index, September 2025 month = 100\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIAGYP\",\"title\":\"Year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIEITCYP\",\"title\":\"Year-ended inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIXVIYP\",\"title\":\"Year-ended inflation – excluding volatile items, interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPITIYP\",\"title\":\"Year-ended tradables inflation – excluding tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPITXVIYP\",\"title\":\"Year-ended tradables inflation – excluding volatile items, tobacco and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPINTIYP\",\"title\":\"Year-ended non-tradables inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPINTXDLYP\",\"title\":\"Year-ended non-tradable inflation – excluding interest charges and indirect deposit & loan facilities and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIOCPMWMYP\",\"title\":\"Year-ended weighted median inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIOCPMTMYP\",\"title\":\"Year-ended trimmed mean inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCP"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "g3"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g3",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"G3\",\"title\":\"G3 INFLATION EXPECTATIONS\",\"columns\":[{\"id\":\"GCONEXP\",\"title\":\"Consumer inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GBUSEXP\",\"title\":\"Business inflation expectations – 3-months ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GUNIEXPY\",\"title\":\"Union officials' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GUNIEXPYY\",\"title\":\"Union officials' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GMAREXPY\",\"title\":\"Market economists' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GMAREXPYY\",\"title\":\"Market economists' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GBONYLD\",\"title\":\"Break-even 10-year inflation rate\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"}]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "g2"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g2",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"G2\",\"title\":\"G2 CONSUMER PRICE INFLATION – EXPENDITURE GROUPS\",\"columns\":[{\"id\":\"GCPIFYP\",\"title\":\"Food and non-alcoholic beverages year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIATYP\",\"title\":\"Alcohol and tobacco year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPICFYP\",\"title\":\"Clothing and footwear year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIHOYP\",\"title\":\"Housing year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIHCSYP\",\"title\":\"Furnishings, household equipment and services year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIHEYP\",\"title\":\"Health year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPITYP\",\"title\":\"Transport year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPICYP\",\"title\":\"Communication year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIRYP\",\"title\":\"Recreation and culture year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIEYP\",\"title\":\"Education year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIFISYP\",\"title\":\"Insurance and financial services year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"}]}"
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "g3",
+     "select": {
+      "series": [
+       "GCONEXP",
+       "GMAREXPY",
+       "GMAREXPYY",
+       "GBONYLD",
+       "GUNIEXPY"
+      ]
+     },
+     "period": {
+      "start": "2023-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g3",
+     "series": [
+      "GCONEXP",
+      "GMAREXPY",
+      "GMAREXPYY",
+      "GBONYLD",
+      "GUNIEXPY"
+     ],
+     "monthly": false,
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"RBA G3 G3 INFLATION EXPECTATIONS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/g3-data.csv\",\"series\":[{\"name\":\"Consumer inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-03-31\",5],[\"2023-06-30\",5.2],[\"2023-09-30\",4.6],[\"2023-12-31\",4.5],[\"2024-03-31\",4.3],[\"2024-06-30\",4.4],[\"2024-09-30\",4.4],[\"2024-12-31\",4.2],[\"2025-03-31\",3.6],[\"2025-06-30\",5],[\"2025-09-30\",4.7],[\"2025-12-31\",4.7],[\"2026-03-31\",5.2],[\"2026-06-30\",5.5],[\"2026-09-30\",4.9]],\"start\":{\"period\":\"2023-03-31\",\"value\":5},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.9},\"change\":-0.1},{\"name\":\"Market economists' inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-03-31\",4],[\"2023-06-30\",3.3],[\"2023-09-30\",3.6],[\"2023-12-31\",3.2],[\"2024-03-31\",3.1],[\"2024-06-30\",2.9],[\"2024-09-30\",2.7],[\"2024-12-31\",3.1],[\"2025-03-31\",3.1],[\"2025-06-30\",2.8],[\"2025-09-30\",2.8],[\"2025-12-31\",2.8],[\"2026-03-31\",3],[\"2026-06-30\",3],[\"2026-09-30\",3]],\"start\":{\"period\":\"2023-03-31\",\"value\":4},\"latest\":{\"period\":\"2026-09-30\",\"value\":3},\"change\":-1},{\"name\":\"Market economists' inflation expectations – 2-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-03-31\",2.8],[\"2023-06-30\",2.7],[\"2023-09-30\",2.7],[\"2023-12-31\",2.8],[\"2024-03-31\",2.7],[\"2024-06-30\",2.6],[\"2024-09-30\",2.8],[\"2024-12-31\",2.5],[\"2025-03-31\",2.5],[\"2025-06-30\",2.6],[\"2025-09-30\",2.6],[\"2025-12-31\",2.5],[\"2026-03-31\",2.6],[\"2026-06-30\",2.6],["
+   },
+   {
+    "turn": 2,
+    "name": "rba_series",
+    "input": {
+     "table": "g1",
+     "select": {
+      "series": [
+       "GCPIAGYP",
+       "GCPIOCPMTMYP"
+      ]
+     },
+     "period": {
+      "start": "2023-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g1",
+     "series": [
+      "GCPIAGYP",
+      "GCPIOCPMTMYP"
+     ],
+     "monthly": false,
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"RBA G1 G1 CONSUMER PRICE INFLATION\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/g1-data.csv\",\"series\":[{\"name\":\"Year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-03-31\",7],[\"2023-06-30\",6],[\"2023-09-30\",5.3],[\"2023-12-31\",4.1],[\"2024-03-31\",3.6],[\"2024-06-30\",3.8],[\"2024-09-30\",2.9],[\"2024-12-31\",2.4],[\"2025-03-31\",2.4],[\"2025-06-30\",2.1],[\"2025-09-30\",3.2],[\"2025-12-31\",3.6],[\"2026-03-31\",4.1],[\"2026-06-30\",3.9]],\"start\":{\"period\":\"2023-03-31\",\"value\":7},\"latest\":{\"period\":\"2026-06-30\",\"value\":3.9},\"change\":-3.1},{\"name\":\"Year-ended trimmed mean inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2023-03-31\",6.5],[\"2023-06-30\",5.8],[\"2023-09-30\",5.1],[\"2023-12-31\",4.2],[\"2024-03-31\",4],[\"2024-06-30\",4],[\"2024-09-30\",3.6],[\"2024-12-31\",3.2],[\"2025-03-31\",2.9],[\"2025-06-30\",2.7],[\"2025-09-30\",2.9],[\"2025-12-31\",3.3],[\"2026-03-31\",3.5],[\"2026-06-30\",3.6]],\"start\":{\"period\":\"2023-03-31\",\"value\":6.5},\"latest\":{\"period\":\"2026-06-30\",\"value\":3.6},\"change\":-2.9}],\"notes\":[]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 2062,
+   "cacheWrite": 6411,
+   "cacheRead": 28218
+  },
+  "ms": 11531
+ }
+}

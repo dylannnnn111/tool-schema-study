@@ -1,0 +1,11 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1....AUS.M",
+  "last_n": 1
+ },
+ "ok": false,
+ "error": "422 from data.api.abs.gov.au",
+ "fetchedAt": "2026-10-18T21:33:39.435Z"
+}

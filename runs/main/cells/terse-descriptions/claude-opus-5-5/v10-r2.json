@@ -1,0 +1,74 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v10",
+ "kind": "vague",
+ "q": "How's the job market looking for women in Victoria?",
+ "date": "2026-10-19",
+ "cost": 0.04355,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Things have got noticeably worse for women in Victoria over the past year. Their unemployment rate is now one of the weaker points in the national labour market. The latest data is for **September 2026** (ABS Labour Force, seasonally adjusted, females).\n\n**Main figures, Victorian women, September 2026**\n\n| Measure | Sep 2026 | Aug 2025 | Change | Australia (women), Sep 2026 |\n|---|---|---|---|---|\n| Unemployment rate | **5.1%** | 4.0% | +1.1 pts | 4.6% |\n| Participation rate | 63.6% | 63.8% | −0.2 pts | 63.1% |\n| Share of women employed | 60.4% | 61.3% | −0.9 pts | 60.2% |\n| Employed | 1,843,000 | 1,833,500 | +9,600 (+0.5%) | 7.10m (+1.1%) |\n| Full-time | 1,008,300 | 1,015,900 | −7,500 | 4.11m (+108,000) |\n| Part-time* | ~834,700 | ~817,600 | ~+17,100 | 3.00m (−30,000) |\n\n*I worked out Victoria's part-time numbers as total employed minus full-time.\n\n**What it shows**\n\n- **Unemployment has risen sharply.** It was around 4.0–4.1% through late 2025, then climbed steadily from February 2026. It jumped to 5.1% in June and peaked at **5.2% in July 2026**. It has eased only slightly since then (5.2% in August, 5.1% in September). Victorian women are now about **0.5 points worse off than women nationally**. A year ago the two rates were roughly the same.\n- **Job growth has stalled.** Employment fell to a low of 1.80 million in April 2026, when the share of women in work dropped to 59.5%. It has recovered since, but the net gain over the year is only about 9,600 jobs. That's half the national growth rate in percentage terms.\n- **The jobs mix has shifted towards part-time.** Victoria lost about 7,500 full-time jobs for women while part-time work grew. Nationally it went the other way: full-time jobs for women rose strongly and part-time fell.\n- **Women haven't left the workforce.** Participation is still fairly high at 63.6%, above the national rate for women. So the higher unemployment mostly reflects women looking for work and not finding it, not women dropping out.\n\n**Bottom line:** The market for Victorian women is softer than it was a year ago and weaker than elsewhere in the country. Unemployment is above 5%, full-time jobs are shrinking and growth is barely positive. One small positive is that things have stabilised a little since mid-2026: employment has recovered from its April low, and unemployment has eased slightly from its July peak.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "vic",
+      "australia"
+     ],
+     "sex": "females",
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed",
+      "employed_full_time",
+      "employed_part_time"
+     ],
+     "start": "2025-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed",
+      "employed_full_time",
+      "employed_part_time"
+     ],
+     "states": [
+      "vic",
+      "australia"
+     ],
+     "sex": "females",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-08"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M3+M1+M2.2.1599.20.2+AUS.M?startPeriod=2025-08\",\"series\":[{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-08\",4.1067],[\"2025-09\",4.1831],[\"2025-10\",4.0563],[\"2025-11\",4.046],[\"2025-12\",3.8515],[\"2026-01\",3.92],[\"2026-02\",4.0217],[\"2026-03\",3.99],[\"2026-04\",4.4064],[\"2026-05\",4.2024],[\"2026-06\",4.4087],[\"2026-07\",4.4349],[\"2026-08\",4.4639],[\"2026-09\",4.6116]],\"start\":{\"period\":\"2025-08\",\"value\":4.1067},\"latest\":{\"period\":\"2026-09\",\"value\":4.6116},\"change\":0.5049},{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-08\",63.2053],[\"2025-09\",63.1539],[\"2025-10\",63.0472],[\"2025-11\",63.0056],[\"2025-12\",62.8919],[\"2026-01\",62.933],[\"2026-02\",63.0369],[\"2026-03\",62.9512],[\"2026-04\",62.743],[\"2026-05\",62.8911],[\"2026-06\",63.2831],[\"2026-07\",63.1621],[\"2026-08\",63.2081],[\"2026-09\",63.0785]],\"start\":{\"period\":\"2025-08\",\"value\":63.2053},\"latest\":{\"period\":\"2026-09\",\"value\":63.0785},\"change\":-0.1268},{\"name\":\"Participation rate - Victoria\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-08\",63.838],[\"2025-09\",63.9474],[\"2025-10\",63.6675],[\"2025-11\",63.9657],[\"2025-12\",63.6937],[\"2026-01\",63.33],[\"2026-02\",63.5135],[\"2026-03\",62.971],[\"2026-04\",62.4134],[\"2026-05\",62.9593],[\"2026-06\",63.3195],[\"2026-07\",63.4711],[\"2026-08\",63.777],[\"2026-09\",63.6163]],\"start\":{\"period\":\"202"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1355,
+   "cacheWrite": 3053,
+   "cacheRead": 5806
+  },
+  "ms": 16143
+ }
+}

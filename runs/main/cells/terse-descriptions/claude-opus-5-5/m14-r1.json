@@ -1,0 +1,59 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "m14",
+ "kind": "multi",
+ "q": "How has the Aussie dollar moved against the US dollar and the euro since the start of 2026?",
+ "date": "2026-10-19",
+ "cost": 0.02532,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The Aussie dollar is up against both currencies since the start of 2026: about 3.8% against the US dollar and about 8.5% against the euro. It has gained more than twice as much against the euro.\n\nThe starting point is the last reading of 2025 (31 December), and the latest figure is the most recent October 2026 reading. October isn't over yet, so that number is provisional.\n\n| | End Dec 2025 | Latest (Oct 2026) | Change |\n|---|---|---|---|\n| **AUD/USD** | US$0.6693 | US$0.6947 | +US 2.5c (+3.8%) |\n| **AUD/EUR** | €0.5704 | €0.6187 | +€0.048 (+8.5%) |\n\n**Against the US dollar: up, but swinging back and forth**\n- It passed US$0.70 in January (0.7004) and reached 0.7126 in February.\n- It fell back to 0.6845 in March, its lowest month-end this year, though still above where it started.\n- It rose again to 0.7164 in May, dropped to 0.6869 in June, then hit its highest month-end of the year in August at US$0.7166.\n- Since then it has eased to 0.6977 (September) and 0.6947 now. That's about 3% below the August high, so recent weeks have taken back some of this year's gains.\n\n**Against the euro: a steadier climb**\n- It rose from €0.5704 to €0.5874 in January and €0.6033 in February, and has stayed above €0.59 at every month-end since.\n- The dips were small: €0.5968 in March and €0.6034 in June.\n- The latest reading of €0.6187 is the highest month-end this year, just above August's €0.6182. Unlike against the US dollar, it is still rising.\n\nBecause the Aussie has risen more against the euro than against the US dollar, the euro has also lost ground to the US dollar this year.\n\nAll figures are the RBA's 4pm AEST rates, taken from the last trading day of each month (table F11.1). Day-to-day highs and lows may have been more extreme than these month-end figures show.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "USD",
+      "EUR"
+     ],
+     "start": "2025-12-01",
+     "end": "2026-10-19",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "USD",
+      "EUR"
+     ],
+     "monthly": true,
+     "start": "2025-12-01",
+     "end": "2026-10-19"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/USD (units of foreign currency per A$1)\",\"unit\":\"USD\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-12\",0.6693],[\"2026-01\",0.7004],[\"2026-02\",0.7126],[\"2026-03\",0.6845],[\"2026-04\",0.7113],[\"2026-05\",0.7164],[\"2026-06\",0.6869],[\"2026-07\",0.703],[\"2026-08\",0.7166],[\"2026-09\",0.6977],[\"2026-10\",0.6947]],\"start\":{\"period\":\"2025-12\",\"value\":0.6693},\"latest\":{\"period\":\"2026-10\",\"value\":0.6947},\"change\":0.0254},{\"name\":\"AUD/EUR (units of foreign currency per A$1)\",\"unit\":\"EUR\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-12\",0.5704],[\"2026-01\",0.5874],[\"2026-02\",0.6033],[\"2026-03\",0.5968],[\"2026-04\",0.61],[\"2026-05\",0.6154],[\"2026-06\",0.6034],[\"2026-07\",0.611],[\"2026-08\",0.6182],[\"2026-09\",0.615],[\"2026-10\",0.6187]],\"start\":{\"period\":\"2025-12\",\"value\":0.5704},\"latest\":{\"period\":\"2026-10\",\"value\":0.6187},\"change\":0.0483}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1006,
+   "cacheWrite": 805,
+   "cacheRead": 5734
+  },
+  "ms": 11523
+ }
+}

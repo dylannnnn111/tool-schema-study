@@ -1,0 +1,99 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "o04",
+ "kind": "out-of-scope",
+ "q": "How many people tapped on at Central station last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.03335,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a figure for Central station last Friday (16 October 2026). The Opal data I can access doesn't go down to single stations, and it doesn't have October yet.\n\n**What the data covers:**\n- It groups tap-ons into six commercial centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta. Central is counted somewhere in the \"Sydney CBD\" total.\n- It only counts tap-ons between 3pm and 7pm, so it's evening commute traffic rather than the whole day.\n- It's published as monthly averages, not daily counts. The latest month is **September 2026**.\n\n**The closest figures (Sydney CBD, all stations together, 3–7pm, September 2026):**\n- **Average Tuesday–Thursday:** about **255,900 tap-ons a day**. This is down from about 279,400 in February.\n- **Average Friday:** about **78% of the Tuesday–Thursday level**, which works out to roughly **200,000 tap-ons**. In August it was about 80%.\n\n**Caveats:**\n- These are totals for the whole CBD. Central would be only part of them.\n- The source isn't sure whether Sydney Metro taps are included in the CBD figures.\n- Public holidays and outages are left out.\n\nFor a daily count at Central itself, Transport for NSW's Open Data portal publishes Opal tap-on and tap-off data by station. Daily station-level releases usually come out with a delay, so last Friday may not be there yet.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-10-01",
+     "end": "2026-10-19",
+     "view": "friday_gap"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-10-01",
+     "end": "2026-10-19"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Known centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield, Parramatta.\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[]}]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-01-01",
+     "view": "evening_volume"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "evening_volume",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-01-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"average Tue-Thu evening tap-ons per day\",\"frequency\":\"Monthly\",\"points\":[[\"2026-02\",279433.3333],[\"2026-03\",273320],[\"2026-04\",261475],[\"2026-05\",257083.3333],[\"2026-06\",246975],[\"2026-07\",252401.6667],[\"2026-08\",262233.3333],[\"2026-09\",255926.6667]],\"start\":{\"period\":\"2026-02\",\"value\":279433.3333},\"latest\":{\"period\":\"2026-09\",\"value\":255926.6667},\"change\":-23506.6666}]}"
+   },
+   {
+    "turn": 2,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-07-01",
+     "view": "friday_gap"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD"
+     ],
+     "start": "2026-07-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-08\",\"value\":0.799},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":-0.016}]}"
+   }
+  ],
+  "turns": 4,
+  "status": "done",
+  "usage": {
+   "input": 10,
+   "output": 1062,
+   "cacheWrite": 1878,
+   "cacheRead": 13395
+  },
+  "ms": 12339
+ }
+}

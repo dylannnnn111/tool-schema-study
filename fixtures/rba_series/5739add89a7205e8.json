@@ -1,0 +1,12 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "building approvals",
+  "search": "building approvals",
+  "monthly": true,
+  "start": "2024-01"
+ },
+ "ok": false,
+ "error": "\"building approvals\" doesn't look like an RBA table id (e.g. f1.1, f5, f6, f11.1, g1).",
+ "fetchedAt": "2026-10-18T21:19:21.744Z"
+}

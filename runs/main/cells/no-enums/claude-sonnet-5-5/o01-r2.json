@@ -1,0 +1,60 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o01",
+ "kind": "out-of-scope",
+ "q": "What's the Friday office gap in Melbourne's CBD?",
+ "date": "2026-10-19",
+ "cost": 0.00617,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a Friday office gap for Melbourne's CBD. The only source I have is Transport for NSW Opal tap data, which covers Sydney only. It has no Melbourne figures, and the Melbourne CBD was rejected as an option. The centres it does cover are Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta.\n\nI can pull the same measure for any of those centres. It's Friday evening tap-ons as a share of Tuesday to Thursday, so 1.0 means no Friday gap. For Melbourne, Public Transport Victoria's myki data or Victorian government CBD foot-traffic data would be the place to look. I don't have access to either.\n\nDo you want the latest Sydney CBD figure as a comparison?",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "centres": [
+      "Melbourne CBD"
+     ]
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "centres",
+      "problem": "\"Melbourne CBD\" isn't a valid value",
+      "allowed": [
+       "Sydney CBD",
+       "North Sydney",
+       "Chatswood",
+       "Macquarie Park",
+       "Strathfield",
+       "Parramatta"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_commute_pulse:\n- centres: \"Melbourne CBD\" isn't a valid value. Use one of: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield, Parramatta"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 457,
+   "cacheWrite": 294,
+   "cacheRead": 8504
+  },
+  "ms": 4918
+ }
+}

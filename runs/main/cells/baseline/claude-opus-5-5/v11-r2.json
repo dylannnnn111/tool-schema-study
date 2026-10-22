@@ -1,0 +1,62 @@
+{
+ "variant": "baseline",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v11",
+ "kind": "vague",
+ "q": "When does the CBD empty out on a Friday compared with midweek?",
+ "date": "2026-10-19",
+ "cost": 0.06011,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "Friday afternoons in the Sydney CBD don't clear out early so much as peak much lower. Fewer people come in on Fridays, so the 5pm rush is about a third smaller than midweek. After 9pm, Friday tap-ons are higher than midweek.\n\nThese are average Opal tap-ons per hour in the CBD over the last 12 months, compared with the Tuesday–Thursday average:\n\n| Hour starting | Tue–Thu avg | Friday | Friday as % of midweek |\n|---|---|---|---|\n| 8am | 22,995 | 18,004 | 78% |\n| 12pm–2pm | ~22,200–31,600 | ~23,000–32,100 | 102–103% |\n| 3pm | 43,026 | 41,067 | 95% |\n| 4pm | 65,505 | 51,933 | 79% |\n| **5pm** | **95,306** | **64,573** | **68%** |\n| 6pm | 51,566 | 40,833 | 79% |\n| 7pm | 27,622 | 25,185 | 91% |\n| 9pm | 19,043 | 21,447 | 113% |\n| 10pm | 12,358 | 19,586 | 158% |\n| 11pm | 5,550 | 11,342 | 204% |\n\n**What this shows:**\n- **Both days peak at 5pm.** On Fridays the peak is about 31,000 tap-ons per hour smaller, so the evening rush is much flatter.\n- **People leave a little earlier on Fridays, but only a little.** About 47% of Friday's 3–7pm tap-ons happen before 5pm, compared with 42.5% midweek. In absolute numbers there's no surge of early leavers: Friday 3pm is still slightly below midweek.\n- **The real driver is that fewer people come in.** Friday morning tap-ons at 8am are 78% of midweek. The 3–7pm Friday gap is about 0.78, which matches the monthly measure: 0.783 in September 2026, and between 0.74 and 0.84 every month since January 2025.\n- **Friday nights are busier.** From 9pm onward Friday overtakes midweek, and by 11pm it has twice the tap-ons.\n\n**Compared with before COVID (January to early March 2020):** Friday 5pm used to be 85% of midweek, and 4pm was 97%. So Fridays were always a bit lighter, but the gap at the evening peak has roughly doubled.\n\nTfNSW Opal data via Commute Pulse; public holidays and outages are excluded. It's unclear whether Metro taps are counted, which could make current CBD totals look lower. That doesn't affect the Friday-versus-midweek ratios, because both days are measured the same way.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "cbd_hourly"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "cbd_hourly"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"Sydney CBD Tue - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1369],[\"01:00\",364],[\"02:00\",328],[\"03:00\",250],[\"04:00\",836],[\"05:00\",2914],[\"06:00\",7011],[\"07:00\",14222],[\"08:00\",23756],[\"09:00\",16511],[\"10:00\",14511],[\"11:00\",16489],[\"12:00\",19656],[\"13:00\",22733],[\"14:00\",28400],[\"15:00\",41744],[\"16:00\",68367],[\"17:00\",115233],[\"18:00\",65356],[\"19:00\",30111],[\"20:00\",19944],[\"21:00\",15956],[\"22:00\",9944],[\"23:00\",4767]],\"start\":{\"period\":\"00:00\",\"value\":1369},\"latest\":{\"period\":\"23:00\",\"value\":4767},\"change\":3398},{\"name\":\"Sydney CBD Wed - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1692],[\"01:00\",544],[\"02:00\",406],[\"03:00\",339],[\"04:00\",869],[\"05:00\",3014],[\"06:00\",7244],[\"07:00\",13989],[\"08:00\",23500],[\"09:00\",16556],[\"10:00\",14856],[\"11:00\",17289],[\"12:00\",20511],[\"13:00\",2318"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",0.766],[\"2025-02\",0.799],[\"2025-03\",0.763],[\"2025-04\",0.836],[\"2025-05\",0.773],[\"2025-06\",0.777],[\"2025-07\",0.793],[\"2025-08\",0.796],[\"2025-09\",0.79],[\"2025-10\",0.8],[\"2025-11\",0.759],[\"2025-12\",0.744],[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2025-01\",\"value\":0.766},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.017}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1923,
+   "cacheWrite": 3942,
+   "cacheRead": 9602
+  },
+  "ms": 19213
+ }
+}

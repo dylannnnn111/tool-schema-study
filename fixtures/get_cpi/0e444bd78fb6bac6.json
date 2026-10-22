@@ -1,0 +1,179 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "electricity",
+   "all_groups"
+  ],
+  "cities": [
+   "perth"
+  ],
+  "measure": "monthly_change",
+  "adjustment": "original",
+  "start": "2025-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/2.40055+10001..5.M?startPeriod=2025-06",
+  "series": [
+   {
+    "name": "Electricity - Perth (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06",
+      0
+     ],
+     [
+      "2025-07",
+      2.5
+     ],
+     [
+      "2025-08",
+      0
+     ],
+     [
+      "2025-09",
+      0
+     ],
+     [
+      "2025-10",
+      -20.9
+     ],
+     [
+      "2025-11",
+      -12.5
+     ],
+     [
+      "2025-12",
+      0
+     ],
+     [
+      "2026-01",
+      30.1
+     ],
+     [
+      "2026-02",
+      11
+     ],
+     [
+      "2026-03",
+      0
+     ],
+     [
+      "2026-04",
+      0
+     ],
+     [
+      "2026-05",
+      0
+     ],
+     [
+      "2026-06",
+      0
+     ],
+     [
+      "2026-07",
+      2.4
+     ],
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2025-06",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "All groups CPI - Perth (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06",
+      0
+     ],
+     [
+      "2025-07",
+      1
+     ],
+     [
+      "2025-08",
+      0.1
+     ],
+     [
+      "2025-09",
+      0.4
+     ],
+     [
+      "2025-10",
+      -0.2
+     ],
+     [
+      "2025-11",
+      -0.3
+     ],
+     [
+      "2025-12",
+      0.7
+     ],
+     [
+      "2026-01",
+      0.3
+     ],
+     [
+      "2026-02",
+      0.6
+     ],
+     [
+      "2026-03",
+      1.2
+     ],
+     [
+      "2026-04",
+      0.4
+     ],
+     [
+      "2026-05",
+      -0.5
+     ],
+     [
+      "2026-06",
+      -0.2
+     ],
+     [
+      "2026-07",
+      1.1
+     ],
+     [
+      "2026-08",
+      0.6
+     ]
+    ],
+    "start": {
+     "period": "2025-06",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0.6
+    },
+    "change": 0.6
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous period, Original, Perth",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:09:57.156Z"
+}

@@ -1,0 +1,102 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v05",
+ "kind": "vague",
+ "q": "Petrol's killing me. How much more am I paying than a year ago?",
+ "date": "2026-10-19",
+ "cost": 0.00073,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Petrol is about **13.5% dearer** than a year ago. In August 2026 the automotive fuel price index was 112.95, against 99.49 in August 2025.\n\nThe index has been volatile this year:\n\n- **March 2026:** a sharp spike to 125.29, up 24.2% on March 2025.\n- **June 2026:** a low of 91.53, down 7.3% on June 2025.\n- **August 2026:** back up to 112.95, the latest figure.\n\nThis is the ABS CPI automotive fuel index, which covers all fuel types and averages across the eight capital cities. It isn't a pump price per litre, so your own bill will vary with your fuel type, where you buy, and how much you drive.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "options": {
+      "measure": "index"
+     },
+     "period": {
+      "start": "2025-06"
+     },
+     "select": {
+      "items": [
+       "automotive_fuel"
+      ],
+      "cities": [
+       "australia"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "index",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/1.40081..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Index Numbers\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",98.75],[\"2025-07\",98.75],[\"2025-08\",99.49],[\"2025-09\",100],[\"2025-10\",99.1],[\"2025-11\",101.55],[\"2025-12\",101],[\"2026-01\",97.72],[\"2026-02\",94.35],[\"2026-03\",125.29],[\"2026-04\",116.53],[\"2026-05\",102.69],[\"2026-06\",91.53],[\"2026-07\",98.4],[\"2026-08\",112.95]],\"start\":{\"period\":\"2025-06\",\"value\":98.75},\"latest\":{\"period\":\"2026-08\",\"value\":112.95},\"change\":14.2}],\"notes\":[\"All series: Index numbers, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "options": {
+      "measure": "annual_change"
+     },
+     "period": {
+      "start": "2025-06"
+     },
+     "select": {
+      "items": [
+       "automotive_fuel"
+      ],
+      "cities": [
+       "australia"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "automotive_fuel"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081..50.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Automotive fuel - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",-7.9],[\"2025-07\",-5.5],[\"2025-08\",-1.7],[\"2025-09\",2.8],[\"2025-10\",1.9],[\"2025-11\",3.5],[\"2025-12\",-0.8],[\"2026-01\",-2.7],[\"2026-02\",-7.2],[\"2026-03\",24.2],[\"2026-04\",18.6],[\"2026-05\",7.7],[\"2026-06\",-7.3],[\"2026-07\",-0.4],[\"2026-08\",13.5]],\"start\":{\"period\":\"2025-06\",\"value\":-7.9},\"latest\":{\"period\":\"2026-08\",\"value\":13.5},\"change\":21.4}],\"notes\":[\"All series: Percentage change from previous year, Automotive fuel, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 894,
+   "cacheWrite": 1408,
+   "cacheRead": 10630
+  },
+  "ms": 5041
+ }
+}

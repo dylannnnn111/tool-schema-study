@@ -1,0 +1,79 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1..TOT.100..AUS.M",
+  "last_n": 1
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1..TOT.100..AUS.M?lastNObservations=1",
+  "series": [
+   {
+    "name": "Total Sectors",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      16967
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "change": 0
+   },
+   {
+    "name": "Private Sector",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      16604
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 16604
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16604
+    },
+    "change": 0
+   },
+   {
+    "name": "Public Sector",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-08",
+      363
+     ]
+    ],
+    "start": {
+     "period": "2026-08",
+     "value": 363
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 363
+    },
+    "change": 0
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Work, Total Residential, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:12:22.348Z"
+}

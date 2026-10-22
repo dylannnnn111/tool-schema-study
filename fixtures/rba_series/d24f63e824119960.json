@@ -1,0 +1,77 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f1.1",
+  "series": [
+   "FIRMMCRI",
+   "FIRMMOIS1",
+   "FIRMMOIS3",
+   "FIRMMOIS6"
+  ],
+  "monthly": false,
+  "start": "2026-05"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F1.1 F1.1 INTEREST RATES AND YIELDS – MONEY MARKET",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv",
+  "series": [
+   {
+    "name": "Interbank Overnight Cash Rate",
+    "unit": "Per cent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-05-31",
+      4.31
+     ],
+     [
+      "2026-06-30",
+      4.35
+     ],
+     [
+      "2026-07-31",
+      4.35
+     ],
+     [
+      "2026-08-31",
+      4.35
+     ],
+     [
+      "2026-09-30",
+      4.36
+     ]
+    ],
+    "start": {
+     "period": "2026-05-31",
+     "value": 4.31
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 4.36
+    },
+    "change": 0.05
+   },
+   {
+    "name": "1-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly",
+    "points": []
+   },
+   {
+    "name": "3-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly",
+    "points": []
+   },
+   {
+    "name": "6-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly",
+    "points": []
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:10:18.183Z"
+}

@@ -1,0 +1,33 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "o05",
+ "kind": "out-of-scope",
+ "q": "What's one Bitcoin worth in Australian dollars?",
+ "date": "2026-10-19",
+ "cost": 0.0042,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a Bitcoin price in Australian dollars. My tools only cover Australian economic data, such as CPI, jobs, interest rates and RBA exchange rates for official currencies like USD, EUR and JPY. They don't include cryptocurrency prices. I don't want to guess a figure, because Bitcoin moves too much for an unsourced number to be useful.\n\nTo get the current price, you could:\n- Check an Australian exchange such as CoinSpot, Swyftx or Independent Reserve. These show live AUD prices.\n- Search \"BTC/AUD\" on Google Finance, TradingView or CoinMarketCap.\n\nIf you already have a Bitcoin price in USD, I can pull the latest AUD/USD rate from the RBA. You could then multiply the two to get an approximate AUD value. Do you want me to do that?",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 349,
+   "cacheWrite": 91,
+   "cacheRead": 4708
+  },
+  "ms": 3999
+ }
+}

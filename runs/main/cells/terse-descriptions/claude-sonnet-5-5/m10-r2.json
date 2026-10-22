@@ -1,0 +1,60 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "m10",
+ "kind": "multi",
+ "q": "Is the Friday dip as big for suburban morning commuters as it is for the CBD?",
+ "date": "2026-10-19",
+ "cost": 0.0207,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "Yes, roughly. Suburban morning commuters show a Friday dip about as large as the CBD's, and it has grown by more since before COVID. The two figures measure different things, so the comparison is approximate.\n\n**Friday volume as a share of the Tue–Thu average (lower means a bigger dip)**\n\n| Group | Pre-COVID | Recent | Change |\n|---|---|---|---|\n| Suburban 7–9am tap-ons, all modes | 0.933 | 0.758 (last 12 months) | about −0.175 |\n| Suburban 7–9am tap-ons, bus only | 0.941 | 0.799 (last 12 months) | about −0.142 |\n| Sydney CBD 3–7pm tap-ons | about 0.88 (Jan–Feb 2020 average of 0.841 and 0.915) | about 0.775 (Oct 2025–Sep 2026 average); 0.783 in Sep 2026 | about −0.10 |\n\n- **Recent level:** Suburban all-modes Fridays run about 24% below Tue–Thu. The CBD runs about 22–23% below. Suburban bus is a little milder, at about 20% below.\n- **Change since before COVID:** Suburban commuters started with a much smaller Friday dip, about 7% below Tue–Thu, versus about 12% below in the CBD. Their dip has widened by more, so the two groups now look similar.\n- **CBD trend:** The CBD ratio has been steady at about 0.74–0.80 since early 2023. It was 0.783 in September 2026.\n\n**Caveats**\n- The CBD figure counts tap-ons from 3pm to 7pm, which is people leaving work. The suburban figure counts tap-ons from 7am to 9am, which is people leaving home. They are different parts of the day.\n- \"Suburban\" means everywhere outside the named commercial centres (Opal's \"Other\" region).\n- The suburban figures are single pre-COVID and last-12-month windows, not monthly series.\n- The CBD data may not include Sydney Metro taps. The note says this affects levels against 2020, not ratios within a period.\n- My CBD pre-COVID figure uses only January and February 2020. The source's baseline runs 6 Jan to 6 Mar.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "friday_gap"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2020-01\",0.841],[\"2020-02\",0.915],[\"2020-03\",0.899],[\"2020-04\",0.984],[\"2020-05\",0.914],[\"2020-06\",0.96],[\"2020-07\",0.944],[\"2020-08\",0.897],[\"2020-09\",0.901],[\"2020-10\",0.88],[\"2020-11\",0.907],[\"2020-12\",0.857],[\"2021-01\",0.897],[\"2021-02\",0.846],[\"2021-03\",0.852],[\"2021-04\",0.795],[\"2021-05\",0.822],[\"2021-06\",0.878],[\"2021-07\",0.944],[\"2021-08\",0.971],[\"2021-09\",0.956],[\"2021-10\",0.895],[\"2021-11\",0.873],[\"2021-12\",0.919],[\"2022-01\",0.911],[\"2022-02\",0.93],[\"2022-03\",0.848],[\"2022-04\",0.718],[\"2022-05\",0.742],[\"2022-06\",0.839],[\"2022-07\",0.818],[\"2022-08\",0.832],[\"2022-09\",0.763],[\"2022-10\",0.811],[\"2022-11\",0.801],[\"2022-12\",0.755],[\"2023-01\",0.785],[\"2023-02\",0.793],[\"2023-03\",0.782],[\"2023-04\",0.798],[\"2023-05\",0.789],[\"2023-06\",0.79],[\"2"
+   },
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "suburban_morning"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "suburban_morning"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Suburban = Opal 'Other' region (everywhere outside the named centres) - people leaving home in the morning.\"],\"series\":[{\"name\":\"Suburban 7-9am tap-ons, bus, pre-COVID\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"pre_covid\",0.941]],\"start\":{\"period\":\"pre_covid\",\"value\":0.941},\"latest\":{\"period\":\"pre_covid\",\"value\":0.941},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, bus, last 12 months\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"last_12m\",0.799]],\"start\":{\"period\":\"last_12m\",\"value\":0.799},\"latest\":{\"period\":\"last_12m\",\"value\":0.799},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, all modes, pre-COVID\",\"unit\":\"Friday / Tue-Thu\",\"frequency\":\"Window\",\"points\":[[\"pre_covid\",0.933]],\"start\":{\"period\":\"pre_covid\",\"value\":0.933},\"latest\":{\"period\":\"pre_covid\",\"value\":0.933},\"change\":0},{\"name\":\"Suburban 7-9am tap-ons, all modes, last 12 months\",\"unit\":\"Friday / Tue-Thu\",\"freq"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1460,
+   "cacheWrite": 2203,
+   "cacheRead": 5832
+  },
+  "ms": 11249
+ }
+}

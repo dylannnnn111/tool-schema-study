@@ -1,0 +1,139 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f1",
+  "series": [
+   "FIRMMCRTD",
+   "FIRMMBAB90D",
+   "FIRMMBAB180D",
+   "FIRMMOIS3D",
+   "FIRMMOIS6D",
+   "FIRMMTN6D"
+  ],
+  "monthly": true,
+  "start": "2026-07"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F1 F1 INTEREST RATES AND YIELDS – MONEY MARKET",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f1-data.csv",
+  "series": [
+   {
+    "name": "Cash Rate Target",
+    "unit": "Per cent",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-07",
+      4.35
+     ],
+     [
+      "2026-08",
+      4.35
+     ],
+     [
+      "2026-09",
+      4.6
+     ],
+     [
+      "2026-10",
+      4.6
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 4.35
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 4.6
+    },
+    "change": 0.25
+   },
+   {
+    "name": "EOD 3-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-07",
+      4.5
+     ],
+     [
+      "2026-08",
+      4.55
+     ],
+     [
+      "2026-09",
+      4.73
+     ],
+     [
+      "2026-10",
+      4.73
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 4.5
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 4.73
+    },
+    "change": 0.23
+   },
+   {
+    "name": "EOD 6-month BABs/NCDs",
+    "unit": "Per cent",
+    "frequency": "Monthly (last observation in month)",
+    "points": [
+     [
+      "2026-07",
+      4.83
+     ],
+     [
+      "2026-08",
+      4.88
+     ],
+     [
+      "2026-09",
+      5.08
+     ],
+     [
+      "2026-10",
+      5.11
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 4.83
+    },
+    "latest": {
+     "period": "2026-10",
+     "value": 5.11
+    },
+    "change": 0.28
+   },
+   {
+    "name": "3-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly (last observation in month)",
+    "points": []
+   },
+   {
+    "name": "6-month OIS",
+    "unit": "Per cent",
+    "frequency": "Monthly (last observation in month)",
+    "points": []
+   },
+   {
+    "name": "6- month Treasury Note",
+    "unit": "Per cent",
+    "frequency": "Monthly (last observation in month)",
+    "points": []
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:41:37.772Z"
+}

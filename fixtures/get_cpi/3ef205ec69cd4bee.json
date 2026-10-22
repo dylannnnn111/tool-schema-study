@@ -1,0 +1,26 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "Rents"
+  ],
+  "cities": [
+   "sydney",
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2023-01",
+  "end": "2026-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Rents..1+50.M?startPeriod=2023-01&endPeriod=2026-09 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Rents..1+50.Q?startPeriod=2023-Q1&endPeriod=2026-Q3",
+  "series": [],
+  "notes": [
+   "ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:16:33.609Z"
+}

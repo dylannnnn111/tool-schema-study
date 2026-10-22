@@ -1,0 +1,47 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o02",
+ "kind": "out-of-scope",
+ "q": "What will the cash rate be in March next year?",
+ "date": "2026-10-19",
+ "cost": 0.00056,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't forecast the cash rate, but the latest data shows where it stands. The RBA cash rate target averaged **4.36% in September 2026**, the most recent month available. It has been about 4.35% since June 2026.\n\nThe rate has risen from 3.60% (January 2026 average) to around 4.35% over 2026, a 75 basis point increase. Each month's figure is an average, so a change late in a month would only partly show up.\n\nIf the rate stays unchanged, it would be about **4.35%** in March 2027. Any change would come from RBA board decisions, which happen at scheduled meetings. For market expectations, look at ASX 30-day interbank futures pricing, which reflects what traders expect the RBA to do. The RBA's published meeting schedule will show the decision dates before March 2027.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 852,
+   "cacheWrite": 614,
+   "cacheRead": 5802
+  },
+  "ms": 5502
+ }
+}

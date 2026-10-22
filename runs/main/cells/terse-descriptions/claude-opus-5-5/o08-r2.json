@@ -1,0 +1,62 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "o08",
+ "kind": "out-of-scope",
+ "q": "What's the average weekly rent for a two-bedroom unit in Newtown?",
+ "date": "2026-10-19",
+ "cost": 0.02,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a dollar figure for Newtown. None of my data sources have rents at the suburb level or broken down by number of bedrooms. They cover ABS price indexes, labour force data and RBA series, which only go down to city or state level.\n\n**What I can tell you is how fast Sydney rents are rising:**\n- The ABS rents index for Sydney was up **3.5% in the year to August 2026**, the latest month available.\n- That rate has stayed between about 3.2% and 3.7% since June 2025. In mid-2025 it was 3.7%, it dipped to 3.2% in August–September 2025, and it has been at 3.5% since June 2026.\n- This index tracks rent on all existing leases, not just new ones. Advertised rents for new leases in suburbs close to the city like Newtown can move a lot faster than this.\n\n**Where to find the Newtown number:**\n- **NSW Government Rent and Sales Report (Department of Communities and Justice):** This is the official source. It gives the median weekly rent for new bonds lodged, broken down by postcode (Newtown is 2042), dwelling type and number of bedrooms. It comes out every quarter.\n- **Domain, realestate.com.au, SQM Research or CoreLogic:** These publish median advertised rents by suburb, which are more current but based on listings.\n\nIf you get the Newtown median, I can compare its growth with the Sydney-wide rents index, wages or interest rates.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "sydney"
+     ],
+     "items": [
+      "rents"
+     ],
+     "start": "2025-06",
+     "measure": "annual_change"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-06\",\"value\":3.7},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":-0.2}],\"notes\":[\"All series: Percentage change from previous year, Rents, Original, Sydney\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 758,
+   "cacheWrite": 734,
+   "cacheRead": 5729
+  },
+  "ms": 9725
+ }
+}

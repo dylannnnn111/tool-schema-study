@@ -1,0 +1,67 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "Census 2021 G02 selected medians and averages SAL"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "C21_G02_SAL",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Suburbs and Localities (SAL)"
+   },
+   {
+    "id": "C21_G02_POA",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Postal Areas (POA)"
+   },
+   {
+    "id": "C21_G02_RA",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Remoteness Areas (RA)"
+   },
+   {
+    "id": "C21_G02_SUA",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Significant Urban Areas (SUA)"
+   },
+   {
+    "id": "C21_G02_SA2",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Main Statistical Areas Level 2 and up (SA2+)"
+   },
+   {
+    "id": "C21_G02_SED",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, State Electoral Divisions (SED 2021 boundaries)"
+   },
+   {
+    "id": "C21_G02_LGA",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Local Government Area 2021 (LGA 2021 boundaries)"
+   },
+   {
+    "id": "C21_G02_CED",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Commonwealth Electoral Divisions (CED 2021 boundaries)"
+   },
+   {
+    "id": "C21_G02_UCL",
+    "version": "1.0.0",
+    "name": "Census 2021, G02 Selected medians and averages, Urban Centres, Localities and Section of State (UCL/SOS/SOSR)"
+   },
+   {
+    "id": "C21_T02_SA2",
+    "version": "1.0.0",
+    "name": "Census 2021, T02 Selected medians and averages, Time Series, Main Statistical Areas Level 2 and up (SA2+)"
+   },
+   {
+    "id": "C21_T02_LGA",
+    "version": "1.0.0",
+    "name": "Census 2021, T02 Selected medians and averages, Time Series, Local Government Area 2021 (LGA 2021 boundaries)"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:14:43.255Z"
+}

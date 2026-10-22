@@ -1,0 +1,207 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "electricity",
+   "all_groups"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2025-01"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40055+10001..50.M?startPeriod=2025-01",
+  "series": [
+   {
+    "name": "Electricity - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-01",
+      -11.4
+     ],
+     [
+      "2025-02",
+      -13.2
+     ],
+     [
+      "2025-03",
+      -9.6
+     ],
+     [
+      "2025-04",
+      -6.5
+     ],
+     [
+      "2025-05",
+      -5.9
+     ],
+     [
+      "2025-06",
+      -6.3
+     ],
+     [
+      "2025-07",
+      13.6
+     ],
+     [
+      "2025-08",
+      24.6
+     ],
+     [
+      "2025-09",
+      33.9
+     ],
+     [
+      "2025-10",
+      37.1
+     ],
+     [
+      "2025-11",
+      19.7
+     ],
+     [
+      "2025-12",
+      21.5
+     ],
+     [
+      "2026-01",
+      32.2
+     ],
+     [
+      "2026-02",
+      37
+     ],
+     [
+      "2026-03",
+      25.4
+     ],
+     [
+      "2026-04",
+      22.5
+     ],
+     [
+      "2026-05",
+      21.1
+     ],
+     [
+      "2026-06",
+      22.4
+     ],
+     [
+      "2026-07",
+      6.1
+     ],
+     [
+      "2026-08",
+      13.2
+     ]
+    ],
+    "start": {
+     "period": "2025-01",
+     "value": -11.4
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 13.2
+    },
+    "change": 24.6
+   },
+   {
+    "name": "All groups CPI - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      2.4
+     ],
+     [
+      "2025-05",
+      2.1
+     ],
+     [
+      "2025-06",
+      1.9
+     ],
+     [
+      "2025-07",
+      3
+     ],
+     [
+      "2025-08",
+      3.2
+     ],
+     [
+      "2025-09",
+      3.6
+     ],
+     [
+      "2025-10",
+      3.8
+     ],
+     [
+      "2025-11",
+      3.4
+     ],
+     [
+      "2025-12",
+      3.8
+     ],
+     [
+      "2026-01",
+      3.8
+     ],
+     [
+      "2026-02",
+      3.7
+     ],
+     [
+      "2026-03",
+      4.6
+     ],
+     [
+      "2026-04",
+      4.2
+     ],
+     [
+      "2026-05",
+      4
+     ],
+     [
+      "2026-06",
+      3.8
+     ],
+     [
+      "2026-07",
+      3.5
+     ],
+     [
+      "2026-08",
+      4
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 2.4
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 4
+    },
+    "change": 1.6
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Original, Australia",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:05:05.733Z"
+}

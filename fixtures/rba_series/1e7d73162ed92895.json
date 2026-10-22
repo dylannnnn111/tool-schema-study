@@ -1,0 +1,259 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "G3",
+  "series": [
+   "GCONEXP",
+   "GBUSEXP",
+   "GUNIEXPY",
+   "GUNIEXPYY",
+   "GMAREXPY",
+   "GMAREXPYY",
+   "GBONYLD"
+  ],
+  "monthly": false,
+  "start": "2025-01",
+  "end": "2026-10"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA G3 G3 INFLATION EXPECTATIONS",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/g3-data.csv",
+  "series": [
+   {
+    "name": "Consumer inflation expectations – 1-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2025-03-31",
+      3.6
+     ],
+     [
+      "2025-06-30",
+      5
+     ],
+     [
+      "2025-09-30",
+      4.7
+     ],
+     [
+      "2025-12-31",
+      4.7
+     ],
+     [
+      "2026-03-31",
+      5.2
+     ],
+     [
+      "2026-06-30",
+      5.5
+     ],
+     [
+      "2026-09-30",
+      4.9
+     ]
+    ],
+    "start": {
+     "period": "2025-03-31",
+     "value": 3.6
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 4.9
+    },
+    "change": 1.3
+   },
+   {
+    "name": "Business inflation expectations – 3-months ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2025-03-31",
+      1.7
+     ],
+     [
+      "2025-06-30",
+      2.5
+     ],
+     [
+      "2025-09-30",
+      1.7
+     ],
+     [
+      "2025-12-31",
+      1.9
+     ],
+     [
+      "2026-03-31",
+      2
+     ],
+     [
+      "2026-06-30",
+      3.6
+     ],
+     [
+      "2026-09-30",
+      2
+     ]
+    ],
+    "start": {
+     "period": "2025-03-31",
+     "value": 1.7
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 2
+    },
+    "change": 0.3
+   },
+   {
+    "name": "Union officials' inflation expectations – 1-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": []
+   },
+   {
+    "name": "Union officials' inflation expectations – 2-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": []
+   },
+   {
+    "name": "Market economists' inflation expectations – 1-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2025-03-31",
+      3.1
+     ],
+     [
+      "2025-06-30",
+      2.8
+     ],
+     [
+      "2025-09-30",
+      2.8
+     ],
+     [
+      "2025-12-31",
+      2.8
+     ],
+     [
+      "2026-03-31",
+      3
+     ],
+     [
+      "2026-06-30",
+      3
+     ],
+     [
+      "2026-09-30",
+      3
+     ]
+    ],
+    "start": {
+     "period": "2025-03-31",
+     "value": 3.1
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 3
+    },
+    "change": -0.1
+   },
+   {
+    "name": "Market economists' inflation expectations – 2-year ahead",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2025-03-31",
+      2.5
+     ],
+     [
+      "2025-06-30",
+      2.6
+     ],
+     [
+      "2025-09-30",
+      2.6
+     ],
+     [
+      "2025-12-31",
+      2.5
+     ],
+     [
+      "2026-03-31",
+      2.6
+     ],
+     [
+      "2026-06-30",
+      2.6
+     ],
+     [
+      "2026-09-30",
+      2.5
+     ]
+    ],
+    "start": {
+     "period": "2025-03-31",
+     "value": 2.5
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 2.5
+    },
+    "change": 0
+   },
+   {
+    "name": "Break-even 10-year inflation rate",
+    "unit": "Per cent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2025-03-31",
+      2.2
+     ],
+     [
+      "2025-06-30",
+      2.1
+     ],
+     [
+      "2025-09-30",
+      2.3
+     ],
+     [
+      "2025-12-31",
+      2.3
+     ],
+     [
+      "2026-03-31",
+      2.4
+     ],
+     [
+      "2026-06-30",
+      2.3
+     ],
+     [
+      "2026-09-30",
+      2.4
+     ]
+    ],
+    "start": {
+     "period": "2025-03-31",
+     "value": 2.2
+    },
+    "latest": {
+     "period": "2026-09-30",
+     "value": 2.4
+    },
+    "change": 0.2
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:24:01.342Z"
+}

@@ -1,0 +1,178 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "C21_G02_SAL",
+  "key": ".12969.."
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS C21_G02_SAL",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,C21_G02_SAL/.12969..",
+  "series": [
+   {
+    "name": "Median total household income ($/weekly)",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      2330
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 2330
+    },
+    "latest": {
+     "period": "2021",
+     "value": 2330
+    },
+    "change": 0
+   },
+   {
+    "name": "Median rent ($/weekly)",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      550
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 550
+    },
+    "latest": {
+     "period": "2021",
+     "value": 550
+    },
+    "change": 0
+   },
+   {
+    "name": "Median total family income ($/weekly)",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      3383
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 3383
+    },
+    "latest": {
+     "period": "2021",
+     "value": 3383
+    },
+    "change": 0
+   },
+   {
+    "name": "Median total personal income ($/weekly)",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      1309
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 1309
+    },
+    "latest": {
+     "period": "2021",
+     "value": 1309
+    },
+    "change": 0
+   },
+   {
+    "name": "Median mortgage repayment ($/monthly)",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      3000
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 3000
+    },
+    "latest": {
+     "period": "2021",
+     "value": 3000
+    },
+    "change": 0
+   },
+   {
+    "name": "Median age of persons",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      34
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 34
+    },
+    "latest": {
+     "period": "2021",
+     "value": 34
+    },
+    "change": 0
+   },
+   {
+    "name": "Average number of persons per bedroom",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      1
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 1
+    },
+    "latest": {
+     "period": "2021",
+     "value": 1
+    },
+    "change": 0
+   },
+   {
+    "name": "Average household size",
+    "unit": "",
+    "frequency": "",
+    "points": [
+     [
+      "2021",
+      2.1
+     ]
+    ],
+    "start": {
+     "period": "2021",
+     "value": 2.1
+    },
+    "latest": {
+     "period": "2021",
+     "value": 2.1
+    },
+    "change": 0
+   }
+  ],
+  "notes": [
+   "All series: Newtown (NSW), Suburbs and Localities, New South Wales"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:14:51.789Z"
+}

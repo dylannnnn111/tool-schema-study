@@ -1,0 +1,94 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.01259,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year government bond yield is now about 1 percentage point above the cash rate, which is a positive term spread.\n\n- **10-year yield:** 5.31% at the latest observation in October 2026. It was 5.34% at the end of September.\n- **Cash rate:** 4.36% (monthly average for September 2026). It has been about 4.35% since June.\n- **Spread:** about +0.95 to +1.0 percentage points. At the end of September the gap was 5.34% − 4.36% ≈ 0.98 points.\n\n**How the gap has changed in 2026**\n- In January the 10-year yield was 4.80% and the cash rate averaged 3.60%, a spread of about 1.2 points.\n- The cash rate rose 0.76 points between January and September, from 3.60% to 4.36%.\n- The 10-year yield rose 0.51 points over a similar period, from 4.80% in January to 5.31% in October.\n- Because the cash rate rose faster, the spread narrowed from about 1.2 points to about 1.0.\n\n**Shorter maturities:** The 2-year yield is 4.92% (October). That is about 0.55 points above the cash rate, so markets are pricing in some further tightening or rates staying high.\n\nThe cash rate figure is a monthly average, while the bond yields are the last observation in each month. The spread is therefore approximate.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f2"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F2\",\"title\":\"F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"columns\":[{\"id\":\"FCMYGBAG2D\",\"title\":\"Australian Government 2 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG3D\",\"title\":\"Australian Government 3 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG5D\",\"title\":\"Australian Government 5 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG10D\",\"title\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAGID\",\"title\":\"Australian Government Indexed Bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"}]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2026-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-01-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "select": {
+      "series": [
+       "FCMYGBAG10D",
+       "FCMYGBAG2D"
+      ]
+     },
+     "period": {
+      "start": "2026-01"
+     },
+     "options": {
+      "monthly": true
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "series": [
+      "FCMYGBAG10D",
+      "FCMYGBAG2D"
+     ],
+     "monthly": true,
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2026-01\",4.799],[\"2026-02\",4.646],[\"2026-03\",4.972],[\"2026-04\",5.067],[\"2026-05\",4.838],[\"2026-06\",4.734],[\"2026-07\",4.942],[\"2026-08\",5.085],[\"2026-09\",5.344],[\"2026-10\",5.314]],\"start\":{\"period\":\"2026-01\",\"value\":4.799},\"latest\":{\"period\":\"2026-10\",\"value\":5.314},\"change\":0.515},{\"name\":\"Australian Government 2 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2026-01\",4.195],[\"2026-02\",4.184],[\"2026-03\",4.66],[\"2026-04\",4.771],[\"2026-05\",4.52],[\"2026-06\",4.412],[\"2026-07\",4.509],[\"2026-08\",4.677],[\"2026-09\",4.942],[\"2026-10\",4.919]],\"start\":{\"period\":\"2026-01\",\"value\":4.195},\"latest\":{\"period\":\"2026-10\",\"value\":4.919},\"change\":0.724}],\"notes\":[]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 707,
+   "cacheWrite": 1530,
+   "cacheRead": 16779
+  },
+  "ms": 6647
+ }
+}

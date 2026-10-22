@@ -1,0 +1,92 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m12",
+ "kind": "multi",
+ "q": "Is electricity inflation running ahead of overall inflation?",
+ "date": "2026-10-19",
+ "cost": 0.00099,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes. Electricity inflation is well ahead of overall inflation.\n\n- **Electricity, August 2026:** up 13.2% over the year.\n- **All groups CPI, August 2026:** up 4.0% over the year.\n\nThe gap has been wide for most of the past year. Electricity annual inflation was 37.0% in February 2026 against 3.7% overall, the widest point in the data. It has since narrowed, but the gap is still about 9 percentage points.\n\nElectricity is also much more volatile than the headline. Its annual rate was negative through most of 2024 and the first half of 2025, then jumped from 13.6% in July 2025 to 37.1% in October 2025. Over the last three months it went 22.4% (June), 6.1% (July), 13.2% (August). The data doesn't say what causes these swings. Timing of government energy rebates is a likely factor, since the sharp drops and rises line up with changes in the base period, but I haven't confirmed that from the data.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "Electricity"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "Electricity"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+Electricity..50.M?startPeriod=2024-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+Electricity..50.Q?startPeriod=2024-Q1\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"All groups CPI - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q1\",3.6],[\"2024-Q2\",3.8],[\"2024-Q3\",2.8],[\"2024-Q4\",2.4],[\"2025-Q1\",2.4],[\"2025-Q2\",2.1],[\"2025-Q3\",3.2]],\"start\":{\"period\":\"2024-Q1\",\"value\":3.6},\"latest\":{\"period\":\"2025-Q3\",\"value\":3.2},\"change\":-0.4}],\"notes\":[\"All series: Percentage change from previous year, All groups CPI, Original, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "start": "2024-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40055..50.M?startPeriod=2024-01\",\"series\":[{\"name\":\"Electricity - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01\",0.8],[\"2024-02\",0.2],[\"2024-03\",5.2],[\"2024-04\",4.2],[\"2024-05\",6.6],[\"2024-06\",7.4],[\"2024-07\",-5.1],[\"2024-08\",-17.9],[\"2024-09\",-24.1],[\"2024-10\",-35.6],[\"2024-11\",-21.5],[\"2024-12\",-17.9],[\"2025-01\",-11.4],[\"2025-02\",-13.2],[\"2025-03\",-9.6],[\"2025-04\",-6.5],[\"2025-05\",-5.9],[\"2025-06\",-6.3],[\"2025-07\",13.6],[\"2025-08\",24.6],[\"2025-09\",33.9],[\"2025-10\",37.1],[\"2025-11\",19.7],[\"2025-12\",21.5],[\"2026-01\",32.2],[\"2026-02\",37],[\"2026-03\",25.4],[\"2026-04\",22.5],[\"2026-05\",21.1],[\"2026-06\",22.4],[\"2026-07\",6.1],[\"2026-08\",13.2]],\"start\":{\"period\":\"2024-01\",\"value\":0.8},\"latest\":{\"period\":\"2026-08\",\"value\":13.2},\"change\":12.4}],\"notes\":[\"All series: Percentage change from previous year, Electricity, Original, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1339,
+   "cacheWrite": 1782,
+   "cacheRead": 9667
+  },
+  "ms": 12167
+ }
+}

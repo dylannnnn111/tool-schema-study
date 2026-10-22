@@ -1,0 +1,50 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o10",
+ "kind": "out-of-scope",
+ "q": "How many people rode the Sydney Metro last Friday?",
+ "date": "2026-10-19",
+ "cost": 0.00064,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I couldn't find a figure for last Friday's Sydney Metro ridership (Friday 16 October 2026). The data I have doesn't cover it.\n\n- **Wrong granularity:** The Commute Pulse data is monthly, not daily, and it has no entry for 16 October.\n- **Wrong measure:** It counts Opal tap-ons between 3pm and 7pm at six commercial centres (Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta). It reports Friday volumes as a ratio to the Tuesday–Thursday average, not raw passenger numbers.\n- **Metro not isolated:** The data notes that it's unclear whether Sydney Metro taps in the CBD are included, so it can't tell us Metro usage.\n\nFor a daily Metro figure, the best source is TfNSW Open Data (Opal tap data, CC BY 4.0) or Transport for NSW's published Sydney Metro ridership reports. Those would give station-level or line-level tap-on counts, though possibly with a publication lag.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "start": "2026-10-16",
+     "end": "2026-10-16"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "start": "2026-10-16",
+     "end": "2026-10-16"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Known centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield, Parramatta.\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[]}]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 952,
+   "cacheWrite": 817,
+   "cacheRead": 5722
+  },
+  "ms": 5738
+ }
+}

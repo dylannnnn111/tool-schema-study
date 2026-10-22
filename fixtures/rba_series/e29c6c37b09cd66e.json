@@ -1,0 +1,46 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f2",
+  "search": "inflation expectations",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "F2",
+  "title": "F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS",
+  "columns": [
+   {
+    "id": "FCMYGBAG2D",
+    "title": "Australian Government 2 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYGBAG3D",
+    "title": "Australian Government 3 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYGBAG5D",
+    "title": "Australian Government 5 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYGBAG10D",
+    "title": "Australian Government 10 year bond",
+    "unit": "Per cent per annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYGBAGID",
+    "title": "Australian Government Indexed Bond",
+    "unit": "Per cent per annum",
+    "frequency": "Daily"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:29:37.255Z"
+}

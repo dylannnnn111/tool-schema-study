@@ -1,0 +1,108 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v13",
+ "kind": "vague",
+ "q": "What's the jobless rate in the territory Canberra's in?",
+ "date": "2026-10-19",
+ "cost": 0.02046,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Canberra is in the **Australian Capital Territory (ACT)**, where unemployment was **about 4.2% in September 2026** (trend).\n\n**ACT unemployment rate, September 2026 (ABS Labour Force):**\n- **Trend: 4.2%.** This is the best figure to use. The ABS doesn't publish a seasonally adjusted rate for the ACT, so trend is the main measure.\n- **Original (not adjusted): 4.7%,** up from 3.9% in August. This figure jumps around a lot from month to month in a labour market as small as the ACT's, so don't read much into single moves.\n\n**Recent direction (trend):** The rate has edged up for four months in a row. It was a low of about 4.10% in May 2026 and reached 4.21% in September. That's about the same as a year earlier (4.12% in September 2025), so it's broadly steady with a slight rise lately.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.20.8.M?startPeriod=2026-01\",\"series\":[],\"notes\":[\"ABS returned no data. Trend and seasonally adjusted series aren't published for every state/sex combination - try original.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2025-09",
+     "adjustment": "trend"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "trend",
+     "start": "2025-09"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.30.8.M?startPeriod=2025-09\",\"series\":[{\"name\":\"Australian Capital Territory\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09\",4.1218],[\"2025-10\",4.1753],[\"2025-11\",4.198],[\"2025-12\",4.1949],[\"2026-01\",4.1724],[\"2026-02\",4.1431],[\"2026-03\",4.1184],[\"2026-04\",4.1027],[\"2026-05\",4.1011],[\"2026-06\",4.1156],[\"2026-07\",4.1417],[\"2026-08\",4.1746],[\"2026-09\",4.2087]],\"start\":{\"period\":\"2025-09\",\"value\":4.1218},\"latest\":{\"period\":\"2026-09\",\"value\":4.2087},\"change\":0.0869}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Trend, Australian Capital Territory\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_labour_force",
+    "input": {
+     "states": [
+      "act"
+     ],
+     "start": "2025-09",
+     "adjustment": "original"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate"
+     ],
+     "states": [
+      "act"
+     ],
+     "sex": "persons",
+     "adjustment": "original",
+     "start": "2025-09"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13.3.1599.10.8.M?startPeriod=2025-09\",\"series\":[{\"name\":\"Australian Capital Territory\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09\",4.2826],[\"2025-10\",4.3734],[\"2025-11\",3.956],[\"2025-12\",3.2567],[\"2026-01\",4.6868],[\"2026-02\",3.8349],[\"2026-03\",4.0945],[\"2026-04\",4.8227],[\"2026-05\",3.7422],[\"2026-06\",3.9022],[\"2026-07\",3.6404],[\"2026-08\",3.9327],[\"2026-09\",4.6645]],\"start\":{\"period\":\"2025-09\",\"value\":4.2826},\"latest\":{\"period\":\"2026-09\",\"value\":4.6645},\"change\":0.3819}],\"notes\":[\"All series: Unemployment rate, Persons, Total (age), Original, Australian Capital Territory\"]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 614,
+   "cacheWrite": 1276,
+   "cacheRead": 8844
+  },
+  "ms": 7885
+ }
+}

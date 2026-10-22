@@ -1,0 +1,395 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f16",
+  "search": "federal",
+  "monthly": true,
+  "start": "2025-01"
+ },
+ "ok": true,
+ "result": {
+  "table": "F16",
+  "title": "F16 INDICATIVE MID RATES OF SELECTED AUSTRALIAN GOVERNMENT SECURITIES",
+  "columns": [
+   {
+    "id": "FCMYAPR15D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYOCT15D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN16D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYFEB17D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUL17D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJAN18D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYOCT18D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAR19D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYOCT19D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR20D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV20D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY21D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYDEC21D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUL22D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV22D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR23D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR24D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV24D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR25D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV25D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR26D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYSEP26D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR27D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV27D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY28D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV28D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR29D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV29D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY30D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYDEC30D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN31D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV31D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY32D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV32D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR33D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV33D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY34D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN34D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYDEC34D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN35D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYDEC35D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAR36D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN36D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYOCT36D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAPR37D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYOCT37D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY38D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN39D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAY41D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYMAR47D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN51D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYJUN54D",
+    "title": "Treasury Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAUG15DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV18DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAUG20DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYFEB22DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYSEP25DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV27DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYSEP30DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYNOV32DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAUG35DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYAUG40DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   },
+   {
+    "id": "FCMYFEB50DINDEX",
+    "title": "Treasury Indexed Bond",
+    "unit": "Per cent annum",
+    "frequency": "Daily"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:28:32.376Z"
+}

@@ -1,0 +1,75 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v03",
+ "kind": "vague",
+ "q": "Are things getting harder for people looking for work in Queensland?",
+ "date": "2026-10-19",
+ "cost": 0.01639,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Yes, it looks like it's getting somewhat harder. Queensland's unemployment rate has been rising, though the monthly figures are noisy.\n\n**Queensland (seasonally adjusted)**\n- The unemployment rate was **4.53% in September 2026**. It was 4.51% in August and 4.24% in July. In June 2025 it was 4.04%.\n- The number of unemployed people was **about 144,400** in September 2026. That's up from about 126,300 in June 2025, an increase of roughly 18,000.\n- The employment-to-population ratio fell to **63.9%** in September 2026, from 64.4% in June 2025. It was 64.1% in July 2026.\n- The participation rate is steady at about 66.9–67.0%, compared with 67.2% in June 2025. So the rise in unemployment isn't mainly because more people are looking for work.\n- Employment is still up, from about 2.998 million in June 2025 to 3.043 million in September 2026. Jobs are being added, but not quickly enough to keep up with the growth in the working-age population.\n\n**Australia overall**\n- The national unemployment rate was **4.72% in September 2026**, up from 4.34% in June 2025. It was 4.45% in June 2026 and 4.65% in August 2026.\n- Queensland's rate (4.53%) is a little below the national rate.\n\n**Caveat:** Queensland's monthly readings jump around. For example, they ran from 3.73% in March 2026 and 3.73% in May 2026 up to 4.32% in June 2026. Single months can mislead. The more reliable signal is the last two months, August and September 2026, which sit at about 4.5%. That's higher than anything from mid-2025 to July 2026 except the 4.44% in February 2026. The national figures show a clearer upward trend.\n\nOverall, the job market in Queensland has softened modestly. Unemployment is higher and a smaller share of the population is in work. It isn't a sharp deterioration, and the state is still doing a bit better than the national average.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "select": {
+      "measures": [
+       "unemployment_rate",
+       "participation_rate",
+       "employment_to_population",
+       "employed",
+       "unemployed"
+      ],
+      "states": [
+       "qld",
+       "australia"
+      ]
+     },
+     "period": {
+      "start": "2025-06"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "employed",
+      "unemployed"
+     ],
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-06"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M3+M6.3.1599.20.3+AUS.M?startPeriod=2025-06\",\"series\":[{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",66.949],[\"2025-07\",67.0025],[\"2025-08\",66.8045],[\"2025-09\",66.9191],[\"2025-10\",66.9122],[\"2025-11\",66.6351],[\"2025-12\",66.6762],[\"2026-01\",66.6826],[\"2026-02\",66.8181],[\"2026-03\",66.7804],[\"2026-04\",66.6726],[\"2026-05\",66.6873],[\"2026-06\",67.0036],[\"2026-07\",66.852],[\"2026-08\",66.996],[\"2026-09\",66.7632]],\"start\":{\"period\":\"2025-06\",\"value\":66.949},\"latest\":{\"period\":\"2026-09\",\"value\":66.7632},\"change\":-0.1858},{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",4.3379],[\"2025-07\",4.2627],[\"2025-08\",4.2228],[\"2025-09\",4.4263],[\"2025-10\",4.3187],[\"2025-11\",4.3144],[\"2025-12\",4.1153],[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\",4.7183]],\"start\":{\"period\":\"2025-06\",\"value\":4.3379},\"latest\":{\"period\":\"2026-09\",\"value\":4.7183},\"change\":0.3804},{\"name\":\"Participation rate - Queensland\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-06\",67.1607],[\"2025-07\",67.0303],[\"2025-08\",66.9624],[\"2025-09\",67.0954],[\"2025-10\",66.8945],[\"2025-11\",66.6006],[\"2025-12\",66.594],[\"2026-01\",67.1227],[\"2026-02\",66.9747],[\"2026-03\",66.7532],[\"2026-04\",66.8393]"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 792,
+   "cacheWrite": 2954,
+   "cacheRead": 10718
+  },
+  "ms": 7497
+ }
+}

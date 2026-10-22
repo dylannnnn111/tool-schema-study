@@ -1,0 +1,215 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9..100..AUS.M",
+  "last_n": 3
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9..100..AUS.M?lastNObservations=3",
+  "series": [
+   {
+    "name": "Total Work",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      19090
+     ],
+     [
+      "2026-07",
+      19273
+     ],
+     [
+      "2026-08",
+      16967
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 19090
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "change": -2123
+   },
+   {
+    "name": "Alterations and additions including conversions",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      66
+     ],
+     [
+      "2026-07",
+      82
+     ],
+     [
+      "2026-08",
+      53
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 66
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 53
+    },
+    "change": -13
+   },
+   {
+    "name": "Conversions",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      21
+     ],
+     [
+      "2026-07",
+      30
+     ],
+     [
+      "2026-08",
+      11
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 21
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 11
+    },
+    "change": -10
+   },
+   {
+    "name": "New",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      19024
+     ],
+     [
+      "2026-07",
+      19191
+     ],
+     [
+      "2026-08",
+      16914
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 19024
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16914
+    },
+    "change": -2110
+   },
+   {
+    "name": "Alterations and additions",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      45
+     ],
+     [
+      "2026-07",
+      52
+     ],
+     [
+      "2026-08",
+      42
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 45
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 42
+    },
+    "change": -3
+   },
+   {
+    "name": "Alterations and additions not creating dwellings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      0
+     ],
+     [
+      "2026-07",
+      0
+     ],
+     [
+      "2026-08",
+      0
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 0
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 0
+    },
+    "change": 0
+   },
+   {
+    "name": "Alterations and additions creating dwellings",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-06",
+      45
+     ],
+     [
+      "2026-07",
+      52
+     ],
+     [
+      "2026-08",
+      42
+     ]
+    ],
+    "start": {
+     "period": "2026-06",
+     "value": 45
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 42
+    },
+    "change": -3
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Sectors, Total Residential, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:23:34.610Z"
+}

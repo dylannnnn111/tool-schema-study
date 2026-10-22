@@ -12,7 +12,8 @@ export type Args = Record<string, unknown>;
 /** Run a canonical tool call against the fixtures. */
 export type Direct = (tool: string, args: Args) => Promise<unknown>;
 
-export interface Check { label: string; value?: number; tol?: number; text?: string }
+/** text checks match anywhere unless `lead` is set, then only in the first 400 characters (the answer's headline, not a table further down). */
+export interface Check { label: string; value?: number; tol?: number; text?: string; lead?: boolean }
 
 export interface Question {
   id: string;
@@ -45,7 +46,7 @@ const named = async (d: Direct, tool: string, args: Args, part: string) => {
   return s.latest.value;
 };
 const num = (label: string, value: number, tol?: number): Check => ({ label, value, tol });
-const txt = (label: string, text: string): Check => ({ label, text });
+const lead = (label: string, text: string): Check => ({ label, text, lead: true });
 const one = (...checks: Check[]): Check[][] => [checks];
 
 const has = (field: string, ...values: string[]) => (a: Args) => values.every((v) => (a[field] as string[] | undefined)?.includes(v));
@@ -132,7 +133,12 @@ export const QUESTIONS: Question[] = [
   {
     id: 'v13', kind: 'vague', q: "What's the jobless rate in the territory Canberra's in?",
     tools: ['get_labour_force'], args: { get_labour_force: all(has('states', 'act'), has('measures', 'unemployment_rate')) },
-    truth: async (d) => one(num('ACT unemployment rate', await latestOf(d, 'get_labour_force', { measures: ['unemployment_rate'], states: ['act'] }), 0.1)),
+    // ABS publishes no seasonally adjusted series for the ACT - the tool comes back empty and says to try original.
+    // So this also tests recovery: trend or original both count.
+    truth: async (d) => [
+      [num('ACT unemployment rate (trend)', await latestOf(d, 'get_labour_force', { measures: ['unemployment_rate'], states: ['act'], adjustment: 'trend' }), 0.1)],
+      [num('ACT unemployment rate (original)', await latestOf(d, 'get_labour_force', { measures: ['unemployment_rate'], states: ['act'], adjustment: 'original' }), 0.1)],
+    ],
   },
   {
     id: 'v14', kind: 'vague', q: 'My power bill in Perth feels huge. Is that just me?',
@@ -263,22 +269,24 @@ export const QUESTIONS: Question[] = [
     },
   },
   {
-    id: 'm15', kind: 'multi', q: "Which of Sydney's commercial centres has bounced back most on Fridays, and which least?",
+    id: 'm15', kind: 'multi', q: "Which of Sydney's commercial centres has the busiest Fridays relative to midweek right now, and which the quietest?",
     tools: ['get_commute_pulse'], args: { get_commute_pulse: (a) => ((a.centres as string[] | undefined)?.length ?? 0) >= 4 },
     truth: async (d) => {
       const centres = ['Sydney CBD', 'North Sydney', 'Chatswood', 'Macquarie Park', 'Strathfield', 'Parramatta'];
       const s = series(await d('get_commute_pulse', { view: 'friday_gap', centres })).filter((x) => x.latest);
       s.sort((a, b) => a.latest!.value - b.latest!.value);
-      return one(txt('least recovered', s[0].name), txt('most recovered', s[s.length - 1].name));
+      return one(lead('quietest Fridays', s[0].name), lead('busiest Fridays', s[s.length - 1].name));
     },
   },
   {
     id: 'm16', kind: 'multi', q: 'How do credit card and personal loan rates compare with the cash rate?',
-    tools: ['get_lending_rates', 'get_cash_rate'], args: { get_lending_rates: has('rates', 'credit_card_standard', 'personal_loan_fixed') },
+    tools: ['get_lending_rates', 'get_cash_rate'], args: { get_lending_rates: has('rates', 'credit_card_standard') },
+    // The RBA stopped the fixed personal loan series in Feb 2020, so there's no current figure to check -
+    // saying so is the right answer for that half. Only the credit card and cash rate figures are scored.
     truth: async (d) => one(
       num('credit card standard', await latestOf(d, 'get_lending_rates', { rates: ['credit_card_standard'] })),
-      num('personal loan fixed', await latestOf(d, 'get_lending_rates', { rates: ['personal_loan_fixed'] })),
       num('cash rate', await latestOf(d, 'get_cash_rate', {})),
     ),
+    hand: 'Personal loan series ended Feb 2020 - the answer should say there is no current figure, not quote 12.46% as current.',
   },
 ];

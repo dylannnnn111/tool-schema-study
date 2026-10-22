@@ -1,0 +1,50 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o09",
+ "kind": "out-of-scope",
+ "q": "Where is the ASX 200 sitting today?",
+ "date": "2026-10-19",
+ "cost": 0.0006,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you where the ASX 200 is today. My tools cover Australian economic data (inflation, jobs, interest rates, the Australian dollar, and some ABS and RBA series) but not share market indices. I checked the RBA's money market tables and they have no equity index either.\n\nFor a live or end-of-day ASX 200 level, try the ASX website (asx.com.au), your broker's app or platform, or a financial news site such as the Australian Financial Review or Market Index.\n\nI can help with the economic backdrop, such as the latest CPI inflation, unemployment, the cash rate, or the AUD against the US dollar.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f1",
+     "search": "ASX 200"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1",
+     "search": "ASX 200",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F1\",\"title\":\"F1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"columns\":[{\"id\":\"FIRMMCRTD\",\"title\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCCRT\",\"title\":\"Change in the Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"as announced\"},{\"id\":\"FIRMMCRID\",\"title\":\"Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIH\",\"title\":\"Highest Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIL\",\"title\":\"Lowest Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIV\",\"title\":\"Volume of Cash Market Transactions\",\"unit\":\"$m\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIN\",\"title\":\"Number of Cash Market Transactions\",\"unit\":\"Number\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCTRI\",\"title\":\"Total Return Index\",\"unit\":\"Index 04-Jan-2011=100\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB30D\",\"title\":\"EOD 1-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB90D\",\"title\":\"EOD 3-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB180D\",\"title\":\"EOD 6-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS1D\",\"title\":\"1-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS3D\",\"title\":\"3-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS6D\",\"title\":\"6-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMTN1D\",\"title\":\"1-month Treasury Note\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMTN3D\",\"title\":\"3"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 672,
+   "cacheWrite": 1347,
+   "cacheRead": 9503
+  },
+  "ms": 4491
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o01",
+ "kind": "out-of-scope",
+ "q": "What's the Friday office gap in Melbourne's CBD?",
+ "date": "2026-10-19",
+ "cost": 0.00546,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you that figure for Melbourne. The Friday office gap data I have access to comes from Sydney Opal card data. It covers only Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta. It has nothing for Melbourne's CBD, such as Myki or pedestrian counts, and I don't want to substitute Sydney numbers and present them as Melbourne's.\n\nI could do either of these instead:\n- **Pull the Sydney CBD Friday gap** for a recent period, as a rough comparison for a big-city CBD.\n- **Look for Melbourne-related proxies** in the ABS or RBA data. These wouldn't measure office attendance directly, though.\n\nWould you like one of those?",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 494,
+   "cacheWrite": 92,
+   "cacheRead": 2816
+  },
+  "ms": 4334
+ }
+}

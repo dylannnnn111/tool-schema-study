@@ -1,0 +1,109 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "trimmed_mean"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.999902..50.M",
+  "series": [
+   {
+    "name": "Trimmed Mean - Australia (monthly)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-04",
+      3.2
+     ],
+     [
+      "2025-05",
+      3
+     ],
+     [
+      "2025-06",
+      2.8
+     ],
+     [
+      "2025-07",
+      3.1
+     ],
+     [
+      "2025-08",
+      3.1
+     ],
+     [
+      "2025-09",
+      3.2
+     ],
+     [
+      "2025-10",
+      3.3
+     ],
+     [
+      "2025-11",
+      3.2
+     ],
+     [
+      "2025-12",
+      3.3
+     ],
+     [
+      "2026-01",
+      3.3
+     ],
+     [
+      "2026-02",
+      3.3
+     ],
+     [
+      "2026-03",
+      3.3
+     ],
+     [
+      "2026-04",
+      3.4
+     ],
+     [
+      "2026-05",
+      3.5
+     ],
+     [
+      "2026-06",
+      3.6
+     ],
+     [
+      "2026-07",
+      3.6
+     ],
+     [
+      "2026-08",
+      3.6
+     ]
+    ],
+    "start": {
+     "period": "2025-04",
+     "value": 3.2
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 3.6
+    },
+    "change": 0.4
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Trimmed Mean, Seasonally Adjusted, Australia",
+   "Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history."
+  ]
+ },
+ "fetchedAt": "2026-10-18T20:50:18.230Z"
+}

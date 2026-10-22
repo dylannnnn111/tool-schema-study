@@ -1,0 +1,69 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m15",
+ "kind": "multi",
+ "q": "Which of Sydney's commercial centres has the busiest Fridays relative to midweek right now, and which the quietest?",
+ "date": "2026-10-19",
+ "cost": 0.0121,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "As of September 2026, the latest month available, **Chatswood** has the busiest Fridays relative to midweek and **North Sydney** has the quietest.\n\nThe measure is Friday tap-ons between 3pm and 7pm divided by the Tuesday–Thursday average. A value of 1.0 means Friday is as busy as midweek.\n\n| Centre | Friday gap, Sept 2026 |\n|---|---|\n| **Chatswood** | **1.03** |\n| Strathfield | 1.00 |\n| Parramatta | 0.81 |\n| Sydney CBD | 0.78 |\n| Macquarie Park | 0.77 |\n| **North Sydney** | **0.74** |\n\n- **Chatswood:** Friday evening tap-ons are about 3% higher than midweek. It has been at or near 1.0 since February, apart from a dip to 0.94 in April, and it peaked at 1.05 in August.\n- **Strathfield:** It is the next busiest, at about 1.00 in each of the last four months.\n- **North Sydney:** Fridays are about 26% quieter than midweek. It has stayed between 0.70 and 0.76 all year.\n- **Sydney CBD and Macquarie Park:** Both are only slightly busier than North Sydney, at 0.78 and 0.77.\n\nChatswood and Strathfield probably score high because their Friday evening taps include retail, dining and interchange travel as well as office workers. The data doesn't separate those groups. One caveat on the data is that it's unclear whether Sydney Metro taps are included in the CBD figures. That affects comparisons with 2020 levels, not the Friday-to-midweek ratio within a period.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "select": {
+      "centres": [
+       "Sydney CBD",
+       "North Sydney",
+       "Chatswood",
+       "Macquarie Park",
+       "Strathfield",
+       "Parramatta"
+      ],
+      "view": "friday_gap"
+     },
+     "period": {
+      "start": "2026-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "friday_gap",
+     "centres": [
+      "Sydney CBD",
+      "North Sydney",
+      "Chatswood",
+      "Macquarie Park",
+      "Strathfield",
+      "Parramatta"
+     ],
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\",\"Months with fewer than 8 usable weekdays are left out.\"],\"series\":[{\"name\":\"Sydney CBD\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.744],[\"2026-02\",0.763],[\"2026-03\",0.769],[\"2026-04\",0.797],[\"2026-05\",0.788],[\"2026-06\",0.776],[\"2026-07\",0.778],[\"2026-08\",0.799],[\"2026-09\",0.783]],\"start\":{\"period\":\"2026-01\",\"value\":0.744},\"latest\":{\"period\":\"2026-09\",\"value\":0.783},\"change\":0.039},{\"name\":\"North Sydney\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.718],[\"2026-02\",0.76],[\"2026-03\",0.716],[\"2026-04\",0.705],[\"2026-05\",0.752],[\"2026-06\",0.743],[\"2026-07\",0.712],[\"2026-08\",0.751],[\"2026-09\",0.741]],\"start\":{\"period\":\"2026-01\",\"value\":0.718},\"latest\":{\"period\":\"2026-09\",\"value\":0.741},\"change\":0.023},{\"name\":\"Chatswood\",\"unit\":\"Friday / Tue-Thu average\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",0.901],[\"2026-02\",0.999],[\"2026-03\",0."
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 696,
+   "cacheWrite": 1625,
+   "cacheRead": 10646
+  },
+  "ms": 6391
+ }
+}

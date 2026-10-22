@@ -1,0 +1,106 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v02",
+ "kind": "vague",
+ "q": "How bad is the rent situation in Sydney?",
+ "date": "2026-10-19",
+ "cost": 0.00098,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Sydney rent inflation has slowed sharply from its peak, but rents are still rising faster than the overall inflation target.\n\n- **Peak:** Sydney rents rose 8.8% year-on-year in March 2024, the highest in the period I checked.\n- **Latest:** 3.5% year-on-year in August 2026, the most recent ABS monthly figure. That's down from 8.8% but still above the 2–3% range the RBA targets for overall inflation.\n- **Recent trend:** The annual rate has been roughly flat at 3.3–3.5% since late 2025. Monthly increases of about 0.3% through mid-2026 point to rents still climbing at about that pace.\n- **National comparison:** Rents across Australia were also up 3.6% year-on-year in August 2026, so Sydney is now in line with the national rate. In early 2024 Sydney was running ahead of the average.\n\nThis is the CPI rent measure, which tracks rents paid by existing tenants and changes slowly. It doesn't capture new-lease asking rents, vacancy rates, or affordability relative to incomes. I didn't pull wage or vacancy data, so I can't say from this alone whether rents are outpacing incomes. If you want that comparison, I can check the wage price index and the ABS building or dwelling data.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "options": {
+      "measure": "annual_change"
+     },
+     "period": {
+      "start": "2023-01"
+     },
+     "select": {
+      "cities": [
+       "sydney",
+       "australia"
+      ],
+      "items": [
+       "rents"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2023-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1+50.M?startPeriod=2023-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30014..1+50.Q?startPeriod=2023-Q1\",\"series\":[{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2023-07\",7.6],[\"2023-08\",7.8],[\"2023-09\",7.5],[\"2023-10\",6.6],[\"2023-11\",7.1],[\"2023-12\",7.4],[\"2024-01\",7.5],[\"2024-02\",7.5],[\"2024-03\",7.7],[\"2024-04\",7.5],[\"2024-05\",7.4],[\"2024-06\",7.1],[\"2024-07\",6.9],[\"2024-08\",6.7],[\"2024-09\",6.6],[\"2024-10\",6.8],[\"2024-11\",6.6],[\"2024-12\",6.2],[\"2025-01\",5.8],[\"2025-02\",5.5],[\"2025-03\",5.2],[\"2025-04\",4.9],[\"2025-05\",4.5],[\"2025-06\",4.2],[\"2025-07\",3.9],[\"2025-08\",3.7],[\"2025-09\",3.8],[\"2025-10\",4.2],[\"2025-11\",4],[\"2025-12\",3.9],[\"2026-01\",3.9],[\"2026-02\",3.8],[\"2026-03\",3.7],[\"2026-04\",3.5],[\"2026-05\",3.6],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2023-07\",\"value\":7.6},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":-4},{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2023-07\",8.4],[\"2023-08\",8.7],[\"2023-09\",8.6],[\"2023-10\",8.1],[\"2023-11\",8.4],[\"2023-12\",8.7],[\"2024-01\",8.7],[\"2024-02\",8.7],[\"2024-03\",8.8],[\"2024-04\",8.5],[\"2024-05\",8.3],[\"2024-06\",7.8],[\"2024-07\",7.4],[\"2024-08\",7.1],[\"2024-09\",6.9],[\"2024-10\",6.8],[\"2024-11\",6.5],[\"2024-12\",6],[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "options": {
+      "measure": "monthly_change"
+     },
+     "period": {
+      "start": "2025-07"
+     },
+     "select": {
+      "cities": [
+       "sydney",
+       "australia"
+      ],
+      "items": [
+       "rents"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney",
+      "australia"
+     ],
+     "measure": "monthly_change",
+     "adjustment": "original",
+     "start": "2025-07"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/2.30014..1+50.M?startPeriod=2025-07\",\"series\":[{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-07\",0.3],[\"2025-08\",0.3],[\"2025-09\",0.2],[\"2025-10\",0.2],[\"2025-11\",0.4],[\"2025-12\",0.2],[\"2026-01\",0.3],[\"2026-02\",0.3],[\"2026-03\",0.2],[\"2026-04\",0.2],[\"2026-05\",0.4],[\"2026-06\",0.3],[\"2026-07\",0.3],[\"2026-08\",0.3]],\"start\":{\"period\":\"2025-07\",\"value\":0.3},\"latest\":{\"period\":\"2026-08\",\"value\":0.3},\"change\":0},{\"name\":\"Rents - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-07\",0.3],[\"2025-08\",0.3],[\"2025-09\",0.2],[\"2025-10\",0.2],[\"2025-11\",0.4],[\"2025-12\",0.2],[\"2026-01\",0.3],[\"2026-02\",0.4],[\"2026-03\",0.2],[\"2026-04\",0.2],[\"2026-05\",0.4],[\"2026-06\",0.3],[\"2026-07\",0.4],[\"2026-08\",0.3]],\"start\":{\"period\":\"2025-07\",\"value\":0.3},\"latest\":{\"period\":\"2026-08\",\"value\":0.3},\"change\":0}],\"notes\":[\"All series: Percentage change from previous period, Rents, Original\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1062,
+   "cacheWrite": 2764,
+   "cacheRead": 10623
+  },
+  "ms": 5971
+ }
+}

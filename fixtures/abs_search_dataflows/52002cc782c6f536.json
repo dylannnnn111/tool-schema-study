@@ -1,0 +1,87 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "Census 2021 rent weekly"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "C21_G40_POA",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Postal Areas (POA)"
+   },
+   {
+    "id": "C21_G40_RA",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Remoteness Areas (RA)"
+   },
+   {
+    "id": "C21_G40_SAL",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Suburbs and Localities (SAL)"
+   },
+   {
+    "id": "C21_G40_SUA",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Significant Urban Areas (SUA)"
+   },
+   {
+    "id": "C21_G40_SA2",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Main Statistical Areas Level 2 and up (SA2+)"
+   },
+   {
+    "id": "C21_G40_SED",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, State Electoral Divisions (SED 2021 boundaries)"
+   },
+   {
+    "id": "C21_G40_LGA",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Local Government Area 2021 (LGA 2021 boundaries)"
+   },
+   {
+    "id": "C21_G40_CED",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Commonwealth Electoral Divisions (CED 2021 boundaries)"
+   },
+   {
+    "id": "C21_T19_SA2",
+    "version": "1.0.0",
+    "name": "Census 2021, T19 Rent (weekly) by landlord type, Time Series, Main Statistical Areas Level 2 and up (SA2+)"
+   },
+   {
+    "id": "C21_G40_UCL",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Urban Centres, Localities and Section of State (UCL/SOS/SOSR)"
+   },
+   {
+    "id": "C21_T19_LGA",
+    "version": "1.0.0",
+    "name": "Census 2021, T19 Rent (weekly) by landlord type, Time Series, Local Government Area 2021 (LGA 2021 boundaries)"
+   },
+   {
+    "id": "C21_G59_POA",
+    "version": "1.0.0",
+    "name": "Census 2021, G59 Total family income (weekly) by labour force status of parent for one parent families, Postal Areas (POA)"
+   },
+   {
+    "id": "C21_T24_SA2",
+    "version": "1.0.0",
+    "name": "Census 2021, T24 Total household income (weekly) by rent (weekly), Time Series, Main Statistical Areas Level 2 and up (SA2+)"
+   },
+   {
+    "id": "C21_G59_RA",
+    "version": "1.0.0",
+    "name": "Census 2021, G59 Total family income (weekly) by labour force status of parent for one parent families, Remoteness Areas (RA)"
+   },
+   {
+    "id": "C21_T24_LGA",
+    "version": "1.0.0",
+    "name": "Census 2021, T24 Total household income (weekly) by rent (weekly), Time Series, Local Government Area 2021 (LGA 2021 boundaries)"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:18:06.002Z"
+}

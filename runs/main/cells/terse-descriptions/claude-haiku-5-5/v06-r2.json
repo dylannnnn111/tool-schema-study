@@ -1,0 +1,55 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v06",
+ "kind": "vague",
+ "q": "Is the Aussie dollar weak against the yen at the moment?",
+ "date": "2026-10-19",
+ "cost": 0.00054,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "No, the Aussie dollar is strong against the yen right now. The latest RBA figure is **109.67 yen per A$1 for October 2026**.\n\n- **Vs. a month earlier:** The September 2026 figure was 109.47, so it's essentially unchanged.\n- **Vs. the recent peak:** It was 114.54 in August 2026, so the Aussie is about 4% below that high.\n- **Vs. a year earlier:** October 2025 was 100.84, so the Aussie has gained about 9%.\n- **Vs. the start of 2025:** January 2025 was 96.14, so the Aussie has gained about 14%.\n\nThe yen has weakened considerably over the past 18 months, which is why the Aussie buys more of it. The RBA series I used records the last observation of each month, so the October figure may not be today's rate.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "JPY"
+     ],
+     "start": "2025-01",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "JPY"
+     ],
+     "monthly": true,
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/JPY (units of foreign currency per A$1)\",\"unit\":\"JPY\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-01\",96.14],[\"2025-02\",92.97],[\"2025-03\",93.62],[\"2025-04\",91.43],[\"2025-05\",92.57],[\"2025-06\",94.26],[\"2025-07\",96.25],[\"2025-08\",96.12],[\"2025-09\",97.91],[\"2025-10\",100.84],[\"2025-11\",102.05],[\"2025-12\",104.83],[\"2026-01\",107.81],[\"2026-02\",110.87],[\"2026-03\",109.27],[\"2026-04\",114.28],[\"2026-05\",114.14],[\"2026-06\",111.48],[\"2026-07\",112.9],[\"2026-08\",114.54],[\"2026-09\",109.47],[\"2026-10\",109.67]],\"start\":{\"period\":\"2025-01\",\"value\":96.14},\"latest\":{\"period\":\"2026-10\",\"value\":109.67},\"change\":13.53}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 801,
+   "cacheWrite": 640,
+   "cacheRead": 5818
+  },
+  "ms": 5020
+ }
+}

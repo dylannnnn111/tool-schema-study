@@ -1,0 +1,75 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "m03",
+ "kind": "multi",
+ "q": "Since January 2022, how much has the cash rate risen, and how fast are Sydney rents growing now?",
+ "date": "2026-10-19",
+ "cost": 0.00056,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Cash rate:** It has risen from 0.10% in January 2022 to 4.36% (September 2026 monthly average), a rise of about 4.26 percentage points. It peaked at 4.35% from late 2023 to early 2025, was cut to 3.60% by late 2025, and has since been raised again, from 3.60% in January 2026 to 4.36%.\n\n**Sydney rents:** Rents rose 3.5% over the year to August 2026. That is up from 3.3% in April 2026, and well below the 5.6% annual pace of January 2025. Rent growth slowed through 2025 and has been roughly stable at 3.3–3.5% since late 2025.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2022-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2022-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2022-01-31\",0.1],[\"2022-02-28\",0.1],[\"2022-03-31\",0.1],[\"2022-04-30\",0.1],[\"2022-05-31\",0.33],[\"2022-06-30\",0.73],[\"2022-07-31\",1.28],[\"2022-08-31\",1.81],[\"2022-09-30\",2.25],[\"2022-10-31\",2.58],[\"2022-11-30\",2.84],[\"2022-12-31\",3.05],[\"2023-01-31\",3.1],[\"2023-02-28\",3.29],[\"2023-03-31\",3.54],[\"2023-04-30\",3.6],[\"2023-05-31\",3.83],[\"2023-06-30\",4.05],[\"2023-07-31\",4.1],[\"2023-08-31\",4.1],[\"2023-09-30\",4.1],[\"2023-10-31\",4.1],[\"2023-11-30\",4.29],[\"2023-12-31\",4.35],[\"2024-01-31\",4.35],[\"2024-02-29\",4.35],[\"2024-03-31\",4.35],[\"2024-04-30\",4.35],[\"2024-05-31\",4.35],[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2022-01-31\",\"value\":0.1},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":4.26}],\"notes\":[\"Monthly average of the"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "sydney"
+     ],
+     "items": [
+      "rents"
+     ],
+     "measure": "annual_change",
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "rents"
+     ],
+     "cities": [
+      "sydney"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.30014..1.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Rents - Sydney (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",5.6],[\"2025-02\",5.2],[\"2025-03\",4.9],[\"2025-04\",4.5],[\"2025-05\",4.1],[\"2025-06\",3.7],[\"2025-07\",3.4],[\"2025-08\",3.2],[\"2025-09\",3.2],[\"2025-10\",3.5],[\"2025-11\",3.4],[\"2025-12\",3.4],[\"2026-01\",3.4],[\"2026-02\",3.4],[\"2026-03\",3.4],[\"2026-04\",3.3],[\"2026-05\",3.4],[\"2026-06\",3.5],[\"2026-07\",3.5],[\"2026-08\",3.5]],\"start\":{\"period\":\"2025-01\",\"value\":5.6},\"latest\":{\"period\":\"2026-08\",\"value\":3.5},\"change\":-2.1}],\"notes\":[\"All series: Percentage change from previous year, Rents, Original, Sydney\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 530,
+   "cacheWrite": 1600,
+   "cacheRead": 9626
+  },
+  "ms": 3938
+ }
+}

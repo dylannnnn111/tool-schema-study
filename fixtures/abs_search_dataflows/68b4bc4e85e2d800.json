@@ -1,0 +1,77 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "building approvals"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "BA_SA2_2016-21",
+    "version": "1.0.0",
+    "name": "Building Approvals by SA2 and above, 2016 to 2021"
+   },
+   {
+    "id": "BA_LGA2018",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2018)"
+   },
+   {
+    "id": "BA_LGA2019",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2019)"
+   },
+   {
+    "id": "BA_LGA2020",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2020)"
+   },
+   {
+    "id": "BA_LGA2021",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2021)"
+   },
+   {
+    "id": "BA_LGA2022",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2022)"
+   },
+   {
+    "id": "BA_LGA2023",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2023)"
+   },
+   {
+    "id": "BA_LGA2024",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2024)"
+   },
+   {
+    "id": "BA_LGA2025",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2025)"
+   },
+   {
+    "id": "BA_LGA2026",
+    "version": "1.0.0",
+    "name": "Building Approvals by Local Government Area (LGA 2026)"
+   },
+   {
+    "id": "BA_SA2",
+    "version": "2.0.0",
+    "name": "Building Approvals by SA2 and above, from July 2021 onwards"
+   },
+   {
+    "id": "BA_SA2_201116",
+    "version": "1.0.0",
+    "name": "Building Approvals by SA2 and above, July 2011 to June 2016"
+   },
+   {
+    "id": "BA_GCCSA",
+    "version": "1.0.0",
+    "name": "Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:04:44.646Z"
+}

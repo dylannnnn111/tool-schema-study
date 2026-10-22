@@ -1,0 +1,91 @@
+{
+ "variant": "no-enums",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v07",
+ "kind": "vague",
+ "q": "Where is the RBA at with rates?",
+ "date": "2026-10-19",
+ "cost": 0.03912,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "The cash rate target is **4.60%**. The RBA raised it by 0.25 points on **30 September 2026**, and it was still 4.60% in the latest daily data (15 October 2026). That's the highest it has been in this cycle, above the 4.35% peak of 2023–24.\n\n**How it got here**\n- **2025: four cuts.** The rate fell from 4.35% to 3.60% between February and August 2025, then held there until January 2026.\n- **2026: four hikes**, 1 percentage point in total. I've worked out the months from monthly averages, so treat them as approximate:\n  - early February: 3.60% → 3.85%\n  - mid-March: → 4.10%\n  - early May: → 4.35%\n  - 30 September: → 4.60%\n\nSo the 2025 cuts have been fully reversed, and the rate is now a quarter point above where it started.\n\n**Why it's been hiking:** inflation has picked up again and stayed well above the RBA's 2–3% target.\n- **Headline CPI:** 4.0% over the year to August 2026, up from 3.5% in July. It peaked at 4.6% in March.\n- **Trimmed mean** (the RBA's preferred underlying measure): 3.6% over the year to August, rising steadily from 3.3% in January.\n\nUnderlying inflation is still rising, not falling, so the RBA is leaning towards keeping policy tight. I haven't looked at its statements or market pricing, so I can't say whether it has signalled more hikes. The next useful pointer will be the September quarter and monthly CPI figures due in late October.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-10"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-10-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2026-01\",\"series\":[{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2026-01\",\"value\":3.8},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":0.2},{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2026-01\",\"value\":3.3},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.3}],\"notes\":[\"All series: Percentage change from previous year, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f1",
+     "search": "cash rate target",
+     "start": "2026-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1",
+     "search": "cash rate target",
+     "monthly": false,
+     "start": "2026-09"
+    },
+    "seen": "{\"source\":\"RBA F1 F1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1-data.csv\",\"series\":[{\"name\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Daily\",\"points\":[[\"2026-09-01\",4.35],[\"2026-09-02\",4.35],[\"2026-09-03\",4.35],[\"2026-09-04\",4.35],[\"2026-09-07\",4.35],[\"2026-09-08\",4.35],[\"2026-09-09\",4.35],[\"2026-09-10\",4.35],[\"2026-09-11\",4.35],[\"2026-09-14\",4.35],[\"2026-09-15\",4.35],[\"2026-09-16\",4.35],[\"2026-09-17\",4.35],[\"2026-09-18\",4.35],[\"2026-09-21\",4.35],[\"2026-09-22\",4.35],[\"2026-09-23\",4.35],[\"2026-09-24\",4.35],[\"2026-09-25\",4.35],[\"2026-09-28\",4.35],[\"2026-09-29\",4.35],[\"2026-09-30\",4.6],[\"2026-10-01\",4.6],[\"2026-10-02\",4.6],[\"2026-10-05\",4.6],[\"2026-10-06\",4.6],[\"2026-10-07\",4.6],[\"2026-10-08\",4.6],[\"2026-10-09\",4.6],[\"2026-10-12\",4.6],[\"2026-10-13\",4.6],[\"2026-10-14\",4.6],[\"2026-10-15\",4.6]],\"start\":{\"period\":\"2026-09-01\",\"value\":4.35},\"latest\":{\"period\":\"2026-10-15\",\"value\":4.6},\"change\":0.25},{\"name\":\"Change in the Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"as announced\",\"points\":[]}],\"notes\":[]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1261,
+   "cacheWrite": 2218,
+   "cacheRead": 13897
+  },
+  "ms": 15141
+ }
+}

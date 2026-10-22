@@ -1,0 +1,108 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m13",
+ "kind": "multi",
+ "q": "Are inflation expectations in line with actual inflation?",
+ "date": "2026-10-19",
+ "cost": 0.00247,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 4,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Short answer: consumers' expectations are well above actual inflation, but market economists' expectations are closer to it and the longer-term view looks anchored.**\n\n**Actual inflation (ABS CPI, year-on-year, August 2026, latest monthly data):**\n- Headline CPI: 4.0% (up from 3.5% in July, and it peaked at 4.6% in March 2026)\n- Trimmed mean (the RBA's preferred underlying measure): 3.6%, which has risen steadily from 2.8% in June 2025\n\n**Inflation expectations (RBA survey data, September quarter 2026, latest available):**\n- **Consumers, 1-year ahead: 4.9%.** That is about 0.9 points above headline and 1.3 points above trimmed mean. It was 5.5% in the June quarter and 3.6% a year earlier.\n- **Market economists, 1-year ahead: 3.0%.** That is below trimmed mean and in line with the RBA's target range. It has been 2.8–3.1% since early 2024.\n- **Market economists, 2-year ahead: 2.5%.** This is within the RBA's 2–3% target band and has stayed between 2.5% and 2.8% since 2022.\n- **Businesses, 3 months ahead: 2.0%** (September quarter 2026).\n\n**What this means:**\n- **Consumers are running hot.** Their expectations track recent price rises, especially for everyday items, and they have been well above actual inflation for a while. Households tend to overestimate inflation, so this is a warning sign rather than proof that inflation will stay high.\n- **Professional forecasters are not following consumers.** Their 1-year view (3.0%) sits below the underlying inflation rate, which suggests they expect the recent pickup to fade. Their 2-year view has not moved outside the target band.\n- **Longer-term expectations look anchored.** The 2-year market measure has barely shifted through the recent inflation spike, which is what the RBA wants to see.\n\nNote that the Sept 2026 quarter CPI isn't in the data yet, so the latest actual figure is August.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2024-06 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001+999902..50.Q?startPeriod=2024-Q2\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",2.4],[\"2025-05\",2.1],[\"2025-06\",1.9],[\"2025-07\",3],[\"2025-08\",3.2],[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-04\",\"value\":2.4},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":1.6},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2024-Q2\",4],[\"2024-Q3\",3.6],[\"2024-Q4\",3.3],[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"start\":{\"period\":\"2024-Q2\",\"value\":4},\"latest\":{\"period\":\"2025-Q3\",\"value\":3},\"change\":-1},{\"name\":\"All groups CPI - Australia (quarterly)\",\"un"
+   },
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "g1",
+     "search": "expectations"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g1",
+     "search": "expectations",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"G1\",\"title\":\"G1 CONSUMER PRICE INFLATION\",\"columns\":[{\"id\":\"GCPIAG\",\"title\":\"Consumer price index\",\"unit\":\"Index, September 2025 month = 100\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIAGYP\",\"title\":\"Year-ended inflation\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIEITCYP\",\"title\":\"Year-ended inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIXVIYP\",\"title\":\"Year-ended inflation – excluding volatile items, interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPITIYP\",\"title\":\"Year-ended tradables inflation – excluding tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPITXVIYP\",\"title\":\"Year-ended tradables inflation – excluding volatile items, tobacco and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPINTIYP\",\"title\":\"Year-ended non-tradables inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPINTXDLYP\",\"title\":\"Year-ended non-tradable inflation – excluding interest charges and indirect deposit & loan facilities and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIOCPMWMYP\",\"title\":\"Year-ended weighted median inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCPIOCPMTMYP\",\"title\":\"Year-ended trimmed mean inflation – excluding interest charges and tax changes\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\"},{\"id\":\"GCP"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "g3",
+     "search": "expectations"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "g3",
+     "search": "expectations",
+     "monthly": false
+    },
+    "seen": "{\"source\":\"RBA G3 G3 INFLATION EXPECTATIONS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/g3-data.csv\",\"series\":[{\"name\":\"Consumer inflation expectations – 1-year ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"2022-03-31\",4.9],[\"2022-06-30\",6.7],[\"2022-09-30\",5.4],[\"2022-12-31\",5.2],[\"2023-03-31\",5],[\"2023-06-30\",5.2],[\"2023-09-30\",4.6],[\"2023-12-31\",4.5],[\"2024-03-31\",4.3],[\"2024-06-30\",4.4],[\"2024-09-30\",4.4],[\"2024-12-31\",4.2],[\"2025-03-31\",3.6],[\"2025-06-30\",5],[\"2025-09-30\",4.7],[\"2025-12-31\",4.7],[\"2026-03-31\",5.2],[\"2026-06-30\",5.5],[\"2026-09-30\",4.9]],\"start\":{\"period\":\"2022-03-31\",\"value\":4.9},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.9},\"change\":0},{\"name\":\"Business inflation expectations – 3-months ahead\",\"unit\":\"Per cent\",\"frequency\":\"Quarterly\",\"points\":[[\"1989-09-30\",4.8],[\"1989-12-31\",3.5],[\"1990-03-31\",4.6],[\"1990-06-30\",3.7],[\"1990-09-30\",3.9],[\"1990-12-31\",3.4],[\"1991-03-31\",2.4],[\"1991-06-30\",2],[\"1991-09-30\",1.7],[\"1991-12-31\",1.6],[\"1992-03-31\",1.9],[\"1992-06-30\",1.7],[\"1992-09-30\",2.1],[\"1992-12-31\",1.7],[\"1993-03-31\",1.8],[\"1993-06-30\",2.3],[\"1993-09-30\",2.4],[\"1993-12-31\",2.5],[\"1994-03-31\",2.3],[\"1994-06-30\",3],[\"1994-09-30\",3.2],[\"1994-12-31\",3.9],[\"1995-03-31\",4],[\"1995-06-30\",4.4],[\"1995-09-30\",3.3],[\"1995-12-31\",2.6],[\"1996-03-31\",2.3],[\"1996-06-30\",2.2],[\"1996-09-30\",1.8],[\"1996-12-31\",1.6],[\"1997-03-31\",1.9],[\"1997-06-30\",1.8],[\"1997-09-30\",1.5],[\"1997-12-31\",1.7],[\"1998-03-31\",2.1],[\"1998-06-30\",1.5],[\"1998-09-30\",1.5"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "search": "inflation expectations"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "search": "inflation expectations",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F2\",\"title\":\"F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"columns\":[{\"id\":\"FCMYGBAG2D\",\"title\":\"Australian Government 2 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG3D\",\"title\":\"Australian Government 3 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG5D\",\"title\":\"Australian Government 5 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG10D\",\"title\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAGID\",\"title\":\"Australian Government Indexed Bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"}]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1831,
+   "cacheWrite": 11185,
+   "cacheRead": 15409
+  },
+  "ms": 10472
+ }
+}

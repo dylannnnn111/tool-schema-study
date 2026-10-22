@@ -1,0 +1,91 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9.TOT.100+110+850.10+20+30.AUS.M",
+  "last_n": 2
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT.100+110+850.10+20+30.AUS.M?lastNObservations=2",
+  "series": [
+   {
+    "name": "Total Residential",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      19273
+     ],
+     [
+      "2026-08",
+      16967
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 19273
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 16967
+    },
+    "change": -2306
+   },
+   {
+    "name": "Dwellings excluding houses",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      7610
+     ],
+     [
+      "2026-08",
+      5834
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 7610
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 5834
+    },
+    "change": -1776
+   },
+   {
+    "name": "Houses",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2026-07",
+      11667
+     ],
+     [
+      "2026-08",
+      11134
+     ]
+    ],
+    "start": {
+     "period": "2026-07",
+     "value": 11667
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 11134
+    },
+    "change": -533
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Sectors, Total Work, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:53:11.544Z"
+}

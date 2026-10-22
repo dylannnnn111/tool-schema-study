@@ -47,8 +47,9 @@ test('nested groups arguments and keeps required ids at the top', () => {
   assert.ok('table' in rba.properties && 'select' in rba.properties);
 });
 
-test('terse-errors only changes error text', () => {
+test('terse-errors only changes error text; the combined variant has no-enums schemas', () => {
   assert.deepEqual(toolDefs('terse-errors'), toolDefs('baseline'));
+  assert.deepEqual(toolDefs('no-enums-terse-errors'), toolDefs('no-enums'));
 });
 
 // ---------- turning arguments into canonical calls ----------
@@ -72,6 +73,7 @@ test('rejects bad values, unknown and missing arguments', () => {
   const msg = validationError(cpi, 'no-enums', (bad as { problems: never }).problems);
   assert.match(msg, /cities: "NSW" isn't a valid value\. Use one of: australia, sydney/);
   assert.equal(validationError(cpi, 'terse-errors', (bad as { problems: never }).problems), 'Error: invalid arguments.');
+  assert.equal(validationError(cpi, 'no-enums-terse-errors', (bad as { problems: never }).problems), 'Error: invalid arguments.');
   // flat arguments sent to the nested schema
   const flat = canonicalize(cpi, 'nested', { items: ['rents'] });
   assert.equal(flat.ok, false);

@@ -1,0 +1,55 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 1,
+ "question": "o05",
+ "kind": "out-of-scope",
+ "q": "What's one Bitcoin worth in Australian dollars?",
+ "date": "2026-10-19",
+ "cost": 0.01811,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you what one Bitcoin is worth in Australian dollars. My data comes from the RBA and ABS, and neither covers cryptocurrency prices. Bitcoin's price also changes by the minute, so for a current figure check an Australian exchange like CoinSpot, Swyftx or Independent Reserve, or a site like CoinGecko or CoinMarketCap.\n\n**If you know the US dollar price, you can convert it yourself:**\n- On **Friday 16 October 2026**, A$1 was worth **US$0.6947** (the RBA's 4pm AEST rate). That's the latest figure available.\n- **To convert:** AUD price = USD price ÷ 0.6947, which is about USD price × 1.44.\n- **Example:** if Bitcoin were US$100,000, that would be about A$143,950.\n\nThe Australian dollar has weakened from US$0.7232 on 9 September to US$0.6947. That makes anything priced in US dollars, including Bitcoin, about 4% dearer in Australian dollars than it was then, even if the US dollar price hasn't moved.\n\nExchanges usually charge a bit more than this conversion suggests because of their spreads and fees.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "USD"
+     ],
+     "start": "2026-09-01",
+     "monthly": false
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "USD"
+     ],
+     "monthly": false,
+     "start": "2026-09-01"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/USD (units of foreign currency per A$1)\",\"unit\":\"USD\",\"frequency\":\"Daily\",\"points\":[[\"2026-09-01\",0.717],[\"2026-09-02\",0.7143],[\"2026-09-03\",0.7164],[\"2026-09-04\",0.721],[\"2026-09-07\",0.7209],[\"2026-09-08\",0.7218],[\"2026-09-09\",0.7232],[\"2026-09-10\",0.722],[\"2026-09-11\",0.7172],[\"2026-09-14\",0.7149],[\"2026-09-15\",0.7122],[\"2026-09-16\",0.7133],[\"2026-09-17\",0.7108],[\"2026-09-18\",0.7126],[\"2026-09-21\",0.7124],[\"2026-09-22\",0.7123],[\"2026-09-23\",0.7102],[\"2026-09-24\",0.7032],[\"2026-09-25\",0.7019],[\"2026-09-28\",0.7023],[\"2026-09-29\",0.6987],[\"2026-09-30\",0.6977],[\"2026-10-01\",0.6949],[\"2026-10-02\",0.6933],[\"2026-10-06\",0.697],[\"2026-10-07\",0.697],[\"2026-10-08\",0.6956],[\"2026-10-09\",0.6979],[\"2026-10-12\",0.6979],[\"2026-10-13\",0.6961],[\"2026-10-14\",0.7002],[\"2026-10-15\",0.6955],[\"2026-10-16\",0.6947]],\"start\":{\"period\":\"2026-09-01\",\"value\":0.717},\"latest\":{\"period\":\"2026-10-16\",\"value\":0.6947},\"change\":-0.0223}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 610,
+   "cacheWrite": 949,
+   "cacheRead": 5723
+  },
+  "ms": 7714
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "rent weekly dwelling"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "ABS_C16_T26_LGA",
+    "version": "1.0.0",
+    "name": "Census 2016, Rent (weekly) by Dwelling Structure (LGA)"
+   },
+   {
+    "id": "ABS_C16_T26_SA",
+    "version": "1.0.0",
+    "name": "Census 2016, Rent (weekly) by Dwelling Structure (SA2+)"
+   },
+   {
+    "id": "ABS_C16_T26_TS_LGA",
+    "version": "1.0.0",
+    "name": "Census Time Series 2016, 2011, 2006: T26 Rent (weekly) by Dwelling Structure (LGA)"
+   },
+   {
+    "id": "ABS_C16_T26_TS_SA",
+    "version": "1.0.0",
+    "name": "Census Time Series 2016, 2011, 2006: T26 Rent (weekly) by Dwelling Structure (SA2+)"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:18:03.950Z"
+}

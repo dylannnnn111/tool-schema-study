@@ -1,0 +1,33 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o09",
+ "kind": "out-of-scope",
+ "q": "Where is the ASX 200 sitting today?",
+ "date": "2026-10-19",
+ "cost": 0.00037,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": false,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't see the ASX 200's current level. My tools cover Australian economic data (CPI, labour force, cash rate, lending rates, exchange rates, ABS datasets, and Sydney commuting), but not share market prices.\n\nFor today's close or intraday level, check the ASX website (asx.com.au), your broker's app, or a financial news site such as the AFR, Reuters, or Google Finance.\n\nI can pull related series if they'd help, such as the cash rate, the AUD against the USD, or the latest inflation and unemployment figures.",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 623,
+   "cacheWrite": 87,
+   "cacheRead": 4708
+  },
+  "ms": 3919
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "WPI",
+  "key": "3.THRPEB.7.TOT.10.AUS.Q",
+  "start": "2024-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS WPI",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,WPI/3.THRPEB.7.TOT.10.AUS.Q?startPeriod=2024-06",
+  "series": [
+   {
+    "name": "Total hourly rates of pay excluding bonuses - Private and Public - All Industries - Australia",
+    "unit": "Percent",
+    "frequency": "Quarterly",
+    "points": [
+     [
+      "2024-Q3",
+      3.5
+     ],
+     [
+      "2024-Q4",
+      3.2
+     ],
+     [
+      "2025-Q1",
+      3.4
+     ],
+     [
+      "2025-Q2",
+      3.4
+     ],
+     [
+      "2025-Q3",
+      3.4
+     ],
+     [
+      "2025-Q4",
+      3.4
+     ],
+     [
+      "2026-Q1",
+      3.2
+     ],
+     [
+      "2026-Q2",
+      3.2
+     ]
+    ],
+    "start": {
+     "period": "2024-Q3",
+     "value": 3.5
+    },
+    "latest": {
+     "period": "2026-Q2",
+     "value": 3.2
+    },
+    "change": -0.3
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from corresponding quarter of previous year, Total hourly rates of pay excluding bonuses, Private and Public, All Industries, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:15:04.137Z"
+}

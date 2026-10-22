@@ -1,0 +1,136 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "g1",
+  "search": "expectations",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "G1",
+  "title": "G1 CONSUMER PRICE INFLATION",
+  "columns": [
+   {
+    "id": "GCPIAG",
+    "title": "Consumer price index",
+    "unit": "Index, September 2025 month = 100",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIAGYP",
+    "title": "Year-ended inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIEITCYP",
+    "title": "Year-ended inflation – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIXVIYP",
+    "title": "Year-ended inflation – excluding volatile items, interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPITIYP",
+    "title": "Year-ended tradables inflation – excluding tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPITXVIYP",
+    "title": "Year-ended tradables inflation – excluding volatile items, tobacco and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPINTIYP",
+    "title": "Year-ended non-tradables inflation – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPINTXDLYP",
+    "title": "Year-ended non-tradable inflation – excluding interest charges and indirect deposit & loan facilities and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIOCPMWMYP",
+    "title": "Year-ended weighted median inflation – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIOCPMTMYP",
+    "title": "Year-ended trimmed mean inflation – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIAGQP",
+    "title": "Quarterly inflation – original",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIAGSAQP",
+    "title": "Quarterly inflation",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIEITCQP",
+    "title": "Quarterly inflation – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIXVIQP",
+    "title": "Quarterly inflation – excluding volatile items, interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPITIQP",
+    "title": "Quarterly tradables inflation  – excluding tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPITXVIQP",
+    "title": "Quarterly tradables inflation – excluding volatile items, tobacco and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPINTIQP",
+    "title": "Quarterly non-tradables inflation  – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPINTXDLQP",
+    "title": "Quarterly non-tradables inflation – excluding interest charges, indirect deposit and loan facilities and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIOCPMWMQP",
+    "title": "Quarterly weighted median inflation  – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   },
+   {
+    "id": "GCPIOCPMTMQP",
+    "title": "Quarterly trimmed mean inflation  – excluding interest charges and tax changes",
+    "unit": "Per cent",
+    "frequency": "Quarterly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:07:58.435Z"
+}

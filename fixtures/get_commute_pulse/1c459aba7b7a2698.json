@@ -1,0 +1,32 @@
+{
+ "tool": "get_commute_pulse",
+ "args": {
+  "view": "friday_gap",
+  "centres": [
+   "Sydney CBD"
+  ],
+  "start": "2026-10-01",
+  "end": "2026-10-19"
+ },
+ "ok": true,
+ "result": {
+  "source": "Commute Pulse (TfNSW Opal Tap Data)",
+  "notes": [
+   "Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.",
+   "Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.",
+   "Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.",
+   "Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse",
+   "Known centres: Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield, Parramatta.",
+   "Months with fewer than 8 usable weekdays are left out."
+  ],
+  "series": [
+   {
+    "name": "Sydney CBD",
+    "unit": "Friday / Tue-Thu average",
+    "frequency": "Monthly",
+    "points": []
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:21:45.288Z"
+}

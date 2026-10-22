@@ -1,0 +1,65 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.02601,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year Australian Government bond yield is about 1 percentage point above the cash rate. The gap has narrowed this year.\n\n**Latest figures**\n- **10-year bond yield:** 5.31% on 14 Oct 2026. It has ranged from 5.29% to 5.41% since the start of October.\n- **Cash rate:** 4.36% (September 2026 monthly average). It has been at about 4.35% since June. I don't have an October reading.\n- **Spread:** about +0.95 percentage points, with the 10-year yield higher. This mixes a mid-October yield with a September cash rate.\n\n**How it has changed this year**\n| Period | 10-yr yield | Cash rate (monthly avg) | Spread |\n|---|---|---|---|\n| Jan 2026 (30 Jan yield) | 4.80% | 3.60% | about +1.20 pp |\n| Jun 2026 (30 Jun yield) | 4.73% | 4.35% | about +0.38 pp |\n| Sep 2026 (30 Sep yield) | 5.34% | 4.36% | about +0.98 pp |\n\n- **Cash rate:** it rose 0.76 percentage points between January and September, from 3.60% to 4.36%.\n- **10-year yield:** it rose about 0.5 percentage points over the same stretch, from 4.82% on 2 Jan to 5.31% on 14 Oct.\n- **June narrowing:** the spread was at its narrowest in mid-2026. The cash rate had caught up to 4.35% while the 10-year yield dipped below 4.8%.\n- **Re-widening:** the spread widened again from July. The 10-year yield climbed from about 4.8% to above 5.3% through August and September, while the cash rate stayed flat.\n\nThe 10-year yield being above the cash rate means the yield curve between the two slopes upward. That is a normal shape, and it suggests the market is not pricing in near-term rate cuts.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2026-01-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "F2",
+     "search": "10 year",
+     "start": "2026-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F2",
+     "search": "10 year",
+     "monthly": false,
+     "start": "2026-01"
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\",\"points\":[[\"2026-01-02\",4.82],[\"2026-01-05\",4.78],[\"2026-01-06\",4.775],[\"2026-01-07\",4.74],[\"2026-01-08\",4.649],[\"2026-01-09\",4.669],[\"2026-01-12\",4.685],[\"2026-01-13\",4.69],[\"2026-01-14\",4.7],[\"2026-01-15\",4.666],[\"2026-01-16\",4.692],[\"2026-01-19\",4.727],[\"2026-01-20\",4.767],[\"2026-01-21\",4.77],[\"2026-01-22\",4.787],[\"2026-01-23\",4.808],[\"2026-01-27\",4.836],[\"2026-01-28\",4.807],[\"2026-01-29\",4.827],[\"2026-01-30\",4.799],[\"2026-02-02\",4.789],[\"2026-02-03\",4.826],[\"2026-02-04\",4.858],[\"2026-02-05\",4.848],[\"2026-02-06\",4.819],[\"2026-02-09\",4.86],[\"2026-02-10\",4.821],[\"2026-02-11\",4.749],[\"2026-02-12\",4.799],[\"2026-02-13\",4.741],[\"2026-02-16\",4.702],[\"2026-02-17\",4.678],[\"2026-02-18\",4.717],[\"2026-02-19\",4.777],[\"2026-02-20\",4.723],[\"2026-02-23\",4.713],[\"2026-02-24\",4.69],[\"2026-02-25\",4.715],[\"2026-02-26\",4.696],[\"2026-02-27\",4.646],[\"2026-03-02\",4.628],[\"2026-03-03\",4.767],[\"2026-03-04\",4.743],[\"2026-03-05\",4.794],[\"2026-03-06\",4.839],[\"2026-03-09\",4.934],[\"2026-03-10\",4.846],[\"2026-03-11\",4.847],[\"2026-03-12\",4.951],[\"2026-03-13\",4.949],[\"2026-03-16\",4.999],[\"2026-03-17\",4.937],[\"2026-03-18\",4.894],[\"2026-03-19\",4.973],[\"2026-03-20\",5.022],[\"2026-03-23\",5.116],[\"2026-03-24\",5.042],[\"2026-03-25\",4.954],[\"2026-03-26\",5.01],[\"2026-03-27\",5.094],[\"2"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1135,
+   "cacheWrite": 5628,
+   "cacheRead": 5818
+  },
+  "ms": 10880
+ }
+}

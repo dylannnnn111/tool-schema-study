@@ -1,0 +1,131 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9.TOT.110+130+120.10.AUS.M",
+  "start": "2024-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT.110+130+120.10.AUS.M?startPeriod=2024-09",
+  "series": [
+   {
+    "name": "Total - Total Sectors - Total Work - Houses - Australia",
+    "unit": "Number",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2024-09",
+      9764
+     ],
+     [
+      "2024-10",
+      10480
+     ],
+     [
+      "2024-11",
+      10107
+     ],
+     [
+      "2024-12",
+      7833
+     ],
+     [
+      "2025-01",
+      6746
+     ],
+     [
+      "2025-02",
+      9396
+     ],
+     [
+      "2025-03",
+      9485
+     ],
+     [
+      "2025-04",
+      8768
+     ],
+     [
+      "2025-05",
+      10041
+     ],
+     [
+      "2025-06",
+      9162
+     ],
+     [
+      "2025-07",
+      10780
+     ],
+     [
+      "2025-08",
+      9730
+     ],
+     [
+      "2025-09",
+      10189
+     ],
+     [
+      "2025-10",
+      10738
+     ],
+     [
+      "2025-11",
+      9982
+     ],
+     [
+      "2025-12",
+      8864
+     ],
+     [
+      "2026-01",
+      7082
+     ],
+     [
+      "2026-02",
+      10415
+     ],
+     [
+      "2026-03",
+      11201
+     ],
+     [
+      "2026-04",
+      10470
+     ],
+     [
+      "2026-05",
+      11245
+     ],
+     [
+      "2026-06",
+      11320
+     ],
+     [
+      "2026-07",
+      11667
+     ],
+     [
+      "2026-08",
+      11134
+     ]
+    ],
+    "start": {
+     "period": "2024-09",
+     "value": 9764
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 11134
+    },
+    "change": 1370
+   }
+  ],
+  "notes": [
+   "All series: Number of dwelling units, Total, Total Sectors, Total Work, Houses, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:46:37.182Z"
+}

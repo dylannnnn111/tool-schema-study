@@ -1,0 +1,53 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "v11",
+ "kind": "vague",
+ "q": "When does the CBD empty out on a Friday compared with midweek?",
+ "date": "2026-10-19",
+ "cost": 0.04286,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": null,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Short answer:** Over the last 12 months, the CBD doesn't empty out much earlier on Fridays. The busiest hour for leaving is still 5pm. The difference is that far fewer people leave in the evening peak, which suggests fewer people came in to begin with. After 9pm Friday is busier than midweek, because people stay out later.\n\n**Average Sydney CBD Opal tap-ons per hour, last 12 months (Friday vs the Tue–Thu average)**\n\n| Hour | Tue–Thu avg | Friday | Fri as % of midweek |\n|---|---|---|---|\n| 12pm | 22,230 | 22,950 | 103% |\n| 2pm | 31,567 | 32,142 | 102% |\n| 3pm | 43,026 | 41,067 | 95% |\n| 4pm | 65,505 | 51,933 | 79% |\n| **5pm** | **95,306** | **64,573** | **68%** |\n| 6pm | 51,566 | 40,833 | 79% |\n| 7pm | 27,622 | 25,185 | 91% |\n| 9pm | 19,043 | 21,447 | 113% |\n| 10pm | 12,358 | 19,586 | 158% |\n| 11pm | 5,550 | 11,342 | 204% |\n\n**What this shows**\n- **No early exodus:** Up to 2pm, Friday is level with or slightly above midweek (102–103%). By 3pm it's still 95% of midweek. There's no big Friday-lunchtime departure.\n- **A much flatter peak:** Friday's 5pm peak is about 31,000 tap-ons (32%) smaller than midweek. Over the whole 3–7pm window, Friday has about 198,000 tap-ons against 255,000 midweek, or **78%**. A slightly larger share of Friday's afternoon departures happen before 5pm (47% vs 43% midweek), so the shift towards leaving earlier is small.\n- **A later tail:** From 9pm Friday overtakes midweek. By 11pm it's double (204%), reflecting people going out after work.\n\n**Compared with before COVID (6 Jan – 6 Mar 2020)**\n- Friday's 3–7pm volume was about **90%** of midweek then, against 78% now.\n- The 5pm peak was 85% of midweek then (95,400 vs 112,581), against 68% now.\n\nSo the Friday gap has widened since 2020. That fits with fewer people coming into the office on Fridays, rather than people leaving early.\n\n**Caveats**\n- These are averages for each hour of the day, not specific dates. Public holidays, outages and periods with known data problems are excluded.\n- It's unclear whether Sydney Metro taps are counted in the CBD figures. That could make current numbers look low next to 2020, but it doesn't affect the Friday vs midweek comparison within the same period.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_commute_pulse",
+    "input": {
+     "view": "cbd_hourly",
+     "centres": [
+      "Sydney CBD"
+     ]
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "view": "cbd_hourly",
+     "centres": [
+      "Sydney CBD"
+     ]
+    },
+    "seen": "{\"source\":\"Commute Pulse (TfNSW Opal Tap Data)\",\"notes\":[\"Measure: Opal tap-ons 3pm-7pm (people leaving work) per commercial centre. Friday gap = Friday volume / average of Tue-Thu in the same period.\",\"Pre-COVID baseline: 6 Jan - 6 Mar 2020. Public holidays, outages and documented data discrepancy windows are excluded.\",\"Caveat: unclear whether Sydney Metro taps in the CBD are included, so CBD levels vs 2020 may be understated. Ratios within a period are unaffected.\",\"Source: TfNSW Open Data - Opal Tap Data (CC BY 4.0). Analysis: Commute Pulse, dylanlewis.au/projects/commute-pulse\"],\"series\":[{\"name\":\"Sydney CBD Tue - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1369],[\"01:00\",364],[\"02:00\",328],[\"03:00\",250],[\"04:00\",836],[\"05:00\",2914],[\"06:00\",7011],[\"07:00\",14222],[\"08:00\",23756],[\"09:00\",16511],[\"10:00\",14511],[\"11:00\",16489],[\"12:00\",19656],[\"13:00\",22733],[\"14:00\",28400],[\"15:00\",41744],[\"16:00\",68367],[\"17:00\",115233],[\"18:00\",65356],[\"19:00\",30111],[\"20:00\",19944],[\"21:00\",15956],[\"22:00\",9944],[\"23:00\",4767]],\"start\":{\"period\":\"00:00\",\"value\":1369},\"latest\":{\"period\":\"23:00\",\"value\":4767},\"change\":3398},{\"name\":\"Sydney CBD Wed - pre-COVID\",\"unit\":\"average tap-ons per hour\",\"frequency\":\"Hourly profile\",\"points\":[[\"00:00\",1692],[\"01:00\",544],[\"02:00\",406],[\"03:00\",339],[\"04:00\",869],[\"05:00\",3014],[\"06:00\",7244],[\"07:00\",13989],[\"08:00\",23500],[\"09:00\",16556],[\"10:00\",14856],[\"11:00\",17289],[\"12:00\",20511],[\"13:00\",2318"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 2052,
+   "cacheWrite": 0,
+   "cacheRead": 9003
+  },
+  "ms": 20641
+ }
+}

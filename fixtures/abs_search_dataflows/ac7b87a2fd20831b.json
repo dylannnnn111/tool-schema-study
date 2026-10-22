@@ -1,0 +1,27 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "rent"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "ALC",
+    "version": "1.0.0",
+    "name": "Apparent Consumption of Alcohol, Australia"
+   },
+   {
+    "id": "BOP_FACTOR",
+    "version": "1.0.0",
+    "name": "Balance of Payments and International Investment Position: Combined current price seasonal adjustment factors"
+   },
+   {
+    "id": "CONFINEMENTS_NUPTIALITY",
+    "version": "1.0.0",
+    "name": "Registered births, confinements and median age of parents by nuptiality and state or territory of usual residence, 1975 onwards"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:13:04.358Z"
+}

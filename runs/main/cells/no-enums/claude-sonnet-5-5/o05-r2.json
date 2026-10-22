@@ -1,0 +1,74 @@
+{
+ "variant": "no-enums",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "o05",
+ "kind": "out-of-scope",
+ "q": "What's one Bitcoin worth in Australian dollars?",
+ "date": "2026-10-19",
+ "cost": 0.00644,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't tell you what one Bitcoin is worth in Australian dollars. The tools I have don't include cryptocurrency prices. The RBA exchange rate data only covers conventional currencies such as USD, EUR, GBP, JPY and NZD. Bitcoin isn't in it, and I don't want to guess at a figure.\n\nBitcoin's price changes minute by minute. For a current AUD quote, check an Australian exchange such as CoinSpot, Independent Reserve or Swyftx. Aggregators like CoinMarketCap or Google Finance (search \"BTC to AUD\") also show it.\n\nI can also give you the AUD/USD rate from the RBA. If you have a USD price for Bitcoin, you could divide it by that rate to get the AUD value. Would you like me to pull it?",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "BTC"
+     ],
+     "start": "2026-09"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "currencies",
+      "problem": "\"BTC\" isn't a valid value",
+      "allowed": [
+       "USD",
+       "TWI",
+       "CNY",
+       "JPY",
+       "EUR",
+       "KRW",
+       "GBP",
+       "SGD",
+       "INR",
+       "THB",
+       "NZD",
+       "TWD",
+       "MYR",
+       "IDR",
+       "VND",
+       "HKD",
+       "CAD",
+       "CHF",
+       "PHP"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_exchange_rates:\n- currencies: \"BTC\" isn't a valid value. Use one of: USD, TWI, CNY, JPY, EUR, KRW, GBP, SGD, INR, THB, NZD, TWD, MYR, IDR, VND, HKD, CAD, CHF, PHP"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 474,
+   "cacheWrite": 336,
+   "cacheRead": 8502
+  },
+  "ms": 5042
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "o03",
+ "kind": "out-of-scope",
+ "q": "What's the US Federal Reserve's interest rate right now?",
+ "date": "2026-10-19",
+ "cost": 0.00087,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you the current Fed rate from the data I can access. My tools cover Australian data (RBA cash rate, ABS inflation and jobs) and the RBA's own tables, and none of them carry the US federal funds rate.\n\nFrom my training data, the Fed cut rates in late 2025, and the target range was around 3.50–3.75% by the end of that year. I don't know what it has done since, and today is October 2026, so that figure may be out of date.\n\nFor the current target range, check the Federal Reserve's website (federalreserve.gov, under \"Monetary Policy\"), or a source like FRED, which publishes the effective federal funds rate daily.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f1",
+     "search": "federal funds"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f1",
+     "search": "federal funds",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F1\",\"title\":\"F1 INTEREST RATES AND YIELDS – MONEY MARKET\",\"columns\":[{\"id\":\"FIRMMCRTD\",\"title\":\"Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCCRT\",\"title\":\"Change in the Cash Rate Target\",\"unit\":\"Per cent\",\"frequency\":\"as announced\"},{\"id\":\"FIRMMCRID\",\"title\":\"Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIH\",\"title\":\"Highest Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIL\",\"title\":\"Lowest Interbank Overnight Cash Rate\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIV\",\"title\":\"Volume of Cash Market Transactions\",\"unit\":\"$m\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCRIN\",\"title\":\"Number of Cash Market Transactions\",\"unit\":\"Number\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMCTRI\",\"title\":\"Total Return Index\",\"unit\":\"Index 04-Jan-2011=100\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB30D\",\"title\":\"EOD 1-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB90D\",\"title\":\"EOD 3-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMBAB180D\",\"title\":\"EOD 6-month BABs/NCDs\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS1D\",\"title\":\"1-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS3D\",\"title\":\"3-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMOIS6D\",\"title\":\"6-month OIS\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMTN1D\",\"title\":\"1-month Treasury Note\",\"unit\":\"Per cent\",\"frequency\":\"Daily\"},{\"id\":\"FIRMMTN3D\",\"title\":\"3"
+   },
+   {
+    "turn": 1,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "search": "United States"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "search": "United States",
+     "monthly": false
+    },
+    "seen": "{\"table\":\"F2\",\"title\":\"F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"columns\":[{\"id\":\"FCMYGBAG2D\",\"title\":\"Australian Government 2 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG3D\",\"title\":\"Australian Government 3 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG5D\",\"title\":\"Australian Government 5 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAG10D\",\"title\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"},{\"id\":\"FCMYGBAGID\",\"title\":\"Australian Government Indexed Bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Daily\"}]}"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 1008,
+   "cacheWrite": 1848,
+   "cacheRead": 13842
+  },
+  "ms": 7050
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "variant": "no-enums",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v04",
+ "kind": "vague",
+ "q": "Should I be fixing my home loan right now? What are banks advertising for a 3-year fixed?",
+ "date": "2026-10-19",
+ "cost": 0.00185,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": true,
+  "calls": 4,
+  "invalid": 1,
+  "errors": 1,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Short answer:** On the advertised numbers, fixing right now costs you more than staying variable, so it's only worth it if you specifically need the certainty of a fixed repayment.\n\n**What banks are advertising (RBA indicator rates, September 2026)**\n\n| Product | Rate (Sep 2026) | A year earlier (Sep 2025) |\n|---|---|---|\n| 3-year fixed, owner-occupier | **7.02%** | 5.52% |\n| Variable, discounted, owner-occupier | 6.80% | 6.05% |\n| Variable, standard, owner-occupier | 8.77% | 8.02% |\n\nThe 3-year fixed rate has risen about 1.5 percentage points since late 2025 and is now 0.22 points above the discounted variable rate. Normally fixed rates sit below variable, so you'd be paying a premium to lock in.\n\n**Why rates have moved**\n- The cash rate was 3.60% in January 2026 and was 4.36% on average in September 2026, after a series of rate rises from February to May.\n- Underlying inflation (trimmed mean) has risen from 3.2% in April 2025 to 3.6% in August 2026, the latest monthly figure. That's above the RBA's 2–3% target band, which is why rates have been pushed up.\n\n**What it means for you**\n- On a $600,000, 30-year loan, the 7.02% fixed works out at roughly $4,000 a month, against about $3,910 at the 6.80% discounted variable. That's around $90 a month more for certainty.\n- Fixing makes most sense if your budget can't absorb a further rise, or if you value knowing exactly what you'll pay for the next three years.\n- Staying variable keeps you flexible. You can make extra repayments, use an offset account, and refinance or switch later. If the RBA does cut, you benefit straight away.\n- Fixed rates already reflect what markets expect the RBA to do. The 3-year fixed rate has climbed, which suggests lenders expect rates to stay high or rise further. I don't have market forecasts, so I can't tell you whether that expectation will be right.\n\n**Practical points**\n- Advertised rates are a starting point. Most borrowers can negotiate a discount off the variable rate, and the rates people actually pay on new loans are lower than the advertised ones (RBA table F6 shows these).\n- If you're already on a fixed rate, check the break costs before switching.\n- A mortgage broker can compare lenders' actual offers and run the numbers on your loan.\n\nThis is general information rather than personal financial advice. If you tell me your loan size, remaining term, and current rate, I can work out the monthly difference for you.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_discounted",
+      "owner_occupier_fixed_3yr",
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2024-09"
+    },
+    "kind": "invalid",
+    "isError": true,
+    "problems": [
+     {
+      "path": "rates",
+      "problem": "\"owner_occupier_fixed_3yr\" isn't a valid value",
+      "allowed": [
+       "owner_occupier_variable_standard",
+       "owner_occupier_variable_discounted",
+       "owner_occupier_3yr_fixed",
+       "investor_variable_standard",
+       "investor_variable_discounted",
+       "investor_3yr_fixed",
+       "small_business_variable",
+       "credit_card_standard",
+       "personal_loan_fixed"
+      ]
+     }
+    ],
+    "seen": "Error: invalid arguments for get_lending_rates:\n- rates: \"owner_occupier_fixed_3yr\" isn't a valid value. Use one of: owner_occupier_variable_standard, owner_occupier_variable_discounted, owner_occupier_3yr_fixed, investor_variable_standard, investor_variable_discounted, investor_3yr_fixed, small_business_variable, credit_card_standard, personal_loan_fixed"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-09"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-09-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "items": [
+      "trimmed_mean"
+     ],
+     "start": "2025-01"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.999902..50.M?startPeriod=2025-01 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.999902..50.Q?startPeriod=2025-Q1\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-04\",3.2],[\"2025-05\",3],[\"2025-06\",2.8],[\"2025-07\",3.1],[\"2025-08\",3.1],[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-04\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"Trimmed Mean - Australia (quarterly)\",\"unit\":\"Percent\",\"frequency\":\"Quarterly\",\"points\":[[\"2025-Q1\",2.9],[\"2025-Q2\",2.7],[\"2025-Q3\",3]],\"start\":{\"period\":\"2025-Q1\",\"value\":2.9},\"latest\":{\"period\":\"2025-Q3\",\"value\":3},\"change\":0.1}],\"notes\":[\"All series: Percentage change from previous year, Trimmed Mean, Seasonally Adjusted, Australia\",\"Includes quarterly CPI series (ends Sep quarter 2025) for history before the monthly CPI starts. For annual_change the two line up and can be read as one timeline; index levels use different bases, so don't join them.\"]}"
+   },
+   {
+    "turn": 1,
+    "name": "get_lending_rates",
+    "input": {
+     "rates": [
+      "owner_occupier_variable_discounted",
+      "owner_occupier_3yr_fixed",
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2024-09"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_variable_discounted",
+      "owner_occupier_3yr_fixed",
+      "owner_occupier_variable_standard"
+     ],
+     "start": "2024-09"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09-30\",7.07],[\"2024-10-31\",7.07],[\"2024-11-30\",7.07],[\"2024-12-31\",7.07],[\"2025-01-31\",7.07],[\"2025-02-28\",6.88],[\"2025-03-31\",6.82],[\"2025-04-30\",6.55],[\"2025-05-31\",6.37],[\"2025-06-30\",6.3],[\"2025-07-31\",6.3],[\"2025-08-31\",6.05],[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2024-09-30\",\"value\":7.07},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":-0.27},{\"name\":\"Housing loans; Banks; 3-year fixed; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2024-09-30\",6.27],[\"2024-10-31\",6.08],[\"2024-11-30\",6.08],[\"2024-12-31\",6.08],[\"2025-01-31\",6.08],[\"2025-02-28\",6.03],[\"2025-03-31\",6.03],[\"2025-04-30\",5.94],[\"2025-05-31\",5.88],[\"2025-06-30\",5.88],[\"2025-07-31\",5.81],[\"2025-08-31\",5.52],[\"2025-09-30\",5.52],[\"2025-10-31\",5.52],[\"2025-11-30\",5.56],[\"2025-12-31\",5.77],[\"2026-01-31\",5.99],[\"2026-02-28\",6.24],[\"2026-03-31\",6.39],[\"2026-04-30\",6.73],[\"2026-05-31\",6.73],[\"2026-06-30\",6.74],[\"2026-07-31\",6.74],[\"2026-08-31\",6.74],[\"2026-09-30\",7.02]],\"start\":{\"period\":\"2024-09"
+   }
+  ],
+  "turns": 3,
+  "status": "done",
+  "usage": {
+   "input": 8,
+   "output": 2571,
+   "cacheWrite": 3327,
+   "cacheRead": 14441
+  },
+  "ms": 14167
+ }
+}

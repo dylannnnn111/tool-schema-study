@@ -1,0 +1,66 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-opus-5-5",
+ "run": 2,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.03148,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year government bond yield is about **1 percentage point above the cash rate**, and that gap has widened over the past year. The bond market expects rates to stay higher than today's cash rate.\n\n**Latest figures**\n- **10-year bond yield:** 5.31% in October 2026 (latest reading, month to date), down slightly from 5.34% at the end of September. Source: RBA table F2.\n- **Cash rate target:** averaged 4.36% in September 2026, the latest month available. Source: RBA table F1.1. There's no October figure yet.\n- **Gap:** about **+0.98 percentage points** for September (5.34% vs 4.36%). Using October's bond yield it's about +0.95 points.\n\n**Change over the past year**\n| | Oct 2025 | Sep 2026 | Change |\n|---|---|---|---|\n| 10-year yield | 4.29% | 5.34% | +1.05 pts |\n| Cash rate (monthly avg) | 3.60% | 4.36% | +0.76 pts |\n| Gap | +0.69 pts | +0.98 pts | +0.29 pts |\n\n- The cash rate stayed at 3.60% until January 2026. It then rose in steps from February to May, reaching 4.35% by June.\n- Bond yields rose more than the cash rate. The 10-year yield passed 5% in April (5.07%), dipped to 4.73% in June, then rose again to a peak of 5.34% in September.\n- September's average of 4.36% is slightly above the 4.35% target. That could mean a small change late in the month, but the monthly average can't confirm it.\n\n**What it means**\n- **Normal shape:** when long-term yields sit above the cash rate, markets don't expect the RBA to cut soon. They expect rates to stay where they are or rise.\n- **Not just inflation:** the 10-year inflation-indexed (real) bond yield also rose, from 1.98% to 2.98% over the same period. That suggests most of the rise in long-term yields comes from higher real rates or a bigger premium for holding long-term bonds, not just higher inflation expectations.\n- **Expected inflation:** the gap between the normal and indexed yields is about 2.3 points. That points to inflation expectations still in the RBA's 2–3% target band.\n\n**Caveats:** the bond yields are end-of-month readings and October's is only part of the month. The cash rate figures are monthly averages, so the comparison isn't exactly like-for-like.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "F2",
+     "search": "10 year",
+     "start": "2025-10",
+     "monthly": true
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "F2",
+     "search": "10 year",
+     "monthly": true,
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-10\",4.29],[\"2025-11\",4.511],[\"2025-12\",4.74],[\"2026-01\",4.799],[\"2026-02\",4.646],[\"2026-03\",4.972],[\"2026-04\",5.067],[\"2026-05\",4.838],[\"2026-06\",4.734],[\"2026-07\",4.942],[\"2026-08\",5.085],[\"2026-09\",5.344],[\"2026-10\",5.314]],\"start\":{\"period\":\"2025-10\",\"value\":4.29},\"latest\":{\"period\":\"2026-10\",\"value\":5.314},\"change\":1.024},{\"name\":\"Australian Government Indexed Bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2025-10\",1.981],[\"2025-11\",2.147],[\"2025-12\",2.436],[\"2026-01\",2.456],[\"2026-02\",2.395],[\"2026-03\",2.621],[\"2026-04\",2.545],[\"2026-05\",2.473],[\"2026-06\",2.461],[\"2026-07\",2.62],[\"2026-08\",2.756],[\"2026-09\",2.942],[\"2026-10\",2.983]],\"start\":{\"period\":\"2025-10\",\"value\":1.981},\"latest\":{\"period\":\"2026-10\",\"value\":2.983},\"change\":1.002}],\"notes\":[]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2025-10"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-10"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-10-31\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1227,
+   "cacheWrite": 1150,
+   "cacheRead": 5818
+  },
+  "ms": 14157
+ }
+}

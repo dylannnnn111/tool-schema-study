@@ -1,0 +1,209 @@
+{
+ "variant": "baseline",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "m09",
+ "kind": "multi",
+ "q": "Have building approvals picked up since the RBA started cutting?",
+ "date": "2026-10-19",
+ "cost": 0.06747,
+ "score": {
+  "tools": true,
+  "args": null,
+  "answer": null,
+  "recovered": null,
+  "calls": 11,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "**Yes, approvals are higher than before the cuts. But the cuts were short-lived, and the gain has continued through the rate rises that followed.**\n\n**Rate path (RBA cash rate, monthly average)**\n- The rate was 4.35% through January 2025.\n- Cuts began in February 2025 and took it to 3.60% by September 2025, a total of 75bp.\n- It held at 3.60% until January 2026.\n- It then rose back to 4.35% by June 2026, and was 4.36% in September 2026. So the cuts have been fully reversed.\n\n**New dwelling approvals (ABS, number of dwellings, total residential, Australia)**\n\nThe tool returned only original (not seasonally adjusted) data, so I compared like-for-like periods.\n\n| Period | Dwellings approved |\n|---|---|\n| Aug 2024–Jan 2025, before cuts (monthly average) | about 15,200 |\n| Feb–Aug 2025, cutting phase (monthly average) | about 16,200 (+7%) |\n| Sep 2024–Aug 2025 (12 months) | 189,295 |\n| Sep 2025–Aug 2026 (12 months) | 207,300 (+9.5%) |\n| Aug 2025 | 15,327 |\n| Aug 2026 | 16,914 (+10.4%) |\n| Mar–Aug 2025 | 96,955 |\n| Mar–Aug 2026, since the rate rises began | 107,875 (+11%) |\n\nRecent months:\n- June 2026 was 19,024, July was 19,191 and August was 16,914.\n- The 2026 low was 10,635 in January. January is seasonally weak, and January 2025 was also low at 13,278.\n\n**By dwelling type (12 months to Aug 2026 vs the previous 12 months)**\n- Houses rose about 10.7%, from 111,844 to 123,810. Monthly approvals were 11,100 in August 2026, up from 9,695 a year earlier.\n- Apartments rose about 9.9%, from 44,765 to 49,187.\n- Townhouses and semi-detached dwellings rose about 4.9%, from 32,686 to 34,303.\n\n**Caveats**\n- Monthly approvals are noisy. The improvement is clearest over 6–12 month windows rather than single months.\n- Approvals kept rising after the rate increases began in early 2026. That suggests other factors are driving them, such as the pipeline of projects, housing supply policy and construction costs. The 2025 cuts are unlikely to be the whole story.\n- I haven't tested what caused the rise. The data only show that approvals are higher.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-06-30\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "building approvals"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "building approvals"
+    },
+    "seen": "{\"results\":[{\"id\":\"BA_SA2_2016-21\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by SA2 and above, 2016 to 2021\"},{\"id\":\"BA_LGA2018\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2018)\"},{\"id\":\"BA_LGA2019\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2019)\"},{\"id\":\"BA_LGA2020\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2020)\"},{\"id\":\"BA_LGA2021\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2021)\"},{\"id\":\"BA_LGA2022\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2022)\"},{\"id\":\"BA_LGA2023\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2023)\"},{\"id\":\"BA_LGA2024\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2024)\"},{\"id\":\"BA_LGA2025\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2025)\"},{\"id\":\"BA_LGA2026\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Local Government Area (LGA 2026)\"},{\"id\":\"BA_SA2\",\"version\":\"2.0.0\",\"name\":\"Building Approvals by SA2 and above, from July 2021 onwards\"},{\"id\":\"BA_SA2_201116\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by SA2 and above, July 2011 to June 2016\"},{\"id\":\"BA_GCCSA\",\"version\":\"1.0.0\",\"name\":\"Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above\"}]}"
+   },
+   {
+    "turn": 1,
+    "name": "abs_describe_dataflow",
+    "input": {
+     "dataflow": "BA_GCCSA"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA"
+    },
+    "seen": "{\"id\":\"BA_GCCSA\",\"name\":\"Building Approvals by Greater Capital Cities Statistical Area (GCCSA) and above\",\"dimensions\":[{\"id\":\"MEASURE\",\"position\":1,\"codes\":[{\"code\":\"1\",\"label\":\"Number of dwelling units\"},{\"code\":\"2\",\"label\":\"Value of building jobs\"},{\"code\":\"3\",\"label\":\"Number of building jobs valued $50,000 or more\"}],\"totalCodes\":3},{\"id\":\"VALUE\",\"position\":2,\"codes\":[{\"code\":\"1\",\"label\":\"Total\"},{\"code\":\"2\",\"label\":\"Value of $50 million and over\"},{\"code\":\"3\",\"label\":\"Value of $20 million to less than $50 million\"},{\"code\":\"4\",\"label\":\"Value of $5 million to less than $20 million\"},{\"code\":\"5\",\"label\":\"Value of $1 million to less than $5 million\"},{\"code\":\"6\",\"label\":\"Value of $250,000 to less than $1 million\"},{\"code\":\"7\",\"label\":\"Value of $50,000 to less than $250,000\"}],\"totalCodes\":7},{\"id\":\"SECTOR\",\"position\":3,\"codes\":[{\"code\":\"9\",\"label\":\"Total Sectors\"},{\"code\":\"1\",\"label\":\"Private Sector\"},{\"code\":\"5\",\"label\":\"Public Sector\"}],\"totalCodes\":3},{\"id\":\"WORK_TYPE\",\"position\":4,\"codes\":[{\"code\":\"TOT\",\"label\":\"Total Work\"},{\"code\":\"1\",\"label\":\"New\"},{\"code\":\"5\",\"label\":\"Relocation of dwellings\"},{\"code\":\"6\",\"label\":\"Demolition of dwellings\"},{\"code\":\"8\",\"label\":\"Alterations and additions including conversions\"},{\"code\":\"2\",\"label\":\"Alterations and additions\"},{\"code\":\"3\",\"label\":\"Alterations and additions creating dwellings\"},{\"code\":\"4\",\"label\":\"Alterations and additions not creating dwellings\"},{\"code\":\"7\",\"label\":\"Conversions\"}],\"totalCodes\":9},{\"id\":\"BUILDING_TYPE"
+   },
+   {
+    "turn": 2,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.TOT.100+110+120+130.20.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.TOT.100+110+120+130.20.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT.100+110+120+130.20.AUS.M?startPeriod=2024-06\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 3,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.TOT.100.20.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.TOT.100.20.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT.100.20.AUS.M?startPeriod=2024-06\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 3,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9..100.20.AUS.M",
+     "last_n": 3
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9..100.20.AUS.M",
+     "last_n": 3
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9..100.20.AUS.M?lastNObservations=3\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 4,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9...20.AUS.M",
+     "last_n": 2
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9...20.AUS.M",
+     "last_n": 2
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9...20.AUS.M?lastNObservations=2\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 4,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100.20.AUS.M",
+     "last_n": 3
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100.20.AUS.M",
+     "last_n": 3
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.1.100.20.AUS.M?lastNObservations=3\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 5,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100..AUS.M",
+     "last_n": 3
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100..AUS.M",
+     "last_n": 3
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.1.100..AUS.M?lastNObservations=3\",\"series\":[{\"name\":\"Total - Total Sectors - New - Total Residential - Australia\",\"unit\":\"Number\",\"frequency\":\"Monthly\",\"points\":[[\"2026-06\",19024],[\"2026-07\",19191],[\"2026-08\",16914]],\"start\":{\"period\":\"2026-06\",\"value\":19024},\"latest\":{\"period\":\"2026-08\",\"value\":16914},\"change\":-2110}],\"notes\":[\"All series: Number of dwelling units, Total, Total Sectors, New, Total Residential, Original, Australia\"]}"
+   },
+   {
+    "turn": 5,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100.20.AUS.",
+     "last_n": 3
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100.20.AUS.",
+     "last_n": 3
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.1.100.20.AUS.?lastNObservations=3\",\"series\":[],\"notes\":[\"No data for that key. Check codes with abs_describe_dataflow.\"]}"
+   },
+   {
+    "turn": 6,
+    "name": "abs_get_data",
+    "input": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100+110+120+130.10+20+30.AUS.M",
+     "start": "2024-06"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "dataflow": "BA_GCCSA",
+     "key": "1.1.9.1.100+110+120+130.10+20+30.AUS.M",
+     "start": "2024-06"
+    },
+    "seen": "{\"source\":\"ABS BA_GCCSA\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.1.100+110+120+130.10+20+30.AUS.M?startPeriod=2024-06\",\"series\":[{\"name\":\"Total Residential\",\"unit\":\"Number\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06\",12575],[\"2024-07\",16477],[\"2024-08\",14797],[\"2024-09\",14867],[\"2024-10\",17886],[\"2024-11\",15854],[\"2024-12\",14241],[\"2025-01\",13278],[\"2025-02\",16214],[\"2025-03\",15668],[\"2025-04\",14586],[\"2025-05\",16730],[\"2025-06\",16480],[\"2025-07\",18164],[\"2025-08\",15327],[\"2025-09\",18511],[\"2025-10\",17488],[\"2025-11\",18525],[\"2025-12\",15096],[\"2026-01\",10635],[\"2026-02\",19170],[\"2026-03\",18056],[\"2026-04\",17577],[\"2026-05\",17113],[\"2026-06\",19024],[\"2026-07\",19191],[\"2026-08\",16914]],\"start\":{\"period\":\"2024-06\",\"value\":12575},\"latest\":{\"period\":\"2026-08\",\"value\":16914},\"change\":4339},{\"name\":\"Apartments - Total including those attached to a house\",\"unit\":\"Number\",\"frequency\":\"Monthly\",\"points\":[[\"2024-06\",1215],[\"2024-07\",3194],[\"2024-08\",2381],[\"2024-09\",2920],[\"2024-10\",4721],[\"2024-11\",3209],[\"2024-12\",4120],[\"2025-01\",4560],[\"2025-02\",4158],[\"2025-03\",3239],[\"2025-04\",2756],[\"2025-05\",3599],[\"2025-06\",4222],[\"2025-07\",4297],[\"2025-08\",2964],[\"2025-09\",5596],[\"2025-10\",3546],[\"2025-11\",5685],[\"2025-12\",3470],[\"2026-01\",1833],[\"2026-02\",5753],[\"2026-03\",3774],[\"2026-04\",4104],[\"2026-05\",2974],[\"2026-06\",4832],[\"2026-07\",4352],[\"2026-08\",3268]],\"start\":{\"period\":\"2024-06\",\"value\":1215},\"latest\":{\"period\":\"2026-08\",\"value\":3268},\"change\":2053},{\"n"
+   }
+  ],
+  "turns": 8,
+  "status": "done",
+  "usage": {
+   "input": 18,
+   "output": 4132,
+   "cacheWrite": 7869,
+   "cacheRead": 64416
+  },
+  "ms": 44722
+ }
+}

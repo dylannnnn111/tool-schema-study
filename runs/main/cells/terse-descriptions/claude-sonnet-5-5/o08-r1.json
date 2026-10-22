@@ -1,0 +1,60 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-sonnet-5-5",
+ "run": 1,
+ "question": "o08",
+ "kind": "out-of-scope",
+ "q": "What's the average weekly rent for a two-bedroom unit in Newtown?",
+ "date": "2026-10-19",
+ "cost": 0.00713,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't give you a figure for Newtown. None of my data sources report rents by suburb or by bedroom count. The ABS and RBA data I can reach is national or city-level. A search of the ABS datasets turned up nothing on suburb rents.\n\nSuburb-level rents are published here:\n- **NSW Housing Rent and Sales Report (NSW Department of Communities & Justice).** It gives median weekly rents for new leases by postcode and dwelling type, including two-bedroom units. Newtown is postcode 2042.\n- **Domain, realestate.com.au or SQM Research.** These show current advertised rents and recent trends for Newtown.\n\nI can pull the **CPI rents index for Sydney**, which shows how rents across the city have changed over time. It won't give a dollar figure for Newtown. Would you like me to get it?",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "rent"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "rent"
+    },
+    "seen": "{\"results\":[{\"id\":\"ALC\",\"version\":\"1.0.0\",\"name\":\"Apparent Consumption of Alcohol, Australia\"},{\"id\":\"BOP_FACTOR\",\"version\":\"1.0.0\",\"name\":\"Balance of Payments and International Investment Position: Combined current price seasonal adjustment factors\"},{\"id\":\"CONFINEMENTS_NUPTIALITY\",\"version\":\"1.0.0\",\"name\":\"Registered births, confinements and median age of parents by nuptiality and state or territory of usual residence, 1975 onwards\"}]}"
+   },
+   {
+    "turn": 0,
+    "name": "abs_search_dataflows",
+    "input": {
+     "query": "rental prices suburb"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "query": "rental prices suburb"
+    },
+    "seen": "{\"results\":[]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 519,
+   "cacheWrite": 544,
+   "cacheRead": 5729
+  },
+  "ms": 6055
+ }
+}

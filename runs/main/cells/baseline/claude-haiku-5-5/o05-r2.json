@@ -1,0 +1,54 @@
+{
+ "variant": "baseline",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o05",
+ "kind": "out-of-scope",
+ "q": "What's one Bitcoin worth in Australian dollars?",
+ "date": "2026-10-19",
+ "cost": 0.00058,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't get a Bitcoin price. My tools cover official Australian data (RBA, ABS) and don't include cryptocurrency prices. A live AUD quote is available on Australian exchanges such as CoinSpot or Swyftx, or on CoinMarketCap or CoinGecko with the AUD currency selected.\n\nI can help with the conversion, though. The latest RBA exchange rate is **US$0.6947 per A$1** (October 2026, the most recent monthly observation, taken at 4pm AEST). So if you have a US dollar Bitcoin price, divide it by 0.6947 to get Australian dollars, or multiply by about 1.44. For example, US$100,000 would be roughly A$143,900.\n\nThe RBA rate is a single afternoon snapshot, so it may differ slightly from a live crypto quote.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_exchange_rates",
+    "input": {
+     "currencies": [
+      "USD"
+     ],
+     "start": "2026-08"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "currencies": [
+      "USD"
+     ],
+     "monthly": true,
+     "start": "2026-08"
+    },
+    "seen": "{\"source\":\"RBA F11.1 Exchange Rates (4pm AEST)\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv\",\"series\":[{\"name\":\"AUD/USD (units of foreign currency per A$1)\",\"unit\":\"USD\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2026-08\",0.7166],[\"2026-09\",0.6977],[\"2026-10\",0.6947]],\"start\":{\"period\":\"2026-08\",\"value\":0.7166},\"latest\":{\"period\":\"2026-10\",\"value\":0.6947},\"change\":-0.0219}],\"notes\":[\"This table covers 2023 to now. Older history is in RBA table f11.1 archives (not wired in).\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 826,
+   "cacheWrite": 591,
+   "cacheRead": 9598
+  },
+  "ms": 5109
+ }
+}

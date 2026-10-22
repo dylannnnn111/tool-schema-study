@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-19",
+  "models": {
+    "sonnet": "claude-sonnet-5-5",
+    "haiku": "claude-haiku-5-5",
+    "opus": "claude-opus-5-5"
+  },
+  "created": "2026-10-18T21:02:24.813Z"
+}

@@ -1,0 +1,92 @@
+{
+ "variant": "terse-errors",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "v14",
+ "kind": "vague",
+ "q": "My power bill in Perth feels huge. Is that just me?",
+ "date": "2026-10-19",
+ "cost": 0.00135,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Probably not a Perth-wide price jump.** The ABS CPI shows Perth electricity prices up only **2.4% year-on-year in August 2026**, the latest month available. Nationally, electricity prices were up **13.2%** over the same year, after rising about 22% in mid-2026.\n\nPerth's price index has been nearly flat since March 2026 (0% or close to it each month, apart from a 2.4% rise in July). Most of the national increase happened in other states, so a bill that feels much bigger than last year is more likely due to something specific to your household:\n\n- **Usage:** Hotter weather, more air-conditioning, a new appliance, or someone home more often can add a lot. Compare kWh used per day with the same quarter last year, not dollars.\n- **Your plan:** A expired discount, a switch to a standard or default tariff, or a change to your supply charge or feed-in tariff can raise the bill even when unit rates barely move.\n- **Government rebates:** WA's electricity rebates have been timed in ways that make the bill look different from one quarter to the next. Check whether a credit has ended or been applied late.\n- **Billing period:** Some bills cover more days than others, so compare daily averages.\n\nIf you share the kWh used and the total for your last two bills, I can help you work out whether it's usage or price.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "items": [
+      "electricity"
+     ],
+     "measure": "annual_change",
+     "start": "2024-07"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "perth",
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2024-07"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40055..5+50.M?startPeriod=2024-07\",\"series\":[{\"name\":\"Electricity - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-07\",-5.1],[\"2024-08\",-17.9],[\"2024-09\",-24.1],[\"2024-10\",-35.6],[\"2024-11\",-21.5],[\"2024-12\",-17.9],[\"2025-01\",-11.4],[\"2025-02\",-13.2],[\"2025-03\",-9.6],[\"2025-04\",-6.5],[\"2025-05\",-5.9],[\"2025-06\",-6.3],[\"2025-07\",13.6],[\"2025-08\",24.6],[\"2025-09\",33.9],[\"2025-10\",37.1],[\"2025-11\",19.7],[\"2025-12\",21.5],[\"2026-01\",32.2],[\"2026-02\",37],[\"2026-03\",25.4],[\"2026-04\",22.5],[\"2026-05\",21.1],[\"2026-06\",22.4],[\"2026-07\",6.1],[\"2026-08\",13.2]],\"start\":{\"period\":\"2024-07\",\"value\":-5.1},\"latest\":{\"period\":\"2026-08\",\"value\":13.2},\"change\":18.3},{\"name\":\"Electricity - Perth (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-07\",42.6],[\"2024-08\",-50.2],[\"2024-09\",-50.2],[\"2024-10\",-47.8],[\"2024-11\",2.5],[\"2024-12\",-23.7],[\"2025-01\",-50.2],[\"2025-02\",-50.2],[\"2025-03\",-11.8],[\"2025-04\",2.5],[\"2025-05\",2.5],[\"2025-06\",2.5],[\"2025-07\",35.9],[\"2025-08\",289],[\"2025-09\",289],[\"2025-10\",59.4],[\"2025-11\",-29.1],[\"2025-12\",75.8],[\"2026-01\",250.3],[\"2026-02\",289],[\"2026-03\",19.2],[\"2026-04\",2.5],[\"2026-05\",2.5],[\"2026-06\",2.5],[\"2026-07\",2.4],[\"2026-08\",2.4]],\"start\":{\"period\":\"2024-07\",\"value\":42.6},\"latest\":{\"period\":\"2026-08\",\"value\":2.4},\"change\":-40.2}],\"notes\":[\"All series: Percentage change from previous year, Electricity, Original\",\"Mon"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "cities": [
+      "perth"
+     ],
+     "items": [
+      "electricity"
+     ],
+     "measure": "monthly_change",
+     "start": "2025-07"
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "electricity"
+     ],
+     "cities": [
+      "perth"
+     ],
+     "measure": "monthly_change",
+     "adjustment": "original",
+     "start": "2025-07"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/2.40055..5.M?startPeriod=2025-07\",\"series\":[{\"name\":\"Electricity - Perth (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-07\",2.5],[\"2025-08\",0],[\"2025-09\",0],[\"2025-10\",-20.9],[\"2025-11\",-12.5],[\"2025-12\",0],[\"2026-01\",30.1],[\"2026-02\",11],[\"2026-03\",0],[\"2026-04\",0],[\"2026-05\",0],[\"2026-06\",0],[\"2026-07\",2.4],[\"2026-08\",0]],\"start\":{\"period\":\"2025-07\",\"value\":2.5},\"latest\":{\"period\":\"2026-08\",\"value\":0},\"change\":-2.5}],\"notes\":[\"All series: Percentage change from previous period, Electricity, Original, Perth\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 2073,
+   "cacheWrite": 1742,
+   "cacheRead": 9507
+  },
+  "ms": 14724
+ }
+}

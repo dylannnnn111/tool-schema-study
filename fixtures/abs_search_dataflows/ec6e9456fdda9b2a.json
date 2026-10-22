@@ -1,0 +1,27 @@
+{
+ "tool": "abs_search_dataflows",
+ "args": {
+  "query": "rent median weekly suburb"
+ },
+ "ok": true,
+ "result": {
+  "results": [
+   {
+    "id": "C21_G40_SAL",
+    "version": "1.0.0",
+    "name": "Census 2021, G40 Rent (weekly) by landlord type, Suburbs and Localities (SAL)"
+   },
+   {
+    "id": "C21_G59_SAL",
+    "version": "1.0.0",
+    "name": "Census 2021, G59 Total family income (weekly) by labour force status of parent for one parent families, Suburbs and Localities (SAL)"
+   },
+   {
+    "id": "C21_G58_SAL",
+    "version": "1.0.0",
+    "name": "Census 2021, G58 Total family income (weekly) by labour force status of parents/partners for couple families with children, Suburbs and Localities (SAL)"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:25:57.763Z"
+}

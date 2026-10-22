@@ -33,7 +33,7 @@ export function hasNumber(text: string, value: number, tol?: number): boolean {
 }
 
 export const passes = (answer: string, checks: Check[]) =>
-  checks.every((c) => (c.text != null ? answer.toLowerCase().includes(c.text.toLowerCase()) : hasNumber(answer, c.value!, c.tol)));
+  checks.every((c) => (c.text != null ? (c.lead ? answer.slice(0, 400) : answer).toLowerCase().includes(c.text.toLowerCase()) : hasNumber(answer, c.value!, c.tol)));
 
 // Phrases that say the data isn't there. Out-of-scope answers are also read by hand.
 const DECLINE = /\b(not (available|covered|included|in (the|these|my) (data|tools))|isn't (available|covered|included)|aren't (available|covered|included)|don't (have|cover|include)|doesn't (cover|include|have|track)|do not (have|cover)|does not (cover|include|have)|no (data|access|tool)|only (covers?|has|includes?|tracks?)|(can't|cannot|can not) (find|provide|get|access|predict|forecast|tell|answer|give)|there(?:'s| is) no (data|series|rate|figure|tool)|(not|un)able to|outside (the|my|what)|beyond (the|what))/i;

@@ -1,0 +1,626 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "f6",
+  "search": "3 year",
+  "monthly": false,
+  "start": "2025-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "RBA F6 F6 - HOUSING LENDING RATES",
+  "sourceUrl": "https://www.rba.gov.au/statistics/tables/csv/f6-data.csv",
+  "series": [
+   {
+    "name": "Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      5.1
+     ],
+     [
+      "2025-07-31",
+      5.1
+     ],
+     [
+      "2025-08-31",
+      5.2
+     ],
+     [
+      "2025-09-30",
+      5.2
+     ],
+     [
+      "2025-10-31",
+      5.2
+     ],
+     [
+      "2025-11-30",
+      5.3
+     ],
+     [
+      "2025-12-31",
+      5.3
+     ],
+     [
+      "2026-01-31",
+      5.3
+     ],
+     [
+      "2026-02-28",
+      5.3
+     ],
+     [
+      "2026-03-31",
+      5.4
+     ],
+     [
+      "2026-04-30",
+      5.5
+     ],
+     [
+      "2026-05-31",
+      5.5
+     ],
+     [
+      "2026-06-30",
+      5.6
+     ],
+     [
+      "2026-07-31",
+      5.6
+     ],
+     [
+      "2026-08-31",
+      5.6
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 5.1
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 5.6
+    },
+    "change": 0.5
+   },
+   {
+    "name": "Lending rates; Housing credit; Outstanding; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      6.2
+     ],
+     [
+      "2025-07-31",
+      6.2
+     ],
+     [
+      "2025-08-31",
+      6.2
+     ],
+     [
+      "2025-09-30",
+      6.2
+     ],
+     [
+      "2025-10-31",
+      6.1
+     ],
+     [
+      "2025-11-30",
+      6.1
+     ],
+     [
+      "2025-12-31",
+      6
+     ],
+     [
+      "2026-01-31",
+      6
+     ],
+     [
+      "2026-02-28",
+      6
+     ],
+     [
+      "2026-03-31",
+      6
+     ],
+     [
+      "2026-04-30",
+      6.1
+     ],
+     [
+      "2026-05-31",
+      6.1
+     ],
+     [
+      "2026-06-30",
+      6.1
+     ],
+     [
+      "2026-07-31",
+      6.2
+     ],
+     [
+      "2026-08-31",
+      6.2
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 6.2
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.2
+    },
+    "change": 0
+   },
+   {
+    "name": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      5.4
+     ],
+     [
+      "2025-07-31",
+      5.4
+     ],
+     [
+      "2025-08-31",
+      5.3
+     ],
+     [
+      "2025-09-30",
+      5.2
+     ],
+     [
+      "2025-10-31",
+      5.1
+     ],
+     [
+      "2025-11-30",
+      5.1
+     ],
+     [
+      "2025-12-31",
+      5.2
+     ],
+     [
+      "2026-01-31",
+      5.3
+     ],
+     [
+      "2026-02-28",
+      5.5
+     ],
+     [
+      "2026-03-31",
+      5.7
+     ],
+     [
+      "2026-04-30",
+      5.9
+     ],
+     [
+      "2026-05-31",
+      6.1
+     ],
+     [
+      "2026-06-30",
+      6.2
+     ],
+     [
+      "2026-07-31",
+      6.3
+     ],
+     [
+      "2026-08-31",
+      6.3
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 5.4
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.3
+    },
+    "change": 0.9
+   },
+   {
+    "name": "Lending rates; Housing credit; New loans funded in the month; Owner-occupied; Fixed-rate, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      6.2
+     ],
+     [
+      "2025-07-31",
+      6.1
+     ],
+     [
+      "2025-08-31",
+      6.1
+     ],
+     [
+      "2025-09-30",
+      6.3
+     ],
+     [
+      "2025-10-31",
+      6.1
+     ],
+     [
+      "2025-11-30",
+      6.2
+     ],
+     [
+      "2025-12-31",
+      5.9
+     ],
+     [
+      "2026-01-31",
+      6
+     ],
+     [
+      "2026-02-28",
+      6.1
+     ],
+     [
+      "2026-03-31",
+      6.3
+     ],
+     [
+      "2026-04-30",
+      6.3
+     ],
+     [
+      "2026-05-31",
+      6.5
+     ],
+     [
+      "2026-06-30",
+      6.8
+     ],
+     [
+      "2026-07-31",
+      6.9
+     ],
+     [
+      "2026-08-31",
+      6.9
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 6.2
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.9
+    },
+    "change": 0.7
+   },
+   {
+    "name": "Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      5.3
+     ],
+     [
+      "2025-07-31",
+      5.3
+     ],
+     [
+      "2025-08-31",
+      5.3
+     ],
+     [
+      "2025-09-30",
+      5.3
+     ],
+     [
+      "2025-10-31",
+      5.3
+     ],
+     [
+      "2025-11-30",
+      5.3
+     ],
+     [
+      "2025-12-31",
+      5.3
+     ],
+     [
+      "2026-01-31",
+      5.3
+     ],
+     [
+      "2026-02-28",
+      5.3
+     ],
+     [
+      "2026-03-31",
+      5.5
+     ],
+     [
+      "2026-04-30",
+      5.5
+     ],
+     [
+      "2026-05-31",
+      5.6
+     ],
+     [
+      "2026-06-30",
+      5.7
+     ],
+     [
+      "2026-07-31",
+      5.7
+     ],
+     [
+      "2026-08-31",
+      5.7
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 5.3
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 5.7
+    },
+    "change": 0.4
+   },
+   {
+    "name": "Lending rates; Housing credit; Outstanding; Investment; Fixed-rate, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      6.9
+     ],
+     [
+      "2025-07-31",
+      6.9
+     ],
+     [
+      "2025-08-31",
+      6.9
+     ],
+     [
+      "2025-09-30",
+      6.9
+     ],
+     [
+      "2025-10-31",
+      6.9
+     ],
+     [
+      "2025-11-30",
+      6.8
+     ],
+     [
+      "2025-12-31",
+      6.6
+     ],
+     [
+      "2026-01-31",
+      6.6
+     ],
+     [
+      "2026-02-28",
+      6.5
+     ],
+     [
+      "2026-03-31",
+      6.5
+     ],
+     [
+      "2026-04-30",
+      6.5
+     ],
+     [
+      "2026-05-31",
+      6.5
+     ],
+     [
+      "2026-06-30",
+      6.5
+     ],
+     [
+      "2026-07-31",
+      6.5
+     ],
+     [
+      "2026-08-31",
+      6.5
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 6.9
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.5
+    },
+    "change": -0.4
+   },
+   {
+    "name": "Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Less than or equal to 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      5.7
+     ],
+     [
+      "2025-07-31",
+      5.6
+     ],
+     [
+      "2025-08-31",
+      5.5
+     ],
+     [
+      "2025-09-30",
+      5.4
+     ],
+     [
+      "2025-10-31",
+      5.4
+     ],
+     [
+      "2025-11-30",
+      5.4
+     ],
+     [
+      "2025-12-31",
+      5.4
+     ],
+     [
+      "2026-01-31",
+      5.5
+     ],
+     [
+      "2026-02-28",
+      5.7
+     ],
+     [
+      "2026-03-31",
+      5.9
+     ],
+     [
+      "2026-04-30",
+      6.1
+     ],
+     [
+      "2026-05-31",
+      6.2
+     ],
+     [
+      "2026-06-30",
+      6.3
+     ],
+     [
+      "2026-07-31",
+      6.4
+     ],
+     [
+      "2026-08-31",
+      6.5
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 5.7
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 6.5
+    },
+    "change": 0.8
+   },
+   {
+    "name": "Lending rates; Housing credit; New loans funded in the month; Investment; Fixed, by residual fixed term; Greater than 3 years",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-06-30",
+      7
+     ],
+     [
+      "2025-07-31",
+      6.7
+     ],
+     [
+      "2025-08-31",
+      7.1
+     ],
+     [
+      "2025-09-30",
+      7
+     ],
+     [
+      "2025-10-31",
+      7
+     ],
+     [
+      "2025-11-30",
+      6.6
+     ],
+     [
+      "2025-12-31",
+      6.1
+     ],
+     [
+      "2026-01-31",
+      6.2
+     ],
+     [
+      "2026-02-28",
+      6.4
+     ],
+     [
+      "2026-03-31",
+      6.6
+     ],
+     [
+      "2026-04-30",
+      6.6
+     ],
+     [
+      "2026-05-31",
+      7
+     ],
+     [
+      "2026-06-30",
+      7.1
+     ],
+     [
+      "2026-07-31",
+      7
+     ],
+     [
+      "2026-08-31",
+      7.6
+     ]
+    ],
+    "start": {
+     "period": "2025-06-30",
+     "value": 7
+    },
+    "latest": {
+     "period": "2026-08-31",
+     "value": 7.6
+    },
+    "change": 0.6
+   }
+  ],
+  "notes": []
+ },
+ "fetchedAt": "2026-10-18T21:27:40.034Z"
+}

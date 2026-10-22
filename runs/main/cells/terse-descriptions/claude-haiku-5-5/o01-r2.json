@@ -1,0 +1,33 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o01",
+ "kind": "out-of-scope",
+ "q": "What's the Friday office gap in Melbourne's CBD?",
+ "date": "2026-10-19",
+ "cost": 0.00027,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't get that figure. My commuting data source covers only Sydney, through Opal card taps for the Sydney CBD, North Sydney, Chatswood, Macquarie Park, Strathfield and Parramatta. It has no Melbourne CBD series, so I can't report a Friday office gap there.\n\nI can pull the Friday gap for the Sydney CBD or any of those other Sydney centres if that would help. For Melbourne, you'd need a separate source, such as Melbourne-specific office occupancy or transport data.",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 485,
+   "cacheWrite": 0,
+   "cacheRead": 2908
+  },
+  "ms": 3359
+ }
+}

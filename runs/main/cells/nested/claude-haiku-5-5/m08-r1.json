@@ -1,0 +1,74 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 1,
+ "question": "m08",
+ "kind": "multi",
+ "q": "How does the 10-year government bond yield compare with the cash rate?",
+ "date": "2026-10-19",
+ "cost": 0.00092,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 2,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "The 10-year government bond yield is now about 0.95 percentage points above the cash rate, the widest gap in the period I checked.\n\n- **10-year bond yield:** 5.31% in October 2026 (latest month, last observation).\n- **Cash rate:** 4.36% as the September 2026 monthly average. The October figure isn't in the data yet.\n\nThe spread has moved a lot since early 2024:\n\n| Period | 10-yr yield | Cash rate | Spread |\n|---|---|---|---|\n| Jan 2024 | 4.02% | 4.35% | about -0.3 pp (yield below cash rate) |\n| Oct 2025 | 4.29% | 3.60% | +0.7 pp |\n| Jan 2026 | 4.80% | 3.60% | +1.2 pp |\n| Sep 2026 | 5.34% | 4.36% | +1.0 pp |\n| Oct 2026 | 5.31% | ~4.36% (Sep avg) | +0.95 pp |\n\nIn early 2024 the long-term yield was below the cash rate, which markets often read as expectations of future rate cuts. Since late 2025 the 10-year yield has risen well above the cash rate. Markets now expect rates to stay high, or to rise further, over the long run. The cash rate was lifted from 3.6% in February to 4.35% by June 2026, and the 10-year yield has risen alongside it.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2024-01"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2024-01-31\",4.35],[\"2024-02-29\",4.35],[\"2024-03-31\",4.35],[\"2024-04-30\",4.35],[\"2024-05-31\",4.35],[\"2024-06-30\",4.35],[\"2024-07-31\",4.35],[\"2024-08-31\",4.35],[\"2024-09-30\",4.35],[\"2024-10-31\",4.35],[\"2024-11-30\",4.35],[\"2024-12-31\",4.35],[\"2025-01-31\",4.35],[\"2025-02-28\",4.25],[\"2025-03-31\",4.1],[\"2025-04-30\",4.1],[\"2025-05-31\",4.01],[\"2025-06-30\",3.85],[\"2025-07-31\",3.85],[\"2025-08-31\",3.7],[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2024-01-31\",\"value\":4.35},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.01}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "rba_series",
+    "input": {
+     "table": "f2",
+     "select": {
+      "search": "10 year"
+     },
+     "period": {
+      "start": "2024-01"
+     },
+     "options": {
+      "monthly": true
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "table": "f2",
+     "search": "10 year",
+     "monthly": true,
+     "start": "2024-01"
+    },
+    "seen": "{\"source\":\"RBA F2 F2 CAPITAL MARKET YIELDS – GOVERNMENT BONDS\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f2-data.csv\",\"series\":[{\"name\":\"Australian Government 10 year bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2024-01\",4.015],[\"2024-02\",4.141],[\"2024-03\",3.968],[\"2024-04\",4.42],[\"2024-05\",4.408],[\"2024-06\",4.312],[\"2024-07\",4.12],[\"2024-08\",3.976],[\"2024-09\",3.987],[\"2024-10\",4.496],[\"2024-11\",4.335],[\"2024-12\",4.366],[\"2025-01\",4.435],[\"2025-02\",4.303],[\"2025-03\",4.402],[\"2025-04\",4.148],[\"2025-05\",4.249],[\"2025-06\",4.161],[\"2025-07\",4.262],[\"2025-08\",4.28],[\"2025-09\",4.307],[\"2025-10\",4.29],[\"2025-11\",4.511],[\"2025-12\",4.74],[\"2026-01\",4.799],[\"2026-02\",4.646],[\"2026-03\",4.972],[\"2026-04\",5.067],[\"2026-05\",4.838],[\"2026-06\",4.734],[\"2026-07\",4.942],[\"2026-08\",5.085],[\"2026-09\",5.344],[\"2026-10\",5.314]],\"start\":{\"period\":\"2024-01\",\"value\":4.015},\"latest\":{\"period\":\"2026-10\",\"value\":5.314},\"change\":1.299},{\"name\":\"Australian Government Indexed Bond\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly (last observation in month)\",\"points\":[[\"2024-01\",1.514],[\"2024-02\",1.658],[\"2024-03\",1.515],[\"2024-04\",1.855],[\"2024-05\",1.926],[\"2024-06\",1.893],[\"2024-07\",1.702],[\"2024-08\",1.682],[\"2024-09\",1.649],[\"2024-10\",2.086],[\"2024-11\",1.941],[\"2024-12\",2.035],[\"2025-01\",2.117],[\"2025-02\",2.055],[\"2025-03\",2.243],[\"2025-04\",2.108],[\"2025-05\",2.124],[\"2025-06\",2.059],[\"2025-07\",2.111],[\"2025-08\",2.03],[\"2025-09\",1.969],[\""
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1117,
+   "cacheWrite": 2066,
+   "cacheRead": 10629
+  },
+  "ms": 5987
+ }
+}

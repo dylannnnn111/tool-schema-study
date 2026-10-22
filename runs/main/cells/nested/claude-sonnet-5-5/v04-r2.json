@@ -1,0 +1,108 @@
+{
+ "variant": "nested",
+ "model": "claude-sonnet-5-5",
+ "run": 2,
+ "question": "v04",
+ "kind": "vague",
+ "q": "Should I be fixing my home loan right now? What are banks advertising for a 3-year fixed?",
+ "date": "2026-10-19",
+ "cost": 0.01892,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 3,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "Banks are advertising an average 3-year fixed rate of **7.02%** for owner-occupiers, as of September 2026. Investors are at 7.11%. I can't tell you whether you should fix, because that depends on your own situation. The data below should help you weigh it.\n\n**Advertised rates, September 2026 (RBA indicator rates)**\n\n| Loan type | Rate | A year earlier (Sep 2025) |\n|---|---|---|\n| 3-year fixed, owner-occupier | 7.02% | 5.52% |\n| Variable, discounted, owner-occupier | 6.80% | 6.05% |\n| Variable, standard, owner-occupier | 8.77% | 8.02% |\n\n**What's behind those rates**\n- **Cash rate:** it was 3.60% through January 2026. It then rose to about 4.35% by June and was 4.36% in September. It has been steady since June.\n- **Inflation:** CPI was 4.0% a year in August 2026, and the trimmed mean (the RBA's preferred underlying measure) was 3.6%. Both are above where they were a year ago, and the trimmed mean is still rising.\n\n**What this means for fixing**\n- **Fixed costs more than variable.** The 3-year fixed rate is about 0.22 percentage points above the discounted variable rate. Fixing only pays off if variable rates end up averaging above about 7% over the next three years. That would need more hikes from here.\n- **Fixed rates jumped in September.** They rose from 6.74% to 7.02% in a single month, and have risen 1.5 points over the past year. Markets seem to be pricing in further tightening, so waiting could mean a higher fixed rate if inflation keeps climbing.\n- **The case for fixing:** inflation is still above target and rising, so more hikes are possible. Fixing gives you certainty on repayments if your budget is tight.\n- **The case against:** you would be locking in near the top of the past year's range. If the RBA stops hiking or cuts, you'd be stuck above variable. Fixed loans also often limit extra repayments and offset accounts, and they can carry break costs.\n\n**Things to check**\n- These are advertised rates. Rates actually paid on new loans are usually lower, so ask your bank or a broker for their real offer. You can also negotiate.\n- A split loan, with part fixed and part variable, is a common middle path.\n- Your own situation matters most: how much a further 0.5–1 point rise would hurt your budget, and whether you want flexibility, such as offset accounts or extra repayments.\n\nThis is general information, not personal financial advice. A broker or adviser can look at your actual loan.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_lending_rates",
+    "input": {
+     "period": {
+      "start": "2025-09"
+     },
+     "select": {
+      "rates": [
+       "owner_occupier_3yr_fixed",
+       "owner_occupier_variable_discounted",
+       "owner_occupier_variable_standard",
+       "investor_3yr_fixed"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "rates": [
+      "owner_occupier_3yr_fixed",
+      "owner_occupier_variable_discounted",
+      "owner_occupier_variable_standard",
+      "investor_3yr_fixed"
+     ],
+     "start": "2025-09"
+    },
+    "seen": "{\"source\":\"RBA F5 Indicator Lending Rates\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f5-data.csv\",\"series\":[{\"name\":\"Housing loans; Banks; 3-year fixed; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09-30\",5.52],[\"2025-10-31\",5.52],[\"2025-11-30\",5.56],[\"2025-12-31\",5.77],[\"2026-01-31\",5.99],[\"2026-02-28\",6.24],[\"2026-03-31\",6.39],[\"2026-04-30\",6.73],[\"2026-05-31\",6.73],[\"2026-06-30\",6.74],[\"2026-07-31\",6.74],[\"2026-08-31\",6.74],[\"2026-09-30\",7.02]],\"start\":{\"period\":\"2025-09-30\",\"value\":5.52},\"latest\":{\"period\":\"2026-09-30\",\"value\":7.02},\"change\":1.5},{\"name\":\"Housing loans; Banks; Variable; Discounted; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09-30\",6.05],[\"2025-10-31\",6.05],[\"2025-11-30\",6.05],[\"2025-12-31\",6.05],[\"2026-01-31\",6.05],[\"2026-02-28\",6.3],[\"2026-03-31\",6.55],[\"2026-04-30\",6.55],[\"2026-05-31\",6.8],[\"2026-06-30\",6.8],[\"2026-07-31\",6.8],[\"2026-08-31\",6.8],[\"2026-09-30\",6.8]],\"start\":{\"period\":\"2025-09-30\",\"value\":6.05},\"latest\":{\"period\":\"2026-09-30\",\"value\":6.8},\"change\":0.75},{\"name\":\"Housing loans; Banks; Variable; Standard; Owner-occupier\",\"unit\":\"Per cent per annum\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09-30\",8.02],[\"2025-10-31\",8.02],[\"2025-11-30\",8.02],[\"2025-12-31\",8.02],[\"2026-01-31\",8.02],[\"2026-02-28\",8.27],[\"2026-03-31\",8.52],[\"2026-04-30\",8.52],[\"2026-05-31\",8.77],[\"2026-06-30\",8.77],[\"2026-07-31\",8.77],[\"2026-08-31\",8.77],[\"2026-09-30\",8.77]],\"start\":{\"pe"
+   },
+   {
+    "turn": 0,
+    "name": "get_cash_rate",
+    "input": {
+     "period": {
+      "start": "2025-09"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "start": "2025-09"
+    },
+    "seen": "{\"source\":\"RBA F1.1 Interest Rates and Yields - Money Market\",\"sourceUrl\":\"https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv\",\"series\":[{\"name\":\"Cash rate target (monthly average)\",\"unit\":\"Per cent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09-30\",3.6],[\"2025-10-31\",3.6],[\"2025-11-30\",3.6],[\"2025-12-31\",3.6],[\"2026-01-31\",3.6],[\"2026-02-28\",3.83],[\"2026-03-31\",3.96],[\"2026-04-30\",4.1],[\"2026-05-31\",4.31],[\"2026-06-30\",4.35],[\"2026-07-31\",4.35],[\"2026-08-31\",4.35],[\"2026-09-30\",4.36]],\"start\":{\"period\":\"2025-09-30\",\"value\":3.6},\"latest\":{\"period\":\"2026-09-30\",\"value\":4.36},\"change\":0.76}],\"notes\":[\"Monthly average of the RBA cash rate target. Periods are month-end dates.\"]}"
+   },
+   {
+    "turn": 0,
+    "name": "get_cpi",
+    "input": {
+     "select": {
+      "items": [
+       "all_groups",
+       "trimmed_mean"
+      ]
+     },
+     "period": {
+      "start": "2025-09"
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "items": [
+      "all_groups",
+      "trimmed_mean"
+     ],
+     "cities": [
+      "australia"
+     ],
+     "measure": "annual_change",
+     "adjustment": "original",
+     "start": "2025-09"
+    },
+    "seen": "{\"source\":\"ABS Consumer Price Index\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,CPI/3.10001+999902..50.M?startPeriod=2025-09\",\"series\":[{\"name\":\"Trimmed Mean - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09\",3.2],[\"2025-10\",3.3],[\"2025-11\",3.2],[\"2025-12\",3.3],[\"2026-01\",3.3],[\"2026-02\",3.3],[\"2026-03\",3.3],[\"2026-04\",3.4],[\"2026-05\",3.5],[\"2026-06\",3.6],[\"2026-07\",3.6],[\"2026-08\",3.6]],\"start\":{\"period\":\"2025-09\",\"value\":3.2},\"latest\":{\"period\":\"2026-08\",\"value\":3.6},\"change\":0.4},{\"name\":\"All groups CPI - Australia (monthly)\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-09\",3.6],[\"2025-10\",3.8],[\"2025-11\",3.4],[\"2025-12\",3.8],[\"2026-01\",3.8],[\"2026-02\",3.7],[\"2026-03\",4.6],[\"2026-04\",4.2],[\"2026-05\",4],[\"2026-06\",3.8],[\"2026-07\",3.5],[\"2026-08\",4]],\"start\":{\"period\":\"2025-09\",\"value\":3.6},\"latest\":{\"period\":\"2026-08\",\"value\":4},\"change\":0.4}],\"notes\":[\"All series: Percentage change from previous year, Australia\",\"Monthly CPI only. Pass an earlier start (e.g. 2019-01) to also get quarterly CPI history.\"]}"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1164,
+   "cacheWrite": 2476,
+   "cacheRead": 10742
+  },
+  "ms": 9528
+ }
+}

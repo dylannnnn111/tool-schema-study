@@ -1,0 +1,136 @@
+{
+ "tool": "rba_series",
+ "args": {
+  "table": "F7",
+  "search": "ASX 200 share price index",
+  "monthly": false
+ },
+ "ok": true,
+ "result": {
+  "table": "F7",
+  "title": "F7  BUSINESS LENDING RATES",
+  "columns": [
+   {
+    "id": "FLRBFOSBT",
+    "title": "Lending rates; Business finance; Outstanding; Small business; Total",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOSBR",
+    "title": "Lending rates; Business finance; Outstanding; Small business; of which, Residentially secured",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOSBF",
+    "title": "Lending rates; Business finance; Outstanding; Small business; Fixed-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOSBV",
+    "title": "Lending rates; Business finance; Outstanding; Small business; Variable-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOMBT",
+    "title": "Lending rates; Business finance; Outstanding; Medium business; Total",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOMBF",
+    "title": "Lending rates; Business finance; Outstanding; Medium business; Fixed-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOMBV",
+    "title": "Lending rates; Business finance; Outstanding; Medium business; Variable-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOLBT",
+    "title": "Lending rates; Business finance; Outstanding; Large business; Total",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOLBF",
+    "title": "Lending rates; Business finance; Outstanding; Large business; Fixed-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFOLBV",
+    "title": "Lending rates; Business finance; Outstanding; Large business; Variable-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNSBT",
+    "title": "Lending rates; Business finance; New loans funded in the month; Small business; Total",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNSBR",
+    "title": "Lending rates; Business finance; New loans funded in the month; Small business; of which, Residentially secured",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNSBF",
+    "title": "Lending rates; Business finance; New loans funded in the month; Small business; Fixed-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNSBV",
+    "title": "Lending rates; Business finance; New loans funded in the month; Small business; Variable-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNMBT",
+    "title": "Lending rates; Business finance; New loans funded in the month; Medium business; Total",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNMBF",
+    "title": "Lending rates; Business finance; New loans funded in the month; Medium business; Fixed-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNMBV",
+    "title": "Lending rates; Business finance; New loans funded in the month; Medium business; Variable-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNLBT",
+    "title": "Lending rates; Business finance; New loans funded in the month; Large business; Total",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNLBF",
+    "title": "Lending rates; Business finance; New loans funded in the month; Large business; Fixed-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   },
+   {
+    "id": "FLRBFNLBV",
+    "title": "Lending rates; Business finance; New loans funded in the month; Large business; Variable-rate",
+    "unit": "Per cent per annum",
+    "frequency": "Monthly"
+   }
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:14:43.384Z"
+}

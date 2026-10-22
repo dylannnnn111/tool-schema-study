@@ -1,0 +1,24 @@
+{
+ "tool": "get_cpi",
+ "args": {
+  "items": [
+   "Meals out and takeaway foods"
+  ],
+  "cities": [
+   "australia"
+  ],
+  "measure": "annual_change",
+  "adjustment": "original",
+  "start": "2024-06"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS Consumer Price Index",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.Meals out and takeaway foods..50.M?startPeriod=2024-06 and https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.Meals out and takeaway foods..50.Q?startPeriod=2024-Q2",
+  "series": [],
+  "notes": [
+   "ABS returned no data for that combination. Not every item is published for every city - try australia, or a broader item."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:17:17.799Z"
+}

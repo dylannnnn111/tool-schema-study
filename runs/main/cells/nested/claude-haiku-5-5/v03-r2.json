@@ -1,0 +1,73 @@
+{
+ "variant": "nested",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "v03",
+ "kind": "vague",
+ "q": "Are things getting harder for people looking for work in Queensland?",
+ "date": "2026-10-19",
+ "cost": 0.00098,
+ "score": {
+  "tools": true,
+  "args": true,
+  "answer": true,
+  "recovered": null,
+  "calls": 1,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": false
+ },
+ "transcript": {
+  "answer": "**Yes, modestly.** Queensland's jobs market has loosened over the past year and a half, though it is still in better shape than the national market.\n\n- **Unemployment rate:** 4.53% in September 2026, up from 3.96% in January 2025 (+0.57 points). It rose through the second half of 2026, from 4.24% in July to 4.51% in August and 4.53% in September.\n- **Unemployed people:** about 144,400 in September 2026, up roughly 21,600 from January 2025.\n- **Employment-to-population ratio:** 63.9% in September 2026, down from 64.6% in January 2025. This is a sign that fewer people are in work relative to the population.\n- **Participation rate:** 66.9% in September 2026, down from 67.2% in January 2025. Some of the rise in unemployment is therefore offset by people leaving the labour force, which keeps the unemployment rate lower than it would otherwise be.\n- **Compared with Australia:** the national rate was 4.72% in September 2026, so Queensland is still slightly below it. Nationally, unemployment rose from 4.13% in January 2025, so the national trend is similar.\n\nThe monthly figures are noisy. Queensland's rate jumped between 3.7% and 4.4% in several months of 2026, so one month's reading shouldn't be over-interpreted. The direction over the past year is still clearly upward.",
+  "calls": [
+   {
+    "turn": 0,
+    "name": "get_labour_force",
+    "input": {
+     "period": {
+      "start": "2025-01"
+     },
+     "select": {
+      "states": [
+       "qld",
+       "australia"
+      ],
+      "measures": [
+       "unemployment_rate",
+       "participation_rate",
+       "employment_to_population",
+       "unemployed"
+      ]
+     }
+    },
+    "kind": "ok",
+    "isError": false,
+    "canonical": {
+     "measures": [
+      "unemployment_rate",
+      "participation_rate",
+      "employment_to_population",
+      "unemployed"
+     ],
+     "states": [
+      "qld",
+      "australia"
+     ],
+     "sex": "persons",
+     "adjustment": "seasonally_adjusted",
+     "start": "2025-01"
+    },
+    "seen": "{\"source\":\"ABS Labour Force, Australia (monthly)\",\"sourceUrl\":\"https://data.api.abs.gov.au/rest/data/ABS,LF/M13+M12+M16+M6.3.1599.20.3+AUS.M?startPeriod=2025-01\",\"series\":[{\"name\":\"Participation rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",67.1924],[\"2025-02\",66.6675],[\"2025-03\",66.6942],[\"2025-04\",67.0774],[\"2025-05\",66.9885],[\"2025-06\",66.949],[\"2025-07\",67.0025],[\"2025-08\",66.8045],[\"2025-09\",66.9191],[\"2025-10\",66.9122],[\"2025-11\",66.6351],[\"2025-12\",66.6762],[\"2026-01\",66.6826],[\"2026-02\",66.8181],[\"2026-03\",66.7804],[\"2026-04\",66.6726],[\"2026-05\",66.6873],[\"2026-06\",67.0036],[\"2026-07\",66.852],[\"2026-08\",66.996],[\"2026-09\",66.7632]],\"start\":{\"period\":\"2025-01\",\"value\":67.1924},\"latest\":{\"period\":\"2026-09\",\"value\":66.7632},\"change\":-0.4292},{\"name\":\"Unemployment rate - Australia\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",4.1285],[\"2025-02\",4.0752],[\"2025-03\",4.0849],[\"2025-04\",4.064],[\"2025-05\",4.1131],[\"2025-06\",4.3379],[\"2025-07\",4.2627],[\"2025-08\",4.2228],[\"2025-09\",4.4263],[\"2025-10\",4.3187],[\"2025-11\",4.3144],[\"2025-12\",4.1153],[\"2026-01\",4.0817],[\"2026-02\",4.3067],[\"2026-03\",4.2903],[\"2026-04\",4.5015],[\"2026-05\",4.3935],[\"2026-06\",4.4494],[\"2026-07\",4.4892],[\"2026-08\",4.6516],[\"2026-09\",4.7183]],\"start\":{\"period\":\"2025-01\",\"value\":4.1285},\"latest\":{\"period\":\"2026-09\",\"value\":4.7183},\"change\":0.5898},{\"name\":\"Participation rate - Queensland\",\"unit\":\"Percent\",\"frequency\":\"Monthly\",\"points\":[[\"2025-01\",67.2303],[\"2025"
+   }
+  ],
+  "turns": 2,
+  "status": "done",
+  "usage": {
+   "input": 6,
+   "output": 1011,
+   "cacheWrite": 2913,
+   "cacheRead": 10718
+  },
+  "ms": 5764
+ }
+}

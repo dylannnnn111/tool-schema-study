@@ -1,0 +1,116 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "CPI",
+  "key": "3.40081..50.M",
+  "start": "2025-01",
+  "end": "2026-09"
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS CPI",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,CPI/3.40081..50.M?startPeriod=2025-01&endPeriod=2026-09",
+  "series": [
+   {
+    "name": "Automotive fuel - Australia",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "points": [
+     [
+      "2025-01",
+      -1.9
+     ],
+     [
+      "2025-02",
+      -5.5
+     ],
+     [
+      "2025-03",
+      -7.7
+     ],
+     [
+      "2025-04",
+      -12
+     ],
+     [
+      "2025-05",
+      -10
+     ],
+     [
+      "2025-06",
+      -7.9
+     ],
+     [
+      "2025-07",
+      -5.5
+     ],
+     [
+      "2025-08",
+      -1.7
+     ],
+     [
+      "2025-09",
+      2.8
+     ],
+     [
+      "2025-10",
+      1.9
+     ],
+     [
+      "2025-11",
+      3.5
+     ],
+     [
+      "2025-12",
+      -0.8
+     ],
+     [
+      "2026-01",
+      -2.7
+     ],
+     [
+      "2026-02",
+      -7.2
+     ],
+     [
+      "2026-03",
+      24.2
+     ],
+     [
+      "2026-04",
+      18.6
+     ],
+     [
+      "2026-05",
+      7.7
+     ],
+     [
+      "2026-06",
+      -7.3
+     ],
+     [
+      "2026-07",
+      -0.4
+     ],
+     [
+      "2026-08",
+      13.5
+     ]
+    ],
+    "start": {
+     "period": "2025-01",
+     "value": -1.9
+    },
+    "latest": {
+     "period": "2026-08",
+     "value": 13.5
+    },
+    "change": 15.4
+   }
+  ],
+  "notes": [
+   "All series: Percentage change from previous year, Automotive fuel, Original, Australia"
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:17:13.534Z"
+}

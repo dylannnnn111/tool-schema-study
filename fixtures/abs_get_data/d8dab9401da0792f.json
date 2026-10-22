@@ -1,0 +1,18 @@
+{
+ "tool": "abs_get_data",
+ "args": {
+  "dataflow": "BA_GCCSA",
+  "key": "1.1.9.TOT.100.20.AUS.",
+  "last_n": 3
+ },
+ "ok": true,
+ "result": {
+  "source": "ABS BA_GCCSA",
+  "sourceUrl": "https://data.api.abs.gov.au/rest/data/ABS,BA_GCCSA/1.1.9.TOT.100.20.AUS.?lastNObservations=3",
+  "series": [],
+  "notes": [
+   "No data for that key. Check codes with abs_describe_dataflow."
+  ]
+ },
+ "fetchedAt": "2026-10-18T21:05:01.734Z"
+}

@@ -1,0 +1,33 @@
+{
+ "variant": "terse-descriptions",
+ "model": "claude-haiku-5-5",
+ "run": 2,
+ "question": "o06",
+ "kind": "out-of-scope",
+ "q": "What's the unemployment rate in Auckland?",
+ "date": "2026-10-19",
+ "cost": 0.00017,
+ "score": {
+  "tools": null,
+  "args": null,
+  "answer": true,
+  "recovered": null,
+  "calls": 0,
+  "invalid": 0,
+  "errors": 0,
+  "needsHand": true
+ },
+ "transcript": {
+  "answer": "I can't get Auckland's unemployment rate. Auckland is in New Zealand, and my data sources only cover Australia. Stats NZ publishes the official New Zealand labour force figures, including regional data for Auckland.\n\nI can give you the unemployment rate for any Australian state or territory, or for Australia as a whole. Would one of those help?",
+  "calls": [],
+  "turns": 1,
+  "status": "done",
+  "usage": {
+   "input": 4,
+   "output": 269,
+   "cacheWrite": 87,
+   "cacheRead": 2816
+  },
+  "ms": 2093
+ }
+}
