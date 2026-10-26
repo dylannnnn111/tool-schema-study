@@ -1,5 +1,7 @@
 # Tool Schema Study
 
+[![CI](https://github.com/dylannnnn111/tool-schema-study/actions/workflows/ci.yml/badge.svg)](https://github.com/dylannnnn111/tool-schema-study/actions/workflows/ci.yml)
+
 Same tools, different schemas: which design choices actually make models call tools correctly?
 
 The ten tools from [Aussie Data MCP](https://github.com/dylannnnn111/aussie-data-mcp) (ABS, RBA and Sydney Opal data), written six ways. Each of the first five changes one thing from the schemas as published; the sixth combines two:
@@ -44,6 +46,18 @@ npm run analyse             # runs/main/results.md, results.json, hand.md
 Options: `VARIANTS=`, `MODELS=` (family names or full ids, pinned in the run's manifest on first use), `RUNS=`, `NAME=`, `CONCURRENCY=`, `DATE=`. Questions can be picked by id: `npm run eval -- v02 m14`.
 
 Answers to hand-flagged and out-of-scope questions are collected in `hand.md` and read by hand.
+
+## Reproducing it
+
+Every saved transcript is in `runs/main/`, so the results can be checked without a key or network:
+
+```
+docker build -t tool-schema-study . && docker run --rm tool-schema-study
+```
+
+That runs the tests, re-scores all 1,200 transcripts against the saved fixtures and checks `results.json` comes out byte for byte the same.
+
+CI (`.github/workflows/ci.yml`) does the same on every push and pull request, plus a [gitleaks](https://github.com/gitleaks/gitleaks) scan of the full Git history for API keys or other secrets. A change to the scorer, the questions or the fixtures that moves a published number fails the build.
 
 ## Layout
 
