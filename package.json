@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-strip-types --no-warnings --test test/*.test.ts",
+    "coverage": "node --experimental-strip-types --no-warnings --test --experimental-test-coverage test/*.test.ts",
     "references": "node --experimental-strip-types --no-warnings scripts/references.ts",
     "eval": "node --experimental-strip-types --no-warnings scripts/eval.ts",
     "eval:keychain": "ANTHROPIC_API_KEY=$(security find-generic-password -s aussie-data-mcp-anthropic -w) npm run eval --",
